@@ -57,10 +57,12 @@ jobs:
             POSTGRES_USER: postgres
             POSTGRES_PASSWORD: postgres
             POSTGRES_DB: djangocon_africa
+            POSTGRES_HOST: localhost
       - name: Run Tests
         run: |
-          py.test --cov
+          pytest --cov
         env:
             POSTGRES_USER: postgres
             POSTGRES_PASSWORD: postgres
             POSTGRES_DB: djangocon_africa
+            POSTGRES_HOST: localhost
