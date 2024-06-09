@@ -11,4 +11,4 @@ ignore:
   - manage.py
 
 codecov:
-  token: ""
+  token: "7cfb8809-743c-4771-8931-ea69b67f8b97"
