@@ -55,9 +55,15 @@ jobs:
         run: |
           python manage.py migrate
         env:
+            DB_USER: postgres
             DB_PASSWORD: postgres
+            DB_NAME: djangocon_africa
+            DB_HOST: localhost
       - name: Run Tests
         run: |
           pytest --cov
         env:
+            DB_USER: postgres
             DB_PASSWORD: postgres
+            DB_NAME: djangocon_africa
+            DB_HOST: localhost
