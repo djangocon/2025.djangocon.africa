@@ -18,6 +18,7 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_DB: djangocon_africa
+          POSTGRES_HOST: localhost
         ports:
           - 5432:5432
         # needed because the postgres container does not provide a healthcheck
