@@ -59,6 +59,7 @@ jobs:
             DB_PASSWORD: postgres
             DB_NAME: djangocon_africa
             DB_HOST: localhost
+            DJANGO_SETTINGS_MODULE: core.settings
       - name: Run Tests
         run: |
           pytest --cov
@@ -67,3 +68,4 @@ jobs:
             DB_PASSWORD: postgres
             DB_NAME: djangocon_africa
             DB_HOST: localhost
+            DJANGO_SETTINGS_MODULE: core.settings
