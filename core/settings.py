@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if not os.environ.get("DJANGO_DEBUG") else False
+DEBUG = bool(os.environ.get("DJANGO_DEBUG")) if os.environ.get("DJANGO_DEBUG") else True
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
