@@ -171,3 +171,5 @@ cython_debug/
 .idea/
 *.pyc
 *.log
+
+.ruff_cache/
