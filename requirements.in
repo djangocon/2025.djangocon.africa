@@ -1,8 +1,22 @@
+# Core dependencies
 django>=4.2,<5
 coverage==7.5.3
 dj-database-url==2.2.0
 psycopg2-binary==2.9.9
+
+
+# Local development
 python-dotenv==1.0.1
+pip-tools==7.4.1
+pre-commit==3.7.1
+setuptools==70.0.0
+
+# Linting
+PyYAML==6.0.1
+ruff==0.4.8
+
+# Testing
+coverage==7.5.3
 pytest==8.2.2
 pytest-django==4.8.0
 pytest-dotenv==0.5.2
