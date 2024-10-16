@@ -13,12 +13,11 @@ jobs:
 
     services:
       postgres:
-        image: postgres:10.8
+        image: postgres:14.13
         env:
-          DB_USER: postgres
-          DB_PASSWORD: postgres
-          DB_NAME: djangocon_africa
-          DB_HOST: localhost
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: djangocon_africa
         ports:
           - 5432:5432
         # needed because the postgres container does not provide a healthcheck
@@ -55,14 +54,15 @@ jobs:
         run: |
           python manage.py migrate
         env:
-            DB_USER: postgres
-            DB_PASSWORD: postgres
-            DB_NAME: djangocon_africa
-            DB_HOST: localhost
             DJANGO_SETTINGS_MODULE: core.settings
+            DATABASE_HOST: localhost
+            DATABASE_PORT: 5432
+            DATABASE_USER: postgres
+            DATABASE_PASSWORD: postgres
+            DATABASE_NAME: djangocon_africa
       - name: Run Tests
         run: |
-          pytest --cov
+          pytest
         env:
             DB_USER: postgres
             DB_PASSWORD: postgres
