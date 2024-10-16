@@ -172,8 +172,8 @@ cython_debug/
 *.pyc
 *.log
 
-
 node_modules/
 
 # automatically generated statuic files. Probably only tailwind
 website/static/dist
+.vscode/settings.json
