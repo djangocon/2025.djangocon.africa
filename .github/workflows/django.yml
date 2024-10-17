@@ -64,8 +64,9 @@ jobs:
         run: |
           pytest
         env:
-            DB_USER: postgres
-            DB_PASSWORD: postgres
-            DB_NAME: djangocon_africa
-            DB_HOST: localhost
             DJANGO_SETTINGS_MODULE: core.settings
+            DATABASE_HOST: localhost
+            DATABASE_PORT: 5432
+            DATABASE_USER: postgres
+            DATABASE_PASSWORD: postgres
+            DATABASE_NAME: djangocon_africa

@@ -19,7 +19,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - run: python -Im pip install --user ruff
+    - name: Install Ruff
+      run: pip install ruff
 
     - name: Run Ruff
-      run: ruff --output-format=github .
+      run: ruff check --output-format=github .
