@@ -1,5 +1,37 @@
 {% load static %}
 
+{% load partials %}
+
+{% partialdef header-menu-item-large %}
+
+{% if link.href %}
+<a href="{{link.href}}" class="header_button">
+    {{ link.label }}
+</a>
+{% else %}
+<div x-data="{ open: false }" class="relative inline-block">
+
+    <button @click="open = ! open" class="header_button">
+        {{ link.label }}
+        <i class="fas fa-chevron-right" x-show="! open"></i>
+        <i class="fas fa-chevron-down" x-show="open"></i>
+    </button>
+
+    <div x-show="open" @click.outside="open = false"
+        class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50 flex flex-col gap-2 pt-2 pl-2"
+        style="display: none;">
+
+        {% for child in link.children %}
+        <a href="{{ child.href }}" class="header_button">{{ child.label }}</a>
+        {% endfor %}
+
+    </div>
+</div>
+{% endif %}
+
+{% endpartialdef %}
+
+
 <html lang="en">
 
 <head>
@@ -12,12 +44,35 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 
     <link rel="stylesheet" type="text/css" href="{% static 'dist/tailwind_final.css' %}">
+    <script src="{% static 'dist/font_awesome_5.js' %}" crossorigin="anonymous"></script>
+
 
 </head>
 
 <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
 
-    {% block content %}{% endblock %}
+
+    <!-- Header bar
+    To edit the header menu items look at header_menu_items.py
+    -->
+    <nav>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5">
+            <div class="flex justify-between h-16">
+                <a class="hover:cursor-pointer">
+                    <img src="{% static 'images/logo.svg' %}" alt="logo" />
+                </a>
+                <div class="flex items-center space-x-4">
+                    {% for link in header_menu_items %}
+                    {% partial header-menu-item-large %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+
+
+    {% endblock %}
 
 
 </body>
