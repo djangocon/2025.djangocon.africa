@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .header_button {
+        @apply hover:underline font-bold
+    }
+}
+
 /* 
 
-@layer components {
 
 
     .button_cta {

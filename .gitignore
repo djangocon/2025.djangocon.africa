@@ -173,7 +173,9 @@ cython_debug/
 *.log
 
 node_modules/
-
-# automatically generated statuic files. Probably only tailwind
-website/static/dist
 .vscode/settings.json
+.ruff_cache/
+
+
+# automatically generated static files. Probably only tailwind
+website/static/dist

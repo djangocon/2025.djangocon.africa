@@ -5,7 +5,9 @@
 #    pip-compile
 #
 asgiref==3.8.1
-    # via django
+    # via
+    #   django
+    #   django-browser-reload
 coverage==7.5.3
     # via -r requirements.in
 dj-database-url==2.2.0
@@ -14,6 +16,12 @@ django==4.2.13
     # via
     #   -r requirements.in
     #   dj-database-url
+    #   django-browser-reload
+    #   django-template-partials
+django-browser-reload==1.16.0
+    # via -r requirements.in
+django-template-partials==24.4
+    # via -r requirements.in
 iniconfig==2.0.0
     # via pytest
 packaging==24.0
