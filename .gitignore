@@ -177,5 +177,3 @@ node_modules/
 .ruff_cache/
 
 
-# automatically generated static files. Probably only tailwind
-website/static/dist
