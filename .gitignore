@@ -175,5 +175,3 @@ cython_debug/
 node_modules/
 .vscode/settings.json
 .ruff_cache/
-
-
