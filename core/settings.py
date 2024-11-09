@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET", "")
 DEBUG = os.environ.get("DJANGO_DEBUG")
 
 ALLOWED_HOSTS = [
-    "https://2025.djangocon.africa/",
+    "2025.djangocon.africa",
     "127.0.0.1",
     "localhost",
 ]
