@@ -54,7 +54,7 @@ jobs:
         run: |
           python manage.py migrate
         env:
-            DJANGO_SETTINGS_MODULE: core.settings
+            DJANGO_SETTINGS_MODULE: core.settings_dev
             DATABASE_HOST: localhost
             DATABASE_PORT: 5432
             DATABASE_USER: postgres
@@ -64,7 +64,7 @@ jobs:
         run: |
           pytest
         env:
-            DJANGO_SETTINGS_MODULE: core.settings
+            DJANGO_SETTINGS_MODULE: core.settings_dev
             DATABASE_HOST: localhost
             DATABASE_PORT: 5432
             DATABASE_USER: postgres

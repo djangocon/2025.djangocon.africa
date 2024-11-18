@@ -3,7 +3,7 @@
     "tailwindcss": "^3.4.13"
   },
   "scripts": {
-    "tailwind": "tailwindcss -i website/static/src/tailwind_input.css -o website/static/dist/tailwind_final.css",
-    "tailwind_watch": "tailwindcss -i website/static/src/tailwind_input.css -o website/static/src/tailwind_final.css --watch"
+    "tailwind": "tailwindcss -i static/src/tailwind_input.css -o static/dist/tailwind_final.css",
+    "tailwind_watch": "tailwindcss -i static/src/tailwind_input.css -o static/src/tailwind_final.css --watch"
   }
 }
