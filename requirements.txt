@@ -10,16 +10,22 @@ asgiref==3.8.1
     #   django-browser-reload
 coverage==7.5.3
     # via -r requirements.in
+crispy-tailwind==1.0.3
+    # via -r requirements.in
 dj-database-url==2.2.0
     # via -r requirements.in
 django==4.2.13
     # via
     #   -r requirements.in
+    #   crispy-tailwind
     #   dj-database-url
     #   django-browser-reload
+    #   django-crispy-forms
     #   django-template-partials
 django-browser-reload==1.16.0
     # via -r requirements.in
+django-crispy-forms==2.3
+    # via crispy-tailwind
 django-template-partials==24.4
     # via -r requirements.in
 iniconfig==2.0.0

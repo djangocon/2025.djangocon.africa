@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 
-# from django.urls import reverse
+from django.urls import reverse
 
 
 @dataclass
@@ -20,3 +20,16 @@ header_menu_items = [
         ],
     ),
 ]
+
+user_loggedin_link = HeaderLink(
+    label='<i class="fas fa-user"></i> User',
+    children=[
+        # HeaderLink("Profile", href="todo"),
+        # HeaderLink("Talk Submissions", href="todo"),
+        HeaderLink("Logout", href=reverse("logout")),
+    ],
+)
+
+user_not_loggedin_link = HeaderLink(
+    label='<i class="fas fa-user"></i> Login/Register', href=reverse("login")
+)

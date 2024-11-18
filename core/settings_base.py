@@ -25,6 +25,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "template_partials",
+    "crispy_forms",
+    "crispy_tailwind",
     "website",
     "custom_auth",
 ]
@@ -119,3 +121,12 @@ STATICFILES_DIRS = [
 
 
 AUTH_USER_MODEL = "custom_auth.User"
+
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+
+CRISPY_TEMPLATE_PACK = "tailwind"
+
+# django.contrib.auth settings
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"

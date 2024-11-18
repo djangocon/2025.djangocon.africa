@@ -6,13 +6,13 @@
 
 {% if link.href %}
 <a href="{{link.href}}" class="header_button">
-    {{ link.label }}
+    {{ link.label | safe }}
 </a>
 {% else %}
 <div x-data="{ open: false }" class="relative inline-block">
 
     <button @click="open = ! open" class="header_button">
-        {{ link.label }}
+        {{ link.label | safe }}
         <i class="fas fa-chevron-right" x-show="! open"></i>
         <i class="fas fa-chevron-down" x-show="open"></i>
     </button>
@@ -45,8 +45,6 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'src/tailwind_final.css' %}">
     <script src="{% static 'src/font_awesome_5.js' %}" crossorigin="anonymous"></script>
-
-
 </head>
 
 <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
@@ -65,8 +63,22 @@
                     {% for link in header_menu_items %}
                     {% partial header-menu-item-large %}
                     {% endfor %}
+
+                    {% if user.is_authenticated %}
+                    {% with link=user_loggedin_link %}
+                    {% partial header-menu-item-large %}
+                    {% endwith %}
+                    {% else %}
+
+                    {% with link=user_not_loggedin_link %}
+                    {% partial header-menu-item-large %}
+                    {% endwith %}
+
+                    {% endif %}
+
                 </div>
             </div>
+
         </div>
     </nav>
     {% block content %}
