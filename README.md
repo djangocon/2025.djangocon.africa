@@ -28,22 +28,21 @@ Then install the requirements:
 pip install -r requirements.txt
 ```
 
-3. Build the tailwind styles 
-
+3. Install npm dependencies
 
 ```
 npm install 
-
-npm run tailwind
 ```
 
-This will create a file called `tailwind_final.css`. This contains the css we use in in our website.
+## Running the application
 
-Yo might be tempted to edit `tailwind_final.css` directly at some point. It is an automatically generated file and all changes will be overwritten.
+1. Get the development database up and running:
 
-See the "working with Tailwind" section below to learn more.
+See: dev_db/README.md
 
-4. Run the server
+Remember to run the migrations! 
+
+2. Run the server
 
 Before using the runserver command, you need to load up some environmental variables. `.env_example` has some sensible defaults that just work in a dev environment:
 
@@ -51,6 +50,7 @@ Before using the runserver command, you need to load up some environmental varia
 source .env_example
 python manage.py runserver
 ```
+
 
 ## Working with tailwind 
 
@@ -83,3 +83,4 @@ In this case use:
 ```
 npm run tailwind_watch
 ```
+

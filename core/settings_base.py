@@ -10,9 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-import os
-import dj_database_url
-
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,6 +26,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "template_partials",
     "website",
+    "custom_auth",
 ]
 
 MIDDLEWARE = [
@@ -69,21 +67,6 @@ STORAGES = {
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
-}
-
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-DB_USER = os.environ.get("DATABASE_USER")
-DB_HOST = os.environ.get("DATABASE_HOST")
-DB_PASSWORD = os.environ.get("DATABASE_PASSWORD")
-DB_NAME = os.environ.get("DATABASE_NAME")
-DB_PORT = os.environ.get("DATABASE_PORT", 5432)
-
-DATABASES = {
-    "default": dj_database_url.config(
-        default=f"postgres://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-    )
 }
 
 
@@ -133,3 +116,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+
+AUTH_USER_MODEL = "custom_auth.User"
