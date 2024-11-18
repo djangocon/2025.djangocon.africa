@@ -22,11 +22,11 @@ INSTALLED_APPS += [
 # You can run this database using docker compose.
 # Look inside dev_db/README.md for details!!
 
-DB_USER = "pguser"
-DB_HOST = "127.0.0.1"
-DB_PASSWORD = "password"
-DB_NAME = "db"
-DB_PORT = 6543
+DB_USER =  os.environ.get("DATABASE_USER", "pg_user")
+DB_HOST = os.environ.get("DATABASE_HOST", "127.0.0.1")
+DB_PASSWORD = os.environ.get("DATABASE_PASSWORD", "password")
+DB_NAME = os.environ.get("DATABASE_NAME","db")
+DB_PORT = os.environ.get("DATABASE_PORT", 6543)
 
 DATABASES = {
     "default": dj_database_url.config(
