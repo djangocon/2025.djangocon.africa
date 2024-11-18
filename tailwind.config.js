@@ -50,7 +50,7 @@ tz_flag_blue = {
 
 
 module.exports = {
-  content: ["./**/*.html",
+  content: ["./**/*.html", '!./dev_db',
   ],
   theme: {
     extend: {

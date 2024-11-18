@@ -1,0 +1,23 @@
+{% extends "_base.html" %}
+
+{% load tailwind_filters %}
+
+{% block content %}
+
+<section class="max-w-3xl pt-24 mx-auto">
+
+    <h1 class="title pb-5">Log in </h1>
+
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <button class="button" type="submit">Log In</button>
+    </form>
+
+    <!-- <a href="{% url 'password_reset' %}">Forgot password</a> -->
+    <!-- <a href="{% url 'password_reset' %}">Register</a> -->
+</section>
+
+
+{% endblock %}
