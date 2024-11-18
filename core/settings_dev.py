@@ -12,6 +12,7 @@ MIDDLEWARE += [
 INSTALLED_APPS += [
     "django_browser_reload",
     "whitenoise.runserver_nostatic",
+    "django_extensions",
 ]
 
 
