@@ -16,11 +16,20 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from custom_auth import views as custom_auth_view
+from django.contrib.auth import views as auth_views
+
+from custom_auth import views as custom_auth_views
 
 urlpatterns = [
     path("", include("website.urls")),
-    path("accounts/register/", custom_auth_view.register, name ="register"),
+    path("accounts/register/", custom_auth_views.register, name ="register"),
+    path('password-reset/', custom_auth_views.ResetPasswordView.as_view(), name='password_reset'),
+    path('accounts/password-reset-confirm/<uidb64>/<token>/',
+         auth_views.PasswordResetConfirmView.as_view(template_name='registration/password_reset_confirm.html'),
+         name='password_reset_confirm'),
+    path('accounts/password-reset-complete/',
+         auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html'),
+         name='password_reset_complete'),
     path("accounts/", include("django.contrib.auth.urls")),
     path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
