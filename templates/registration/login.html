@@ -12,11 +12,15 @@
     <form method="post">
         {% csrf_token %}
         {{ form | crispy }}
-        <button class="button" type="submit">Log In</button>
+        <div class="mt-2 flex justify-between">
+            <div>
+                <button class="button" type="submit">Log In</button>
+                <a class="button" href="{% url 'password_reset' %}">Forgot password</a>
+            </div>
+            <a class="button" ref="{% url 'password_reset' %}">Register</a> 
+        </div>
     </form>
 
-    <!-- <a href="{% url 'password_reset' %}">Forgot password</a> -->
-    <!-- <a href="{% url 'password_reset' %}">Register</a> -->
 </section>
 
 
