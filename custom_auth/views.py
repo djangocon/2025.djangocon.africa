@@ -13,7 +13,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 
 
 class ResetPasswordView(SuccessMessageMixin, PasswordResetView):
-    template_name = 'templates/registration/password_reset.html'
+    template_name = 'templates/registration/password_reset_form.html'
     email_template_name = 'templates/registration/password_reset_email.html'
     subject_template_name = 'templates/registration/password_reset_subject'
     success_message = "We've emailed you instructions for setting your password, " \
