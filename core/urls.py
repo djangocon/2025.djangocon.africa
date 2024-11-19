@@ -16,9 +16,11 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from custom_auth import views as custom_auth_view
 
 urlpatterns = [
     path("", include("website.urls")),
+    path("accounts/register/", custom_auth_view.register, name ="register"),
     path("accounts/", include("django.contrib.auth.urls")),
     path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
