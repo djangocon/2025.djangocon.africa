@@ -12,9 +12,12 @@
       {{ form|crispy}}
     </fieldset>
     <div class="mt-2 flex justify-between">
-      <button class="button" type="submit"><span class="glyphicon glyphicon-check"></span>   sign up</button>
-      <a href="{% url "login" %}" class="button">Already have an account ?</a>
+      <div>
+        <button class="button" type="submit"><span class="glyphicon glyphicon-check"></span>   sign up</button>
+        <a href="{% url "login" %}" class="button">Already have an account ?</a>
       </div>
+      <a href="{% url "page_home" %}" class="button">cancel</a>
+    </div>
   </form>
 </section>
 
