@@ -15,7 +15,7 @@ def register(request):
             username = form.cleaned_data.get('username')
             email = form.cleaned_data.get('email')
             ######################### mail system ####################################
-            template_email = get_template('registration/email.html')
+            template_email = get_template('registration/registration_email.html')
             d = { 'username': username }
             subject, from_email, to = 'welcome', 'hello@djangoconafrica.com', email
             html_content = template_email.render(d)
