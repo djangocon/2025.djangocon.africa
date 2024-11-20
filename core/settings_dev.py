@@ -1,15 +1,14 @@
-from .settings_base import *
-import os
+from .settings_base import *  # noqa: F403
 import dj_database_url
 
 SECRET_KEY = "not really a secret"
 DEBUG = True
 
-MIDDLEWARE += [
+MIDDLEWARE += [  # noqa: F405
     "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
-INSTALLED_APPS += [
+INSTALLED_APPS += [  # noqa: F405
     "django_browser_reload",
     "whitenoise.runserver_nostatic",
 ]
@@ -22,11 +21,11 @@ INSTALLED_APPS += [
 # You can run this database using docker compose.
 # Look inside dev_db/README.md for details!!
 
-DB_USER = "pguser"
-DB_HOST = "127.0.0.1"
-DB_PASSWORD = "password"
-DB_NAME = "db"
-DB_PORT = 6543
+DB_USER = os.environ.get("DATABASE_USER", "pguser")  # noqa: F405
+DB_HOST = os.environ.get("DATABASE_HOST", "127.0.0.1")  # noqa: F405
+DB_PASSWORD = os.environ.get("DATABASE_PASSWORD", "password")  # noqa: F405
+DB_NAME = os.environ.get("DATABASE_NAME", "db")  # noqa: F405
+DB_PORT = os.environ.get("DATABASE_PORT", 5432)  # noqa: F405
 
 DATABASES = {
     "default": dj_database_url.config(

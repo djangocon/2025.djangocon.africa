@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -130,3 +131,12 @@ CRISPY_TEMPLATE_PACK = "tailwind"
 # django.contrib.auth settings
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
+
+# Database
+# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
+DB_USER = os.environ.get("DATABASE_USER")
+DB_HOST = os.environ.get("DATABASE_HOST")
+DB_PASSWORD = os.environ.get("DATABASE_PASSWORD")
+DB_NAME = os.environ.get("DATABASE_NAME")
+DB_PORT = os.environ.get("DATABASE_PORT", 5432)
