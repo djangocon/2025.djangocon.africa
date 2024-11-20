@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse, Http404
-from . import models
+from django.http import Http404
 from django.shortcuts import get_object_or_404
+from . import models
+from . import forms
 
 
 @login_required
@@ -27,3 +28,10 @@ def action_delete_my_proposal(request, proposal_id):
 
     context = {"proposals": proposals}
     return render(request, "proposals/my_proposals.html#table_body", context)
+
+
+@login_required
+def create_proposal(request):
+    form = forms.ProposalForm()
+    context = {"form": form}
+    return render(request, "proposals/create_proposal.html", context)
