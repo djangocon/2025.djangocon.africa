@@ -1,0 +1,59 @@
+{% extends "_base.html" %}
+
+{% load partials %}
+
+{% partialdef table_body %}
+
+<tbody id="proposals-table-body">
+
+    {% for proposal in proposals %}
+    <tr id="proposal-{{proposal.id}}">
+        <td>{{proposal.title}}</td>
+        <td>{{proposal.proposal_type}}</td>
+        <td>{{proposal.track}}</td>
+        <td class="text-right">
+            <a class="button"><i class="fas fa-edit"></i>Edit</a>
+            <button class="button" hx-delete="{% url 'action_delete_my_proposal' proposal.id %}"
+                hx-target="#proposals-table-body" hx-swap="outerHTML"
+                hx-confirm="Are you sure you wish to delete your proposal? {{proposal.title}} "><i
+                    class="fas fa-trash"></i>Delete</button>
+        </td>
+    </tr>
+
+    {% empty %}
+
+    <tr>
+        <td colspan="6" class="text-center font-bold text-2xl text-gray-500">You haven't submitted any proposals yet
+        </td>
+    </tr>
+    {% endfor %}
+</tbody>
+
+{% endpartialdef %}
+
+
+
+{% block content %}
+
+<h1>My Proposals</h1>
+
+
+<table class="w-full my-5">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Type</th>
+            <th>Track</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    {% partial table_body %}
+
+</table>
+<div class="mb-8">
+
+    <a class="button ">Create new proposal</a>
+</div>
+
+{% endblock content %}
