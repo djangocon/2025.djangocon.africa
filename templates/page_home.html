@@ -1,5 +1,5 @@
 {% extends "_base.html" %}
-
+{% load i18n %}
 
 {% block content %}
 
@@ -10,36 +10,35 @@
 
     <section id="hero" class="">
 
-        <h1 class="text-6xl pb-2 leading-snug">DjangoCon Africa <br /><span class="text-lightPrimary">2025</span></h1>
+        <h1 class="text-6xl pb-2 leading-snug">{% translate "DjangoCon Africa" %} <br /><span class="text-lightPrimary">2025</span></h1>
         <!-- <h2 class="text-5xl font-bold text-tz_flag_blue-600 mb-4">Arusha, Tanzania</h2>
     <p class="text-3xl font-semibold text-gray-700 mb-2">11 - 16 August</p> -->
 
-        <p>We are in the early phases of planning the next DjangoCon Africa!</p>
-        <p>Follow our socials to stay up to date</p>
+        <p>{% translate "We are in the early phases of planning the next DjangoCon Africa!" %}</p>
+        <p>{% translate "Follow our socials to stay up to date" %}</p>
 
         <div class="border border-accentPurple p-2 w-fit rounded-md mt-5">
-            <p class="font-bold">📆 11 - 16 August </p>
-            <p class="font-bold">📍 Arusha, Tanzania</p>
+            <p class="font-bold">📆 {% translate "11 - 15 August" %}</p>
+            <p class="font-bold">📍 {% translate "Arusha, Tanzania" %}</p>
         </div>
     </section>
 
 
     <section class="bg-lightPrimary p-10 ">
-        <h2 class="text-white text-4xl leading-snug pb-5">What’s happening at DjangoCon <br /> Africa <span
+        <h2 class="text-white text-4xl leading-snug pb-5">{% translate "What’s happening at DjangoCon" %} <br /> {% translate "Africa" %} <span
                 class="text-accentYellow">2025</span>
         </h2>
 
         <div class="grid grid-cols-2 gap-3">
 
             <div class="bg-darkPrimary p-5">
-                <h3 class="text-accentYellow">Workshops</h3>
-                <p class="text-white">Get hands on experiene with different tools and technologies</p>
+                <h3 class="text-accentYellow">{% translate "Workshops" %}</h3>
+                <p class="text-white">{% translate "Get hands on experiene with different tools and technologies." %}</p>
             </div>
 
             <div class="bg-darkPrimary p-5">
-                <h3 class="text-accentYellow">DjangoGirls</h3>
-                <p class="text-white">A Django workshop aimed at getting more women and girls introduced to web
-                    development
+                <h3 class="text-accentYellow">Django Girls</h3>
+                <p class="text-white">{% translate "A Django workshop aimed at getting more women and girls introduced to web development." %}"
                 </p>
             </div>
         </div>
@@ -47,39 +46,42 @@
     </section>
 
     <section class="p-10">
-        <h2 class="text-4xl leading-snug pb-5"><span class="text-accentYellow">First</span> DjangoCon Africa
+        <h2 class="text-4xl leading-snug pb-5"><span class="text-accentYellow">{% translate "First" %}</span> {% translate "DjangoCon Africa" %}
         </h2>
 
-        <p>In 2023 we hosted the first ever DjangoCon Africa</p>
+        <p>{% translate "In 2023 we hosted the first ever DjangoCon Africa." %}</p>
 
-        <p>DjangoCon Africa took place in Zanzibar, Tanzania 6th-11th November 2023</p>
+        <p>{% translate "DjangoCon Africa took place in Zanzibar, Tanzania 6th-11th November 2023." %}</p>
 
         <div class="pt-5 grid grid-cols-3 gap-5">
 
             <div>
                 <h3 class="text-accentGreen text-4xl">~200</h3>
 
-                <p>TWe had roughly 200 attendees, of whom 103 were women</p>
+                <p>{% translate "We had roughly 200 attendees, of whom 103 were women." %}</p>
             </div>
 
             <div>
                 <h3 class="text-accentGreen text-4xl">22 +</h3>
 
-                <p>The attendees represented at least 22 countries from around the world</p>
+                <p>{% translate "The attendees represented at least 22 countries from around the world." %}</p>
             </div>
 
             <div>
                 <h3 class="text-accentGreen text-4xl">26</h3>
 
-                <p>We held 26 talks on topics covering programming, society, careers, education, disability, agriculture
+                <p>{% blocktranslate %}
+                    We held 26 talks on topics covering programming, society, careers, education, disability, agriculture
                     - the full range
-                    of topics you’d expect at a DjangoCon, with the African perspective often at the forefront</p>
+                    of topics you’d expect at a DjangoCon, with the African perspective often at the forefront
+                    {% endblocktranslate %}
+                </p>
             </div>
 
 
         </div>
 
-        <a href="https://2023.djangocon.africa/news/report/" target="_blank" class="button">Read the report ></a>
+        <a href="https://2023.djangocon.africa/news/report/" target="_blank" class="button">{% translate "Read the report >" %}</a>
 
     </section>
 
