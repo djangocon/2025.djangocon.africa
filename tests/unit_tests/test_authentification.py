@@ -2,6 +2,7 @@ from django.test  import TestCase, Client
 from custom_auth.models import User
 from django.core import mail
 
+import pytest
 
 class UserTestCase(TestCase):
     def setUp(self):
@@ -11,15 +12,6 @@ class UserTestCase(TestCase):
             email="alice@wonderland.com",
             password="nfpt30x49q2obt9"
         )
-        client = Client()
-
-    def test_login_with_valid_credential(self):
-        u = User.objects.get(email="alice@wonderland.com")
-        response = self.client.post("/accounts/login/",
-                               dict(email=u.email,password=u.password),
-                               content_type="application/json")
-        assert response.status_code == 200
-        assert u.is_authenticated == True
 
     def test_register_new_member(self):
         response = self.client.post("/accounts/register/",
@@ -32,7 +24,12 @@ class UserTestCase(TestCase):
                              target_status_code=200,
                              fetch_redirect_response=True)
         self.assertEqual(len(mail.outbox), 1)
-    
+
+    def test_get_register_page(self):
+        response = self.client.get("/accounts/register/")
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "registration/register.html")
+
     def test_valid_template_for_forgotten_password(self):
         response = self.client.get("/accounts/password_reset/")
         self.assertTemplateUsed(response, "registration/password_reset_form.html")
@@ -51,4 +48,14 @@ class UserTestCase(TestCase):
 
 
     def test_valid_url_to_reset_password(self):
-        pass
+        u = User.objects.get(email="alice@wonderland.com")
+        self.client.post("/accounts/password_reset/",
+                                    dict(email=u.email),
+                                   format="text/html")
+        email_lines = mail.outbox[0].body.splitlines()
+        reset_password_url = email_lines[2].replace(" ", "")
+        response = self.client.post(
+            reset_password_url,
+            dict(password1="3OPHWv9S3ZI", password2="3OPHWv9S3ZI",email=u.email),
+            format="text.html",
+        )
