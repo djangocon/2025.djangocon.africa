@@ -1,5 +1,7 @@
 from django.test  import TestCase, Client
 from custom_auth.models import User
+from django.core import mail
+
 
 class UserTestCase(TestCase):
     def setUp(self):
@@ -9,19 +11,18 @@ class UserTestCase(TestCase):
             email="alice@wonderland.com",
             password="nfpt30x49q2obt9"
         )
+        client = Client()
 
     def test_login_with_valid_credential(self):
-        client = Client()
         u = User.objects.get(email="alice@wonderland.com")
-        response = client.post("/accounts/login/",
+        response = self.client.post("/accounts/login/",
                                dict(email=u.email,password=u.password),
                                content_type="application/json")
         assert response.status_code == 200
         assert u.is_authenticated == True
 
     def test_register_new_member(self):
-        client = Client()
-        response = client.post("/accounts/register/",
+        response = self.client.post("/accounts/register/",
                                dict(email="rabbit.white@wonderland.com",
                                     last_name="Rabbit", first_name="White",
                                     password1="FNEYghfr",
@@ -30,3 +31,24 @@ class UserTestCase(TestCase):
         self.assertRedirects(response, "/accounts/login/", status_code=302,
                              target_status_code=200,
                              fetch_redirect_response=True)
+        self.assertEqual(len(mail.outbox), 1)
+    
+    def test_valid_template_for_forgotten_password(self):
+        response = self.client.get("/accounts/password_reset/")
+        self.assertTemplateUsed(response, "registration/password_reset_form.html")
+
+    def test_valid_email_sending_for_forgotten_password(self):
+        u = User.objects.get(email="alice@wonderland.com")
+        response = self.client.post("/accounts/password_reset/",
+                                    dict(email=u.email),
+                                   format="text/html")
+        self.assertRedirects(response, "/accounts/password_reset/done/",
+                             status_code=302,
+                             target_status_code=200,
+                             fetch_redirect_response=True)
+        assert mail.outbox[0].to == [u.email]
+        self.assertEqual(len(mail.outbox), 1)
+
+
+    def test_valid_url_to_reset_password(self):
+        pass
