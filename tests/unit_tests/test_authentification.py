@@ -49,7 +49,7 @@ class UserTestCase(TestCase):
 
     def test_valid_url_to_reset_password(self):
         u = User.objects.get(email="alice@wonderland.com")
-        self.client.post("/accounts/password_reset/",
+        response_0 = self.client.post("/accounts/password_reset/",
                                     dict(email=u.email),
                                    format="text/html")
         email_lines = mail.outbox[0].body.splitlines()
@@ -59,3 +59,4 @@ class UserTestCase(TestCase):
             dict(password1="3OPHWv9S3ZI", password2="3OPHWv9S3ZI",email=u.email),
             format="text.html",
         )
+        self.assertEqual(response.status_code, 302)
