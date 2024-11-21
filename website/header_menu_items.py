@@ -4,8 +4,6 @@ from typing import List
 from django.urls import reverse
 from django.utils.translation import gettext as _
 
-from .views import page_home
-
 
 @dataclass
 class HeaderLink:
