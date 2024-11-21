@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-21 23:17+0100\n"
+"POT-Creation-Date: 2024-11-22 00:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,66 +20,73 @@ msgstr ""
 
 #: templates/page_home.html:13 templates/page_home.html:49
 msgid "DjangoCon Africa"
-msgstr ""
+msgstr "DjangoCon Afrique"
 
 #: templates/page_home.html:17
 msgid "We are in the early phases of planning the next DjangoCon Africa!"
 msgstr ""
+"Nous sommes dans les premières phases de planification de la prochaine "
+"DjangoCon Afrique!"
 
 #: templates/page_home.html:18
 msgid "Follow our socials to stay up to date"
-msgstr ""
+msgstr "Suivez nos réseaux sociaux pour rester informé"
 
 #: templates/page_home.html:21
 msgid "11 - 15 August"
-msgstr ""
+msgstr "11 - 15 août"
 
 #: templates/page_home.html:22
 msgid "Arusha, Tanzania"
-msgstr ""
+msgstr "Arusha, Tanzanie"
 
 #: templates/page_home.html:28
 msgid "What’s happening at DjangoCon"
-msgstr ""
+msgstr "Que se passe-t-il à la DjangoCon"
 
 #: templates/page_home.html:28
 msgid "Africa"
-msgstr ""
+msgstr "Afrique"
 
 #: templates/page_home.html:35
 msgid "Workshops"
-msgstr ""
+msgstr "Ateliers"
 
 #: templates/page_home.html:36
 msgid "Get hands on experiene with different tools and technologies."
 msgstr ""
+"Obtenez une expérience pratique avec différents outils et technologies."
 
 #: templates/page_home.html:41
 msgid ""
 "A Django workshop aimed at getting more women and girls introduced to web "
 "development."
 msgstr ""
+"Un atelier Django visant à initier davantage de femmes et de filles au "
+"développement Web."
 
 #: templates/page_home.html:49
 msgid "First"
-msgstr ""
+msgstr "D'abord"
 
 #: templates/page_home.html:52
 msgid "In 2023 we hosted the first ever DjangoCon Africa."
-msgstr ""
+msgstr "En 2023, nous avons accueilli la toute première DjangoCon Afrique."
 
 #: templates/page_home.html:54
 msgid ""
 "DjangoCon Africa took place in Zanzibar, Tanzania 6th-11th November 2023."
 msgstr ""
+"La DjangoCon Africa a eu lieu à Zanzibar, en Tanzanie, du 6 au 11 novembre "
+"2023."
 
 #: templates/page_home.html:61
 msgid "We had roughly 200 attendees, of whom 103 were women."
-msgstr ""
+msgstr "Nous avons accueilli environ 200 participants, dont 103 femmes."
 
 #: templates/page_home.html:67
 msgid "The attendees represented at least 22 countries from around the world."
-msgstr ""
+msgstr "Les participants représentaient au moins 22 pays du monde entier."
 
 #: templates/page_home.html:73
 msgid ""
@@ -91,10 +98,14 @@ msgid ""
 "perspective often at the forefront\n"
 "                    "
 msgstr ""
+"Nous avons organisé 26 conférences sur des sujets couvrant la programmation, "
+"la société, les carrières, l'éducation, le handicap, l'agriculture - toute "
+"la gamme de sujets auxquels on peut s'attendre lors d'une DjangoCon, avec la "
+"perspective africaine souvent au premier plan."
 
 #: templates/page_home.html:84
 msgid "Read the report >"
-msgstr ""
+msgstr "Lire le rapport >"
 
 #: venv/lib/python3.12/site-packages/_pytest/config/argparsing.py:475
 #, python-format
@@ -1308,26 +1319,26 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
-#: website/header_menu_items.py:18
+#: website/header_menu_items.py:16
 msgid "Home"
 msgstr "Accueil"
 
-#: website/header_menu_items.py:26
+#: website/header_menu_items.py:24
 msgid "Sponsors"
-msgstr ""
+msgstr "Commanditaires"
+
+#: website/header_menu_items.py:26
+msgid "Sponsor Us"
+msgstr "Parrainez-nous"
+
+#: website/header_menu_items.py:27
+msgid "Our Sponsors"
+msgstr "Nos sponsors"
 
 #: website/header_menu_items.py:28
-msgid "Sponsor Us"
-msgstr ""
-
-#: website/header_menu_items.py:29
-msgid "Our Sponsors"
-msgstr ""
-
-#: website/header_menu_items.py:30
 msgid "Donate"
-msgstr ""
+msgstr "Faire un don"
 
-#: website/header_menu_items.py:40
+#: website/header_menu_items.py:38
 msgid "Logout"
 msgstr "Se Déconnecter"
