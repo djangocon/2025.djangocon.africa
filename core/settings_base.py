@@ -22,7 +22,6 @@ def gettext(s):
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-BASE_URL = "https://2025.djangocon.africa"
 
 SITE_ID = 1
 
