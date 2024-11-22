@@ -91,7 +91,7 @@ def deploy() -> None:
         "npm install",
         "python manage.py migrate",
         "npm run tailwind",
-        "python manage.py collectstatic",
+        "python manage.py collectstatic --no-input",
 
         # return home
         "cd",
