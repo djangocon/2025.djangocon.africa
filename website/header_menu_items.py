@@ -23,9 +23,8 @@ header_menu_items = [
     HeaderLink(
        label=_("Sponsors"),
        children=[
-            HeaderLink(_("Sponsor Us"), href=reverse("page_home")),
-            HeaderLink(_("Our Sponsors"), href=reverse("page_home")),
-            HeaderLink(_("Donate"), href=reverse("page_home")),
+            HeaderLink(_("Sponsor Us"), href="#"),
+            HeaderLink(_("Our Sponsors"), href="#"),
         ],
     ),
 ]

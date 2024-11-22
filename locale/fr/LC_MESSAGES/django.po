@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-22 00:47+0100\n"
+"POT-Creation-Date: 2024-11-22 01:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,13 +90,10 @@ msgstr "Les participants représentaient au moins 22 pays du monde entier."
 
 #: templates/page_home.html:73
 msgid ""
-"\n"
-"                    We held 26 talks on topics covering programming, "
-"society, careers, education, disability, agriculture\n"
-"                    - the full range\n"
-"                    of topics you’d expect at a DjangoCon, with the African "
-"perspective often at the forefront\n"
-"                    "
+"We held 26 talks on topics covering programming, "
+"society, careers, education, disability, agriculture - the full range "
+"of topics you’d expect at a DjangoCon, with the African perspective often at the forefront."
+
 msgstr ""
 "Nous avons organisé 26 conférences sur des sujets couvrant la programmation, "
 "la société, les carrières, l'éducation, le handicap, l'agriculture - toute "
@@ -1335,10 +1332,9 @@ msgstr "Parrainez-nous"
 msgid "Our Sponsors"
 msgstr "Nos sponsors"
 
-#: website/header_menu_items.py:28
-msgid "Donate"
-msgstr "Faire un don"
-
-#: website/header_menu_items.py:38
+#: website/header_menu_items.py:37
 msgid "Logout"
 msgstr "Se Déconnecter"
+
+#~ msgid "Donate"
+#~ msgstr "Faire un don"
