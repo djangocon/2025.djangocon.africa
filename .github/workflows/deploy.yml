@@ -1,0 +1,28 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: ["Tests"]
+    types: ["completed"]
+    branches: [main]
+
+
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install requirements
+        run: pip install requests
+
+      - name: Run deploy script
+        env:
+          PYTHON_ANYWHERE_USERNAME: ${{ secrets.PYTHON_ANYWHERE_USERNAME }}
+          PYTHON_ANYWHERE_TOKEN: ${{ secrets.PYTHON_ANYWHERE_TOKEN }}
+          PYTHON_ANYWHERE_HOST: ${{ secrets.PYTHON_ANYWHERE_HOST }}
+          PYTHON_ANYWHERE_DOMAIN_NAME: ${{ secrets.PYTHON_ANYWHERE_DOMAIN_NAME }}
+        run: python .github/scripts/deploy.py
+
