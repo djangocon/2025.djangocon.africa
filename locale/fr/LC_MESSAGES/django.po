@@ -46,7 +46,7 @@ msgstr "Ce qui se passe à DjangoCon"
 
 #: templates/page_home.html:28
 msgid "Africa"
-msgstr "Afrique"
+msgstr "Africa"
 
 #: templates/page_home.html:35
 msgid "Workshops"
