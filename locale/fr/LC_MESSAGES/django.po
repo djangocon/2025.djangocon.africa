@@ -71,7 +71,7 @@ msgstr "Première édition"
 
 #: templates/page_home.html:52
 msgid "In 2023 we hosted the first ever DjangoCon Africa."
-msgstr "En 2023, nous avons accueilli la toute première DjangoCon Afrique."
+msgstr "En 2023, nous avons accueilli la toute première DjangoCon Africa."
 
 #: templates/page_home.html:54
 msgid ""
