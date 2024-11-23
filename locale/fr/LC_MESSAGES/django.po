@@ -20,7 +20,7 @@ msgstr ""
 
 #: templates/page_home.html:13 templates/page_home.html:49
 msgid "DjangoCon Africa"
-msgstr "DjangoCon Afrique"
+msgstr "DjangoCon Africa"
 
 #: templates/page_home.html:17
 msgid "We are in the early phases of planning the next DjangoCon Africa!"
