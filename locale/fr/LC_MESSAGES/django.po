@@ -96,7 +96,7 @@ msgid ""
 
 msgstr ""
 "Nous avons organisé 26 conférences sur des sujets couvrant la programmation, "
-"la société, les carrières, l'éducation, le handicap, l'agriculture - toute "
+"la société, les carrières, l'éducation, le handicap, l'agriculture, soit toute "
 "la gamme de sujets auxquels on peut s'attendre lors d'une DjangoCon, avec la "
 "perspective africaine étant au premier plan."
 
