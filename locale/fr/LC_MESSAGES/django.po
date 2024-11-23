@@ -1326,7 +1326,7 @@ msgstr "Commanditaires"
 
 #: website/header_menu_items.py:26
 msgid "Sponsor Us"
-msgstr "Parrainez-nous"
+msgstr "Sponsorisez-nous"
 
 #: website/header_menu_items.py:27
 msgid "Our Sponsors"
