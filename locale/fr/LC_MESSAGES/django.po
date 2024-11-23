@@ -77,7 +77,7 @@ msgstr "En 2023, nous avons accueilli la toute première DjangoCon Africa."
 msgid ""
 "DjangoCon Africa took place in Zanzibar, Tanzania 6th-11th November 2023."
 msgstr ""
-"La DjangoCon Africa a eu lieu à Zanzibar, en Tanzanie, du 6 au 11 novembre "
+"DjangoCon Africa a eu lieu à Zanzibar, en Tanzanie, du 6 au 11 Novembre "
 "2023."
 
 #: templates/page_home.html:61
