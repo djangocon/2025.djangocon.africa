@@ -67,7 +67,7 @@ msgstr ""
 
 #: templates/page_home.html:49
 msgid "First"
-msgstr "D'abord"
+msgstr "Première édition"
 
 #: templates/page_home.html:52
 msgid "In 2023 we hosted the first ever DjangoCon Africa."
