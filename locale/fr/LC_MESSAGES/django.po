@@ -42,7 +42,7 @@ msgstr "Arusha, Tanzanie"
 
 #: templates/page_home.html:28
 msgid "What’s happening at DjangoCon"
-msgstr "Que se passe-t-il à la DjangoCon"
+msgstr "Ce qui se passe à DjangoCon"
 
 #: templates/page_home.html:28
 msgid "Africa"
