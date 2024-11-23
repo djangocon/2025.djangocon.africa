@@ -25,7 +25,7 @@ msgstr "DjangoCon Afrique"
 #: templates/page_home.html:17
 msgid "We are in the early phases of planning the next DjangoCon Africa!"
 msgstr ""
-"Nous sommes dans les premières phases de planification de la prochaine "
+"Nous entamons les premières phases de planification de la prochaine "
 "DjangoCon Africa!"
 
 #: templates/page_home.html:18
