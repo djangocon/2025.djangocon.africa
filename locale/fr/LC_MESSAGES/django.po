@@ -1322,7 +1322,7 @@ msgstr "Accueil"
 
 #: website/header_menu_items.py:24
 msgid "Sponsors"
-msgstr "Commanditaires"
+msgstr "Sponsors"
 
 #: website/header_menu_items.py:26
 msgid "Sponsor Us"
