@@ -98,7 +98,7 @@ msgstr ""
 "Nous avons organisé 26 conférences sur des sujets couvrant la programmation, "
 "la société, les carrières, l'éducation, le handicap, l'agriculture - toute "
 "la gamme de sujets auxquels on peut s'attendre lors d'une DjangoCon, avec la "
-"perspective africaine souvent au premier plan."
+"perspective africaine étant au premier plan."
 
 #: templates/page_home.html:84
 msgid "Read the report >"
