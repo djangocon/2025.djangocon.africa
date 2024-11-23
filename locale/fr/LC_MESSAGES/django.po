@@ -34,7 +34,7 @@ msgstr "Suivez nos réseaux sociaux pour rester informé"
 
 #: templates/page_home.html:21
 msgid "11 - 15 August"
-msgstr "11 - 15 août"
+msgstr "11 - 15 Août"
 
 #: templates/page_home.html:22
 msgid "Arusha, Tanzania"
