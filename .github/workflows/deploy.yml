@@ -12,7 +12,7 @@ jobs:
   deploy:
     name: deploy
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.repository == 'djangocon/2025.djangocon.africa' }}
     steps:
       - uses: actions/checkout@v4
 
