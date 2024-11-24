@@ -2,6 +2,7 @@ import requests
 import logging
 import sys
 import os
+import time
 from dataclasses import dataclass
 
 # config for logging
@@ -67,8 +68,11 @@ def get_deployment_console(console_name: str = "deploy") -> Console:
         sys.exit(1)
 
 
-def reload() -> None:
+def reload(wait_for: int = 10) -> None:
     """reload app"""
+    logging.info(f"waiting for {wait_for} seconds before reloading")
+    time.sleep(wait_for)
+
     logging.info("reloading app...")
     response = requests.post(
         f"https://{HOST}/api/v0/user/{USERNAME}/webapps/{DOMAIN_NAME}/reload/",
