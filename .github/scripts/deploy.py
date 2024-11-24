@@ -106,7 +106,7 @@ def deploy() -> None:
 def main() -> None:
     check_envs()
     deploy()
-    # reload()
+    reload()
 
 
 if __name__ == "__main__":
