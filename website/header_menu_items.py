@@ -20,13 +20,6 @@ header_menu_items = [
     #         #   HeaderLink("Team", href=reverse("page_team")),
     #     ],
     # ),
-    HeaderLink(
-       label=_("Sponsors"),
-       children=[
-            HeaderLink(_("Sponsor Us"), href="#"),
-            HeaderLink(_("Our Sponsors"), href="#"),
-        ],
-    ),
 ]
 
 user_loggedin_link = HeaderLink(
