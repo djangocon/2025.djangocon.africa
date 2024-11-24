@@ -9,4 +9,4 @@ services:
       - ./gitignore/postgresql:/var/lib/postgresql/data
       - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
     ports:
-      - "6543:5432"
+      - "5432:5432"
