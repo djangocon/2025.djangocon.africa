@@ -930,6 +930,22 @@ body {
   width: 58.333333%;
 }
 
+.w-1 {
+  width: 0.25rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-7 {
+  width: 1.75rem;
+}
+
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -1207,6 +1223,11 @@ body {
   padding-bottom: 1.25rem;
 }
 
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -1253,6 +1274,10 @@ body {
 
 .pt-3 {
   padding-top: 0.75rem;
+}
+
+.pt-0 {
+  padding-top: 0px;
 }
 
 .text-center {
