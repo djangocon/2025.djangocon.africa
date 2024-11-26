@@ -52,9 +52,12 @@
     }
 
     .button {
-        @apply bg-accentYellow text-gray-800 hover:text-black no-underline hover:font-bold pt-3 pb-3 pl-3 pr-3 cursor-pointer;
+        @apply bg-accentPurple text-white  no-underline p-3 cursor-pointer;
     }
 
+    .button_secondary {
+        @apply bg-accentYellow text-black no-underline p-3 cursor-pointer;
+    }
 
 }
 

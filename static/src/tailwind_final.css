@@ -693,20 +693,21 @@ td {
 .button {
   cursor: pointer;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 205 41 / var(--tw-bg-opacity));
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  background-color: rgb(44 5 242 / var(--tw-bg-opacity));
+  padding: 0.75rem;
   --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
   text-decoration-line: none;
 }
 
-.button:hover {
-  font-weight: 700;
+.button_secondary {
+  cursor: pointer;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 205 41 / var(--tw-bg-opacity));
+  padding: 0.75rem;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+  text-decoration-line: none;
 }
 
 .sr-only {
@@ -818,6 +819,10 @@ td {
 
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .block {

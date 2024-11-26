@@ -41,7 +41,25 @@ def create_proposal(request):
             proposal.user = request.user
             proposal.save()
             return HttpResponseRedirect(reverse("my_proposals"))
-
-    form = forms.ProposalForm()
+    else:
+        form = forms.ProposalForm()
     context = {"form": form}
     return render(request, "proposals/create_proposal.html", context)
+
+
+@login_required
+def edit_my_proposal(request, proposal_id):
+    proposal = get_object_or_404(models.Proposal, pk=proposal_id)
+    if proposal.user != request.user:
+        raise Http404("Proposal does not exist")
+
+    if request.method == "POST":
+        form = forms.ProposalForm(request.POST, instance=proposal)
+        if form.is_valid():
+            proposal = form.save()
+            return HttpResponseRedirect(reverse("my_proposals"))
+    else:
+        form = forms.ProposalForm(instance=proposal)
+
+    context = {"form": form}
+    return render(request, "proposals/edit_proposal.html", context)

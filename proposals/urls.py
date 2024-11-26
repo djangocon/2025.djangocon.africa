@@ -14,9 +14,9 @@ urlpatterns = [
         views.create_proposal,
         name="create_proposal",
     ),
-    # path(
-    #     "my_proposals/create",
-    #     views.action_create_proposal_submit,
-    #     name="action_create_proposal_submit",
-    # ),
+    path(
+        "my_proposals/<int:proposal_id>/edit",
+        views.edit_my_proposal,
+        name="edit_my_proposal",
+    ),
 ]
