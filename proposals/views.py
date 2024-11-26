@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from django.http import Http404
+from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404
+from django.urls import reverse
+
 from . import models
 from . import forms
 
@@ -32,6 +34,14 @@ def action_delete_my_proposal(request, proposal_id):
 
 @login_required
 def create_proposal(request):
+    if request.method == "POST":
+        form = forms.ProposalForm(request.POST)
+        if form.is_valid():
+            proposal = form.save(commit=False)
+            proposal.user = request.user
+            proposal.save()
+            return HttpResponseRedirect(reverse("my_proposals"))
+
     form = forms.ProposalForm()
     context = {"form": form}
     return render(request, "proposals/create_proposal.html", context)

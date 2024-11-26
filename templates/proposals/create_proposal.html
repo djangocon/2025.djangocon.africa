@@ -14,8 +14,8 @@
     {% endif %}
 
 
-    <form class="space-y-6" hx-post="{% url 'create_proposal' %}" hx-target="#proposal_form"
-        hx-disabled-elt="#proposal_form_button" hx-swap="outerHTML">
+    <form class="space-y-6" method="post">
+        {% csrf_token %}
         {{ form | crispy}}
         <div>
             <button type="submit" id="proposal_form_button" class="button w-full">
