@@ -72,7 +72,7 @@
     </section>
 
     <section class="p-10 flex flex-row gap-5">
-        <div class="w-10/12">
+        <div class="lg:w-10/12">
 
             <h2 class="text-4xl leading-snug pb-5"><span class="text-accentYellow">First</span> DjangoCon Africa
             </h2>
@@ -81,12 +81,12 @@
 
             <p>DjangoCon Africa took place in Zanzibar, Tanzania 6th-11th November 2023</p>
 
-            <div class="pt-5 grid grid-cols-3 gap-5">
+            <div class="pt-5 grid lg:grid-cols-3 gap-5">
 
                 <div>
                     <h3 class="text-accentGreen text-4xl">~200</h3>
 
-                    <p>TWe had roughly 200 attendees, of whom 103 were women</p>
+                    <p>We had roughly 200 attendees, of whom 103 were women</p>
                 </div>
 
                 <div>
@@ -107,10 +107,14 @@
 
             </div>
 
-            <a href="https://2023.djangocon.africa/news/report/" target="_blank" class="button">Read the report ></a>
+            <div class="pt-5">
+
+                <a href="https://2023.djangocon.africa/news/report/" target="_blank" class="button">Read the report
+                    ></a>
+            </div>
         </div>
-        <div>
-            <img src="{% static 'images/first-djangocon-africa.png' %}" class="" />
+        <div class="hidden  lg:flex items-center">
+            <img src="{% static 'images/first-djangocon-africa.png' %}" class=" " />
 
         </div>
 
