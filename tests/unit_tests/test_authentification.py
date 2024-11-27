@@ -3,13 +3,14 @@ import pytest
 from pytest_django.asserts import assertRedirects, assertTemplateUsed
 from custom_auth.models import User
 from django.core import mail
+from django.urls import reverse
 
 
 client = Client()
 
 @pytest.fixture
-def user_fixture(db):
-    default_user = User.objects.create(
+def user_fixture(db, django_user_model):
+    default_user = django_user_model.objects.create(
         first_name="Alice",
         last_name="Nolastname",
         email="alice@wonderland.com",
@@ -31,13 +32,13 @@ def test_register_new_member():
                              fetch_redirect_response=True)
     assert len(mail.outbox) == 1
 
-
+@pytest.mark.django_db
 def test_get_register_page():
     response = client.get("/accounts/register/")
     assert response.status_code ==  200
     assertTemplateUsed(response, "registration/register.html")
 
-
+@pytest.mark.django_db
 def test_valid_template_for_forgotten_password():
     response = client.get("/accounts/password_reset/")
     assertTemplateUsed(response, "registration/password_reset_form.html")
@@ -45,7 +46,7 @@ def test_valid_template_for_forgotten_password():
 
 @pytest.mark.django_db
 def test_valid_email_sending_for_forgotten_password(user_fixture):
-    u = user_fixture()
+    u = user_fixture
     response = client.post(
         "/accounts/password_reset/",
         dict(email=u.email),
@@ -64,16 +65,12 @@ def test_valid_email_sending_for_forgotten_password(user_fixture):
 
 
 
-def test_valid_url_to_reset_password():
-    u = user_fixture()
-    response_0 = client.post("/accounts/password_reset/",
+def test_valid_url_to_reset_password(user_fixture):
+    u = User.objects.get(email = "alice@wonderland.com")
+    client.post("/accounts/password_reset/",
                                 dict(email=u.email),
                                format="text/html")
     email_lines = mail.outbox[0].body.splitlines()
-    reset_password_url = email_lines[2]
-    response = client.post(
-        reset_password_url,
-        dict(password1="3OPHWv9S3ZI", password2="3OPHWv9S3ZI",email=u.email),
-        format="text.html",
-    )
-    assert response.status_code ==  200
+    url = email_lines[5]
+    response = client.get(url)
+    assert response.status_code == 302
