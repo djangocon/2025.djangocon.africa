@@ -3,7 +3,6 @@ import pytest
 from pytest_django.asserts import assertRedirects, assertTemplateUsed
 from custom_auth.models import User
 from django.core import mail
-from django.urls import reverse
 
 
 client = Client()
@@ -61,7 +60,6 @@ def test_valid_email_sending_for_forgotten_password(user_fixture):
     )
     assert mail.outbox[0].to == [u.email]
     assert len(mail.outbox) ==  1
-
 
 
 
