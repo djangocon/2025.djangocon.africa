@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.template import Context
 
-
 from .forms import UserRegisterForm
 from  .utils import send_registration_email
 

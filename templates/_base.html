@@ -64,7 +64,7 @@
                     {% partial header-menu-item-large %}
                     {% endfor %}
 
-                    {% if user.is_authenticated %}
+                    <!-- {% if user.is_authenticated %}
                     {% with link=user_loggedin_link %}
                     {% partial header-menu-item-large %}
                     {% endwith %}
@@ -72,7 +72,7 @@
 
                     {% with link=user_not_loggedin_link %}
                     {% partial header-menu-item-large %}
-                    {% endwith %}
+                    {% endwith %} -->
 
                     {% endif %}
 
@@ -81,11 +81,23 @@
 
         </div>
     </nav>
-    {% block content %}
+    <section class="max-w-7xl mx-auto pt-14">
+        {% block content %}
 
 
-    {% endblock %}
 
+        {% endblock %}
+
+        <section class="bg-lightPrimary text-white text-2xl text-center py-8">
+
+            <a target="_blank" href="https://x.com/djcafrica"><i class="fab fa-twitter"></i></a>
+            <a target="_blank" href="https://github.com/djangocon/2025.djangocon.africa"><i
+                    class="fab fa-github"></i></a>
+            <a target="_blank" href="https://fosstodon.org/@djangoconafrica"><i class="fab fa-mastodon"></i></a>
+            <a target="_blank" href="https://www.facebook.com/djcafrica/"><i class="fab fa-facebook"></i></a>
+
+        </section>
+    </section>
 
 </body>
 

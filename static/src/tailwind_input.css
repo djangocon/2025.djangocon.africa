@@ -4,9 +4,7 @@
 
 @layer components {
 
-    .title {
-        @apply font-bold text-gray-700
-    }
+
 
     h1 {
         @apply text-4xl font-bold text-gray-700
@@ -28,14 +26,17 @@
         @apply list-disc list-inside ml-6 space-y-2 text-lg text-gray-700
     }
 
+    body {
+        font-family: Arial, sans-serif;
 
+    }
 
     .header_button {
         @apply hover:underline font-bold
     }
 
     .button {
-        @apply bg-green-500 text-gray-100 hover:bg-green-700 font-bold rounded-full transition-colors duration-300 no-underline hover:text-gray-100 pt-1 pb-1 pl-3 pr-3;
+        @apply bg-accentYellow text-black   transition-colors duration-300 no-underline hover:text-gray-700 pt-3 pb-3 pl-3 pr-3;
     }
 
 

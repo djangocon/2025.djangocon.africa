@@ -13,12 +13,12 @@ class HeaderLink:
 
 header_menu_items = [
     HeaderLink(label="Home", href="/"),
-    HeaderLink(
-        label="About",
-        children=[
-            #   HeaderLink("Team", href=reverse("page_team")),
-        ],
-    ),
+    # HeaderLink(
+    #     label="About",
+    #     children=[
+    #         #   HeaderLink("Team", href=reverse("page_team")),
+    #     ],
+    # ),
 ]
 
 user_loggedin_link = HeaderLink(
