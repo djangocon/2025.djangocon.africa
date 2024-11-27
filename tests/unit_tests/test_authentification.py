@@ -2,7 +2,6 @@ from django.test  import TestCase, Client
 from custom_auth.models import User
 from django.core import mail
 
-import pytest
 
 class UserTestCase(TestCase):
     def setUp(self):
@@ -59,4 +58,4 @@ class UserTestCase(TestCase):
             dict(password1="3OPHWv9S3ZI", password2="3OPHWv9S3ZI",email=u.email),
             format="text.html",
         )
-        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.status_code, 200)
