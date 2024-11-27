@@ -52,7 +52,7 @@ class UserTestCase(TestCase):
                                     dict(email=u.email),
                                    format="text/html")
         email_lines = mail.outbox[0].body.splitlines()
-        reset_password_url = email_lines[2].replace(" ", "")
+        reset_password_url = email_lines[2]
         response = self.client.post(
             reset_password_url,
             dict(password1="3OPHWv9S3ZI", password2="3OPHWv9S3ZI",email=u.email),
