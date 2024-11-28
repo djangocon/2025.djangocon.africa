@@ -1,9 +1,9 @@
-from django.test  import TestCase, Client
 import pytest
+from django.core import mail
+from django.test import Client
 from pytest_django.asserts import assertRedirects, assertTemplateUsed
 from custom_auth.models import User
-from django.core import mail
-
+from custom_auth import utils
 
 client = Client()
 
@@ -17,8 +17,14 @@ def user_fixture(db, django_user_model):
     )
     return default_user
 
+def test_send_registration_email():
+   utils.send_registration_email(
+       email="alice@wonderland.com",
+       username ="alice")
+   assert len(mail.outbox) == 1
+
 @pytest.mark.django_db
-def test_register_new_member():
+def test_register():
     response = client.post(
         "/accounts/register/",
         dict(email="rabbit.white@wonderland.com",
@@ -30,6 +36,7 @@ def test_register_new_member():
                              target_status_code=200,
                              fetch_redirect_response=True)
     assert len(mail.outbox) == 1
+
 
 @pytest.mark.django_db
 def test_get_register_page():
@@ -72,3 +79,8 @@ def test_valid_url_to_reset_password(user_fixture):
     url = email_lines[5]
     response = client.get(url)
     assert response.status_code == 302
+    re = client.post(
+        response.url,
+        dict(password1="FNEYghfr",password2="FNEYghfr"),
+        format="text/html")
+    assert re.status_code == 200
