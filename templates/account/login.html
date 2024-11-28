@@ -1,9 +1,14 @@
 {% extends "_base.html" %}
+{% load i18n %}
+{% load allauth account %}
 
 {% load tailwind_filters %}
 
-{% block content %}
 
+{% block head_title %}
+    {% trans "Sign In" %}
+{% endblock head_title %}
+{% block content %}
 <section class="max-w-3xl pt-24 mx-auto">
     {% for msg in messages %}
         <div class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 py-3" role="alert">
@@ -12,17 +17,20 @@
         </div>
     {% endfor %}
     <h1 class="title pb-5">Log in </h1>
+     {% element p %}
+    {% blocktranslate %}If you have not created an account yet, then please {{ link }}sign up{{ end_link }} first.{% endblocktranslate %}
+    {% endelement %}
+
     <form method="post">
         {% csrf_token %}
         {{ form | crispy }}
         <div class="mt-2 flex justify-between">
             <div>
                 <button class="button" type="submit">Log In</button>
-                <a class="button" href="{% url 'password_reset' %}">Forgot password</a>
+                <a class="button" href="{% url 'account_reset_password' %}">Forgot password</a>
             </div>
-            <a class="button" href="{% url 'register' %}">Register</a> 
+            <a class="button" href="{% url 'account_signup' %}">Register</a> 
         </div>
     </form>
 </section>
-
 {% endblock %}

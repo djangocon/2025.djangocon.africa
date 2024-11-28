@@ -26,10 +26,10 @@ user_loggedin_link = HeaderLink(
     children=[
         # HeaderLink("Profile", href="todo"),
         # HeaderLink("Talk Submissions", href="todo"),
-        HeaderLink("Logout", href=reverse("logout")),
+        HeaderLink("Logout", href=reverse("account_logout")),
     ],
 )
 
 user_not_loggedin_link = HeaderLink(
-    label='<i class="fas fa-user"></i> Login/Register', href=reverse("login")
+    label='<i class="fas fa-user"></i> Login/Register', href=reverse("account_login")
 )

@@ -21,7 +21,7 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path("", include("website.urls")),
-    path("", include("custom_auth.urls")),
+    path("accounts/", include("allauth.urls")),
     path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
 ]
