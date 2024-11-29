@@ -149,8 +149,14 @@ AUTHENTICATION_BACKENDS = [
     "allauth.account.auth_backends.AuthenticationBackend",
 ]
 
-SITE_ID = 1  # new
+ACCOUNT_FORMS = {
+'signup': 'custom_auth.forms.CustomSignupForm',
+}
 
-ACCOUNT_EMAIL_VERIFICATION = "none"
+SITE_ID = 1  # new
+ACCOUNT_EMAIL_VERIFICATION = True
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_AUTHENTICATION_METHOD = "email"
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_LOGOUT_REDIRECT_URL ='/accounts/login/'
