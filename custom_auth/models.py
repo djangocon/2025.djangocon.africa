@@ -8,7 +8,6 @@ class UserManager(BaseUserManager):
     def create_user(
         self,
         email,
-        username,
         first_name,
         last_name,
         password=None,
@@ -39,10 +38,9 @@ class UserManager(BaseUserManager):
         )
         return user
 
-    def create_superuser(self, email, username="", first_name="", last_name="", password=None):
+    def create_superuser(self, email, first_name="", last_name="", password=None):
         user = self.create_user(
             email,
-            username,
             first_name,
             last_name,
             password=password,
@@ -55,7 +53,6 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=50, unique=True)
 
-    username = models.CharField(max_length=25, blank=True)
     first_name = models.CharField(max_length=25, blank=True)
     last_name = models.CharField(max_length=25, blank=True)
 
