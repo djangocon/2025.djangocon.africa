@@ -1,5 +1,6 @@
 {% load static %}
 
+{% load tailwind_filters %}
 {% load partials %}
 
 {% partialdef header-menu-item-large %}
@@ -22,7 +23,16 @@
         style="display: none;">
 
         {% for child in link.children %}
-        <a href="{{ child.href }}" class="header_button">{{ child.label }}</a>
+            {% if child.action_url %}
+            <form method="post" action={{ child.action_url}}>
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <button  type="submit">{{ child.label }}</button>
+                </form>
+            {% else %}
+
+                 <a href="{{ child.href }}" class="header_button">{{ child.label }}</a>
+            {% endif %}
         {% endfor %}
 
     </div>
@@ -64,7 +74,7 @@
                     {% partial header-menu-item-large %}
                     {% endfor %}
 
-                    <!-- {% if user.is_authenticated %}
+                    {% if user.is_authenticated %}
                         {% with link=user_loggedin_link %}
                         {% partial header-menu-item-large %}
                         {% endwith %}
@@ -74,7 +84,7 @@
                         {% partial header-menu-item-large %}
                         {% endwith %} 
 
-                        {% endif %} -->
+                    {% endif %}
 
                 </div>
             </div>
