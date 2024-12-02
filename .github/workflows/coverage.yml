@@ -46,5 +46,9 @@ jobs:
         DB_HOST: localhost
         DB_PASSWORD: postgres
         DB_USER: postgres
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
+      with:
+        limit-access-to-actor: true
     - name: Upload Coverage to Codecov
       uses: codecov/codecov-action@v2
