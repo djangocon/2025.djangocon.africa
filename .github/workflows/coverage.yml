@@ -19,8 +19,8 @@ jobs:
       postgres:
         image: postgres:10.8
         env:
-          DB_USER: postgres
-          DB_PASSWORD: pguser
+          DB_USER: pguser
+          DB_PASSWORD: postgres
           DB_NAME: djangocon_africa
         ports:
           - 5432:5432
