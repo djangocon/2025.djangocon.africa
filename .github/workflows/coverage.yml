@@ -21,31 +21,30 @@ jobs:
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: test_db
+          POSTGRES_DB: djangocon_africa
         ports:
           - 5432:5432
         # needed because the postgres container does not provide a healthcheck
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: '2'
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: '2'
 
-      - name: Setup Python ${{ matrix.python-version }}
-        uses: actions/setup-python@master
-        with:
-          python-version: ${{ matrix.python-version }}
-
-      - name: Generate Report
-        run: |
-          pip install -r requirements.txt
-          coverage run -m pytest
-          coverage xml
-        env:
-          POSTGRES_DB: test_db
-          POSTGRES_HOST: localhost
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_USER: postgres
-      - name: Upload Coverage to Codecov
-        uses: codecov/codecov-action@v2
+    - name: Setup Python ${{ matrix.python-version }}
+      uses: actions/setup-python@master
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Generate Report
+      run: |
+        pip install -r requirements.txt
+        coverage run -m pytest
+        coverage xml
+      env:
+        POSTGRES_DB: djangocon_africa
+        POSTGRES_HOST: localhost
+        POSTGRES_PASSWORD: postgres
+        POSTGRES_USER: postgres
+    - name: Upload Coverage to Codecov
+      uses: codecov/codecov-action@v2
