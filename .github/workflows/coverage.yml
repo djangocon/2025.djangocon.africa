@@ -21,7 +21,7 @@ jobs:
         env:
           DB_USER: postgres
           DB_PASSWORD: postgres
-          DB_NAME: djangocon_africa
+          DB_NAME: test_db
         ports:
           - 5432:5432
         # needed because the postgres container does not provide a healthcheck
@@ -42,7 +42,7 @@ jobs:
         coverage run -m pytest
         coverage xml
       env:
-        DB_NAME: djangocon_africa
+        DB_NAME: test_db
         DB_HOST: localhost
         DB_PASSWORD: postgres
         DB_USER: postgres

@@ -4,7 +4,7 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=djangocon_africa
+      - POSTGRES_DB=test_db
     volumes:
       - ./gitignore/postgresql:/var/lib/postgresql/data
       - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
