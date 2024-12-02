@@ -15,7 +15,7 @@ jobs:
       postgres:
         image: postgres:14.13
         env:
-          POSTGRES_USER: pguser
+          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_DB: djangocon_africa
         ports:
@@ -57,7 +57,7 @@ jobs:
             DJANGO_SETTINGS_MODULE: core.settings_dev
             DATABASE_HOST: localhost
             DATABASE_PORT: 5432
-            DATABASE_USER: pguser
+            DATABASE_USER: postgres
             DATABASE_PASSWORD: postgres
             DATABASE_NAME: djangocon_africa
       - name: Run Tests
@@ -67,6 +67,6 @@ jobs:
             DJANGO_SETTINGS_MODULE: core.settings_dev
             DATABASE_HOST: localhost
             DATABASE_PORT: 5432
-            DATABASE_USER: pguser
+            DATABASE_USER: postgres
             DATABASE_PASSWORD: postgres
             DATABASE_NAME: djangocon_africa
