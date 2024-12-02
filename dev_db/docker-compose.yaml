@@ -2,7 +2,7 @@ services:
   postgres:
     image: postgres:12
     environment:
-      - POSTGRES_USER=pguser
+      - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=db
     volumes:
