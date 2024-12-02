@@ -19,8 +19,8 @@ jobs:
       postgres:
         image: postgres:10.8
         env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: pguser
+          POSTGRES_PASSWORD: pguserpasswd
           POSTGRES_DB: djangocon_africa
         ports:
           - 5432:5432
@@ -43,8 +43,8 @@ jobs:
         coverage xml
       env:
         POSTGRES_DB: djangocon_africa
+        POSTGRES_USER: pguser
         POSTGRES_HOST: localhost
-        POSTGRES_PASSWORD: postgres
-        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: pguserpasswd
     - name: Upload Coverage to Codecov
       uses: codecov/codecov-action@v2
