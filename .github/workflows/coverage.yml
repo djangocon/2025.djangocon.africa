@@ -39,6 +39,7 @@ jobs:
     - name: Generate Report
       run: |
         pip install -r requirements.txt
+        python manage.py collectstatic
         coverage run -m pytest
         coverage xml
       env:
