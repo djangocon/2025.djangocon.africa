@@ -20,7 +20,7 @@ jobs:
         image: postgres:10.8
         env:
           DB_USER: postgres
-          DB_PASSWORD: postgres
+          DB_PASSWORD: pguser
           DB_NAME: djangocon_africa
         ports:
           - 5432:5432
@@ -45,6 +45,6 @@ jobs:
         DB_NAME: djangocon_africa
         DB_HOST: localhost
         DB_PASSWORD: postgres
-        DB_USER: postgres
+        DB_USER: pguser
     - name: Upload Coverage to Codecov
       uses: codecov/codecov-action@v2
