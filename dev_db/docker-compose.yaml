@@ -2,9 +2,9 @@ services:
   postgres:
     image: postgres:12
     environment:
-      - POSTGRES_USER=postgres
+      - POSTGRES_USER=pguser
       - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=test_db
+      - POSTGRES_DB=db
     volumes:
       - ./gitignore/postgresql:/var/lib/postgresql/data
       - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
