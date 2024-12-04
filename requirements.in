@@ -10,3 +10,4 @@ django-browser-reload==1.16.0
 django-template-partials==24.4
 whitenoise==6.8.2
 crispy-tailwind==1.0.3
+django-template-partials==24.4
