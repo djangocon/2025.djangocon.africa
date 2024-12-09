@@ -21,14 +21,22 @@
 
     <form method="post">
         {% csrf_token %}
-        {{ form | crispy }}
-        <div class="mt-2 flex justify-between">
-            <div>
-                <button class="button" type="submit">Log In</button>
-                <a class="button" href="{% url 'account_reset_password' %}">Forgot password</a>
+        <section class="mt-2">
+            {{ form | crispy }}
+        </section>
+        <section class="pt-10">
+            <div class=" mt-4 flex items-stretch">
+                <div> 
+                    <button class="button" type="submit">Log In</button>
+                </div>
+                <div>
+                    <a class="button" href="{% url 'account_reset_password' %}">Forgot password</a>
+                </div>
+                <div>
+                   <a class="button" href="{% url 'account_signup' %}">Register</a> 
+                </div>
             </div>
-            <a class="button" href="{% url 'account_signup' %}">Register</a> 
-        </div>
+        </section>
     </form>
 </div>
 {% endblock %}
