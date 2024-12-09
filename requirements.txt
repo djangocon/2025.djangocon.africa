@@ -7,6 +7,7 @@
 asgiref==3.8.1
     # via
     #   django
+    #   django-allauth
     #   django-browser-reload
 coverage==7.5.3
     # via -r requirements.in
@@ -14,18 +15,24 @@ crispy-tailwind==1.0.3
     # via -r requirements.in
 dj-database-url==2.2.0
     # via -r requirements.in
-django==4.2.13
+django==4.2.16
     # via
     #   -r requirements.in
     #   crispy-tailwind
     #   dj-database-url
+    #   django-allauth
     #   django-browser-reload
     #   django-crispy-forms
+    #   django-extensions
     #   django-template-partials
+django-allauth==65.2.0
+    # via -r requirements.in
 django-browser-reload==1.16.0
     # via -r requirements.in
 django-crispy-forms==2.3
     # via crispy-tailwind
+django-extensions==3.2.3
+    # via -r requirements.in
 django-template-partials==24.4
     # via -r requirements.in
 iniconfig==2.0.0
@@ -36,7 +43,7 @@ pluggy==1.5.0
     # via pytest
 psycopg2-binary==2.9.9
     # via -r requirements.in
-pytest==8.2.2
+pytest==8.3.3
     # via
     #   -r requirements.in
     #   pytest-django

@@ -17,11 +17,11 @@ jobs:
 
     services:
       postgres:
-        image: postgres:10.8
+        image: postgres:14.13
         env:
-          DB_USER: postgres
-          DB_PASSWORD: postgres
-          DB_NAME: djangocon_africa
+          POSTGRES_USER: pguser
+          POSTGRES_PASSWORD: pguserpasswd
+          POSTGRES_DB: djangocon_africa
         ports:
           - 5432:5432
         # needed because the postgres container does not provide a healthcheck
@@ -39,12 +39,13 @@ jobs:
     - name: Generate Report
       run: |
         pip install -r requirements.txt
+        python manage.py collectstatic
         coverage run -m pytest
         coverage xml
       env:
-        DB_NAME: djangocon_africa
-        DB_HOST: localhost
-        DB_PASSWORD: postgres
-        DB_USER: postgres
+        POSTGRES_DB: djangocon_africa
+        POSTGRES_USER: pguser
+        POSTGRES_HOST: localhost
+        POSTGRES_PASSWORD: pguserpasswd
     - name: Upload Coverage to Codecov
       uses: codecov/codecov-action@v2

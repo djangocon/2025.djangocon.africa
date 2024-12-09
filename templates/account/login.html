@@ -1,0 +1,42 @@
+{% extends "_base.html" %}
+{% load i18n %}
+{% load allauth account %}
+
+{% load tailwind_filters %}
+
+
+{% block content %}
+
+<div class="flex flex-col items-center">
+    {% for msg in messages %}
+        <div class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 py-3" role="alert">
+            <p class="font-bold">Success!</p>
+            <p class="text-sm">{{ msg }}</p>
+        </div>
+    {% endfor %}
+    <h1 class="title pb-5">Log in </h1>
+     {% element p %}
+    {% blocktranslate %}If you have not created an account yet, then please {{ link }}sign up{{ end_link }} first.{% endblocktranslate %}
+    {% endelement %}
+
+    <form method="post">
+        {% csrf_token %}
+        <section class="mt-2">
+            {{ form | crispy }}
+        </section>
+        <section class="pt-10">
+            <div class=" mt-4 flex items-stretch">
+                <div> 
+                    <button class="button" type="submit">Log In</button>
+                </div>
+                <div>
+                    <a class="button" href="{% url 'account_reset_password' %}">Forgot password</a>
+                </div>
+                <div>
+                   <a class="button" href="{% url 'account_signup' %}">Register</a> 
+                </div>
+            </div>
+        </section>
+    </form>
+</div>
+{% endblock %}
