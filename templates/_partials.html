@@ -1,0 +1,29 @@
+{% load partials %}
+{% load static %}
+
+
+{% partialdef separator-top-waves %}
+
+<div class="h-20  lg:h-40 relative overflow-hidden">
+
+    <img src="{% static 'images/wave-divider.png' %}" class="top-0 left-0 absolute " />
+
+    <div class="h-20 bg-darkPrimary absolute top-10 lg:top-20 left-0 w-full"></div>
+</div>
+
+{% endpartialdef %}
+
+
+
+
+
+{% partialdef separator-bottom-waves %}
+
+<div class="h-20 lg:h-40 relative overflow-hidden">
+
+    <img src="{% static 'images/wave-divider.png' %}" class="bottom-10 lg:bottom-20 left-0 absolute rotate-180" />
+
+    <!-- <div class="h-20 bg-darkPrimary absolute top-20 left-0 w-1"></div> -->
+</div>
+
+{% endpartialdef %}

@@ -56,52 +56,46 @@
     <script src="{% static 'src/font_awesome_5.js' %}" crossorigin="anonymous"></script>
 </head>
 
-<body  hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
 
-   <div class="h-svh">
-        <!-- Header bar
-        To edit the header menu items look at header_menu_items.py
-        -->
-        <nav>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5">
-                <div class="flex justify-between h-16">
-                    <a class="hover:cursor-pointer">
-                        <img src="{% static 'images/logo.svg' %}" alt="logo" />
-                    </a>
-                    <div class="flex items-center space-x-4">
-                        {% for link in header_menu_items %}
-                            {% partial header-menu-item-large %}
-                        {% endfor %}
-                        {% if user.is_authenticated %}
-                            {% with link=user_loggedin_link %}
-                                {% partial header-menu-item-large %}
-                            {% endwith %}
-                        {% else %}
-                            {% with link=user_not_loggedin_link %}
-                                {% partial header-menu-item-large %}
-                            {% endwith %} 
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <section class="max-w-7xl mx-auto pt-14">
-            {% block content %}
-            {% endblock %}
+
+    <!-- Header bar
+    To edit the header menu items look at header_menu_items.py
+    -->
+    <nav>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5">
+            <div class="flex justify-between">
+                <a class="hover:cursor-pointer ">
+                    <img src="{% static 'images/logo.svg' %}" alt="logo" class="h-8" />
+                </a>
+                <div class="flex items-center space-x-4">
+                    {% for link in header_menu_items %}
+                    {% partial header-menu-item-large %}
+                    {% endfor %}
+
+                    <!-- {% if user.is_authenticated %}
+                    {% with link=user_loggedin_link %}
+                    {% partial header-menu-item-large %}
+                    {% endwith %}
+                    {% else %}
+
+                    {% with link=user_not_loggedin_link %}
+                    {% partial header-menu-item-large %}
+                    {% endwith %} -->
+                    {% endif %}
+        </div>
+    </nav>
+    <section class="max-w-7xl mx-auto pt-14">
+        {% block content %}
+        {% endblock %}
+        <section class="bg-darkPrimary text-white text-2xl text-center py-8">
+            <a target="_blank" href="https://x.com/djcafrica"><i class="fab fa-twitter"></i></a>
+            <a target="_blank" href="https://github.com/djangocon/2025.djangocon.africa"><i
+                    class="fab fa-github"></i></a>
+            <a target="_blank" href="https://fosstodon.org/@djangoconafrica"><i class="fab fa-mastodon"></i></a>
+            <a target="_blank" href="https://www.facebook.com/djcafrica/"><i class="fab fa-facebook"></i></a>
         </section>
-    </div>
-
-    <footer class="bg-lightPrimary text-white text-2xl text-center py-8 fixed bottom-0 w-full">
-        <a target="_blank" href="https://x.com/djcafrica"><i class="fab fa-twitter"></i></a>
-        <a target="_blank" href="https://github.com/djangocon/2025.djangocon.africa">
-            <i class="fab fa-github"></i>
-        </a>
-        <a target="_blank" href="https://fosstodon.org/@djangoconafrica">
-            <i class="fab fa-mastodon"></i></a>
-        <a target="_blank" href="https://www.facebook.com/djcafrica/">
-            <i class="fab fa-facebook"></i>
-        </a>
-    </footer>
+    </section>
 </body>
 
 </html>
