@@ -49,5 +49,20 @@ class Proposal(models.Model):
 
     accessibility_requests = models.TextField(blank=True, null=True)
 
+    STATUS_SUBMITTED = "submitted"
+    STATUS_REJECTED = "rejected"
+    STATUS_ACCEPTED = "accepted"
+    STATUS_SHORTLIST = "shortlisted"
+    STATUS_BACKUP = "backup"
+
+    STATUS_CHOICES = [
+        (STATUS_SUBMITTED, "Submitted"),
+        (STATUS_REJECTED, "Rejected"),
+        (STATUS_ACCEPTED, "Accepted"),
+        (STATUS_SHORTLIST, "Shortlisted"),
+        (STATUS_BACKUP, "Backup"),
+    ]
+    status = models.CharField(choices=STATUS_CHOICES, default=STATUS_SUBMITTED)
+
     def __str__(self):
         return f"{self.title}"
