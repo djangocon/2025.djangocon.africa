@@ -49,11 +49,14 @@ Tanzania flag colors generated using:
 // }
 
 
-const darkPrimary = "#2B1392"
-const lightPrimary = "#004AAD"
+// 
+
+const darkPrimary = "#0F103F"
+const lightPrimary = "#2B1392"
 
 const accentPurple = "#2C05F2"
 const accentYellow = "#FFCD29"
+const accentPink = "#FF93DD"
 
 const accentGreen = "#048041"
 
@@ -70,7 +73,8 @@ module.exports = {
         lightPrimary,
         accentPurple,
         accentYellow,
-        accentGreen
+        accentGreen,
+        accentPink
       },
     },
   },

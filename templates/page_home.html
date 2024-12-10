@@ -1,5 +1,6 @@
 {% extends "_base.html" %}
 {% load static %}
+{% load partials %}
 
 
 {% block content %}
@@ -8,118 +9,144 @@
 
 <div class="flex flex-col gap-10">
 
-
     <section id="hero" class="flex flex-col lg:flex-row px-2 ">
-        <div class="md:w-7/12 ">
+        <div class="lg:w-7/12">
 
 
-            <h1 class="text-6xl pb-2 leading-snug">DjangoCon Africa <br /><span class="text-lightPrimary">2025</span>
+            <h1 class="text-6xl pb-2 leading-snug text-darkPrimary">DjangoCon Africa <br />2025
             </h1>
-            <!-- <h2 class="text-5xl font-bold text-tz_flag_blue-600 mb-4">Arusha, Tanzania</h2>
-            <p class="text-3xl font-semibold text-gray-700 mb-2">11 - 16 August</p> -->
 
-            <div class="lg:pt-10">
+            <div class="pb-4">
+                <p class="font-bold">📍 Arusha, Tanzania</p>
+                <p class="font-bold">📆 11 - 15 August </p>
+            </div>
 
-                <p>We are in the early phases of planning the next DjangoCon Africa!</p>
+            <div class="lg:pt-10 gap-2 flex flex-col">
+
+                <p>
+                    Welcome to DjangoCon Africa 2025! Get ready for five amazing days packed with talks, workshops,
+                    learning, and
+                    collaboration. It’s a chance to connect with the international Django community, share ideas, and be
+                    part of something
+                    special.
+                </p>
+                <p>
+                    This year’s DjangoCon will take place in the stunning city of Arusha, known for its vibrant culture
+                    and
+                    breathtaking
+                    landscapes.
+
+                </p>
                 <p>Follow our socials to stay up to date</p>
             </div>
 
-            <!-- <div class="border border-accentPurple p-2 rounded-md mt-5 w-fit lg:hidden">
 
-                <p class="font-bold">📆 11 - 15 August </p>
-                <p class="font-bold">📍 Arusha, Tanzania</p>
-            </div> -->
 
         </div>
 
-        <img src="{% static 'images/hero.png' %}" class="lg:w-6/12 pt-5 lg:pt-0" />
+        <div class="hidden  lg:w-6/12 pt-5 md:pt-0 lg:flex items-center mx-auto">
+            <img src="{% static 'images/hero.png' %}" />
+        </div>
 
     </section>
 
 
-    <section class="bg-lightPrimary flex lg:flex-row flex-col">
+    <div>
 
+        {% include "_partials.html#separator-top-waves" %}
 
-
-
-        <div class="p-10 ">
-
-            <h2 class="text-white text-4xl leading-snug pb-5">What’s happening at DjangoCon <br /> Africa <span
-                    class="text-accentYellow">2025</span>
-            </h2>
-
-            <div class="grid md:grid-cols-2 gap-3">
-
-                <div class="bg-darkPrimary p-5">
-                    <h3 class="text-accentYellow">Workshops</h3>
-                    <p class="text-white">Get hands on experience with different tools and technologies</p>
-                </div>
-
-                <div class="bg-darkPrimary p-5">
-                    <h3 class="text-accentYellow">DjangoGirls</h3>
-                    <p class="text-white">A Django workshop aimed at getting more women and girls introduced to web
-                        development
-                    </p>
+        <section class="bg-darkPrimary px-10">
+            <div class="">
+                <div class="w-fit mx-auto">
+                    <h2 class="text-white text-6xl ">What’s happening at DjangoCon Africa <br /> <span
+                            class="text-accentPink">2025</span>
+                    </h2>
                 </div>
             </div>
-        </div>
 
-        <div class="w-full">
+            <div class="flex flex-col lg:flex-row mt-5 gap-5 pb-20">
 
-            <img src="{% static 'images/photos/IMG_5854.JPG' %}" class="lg:h-full lg:w-auto object-cover w-full" />
-        </div>
+                <div class="grid md:grid-cols-2 gap-3 p-5">
 
-    </section>
+                    <div class="bg-lightPrimary p-5">
+                        <h3 class="text-accentPink pb-2">Workshops</h3>
+                        <p class="text-white pl-2">Get hands on experience with different tools and technologies</p>
+                    </div>
 
-    <section class="p-10 flex flex-row gap-5">
-        <div class="lg:w-10/12">
+                    <div class="bg-lightPrimary p-5">
+                        <h3 class="text-accentPink pb-2">DjangoGirls</h3>
+                        <p class="text-white pl-2">A Django workshop aimed at getting more women and girls introduced to
+                            web
+                            development
+                        </p>
+                    </div>
 
-            <h2 class="text-4xl leading-snug pb-5"><span class="text-accentYellow">First</span> DjangoCon Africa
-            </h2>
+                    <div class="bg-lightPrimary p-5">
+                        <h3 class="text-accentPink pb-2">Talks</h3>
+                        <p class="text-white pl-2">Many exciting talks from across Africa and the world!
+                        </p>
+                    </div>
+
+                    <div class="bg-lightPrimary p-5">
+                        <h3 class="text-accentPink pb-2">Sprints</h3>
+                        <p class="text-white pl-2">Work on open source projects
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="w-full">
+
+                    <img src="{% static 'images/photos/IMG_5854.JPG' %}"
+                        class="lg:h-full lg:w-auto object-cover w-full" />
+                </div>
+            </div>
+
+        </section>
+        {% include "_partials.html#separator-bottom-waves" %}
+
+
+    </div>
+
+
+
+    <section class="flex flex-row gap-5 pb-10 pl-5">
+        <div class="flex flex-col gap-2 w-10/12">
+
+            <div class="">
+                <div class="w-fit mx-auto">
+                    <h2 class="text-6xl "><span class="text-accentYellow">First</span> DjangoCon Africa
+                    </h2>
+                </div>
+            </div>
+
 
             <p>In 2023 we hosted the first ever DjangoCon Africa</p>
 
             <p>DjangoCon Africa took place in Zanzibar, Tanzania 6th-11th November 2023</p>
 
-            <div class="pt-5 grid lg:grid-cols-3 gap-5">
+            <p>We had roughly 200 attendees, of whom 103 were women</p>
+            <p>The attendees represented at least 22 countries from around the world</p>
 
-                <div>
-                    <h3 class="text-accentGreen text-4xl">~200</h3>
-
-                    <p>We had roughly 200 attendees, of whom 103 were women</p>
-                </div>
-
-                <div>
-                    <h3 class="text-accentGreen text-4xl">22 +</h3>
-
-                    <p>The attendees represented at least 22 countries from around the world</p>
-                </div>
-
-                <div>
-                    <h3 class="text-accentGreen text-4xl">26</h3>
-
-                    <p>We held 26 talks on topics covering programming, society, careers, education, disability,
-                        agriculture
-                        - the full range
-                        of topics you’d expect at a DjangoCon, with the African perspective often at the forefront</p>
-                </div>
-
-
-            </div>
+            <p>We held 26 talks on topics covering programming, society, careers, education, disability,
+                agriculture
+                - the full range
+                of topics you’d expect at a DjangoCon, with the African perspective often at the forefront</p>
 
             <div class="pt-5">
 
                 <a href="https://2023.djangocon.africa/news/report/" target="_blank" class="button">Read the report
                     ></a>
             </div>
+
         </div>
-        <div class="hidden  lg:flex items-center">
-            <img src="{% static 'images/first-djangocon-africa.png' %}" class=" " />
+
+        <div>
+            <img src="{% static 'images/first-djangocon-africa.png' %}" class="hidden lg:block" />
 
         </div>
 
     </section>
-
 
 
 </div>

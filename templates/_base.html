@@ -55,9 +55,9 @@
     -->
     <nav>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5">
-            <div class="flex justify-between h-16">
-                <a class="hover:cursor-pointer">
-                    <img src="{% static 'images/logo.svg' %}" alt="logo" />
+            <div class="flex justify-between">
+                <a class="hover:cursor-pointer ">
+                    <img src="{% static 'images/logo.svg' %}" alt="logo" class="h-8" />
                 </a>
                 <div class="flex items-center space-x-4">
                     {% for link in header_menu_items %}
@@ -88,7 +88,7 @@
 
         {% endblock %}
 
-        <section class="bg-lightPrimary text-white text-2xl text-center py-8">
+        <section class="bg-darkPrimary text-white text-2xl text-center py-8">
 
             <a target="_blank" href="https://x.com/djcafrica"><i class="fab fa-twitter"></i></a>
             <a target="_blank" href="https://github.com/djangocon/2025.djangocon.africa"><i
