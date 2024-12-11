@@ -1,0 +1,72 @@
+{% extends "_base.html" %}
+{% load tailwind_filters %}
+
+{% load partials %}
+
+{% partialdef form %}
+
+
+{% if form.errors %}
+<div id="review_form">
+
+    <p class="mb-8 text-xl"> <i class="fas fa-times-circle text-error-500 mr-3"> </i>Please correct the errors below.
+    </p>
+    {% endif %}
+
+
+    <form class="space-y-6" method="post">
+        {% csrf_token %}
+        {{ form | crispy}}
+        <div class="flex flex-row justify-between">
+            <button class="button_secondary" onclick="history.back()"><i class="fas fa-chevron-left"></i> Back</button>
+
+            <button type="submit" id="proposal_form_button" class="button ">
+                Submit Review <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </form>
+
+</div>
+
+{% endpartialdef %}
+
+
+
+{% block content %}
+
+<h1 class="pb-5">Review proposal</h1>
+
+<div class="grid grid-cols-2 gap-3">
+    <div class="border border-gray-200 rounded-md p-2 mb-2 flex flex-col gap-2">
+        <h2>
+            Proposal under review
+
+        </h2>
+
+        <h3>
+
+            Title: {{proposal.title}}
+        </h3>
+        <ul>
+            <li>Type: {{proposal.proposal_type}}</li>
+            <li>Track: {{proposal.track}}</li>
+            <li>Level:{{proposal.audience_level}}</li>
+        </ul>
+
+        <h3>Description</h3>
+
+        {{proposal.description}}
+
+        <h3>Private notes</h3>
+        {{proposal.private_notes}}
+
+
+
+    </div>
+    <div class="border border-gray-200 rounded-md p-2 mb-2">
+        <h2>Your review</h2>
+        {% partial form %}
+    </div>
+</div>
+
+{% endblock content %}

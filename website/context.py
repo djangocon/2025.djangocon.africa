@@ -1,6 +1,6 @@
 from .header_menu_items import (
     header_menu_items,
-    user_loggedin_link,
+    get_user_loggedin_link,
     user_not_loggedin_link,
 )
 
@@ -8,6 +8,6 @@ from .header_menu_items import (
 def context(request):
     return {
         "header_menu_items": header_menu_items,
-        "user_loggedin_link": user_loggedin_link,
+        "user_loggedin_link": get_user_loggedin_link(request),
         "user_not_loggedin_link": user_not_loggedin_link,
     }

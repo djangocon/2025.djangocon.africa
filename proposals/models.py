@@ -66,3 +66,41 @@ class Proposal(models.Model):
 
     def __str__(self):
         return f"{self.title}"
+
+
+class ReviewAspect(models.Model):
+    name = models.CharField()
+    # slug = TODO
+
+    DATA_TYPE_SCORE = "score"
+    DATA_TYPE_BOOLEAN = "true/false"
+
+    DATA_TYPE_CHOICES = [
+        (DATA_TYPE_BOOLEAN, DATA_TYPE_BOOLEAN),
+        (DATA_TYPE_SCORE, DATA_TYPE_SCORE),
+    ]
+    data_type = models.CharField(choices=DATA_TYPE_CHOICES)
+
+    # if we are using a SCORE datatype then these are used
+    minimum_score = models.SmallIntegerField(default=0)
+    maximum_score = models.SmallIntegerField(default=4)
+
+    help_text = (
+        models.TextField()
+    )  # use this to describe the aspect. Eg 0=terrible, 5=awesome
+
+
+class Review(models.Model):
+    reviewer_user = models.ForeignKey(User, on_delete=models.CASCADE)
+    notes = models.TextField()
+
+    hard_no = models.BooleanField(default=False)
+    favourite = models.BooleanField(default=False)
+
+
+class ReviewAspectScore(models.Model):
+    aspect = models.ForeignKey(ReviewAspect, on_delete=models.PROTECT)
+    review = models.ForeignKey(Review, on_delete=models.CASCADE)
+
+    score = models.SmallIntegerField(null=True, blank=True)
+    bool = models.BooleanField(null=True, blank=True)
