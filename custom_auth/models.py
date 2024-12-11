@@ -60,6 +60,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField("is staff", default=False)
     is_superuser = models.BooleanField("is superuser", default=False)
 
+    is_reviewer = models.BooleanField("is reviewer", default=False)
+
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
 

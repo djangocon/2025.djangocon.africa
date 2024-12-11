@@ -21,14 +21,24 @@ header_menu_items = [
     # ),
 ]
 
-user_loggedin_link = HeaderLink(
-    label='<i class="fas fa-user"></i> User',
-    children=[
-        # HeaderLink("Profile", href="todo"),
-        HeaderLink("Talk Proposals", href=reverse("my_proposals")),
-        HeaderLink("Logout", href=reverse("logout")),
-    ],
-)
+
+def get_user_loggedin_link(request):
+    if not request.user.is_authenticated:
+        return
+    children = []
+    if request.user.is_reviewer:
+        children.append(HeaderLink("Reviews", href=reverse("reviewer_dashboard")))
+    children.extend(
+        [
+            HeaderLink("Talk Proposals", href=reverse("my_proposals")),
+            HeaderLink("Logout", href=reverse("logout")),
+        ]
+    )
+
+    return HeaderLink(
+        label=f'<i class="fas fa-user"></i> {request.user}', children=children
+    )
+
 
 user_not_loggedin_link = HeaderLink(
     label='<i class="fas fa-user"></i> Login/Register', href=reverse("login")

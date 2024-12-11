@@ -1,0 +1,43 @@
+{% extends "_base.html" %}
+
+{% load partials %}
+
+{% block content %}
+
+<h1>Reviewer Dashboard</h1>
+
+
+
+<section>
+    <table class="w-full">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Track</th>
+                <th>Level</th>
+                <th>Review count</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for proposal in proposals %}
+            <tr>
+                <td>{{ proposal.user }}</td>
+                <td>{{ proposal.title }}</td>
+                <td>{{ proposal.proposal_type }}</td>
+                <td>{{ proposal.track }}</td>
+                <td>{{ proposal.audience_level }}</td>
+                <td>{{ proposal.review_count }} todo</td>
+                <td>
+                    <a href="{% url 'add_edit_review' proposal.id %}" class="button">Add review</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+
+{% endblock %}

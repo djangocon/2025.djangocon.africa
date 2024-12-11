@@ -19,4 +19,10 @@ urlpatterns = [
         views.edit_my_proposal,
         name="edit_my_proposal",
     ),
+    path("reviewer_dashboard", views.reviewer_dashboard, name="reviewer_dashboard"),
+    path(
+        "proposals/<int:proposal_id>/review",
+        views.add_edit_review,
+        name="add_edit_review",
+    ),
 ]
