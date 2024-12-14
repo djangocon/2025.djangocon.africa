@@ -23,9 +23,9 @@ INSTALLED_APPS += [  # noqa: F405
 # Look inside dev_db/README.md for details!!
 
 DB_HOST = os.environ.get("DATABASE_HOST", "127.0.0.1")  # noqa: F405
-DB_NAME = os.environ.get("DATABASE_NAME", "djangocon_africa")  # noqa: F405
+DB_NAME = os.environ.get("DATABASE_NAME", "db")  # noqa: F405
 DB_USER = os.environ.get("DATABASE_USER", "pguser")  # noqa: F405
-DB_PASSWORD = os.environ.get("DATABASE_PASSWORD", "pguserpasswd")  # noqa: F405
+DB_PASSWORD = os.environ.get("DATABASE_PASSWORD", "passwd")  # noqa: F405
 DB_PORT = os.environ.get("DATABASE_PORT", 5432)  # noqa: F405
 
 DATABASES = {
