@@ -30,10 +30,10 @@ INSTALLED_APPS = [
     "crispy_forms",
     "crispy_tailwind",
     "website",
+    "proposals",
     "custom_auth",
     "allauth",
     "allauth.account",
-
 ]
 
 MIDDLEWARE = [
