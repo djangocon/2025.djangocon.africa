@@ -166,3 +166,4 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_LOGOUT_REDIRECT_URL ='/accounts/login/'
 LOGIN_REDIRECT_URL = "/"
 ACCOUNT_LOGIN_ON_PASSWORD_RESET = True #logged automatiquely when success
+ACCOUNT_LOGOUT_ON_GET = True
