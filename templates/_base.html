@@ -72,20 +72,15 @@
                     {% for link in header_menu_items %}
                     {% partial header-menu-item-large %}
                     {% endfor %}
-                    <!-- 
-                        
                     {% if user.is_authenticated %}
-                    {% with link=user_loggedin_link %}
-                    {% partial header-menu-item-large %}
-                    {% endwith %}
+                        {% with link=user_loggedin_link %}
+                        {% partial header-menu-item-large %}
+                        {% endwith %}
                     {% else %}
-                    
-                    {% with link=user_not_loggedin_link %}
-                    {% partial header-menu-item-large %}
-                    {% endwith %}
+                        {% with link=user_not_loggedin_link %}
+                        {% partial header-menu-item-large %}
+                        {% endwith %}
                     {% endif %}
-                    -->
-
                 </div>
             </div>
         </div>
