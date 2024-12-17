@@ -1,36 +1,24 @@
 {% extends "_base.html" %}
-{% load i18n %}
-{% load allauth account %}
 
 {% load tailwind_filters %}
 
 
 {% block content %}
-
-<div class="flex flex-col items-center">
-    <h1 class="title pb-5">Log in </h1>
-    {% element p %}
-    {% blocktranslate %}If you have not created an account yet, then please {{ link }}sign up{{ end_link }} first.{% endblocktranslate %}
-    {% endelement %}
-
-    <form method="post">
-        {% csrf_token %}
-        <section class="mt-2">
-            {{ form | crispy }}
-        </section>
-        <section class="pt-10">
-            <div class=" mt-4 flex items-stretch">
-                <div> 
-                    <button class="button" type="submit">Log In</button>
-                </div>
-                <div>
-                    <a class="button" href="{% url 'account_reset_password' %}">Forgot password</a>
-                </div>
-                <div>
-                   <a class="button" href="{% url 'account_signup' %}">Register</a> 
-                </div>
+<div>
+<div class="flex flex-col  items-center">
+    <div class="pb-10  items-center">
+        <h1 class="title pb-5"> Sign in to continue </h1>
+        <form method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                {{ form|crispy }}
+            </fieldset>
+            <div class="mt-2">
+                <button class="btn" type="submit">Log In</button>
+                <p> Don't have an account, <a class="" href="{% url 'account_signup' %}">Signup!</a></p> 
             </div>
-        </section>
-    </form>
+        </form>
+    </div>
+</div>
 </div>
 {% endblock %}

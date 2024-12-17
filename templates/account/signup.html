@@ -2,22 +2,23 @@
 {% load tailwind_filters %}
 
 {% block content %}
- 
+<div> 
 <div class="flex flex-col items-center">
-    <h1 class="title pb-5"> Register </h1>
-    <form method="post">
-    {% csrf_token %}
-    <fieldset class="form-group">
-      {{ form|crispy}}
-    </fieldset>
-    <div class="mt-2 flex justify-between">
-      <div>
-        <button class="button" type="submit"><span class="glyphicon glyphicon-check"></span>   sign up</button>
-        <a href="{% url "account_login" %}" class="button">Already have an account ?</a>
-      </div>
-      <a href="{% url "page_home" %}" class="button">cancel</a>
+    <h1 class="title pb-5"> Create new account </h1>
+    <div class="pt-10">
+      <form method="post">
+        <div class="pb-10">
+          {% csrf_token %}
+          <fieldset class="form-group">
+              {{ form|crispy}}
+          </fieldset>
+          <div class="mt-2">
+            <button class="" type="submit"><span class="glyphicon glyphicon-check"></span>   Sign up</button>
+          </div>
+       </div>
+        <p class="pt-10"> <a href="{% url "account_login" %}" >Already registered ? Log in here </a> </p>
+      </form>
     </div>
-  </form>
 </div>
-
+</div>
 {% endblock %}
