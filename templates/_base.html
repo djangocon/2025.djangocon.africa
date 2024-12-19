@@ -23,16 +23,7 @@
         style="display: none;">
 
         {% for child in link.children %}
-            {% if child.action_url %}
-            <form method="post" action={{ child.action_url}}>
-                    {% csrf_token %}
-                    {{ form | crispy }}
-                    <button  type="submit">{{ child.label }}</button>
-                </form>
-            {% else %}
-
-                 <a href="{{ child.href }}" class="header_button">{{ child.label }}</a>
-            {% endif %}
+            <a href="{{ child.href }}" class="header_button">{{ child.label }}</a>
         {% endfor %}
 
     </div>

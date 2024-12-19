@@ -9,7 +9,6 @@ class HeaderLink:
     label: str
     href: str = ""
     children: List["HeaderLink"] = field(default_factory=list)
-    action_url: str = ""
 
 header_menu_items = [
     HeaderLink(label="Home", href="/"),
