@@ -30,6 +30,6 @@ user_loggedin_link = HeaderLink(
 )
 
 user_not_loggedin_link = HeaderLink(
-    label='<i class="fas fa-user"></i> Login/Register',
+    label='LogIn',
     href=reverse("account_login")
 )
