@@ -22,10 +22,10 @@
                 <form method="post">
                     {% csrf_token %}
                     {{ form | crispy }}
-                    <div class="mt-2 flex justify-between">
+                    <div class="mt-2 pt-4 flex justify-between">
                         <div>
-                            <button class="button" type="submit">Confirm</button>
-                            <a class="button" href="{% url 'page_home' %}">Cancel</a>
+                            <button  class="button" type="submit">Confirm</button>
+                            <a  class="button_secondary" href="{% url 'page_home' %}">Cancel</a>
                         </div>
                     </div>
                 </form>
