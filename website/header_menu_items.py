@@ -13,12 +13,19 @@ class HeaderLink:
 
 header_menu_items = [
     HeaderLink(label="Home", href="/"),
-    # HeaderLink(
-    #     label="About",
-    #     children=[
-    #         #   HeaderLink("Team", href=reverse("page_team")),
-    #     ],
-    # ),
+    HeaderLink(
+        label="About",
+        children=[
+            #   HeaderLink("About DjangoCon Africa", href=reverse("page_about")),
+            #   HeaderLink("Tickets", href=reverse("page_tickets")),
+            #   HeaderLink("FAQ", href=reverse("page_faq")),
+            HeaderLink("Code of Conduct", href=reverse("page_code_of_conduct")),
+            # Public HEalth
+            # Opportunity Grants
+            # Visa Support
+            # Organisers
+        ],
+    ),
 ]
 
 user_loggedin_link = HeaderLink(
