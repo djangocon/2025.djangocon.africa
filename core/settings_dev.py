@@ -11,6 +11,7 @@ MIDDLEWARE += [  # noqa: F405
 INSTALLED_APPS += [  # noqa: F405
     "django_browser_reload",
     "whitenoise.runserver_nostatic",
+    "django_extensions",
 ]
 
 
@@ -32,3 +33,6 @@ DATABASES = {
         default=f"postgres://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
     )
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = BASE_DIR / 'emails'
