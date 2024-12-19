@@ -1,5 +1,6 @@
 {% load static %}
 
+{% load tailwind_filters %}
 {% load partials %}
 
 {% partialdef header-menu-item-large %}
@@ -22,7 +23,7 @@
         style="display: none;">
 
         {% for child in link.children %}
-        <a href="{{ child.href }}" class="header_button">{{ child.label }}</a>
+            <a href="{{ child.href }}" class="header_button">{{ child.label }}</a>
         {% endfor %}
 
     </div>
@@ -33,7 +34,6 @@
 
 
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,45 +63,30 @@
                     {% for link in header_menu_items %}
                     {% partial header-menu-item-large %}
                     {% endfor %}
-
-                    <!-- 
-                        
                     {% if user.is_authenticated %}
-                    {% with link=user_loggedin_link %}
-                    {% partial header-menu-item-large %}
-                    {% endwith %}
+                        {% with link=user_loggedin_link %}
+                        {% partial header-menu-item-large %}
+                        {% endwith %}
                     {% else %}
-                    
-                    {% with link=user_not_loggedin_link %}
-                    {% partial header-menu-item-large %}
-                    {% endwith %}
-                    
+                        {% with link=user_not_loggedin_link %}
+                        {% partial header-menu-item-large %}
+                        {% endwith %}
                     {% endif %}
-                    -->
-
                 </div>
             </div>
-
         </div>
     </nav>
     <section class="max-w-7xl mx-auto pt-14">
         {% block content %}
-
-
-
         {% endblock %}
-
         <section class="bg-darkPrimary text-white text-2xl text-center py-8">
-
             <a target="_blank" href="https://x.com/djcafrica"><i class="fab fa-twitter"></i></a>
             <a target="_blank" href="https://github.com/djangocon/2025.djangocon.africa"><i
                     class="fab fa-github"></i></a>
             <a target="_blank" href="https://fosstodon.org/@djangoconafrica"><i class="fab fa-mastodon"></i></a>
             <a target="_blank" href="https://www.facebook.com/djcafrica/"><i class="fab fa-facebook"></i></a>
-
         </section>
     </section>
-
 </body>
 
 </html>
