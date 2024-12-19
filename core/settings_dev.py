@@ -1,4 +1,5 @@
 from .settings_base import *  # noqa: F403
+from .settings_base import BASE_DIR
 import dj_database_url
 
 SECRET_KEY = "not really a secret"
@@ -34,5 +35,5 @@ DATABASES = {
     )
 }
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = BASE_DIR / 'emails'
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = BASE_DIR / "emails"
