@@ -791,6 +791,18 @@ td {
   z-index: 50;
 }
 
+.z-\[\FFFD\FFFD\18k\FFFD\FFFD\F\FFFD_\] {
+  z-index: ��k���;
+}
+
+.m-3 {
+  margin: 0.75rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1163,6 +1175,10 @@ td {
   padding-left: 1.25rem;
 }
 
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
 .pt-14 {
   padding-top: 3.5rem;
 }
@@ -1173,6 +1189,10 @@ td {
 
 .pt-24 {
   padding-top: 6rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .pt-5 {
@@ -1284,12 +1304,24 @@ td {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.outline {
+  outline-style: solid;
+}
+
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.\[o\:\FFFD\FFFD\FFFD\^\FFFD\] {
+  o: ���^�;
+}
+
+.\[v\:\FFFDv\] {
+  v: �v;
 }
 
 .hover\:cursor-pointer:hover {
