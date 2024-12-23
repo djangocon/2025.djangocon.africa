@@ -35,4 +35,4 @@ DATABASES = {
 }
 
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
-EMAIL_FILE_PATH = BASE_DIR / "emails"  # noqa: F405
+EMAIL_FILE_PATH = BASE_DIR / "gitignore/emails"  # noqa: F405

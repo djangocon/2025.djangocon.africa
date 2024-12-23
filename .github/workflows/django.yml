@@ -70,6 +70,7 @@ jobs:
             DATABASE_NAME: djangocon_africa
       - name: Run Tests
         run: |
+          python manage.py collectstatic
           pytest
         env:
             DJANGO_SETTINGS_MODULE: core.settings_dev
