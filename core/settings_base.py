@@ -150,7 +150,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 ACCOUNT_FORMS = {
-'signup': 'custom_auth.forms.CustomSignupForm',
+    "signup": "custom_auth.forms.CustomSignupForm",
 }
 
 SITE_ID = 1  # new
@@ -161,9 +161,13 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
-ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_LOGOUT_REDIRECT_URL ='/accounts/login/'
+ACCOUNT_LOGOUT_REDIRECT_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/"
-ACCOUNT_LOGIN_ON_PASSWORD_RESET = True #logged automatiquely when success
+ACCOUNT_LOGIN_ON_PASSWORD_RESET = True  # logged automatiquely when success
 ACCOUNT_LOGOUT_ON_GET = True
+
+
+# override in dev and prod settings as needed
+FEATURE_FLAGS = {"USER_LOGIN_REG": False}  # user login and registration is disabled

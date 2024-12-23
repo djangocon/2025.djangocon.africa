@@ -23,7 +23,7 @@
         style="display: none;">
 
         {% for child in link.children %}
-            <a href="{{ child.href }}" class="header_button">{{ child.label }}</a>
+        <a href="{{ child.href }}" class="header_button">{{ child.label }}</a>
         {% endfor %}
 
     </div>
@@ -34,6 +34,7 @@
 
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,14 +64,17 @@
                     {% for link in header_menu_items %}
                     {% partial header-menu-item-large %}
                     {% endfor %}
+
+                    {% if FEATURE_FLAGS.USER_LOGIN_REG %}
                     {% if user.is_authenticated %}
-                        {% with link=user_loggedin_link %}
-                        {% partial header-menu-item-large %}
-                        {% endwith %}
+                    {% with link=user_loggedin_link %}
+                    {% partial header-menu-item-large %}
+                    {% endwith %}
                     {% else %}
-                        {% with link=user_not_loggedin_link %}
-                        {% partial header-menu-item-large %}
-                        {% endwith %}
+                    {% with link=user_not_loggedin_link %}
+                    {% partial header-menu-item-large %}
+                    {% endwith %}
+                    {% endif %}
                     {% endif %}
                 </div>
             </div>
