@@ -31,6 +31,14 @@ jobs:
       with:
         fetch-depth: '2'
 
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Generate tailwind css 
+      run: |
+        npm i 
+        npm run tailwind
     - name: Setup Python ${{ matrix.python-version }}
       uses: actions/setup-python@master
       with:
