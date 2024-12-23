@@ -39,6 +39,7 @@ jobs:
       run: |
         npm i 
         npm run tailwind
+        
     - name: Setup Python ${{ matrix.python-version }}
       uses: actions/setup-python@master
       with:
