@@ -10,7 +10,6 @@ class HeaderLink:
     href: str = ""
     children: List["HeaderLink"] = field(default_factory=list)
 
-
 header_menu_items = [
     HeaderLink(label="Home", href="/"),
     # HeaderLink(
@@ -26,10 +25,11 @@ user_loggedin_link = HeaderLink(
     children=[
         # HeaderLink("Profile", href="todo"),
         HeaderLink("Talk Proposals", href=reverse("my_proposals")),
-        HeaderLink("Logout", href=reverse("logout")),
+        HeaderLink("Logout", href=reverse("account_logout")),
     ],
 )
 
 user_not_loggedin_link = HeaderLink(
-    label='<i class="fas fa-user"></i> Login/Register', href=reverse("login")
+    label='LogIn',
+    href=reverse("account_login")
 )
