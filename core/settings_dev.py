@@ -36,3 +36,6 @@ DATABASES = {
 
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = BASE_DIR / "gitignore/emails"  # noqa: F405
+
+
+FEATURE_FLAGS["USER_LOGIN_REG"] = True  # noqa: F405
