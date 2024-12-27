@@ -9,6 +9,10 @@ asgiref==3.8.1
     #   django
     #   django-allauth
     #   django-browser-reload
+certifi==2024.12.14
+    # via requests
+charset-normalizer==3.4.1
+    # via requests
 coverage==7.5.3
     # via -r requirements.in
 crispy-tailwind==1.0.3
@@ -35,8 +39,12 @@ django-extensions==3.2.3
     # via -r requirements.in
 django-template-partials==24.4
     # via -r requirements.in
+idna==3.10
+    # via requests
 iniconfig==2.0.0
     # via pytest
+mailjet-rest==1.3.4
+    # via -r requirements.in
 packaging==24.0
     # via pytest
 pluggy==1.5.0
@@ -56,9 +64,13 @@ python-dotenv==1.0.1
     # via
     #   -r requirements.in
     #   pytest-dotenv
+requests==2.32.3
+    # via mailjet-rest
 sqlparse==0.5.0
     # via django
 typing-extensions==4.12.2
     # via dj-database-url
+urllib3==2.3.0
+    # via requests
 whitenoise==6.8.2
     # via -r requirements.in
