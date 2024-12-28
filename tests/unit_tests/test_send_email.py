@@ -1,5 +1,3 @@
-import os
-
 from libs.mailjet import MailClient
 from core.settings_base import MAILJET
 
