@@ -1,12 +1,12 @@
-import os
-
 from mailjet_rest import Client
 from dataclasses import dataclass
 
+from core.settings_base import MAILJET
+
 @dataclass
 class MailClient:
-    api_key = os.environ["MJ_APIKEY_PUBLIC"]
-    api_secret = os.environ["MJ_APIKEY_PRIVATE"]
+    api_key = MAILJET["APIKEY_PUBLIC"]
+    api_secret = MAILJET["APIKEY_PRIVATE"]
     version="v3.1"
     client = Client(auth=(api_key, api_secret), version=version)
 

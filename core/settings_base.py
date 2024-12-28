@@ -171,3 +171,10 @@ ACCOUNT_LOGOUT_ON_GET = True
 
 # override in dev and prod settings as needed
 FEATURE_FLAGS = {"USER_LOGIN_REG": False}  # user login and registration is disabled
+
+# MailJet Config
+MAILJET = {
+    "APIKEY_PRIVATE": os.environ.get("MJ_APIKEY_PRIVATE"),
+    "APIKEY_PUBLIC": os.environ.get("MJ_APIKEY_PUBLIC"),
+    "SENDER_EMAIL": os.environ.get("SENDER_EMAIL","hello@djangocon.africa")
+}

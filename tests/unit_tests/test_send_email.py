@@ -1,10 +1,11 @@
-import pytest
 import os
 
 from libs.mailjet import MailClient
+from core.settings_base import MAILJET
+
 
 def message():
-   sender_email = os.environ['SENDER_EMAIL']
+   sender_email = MAILJET["SENDER_EMAIL"]
    subject = "A message from DjangoCon Africa"
    recipient_email = os.environ['RECIPIENT_EMAIL']
    data = {

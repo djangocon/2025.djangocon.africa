@@ -1,5 +1,6 @@
 from .settings_base import *  # noqa: F403
 import dj_database_url
+import os
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "2025.djangocon.africa"]
 
@@ -20,6 +21,11 @@ DATABASES = {
 # email config - to be setted in another feature
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = BASE_DIR / "gitignore/emails"  # noqa: F405
+
+MJ_APIKEY_PRIVATE=os.environ.get("MJ_APIKEY_SECRET")
+MJ_APIKEY_PUBLIC=os.environ.get("MJ_APIKEY_PUBLIC")
+SENDER_EMAIL=os.environ.get("SENDER_EMAIL", "hello@djangocon.africa")
+
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_HOST = 'smtp.gmail.com'
