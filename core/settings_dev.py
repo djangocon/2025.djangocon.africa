@@ -43,4 +43,5 @@ EMAIL_FILE_PATH = BASE_DIR / "gitignore/emails"  # noqa: F405
 FEATURE_FLAGS["USER_LOGIN_REG"] = True  # noqa: F405
 # MailJet Config
 MAILJET["SENDER_EMAIL"] =  os.environ.get("SENDER_EMAIL","rakoto.olive42@gmail.com")
+MAILJET["RECIPIENT_EMAIL"] =  os.environ.get("RECIPIENT_EMAIL","rakoto.olive42@gmail.com")
 
