@@ -5,10 +5,15 @@
 
 {% partialdef header-menu-item-large %}
 
-{% if link.href %}
+{% if link.href and link.btn %}
+<a href="{{link.href}}" class="button_primary">
+    {{ link.label | safe }}
+</a>
+{% elif link.href and not link.btn %}
 <a href="{{link.href}}" class="header_button">
     {{ link.label | safe }}
 </a>
+
 {% else %}
 <div x-data="{ open: false }" class="relative inline-block">
 

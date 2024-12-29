@@ -8,6 +8,7 @@ from django.urls import reverse
 class HeaderLink:
     label: str
     href: str = ""
+    btn: bool = False
     children: List["HeaderLink"] = field(default_factory=list)
 
 header_menu_items = [
@@ -31,5 +32,6 @@ user_loggedin_link = HeaderLink(
 
 user_not_loggedin_link = HeaderLink(
     label='LogIn',
+    btn = True,
     href=reverse("account_login")
 )

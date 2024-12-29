@@ -55,9 +55,15 @@
         @apply bg-accentPurple text-white  no-underline p-3 cursor-pointer;
     }
 
-    .button_secondary {
-        @apply bg-accentYellow text-black no-underline p-3 cursor-pointer;
+    .button_primary {
+        @apply bg-darkPrimary text-white no-underline p-3 cursor-pointer rounded;
     }
+
+    .button_secondary {
+        @apply bg-accentYellow text-black no-underline p-3 cursor-pointer rounded;
+    }
+
+
 
 }
 
