@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-22 01:47+0100\n"
+"POT-Creation-Date: 2024-11-24 16:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,8 +77,7 @@ msgstr "En 2023, nous avons accueilli la toute première DjangoCon Africa."
 msgid ""
 "DjangoCon Africa took place in Zanzibar, Tanzania 6th-11th November 2023."
 msgstr ""
-"DjangoCon Africa a eu lieu à Zanzibar, en Tanzanie, du 6 au 11 Novembre "
-"2023."
+"DjangoCon Africa a eu lieu à Zanzibar, en Tanzanie, du 6 au 11 Novembre 2023."
 
 #: templates/page_home.html:61
 msgid "We had roughly 200 attendees, of whom 103 were women."
@@ -90,17 +89,25 @@ msgstr "Les participants représentaient au moins 22 pays du monde entier."
 
 #: templates/page_home.html:73
 msgid ""
-"We held 26 talks on topics covering programming, "
-"society, careers, education, disability, agriculture - the full range "
-"of topics you’d expect at a DjangoCon, with the African perspective often at the forefront."
-
+"We held 26 talks on topics covering programming, society, careers, "
+"education, disability, agriculture"
 msgstr ""
-"Nous avons animé 26 sessions autour de thèmes tels que la programmation, "
-"la société, les carrières, l'éducation, le handicap, l'agriculture, soit toute "
-"la gamme de sujets auxquels on peut s'attendre lors d'une DjangoCon, avec la "
-"perspective africaine étant au premier plan."
+"Nous avons animé 26 sessions autour de thèmes tels que la programmation, la "
+"société, les carrières, l'éducation, le handicap, l'agriculture, soit "
 
-#: templates/page_home.html:84
+#: templates/page_home.html:74
+#, fuzzy
+#| msgid ""
+#| "- the full range of topics you’d expect at a DjangoCon, with the African "
+#| "perspective often at the forefront."
+msgid ""
+"- the full range of topics you’d expect at a DjangoCon, with the African "
+"perspective often at the forefront"
+msgstr ""
+"toute la gamme de sujets auxquels on peut s'attendre lors d'une DjangoCon, "
+"avec la perspective africaine étant au premier plan."
+
+#: templates/page_home.html:81
 msgid "Read the report >"
 msgstr "Lire le rapport >"
 
@@ -108,6 +115,286 @@ msgstr "Lire le rapport >"
 #, python-format
 msgid "ambiguous option: %(option)s could match %(matches)s"
 msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/_termui_impl.py:518
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/_termui_impl.py:522
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1120
+msgid "Aborted!"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1309
+#: venv/lib/python3.12/site-packages/click/decorators.py:559
+msgid "Show this message and exit."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1340
+#: venv/lib/python3.12/site-packages/click/core.py:1370
+#, python-brace-format
+msgid "(Deprecated) {text}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1387
+msgid "Options"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1413
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1429
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1636
+msgid "Commands"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1668
+msgid "Missing command."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1746
+msgid "No such command {name!r}."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2310
+msgid "Value must be an iterable."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2331
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2778
+#, python-brace-format
+msgid "env var: {var}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2808
+msgid "(dynamic)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2821
+#, python-brace-format
+msgid "default: {default}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2834
+msgid "required"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/decorators.py:465
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/decorators.py:528
+msgid "Show the version and exit."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:44
+#: venv/lib/python3.12/site-packages/click/exceptions.py:80
+#, python-brace-format
+msgid "Error: {message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:72
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:121
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:123
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:179
+msgid "Missing argument"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:181
+msgid "Missing option"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:183
+msgid "Missing parameter"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:185
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:192
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:212
+#, python-brace-format
+msgid "No such option: {name}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:224
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:262
+msgid "unknown error"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:269
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/parser.py:231
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/parser.py:413
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/parser.py:474
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/shell_completion.py:319
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/shell_completion.py:326
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:158
+msgid "Repeat for confirmation"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:174
+msgid "Error: The value you entered was invalid."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:176
+#, python-brace-format
+msgid "Error: {e.message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:187
+msgid "Error: The two entered values do not match."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:243
+msgid "Error: invalid input"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:773
+msgid "Press any key to continue..."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:266
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:298
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:392
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:414
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:470
+#, python-brace-format
+msgid "{value} is not in the range {range}."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:611
+msgid "{value!r} is not a valid boolean."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:635
+msgid "{value!r} is not a valid UUID."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:822
+msgid "file"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:824
+msgid "directory"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:826
+msgid "path"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:877
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:886
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:894
+#, python-brace-format
+msgid "{name} '{filename}' is a directory."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:903
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:912
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:921
+msgid "{name} {filename!r} is not executable."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:988
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
 
 #: venv/lib/python3.12/site-packages/django/contrib/messages/apps.py:15
 msgid "Messages"
@@ -746,6 +1033,7 @@ msgid "Unknown"
 msgstr ""
 
 #: venv/lib/python3.12/site-packages/django/forms/widgets.py:795
+#: venv/lib/python3.12/site-packages/telepath/tests.py:243
 msgid "Yes"
 msgstr ""
 
@@ -1318,23 +1606,39 @@ msgstr ""
 
 #: website/header_menu_items.py:16
 msgid "Home"
-msgstr "Accueil"
+msgstr ""
 
-#: website/header_menu_items.py:24
-msgid "Sponsors"
-msgstr "Sponsors"
-
-#: website/header_menu_items.py:26
-msgid "Sponsor Us"
-msgstr "Sponsorisez-nous"
-
-#: website/header_menu_items.py:27
-msgid "Our Sponsors"
-msgstr "Nos sponsors"
-
-#: website/header_menu_items.py:37
+#: website/header_menu_items.py:30
 msgid "Logout"
-msgstr "Se Déconnecter"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "We held 26 talks on topics covering programming, society, careers, "
+#~| "education, disability, agriculture - the full range of topics you’d "
+#~| "expect at a DjangoCon, with the African perspective often at the "
+#~| "forefront."
+#~ msgid ""
+#~ "\n"
+#~ "                    We held 26 talks on topics covering programming, "
+#~ "society, careers, education, disability, agriculture\n"
+#~ "                    - the full range of topics you’d expect at a "
+#~ "DjangoCon, with the African perspective often at the forefront\n"
+#~ "                    "
+#~ msgstr ""
+#~ "Nous avons animé 26 sessions autour de thèmes tels que la programmation, "
+#~ "la société, les carrières, l'éducation, le handicap, l'agriculture, soit "
+#~ "toute la gamme de sujets auxquels on peut s'attendre lors d'une "
+#~ "DjangoCon, avec la perspective africaine étant au premier plan."
+
+#~ msgid "Sponsors"
+#~ msgstr "Sponsors"
+
+#~ msgid "Sponsor Us"
+#~ msgstr "Sponsorisez-nous"
+
+#~ msgid "Our Sponsors"
+#~ msgstr "Nos sponsors"
 
 #~ msgid "Donate"
 #~ msgstr "Faire un don"
