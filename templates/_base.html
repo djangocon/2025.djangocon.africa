@@ -46,6 +46,7 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'src/tailwind_final.css' %}">
     <script src="{% static 'src/font_awesome_5.js' %}" crossorigin="anonymous"></script>
+    <link href="{% static 'images/icon.png' %}" rel="shortcut icon">
 </head>
 
 <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
@@ -79,6 +80,7 @@
                 </div>
             </div>
         </div>
+        
     </nav>
     <section class="max-w-7xl mx-auto pt-14">
         {% block content %}
