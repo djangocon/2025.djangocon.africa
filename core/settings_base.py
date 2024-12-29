@@ -173,8 +173,12 @@ ACCOUNT_LOGOUT_ON_GET = True
 FEATURE_FLAGS = {"USER_LOGIN_REG": False}  # user login and registration is disabled
 
 # MailJet Config
-MAILJET = {
-    "APIKEY_PRIVATE": os.environ.get("MJ_APIKEY_PRIVATE"),
-    "APIKEY_PUBLIC": os.environ.get("MJ_APIKEY_PUBLIC"),
-    "SENDER_EMAIL": os.environ.get("SENDER_EMAIL","hello@djangocon.africa")
-}
+EMAIL_BACKEND = 'django_mailjet.backends.MailjetBackend'
+EMAIL_HOST = 'in-v3.mailjet.com'
+MAILJET_API_KEY = os.environ.get("MJ_APIKEY_PUBLIC")
+MAILJET_API_SECRET = os.environ.get("MJ_APIKEY_PRIVATE")
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_TIMEOUT = 30
+DEFAULT_FROM_EMAIL = os.environ.get("SENDER_EMAIL")

@@ -55,7 +55,8 @@ jobs:
         POSTGRES_USER: pguser
         POSTGRES_HOST: localhost
         POSTGRES_PASSWORD: password
-        MJ_APIKEY_PUBLIC : ${{ secrets.MJ_APIKEY_PUBLIC_DEV }}
-        MJ_APIKEY_PRIVATE : ${{ secrets.MJ_APIKEY_PRIVATE_DEV }}
+        MJ_APIKEY_PUBLIC: ${{ secrets.MJ_APIKEY_PUBLIC_DEV }}
+        MJ_APIKEY_PRIVATE: ${{ secrets.MJ_APIKEY_PRIVATE_DEV }}
+        SENDER_EMAIL: ${{secrets.SENDER_EMAIL_DEV}}
     - name: Upload Coverage to Codecov
       uses: codecov/codecov-action@v2

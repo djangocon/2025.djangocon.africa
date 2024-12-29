@@ -18,13 +18,9 @@ DATABASES = {
 }
 
 
-# email config - to be setted in another feature
-EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
-EMAIL_FILE_PATH = BASE_DIR / "gitignore/emails"  # noqa: F405
-
-MJ_APIKEY_PRIVATE=os.environ.get("MJ_APIKEY_SECRET")
-MJ_APIKEY_PUBLIC=os.environ.get("MJ_APIKEY_PUBLIC")
-SENDER_EMAIL=os.environ.get("SENDER_EMAIL", "hello@djangocon.africa")
+MAILJET_API_SECRET=os.environ.get("MJ_APIKEY_SECRET_PROD")
+MAILJET_APIKEY_PUBLIC=os.environ.get("MJ_APIKEY_PUBLIC_PROD")
+DEFAULT_FROM_EMAIL=os.environ.get("SENDER_EMAIL_PROD", "hello@djangocon.africa")
 
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
