@@ -1,10 +1,9 @@
 {% extends "_base.html" %}
 {% load static %}
 {% load partials %}
-
+{% load i18n %}
 
 {% block content %}
-
 
 
 <div class="flex flex-col gap-10">
@@ -24,20 +23,15 @@
             <div class="lg:pt-10 gap-2 flex flex-col">
 
                 <p>
-                    Welcome to DjangoCon Africa 2025! Get ready for five amazing days packed with talks, workshops,
-                    learning, and
-                    collaboration. It’s a chance to connect with the international Django community, share ideas, and be
-                    part of something
-                    special.
+                    {% translate "Welcome to DjangoCon Africa 2025! Get ready for five amazing days packed with talks, workshops, learning, and" %}
+                    {% translate "collaboration. It’s a chance to connect with the international Django community, share ideas, and be part of something special." %}
                 </p>
                 <p>
-                    This year’s DjangoCon will take place in the stunning city of Arusha, known for its vibrant culture
-                    and
-                    breathtaking
-                    landscapes.
+                    {% translate "This year’s DjangoCon will take place in the stunning city of Arusha, known for its vibrant culture." %}
+                    {% translate "and breathtaking landscapes." %}
 
                 </p>
-                <p>Follow our socials to stay up to date</p>
+                <p>{% translate "Follow our socials to stay up to date." %}</p>
             </div>
 
 
@@ -58,7 +52,7 @@
         <section class="bg-darkPrimary px-10">
             <div class="">
                 <div class="w-fit mx-auto">
-                    <h2 class="text-white text-6xl ">What’s happening at DjangoCon Africa <br /> <span
+                    <h2 class="text-white text-6xl ">{% translate "What’s happening at DjangoCon Africa" %} <br /> <span
                             class="text-accentPink">2025</span>
                     </h2>
                 </div>
@@ -69,27 +63,26 @@
                 <div class="grid md:grid-cols-2 gap-3 p-5">
 
                     <div class="bg-lightPrimary p-5">
-                        <h3 class="text-accentPink pb-2">Workshops</h3>
-                        <p class="text-white pl-2">Get hands on experience with different tools and technologies</p>
+                        <h3 class="text-accentPink pb-2">{% translate "Workshops" %}</h3>
+                        <p class="text-white pl-2">{% translate "Get hands on experience with different tools and technologies." %}</p>
                     </div>
 
                     <div class="bg-lightPrimary p-5">
-                        <h3 class="text-accentPink pb-2">DjangoGirls</h3>
-                        <p class="text-white pl-2">A Django workshop aimed at getting more women and girls introduced to
-                            web
-                            development
+                        <h3 class="text-accentPink pb-2">Django Girls</h3>
+                        <p class="text-white pl-2">
+                            {% translate "A Django workshop aimed at getting more women and girls introduced to web development." %}
                         </p>
                     </div>
 
                     <div class="bg-lightPrimary p-5">
-                        <h3 class="text-accentPink pb-2">Talks</h3>
-                        <p class="text-white pl-2">Many exciting talks from across Africa and the world!
+                        <h3 class="text-accentPink pb-2">{% translate "Talks" %}</h3>
+                        <p class="text-white pl-2">{% translate "Many exciting talks from across Africa and the world!" %}
                         </p>
                     </div>
 
                     <div class="bg-lightPrimary p-5">
-                        <h3 class="text-accentPink pb-2">Sprints</h3>
-                        <p class="text-white pl-2">Work on open source projects
+                        <h3 class="text-accentPink pb-2">{% translate "Sprints" %}</h3>
+                        <p class="text-white pl-2">{% translate "Work on open source projects." %}
                         </p>
                     </div>
                 </div>
@@ -115,27 +108,25 @@
 
             <div class="">
                 <div class="w-fit mx-auto">
-                    <h2 class="text-6xl "><span class="text-accentYellow">First</span> DjangoCon Africa
+                    <h2 class="text-6xl "><span class="text-accentYellow">{% translate "First" %}</span> DjangoCon Africa
                     </h2>
                 </div>
             </div>
 
 
-            <p>In 2023 we hosted the first ever DjangoCon Africa</p>
+            <p>{% translate "In 2023 we hosted the first ever DjangoCon Africa." %}</p>
 
-            <p>DjangoCon Africa took place in Zanzibar, Tanzania 6th-11th November 2023</p>
+            <p>{% translate "DjangoCon Africa took place in Zanzibar, Tanzania 6th-11th November 2023." %}</p>
 
-            <p>We had roughly 200 attendees, of whom 103 were women</p>
-            <p>The attendees represented at least 22 countries from around the world</p>
+            <p>{% translate "We had roughly 200 attendees, of whom 103 were women." %}</p>
+            <p>{% translate "The attendees represented at least 22 countries from around the world." %}</p>
 
-            <p>We held 26 talks on topics covering programming, society, careers, education, disability,
-                agriculture
-                - the full range
-                of topics you’d expect at a DjangoCon, with the African perspective often at the forefront</p>
+            <p>{% translate "We held 26 talks on topics covering programming, society, careers, education, disability, agriculture - the full range" %}
+                {% translate "of topics you’d expect at a DjangoCon, with the African perspective often at the forefront." %}</p>
 
             <div class="pt-5">
 
-                <a href="https://2023.djangocon.africa/news/report/" target="_blank" class="button">Read the report
+                <a href="https://2023.djangocon.africa/news/report/" target="_blank" class="button">{% translate "Read the report" %}
                     ></a>
             </div>
 
