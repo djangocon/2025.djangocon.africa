@@ -1,22 +1,25 @@
 {% extends "_base.html" %}
 
 {% load tailwind_filters %}
-
+{% load crispy_forms_tags %}
 
 {% block content %}
-<div class="flex items-center justify-center main bg-darkPrimary">
-    <div class="bg-white mx-auto">
-        <h1 class="title pb-5"> Sign in to continue </h1>
-            <form method="post">
-                {% csrf_token %}
-                <fieldset class="form-group">
-                    {{ form|crispy }}
-                </fieldset>
-                <div class="mt-2">
-                    <button class="button" type="submit">Log In</button>
-                    <p> Don't have an account, <a class="" href="{% url 'account_signup' %}">Signup!</a></p> 
-                </div>
-            </form>
-    </div>
+<div class="box_auth">
+           <div class="card_auth">
+            <h5 class="p-3 my-5  m text-xl flex justify-center items-center font-medium leading-tight">Login </h5>
+                <form method="post" class="p-5">
+                    {% csrf_token %}
+                    <fieldset class="form-group ">
+                        {{ form|crispy }}
+                    </fieldset>
+                    <div class="mt-4">
+                        <button class="button_auth w-full" type="submit">Log In</button>
+                            <p class="text-center"> Don't have an account, </p>
+                        <p class="text-center"> 
+                            <a  href="{% url 'account_signup' %}">Signup!</a>
+                        </p> 
+                    </div>
+                </form>
+        </div>
 </div>
 {% endblock %}

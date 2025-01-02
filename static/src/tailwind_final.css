@@ -711,9 +711,20 @@ td {
   text-decoration-line: none;
 }
 
-.button_secondary {
+.button_auth {
   cursor: pointer;
   border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  padding: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  text-decoration-line: none;
+}
+
+.button_secondary {
+  cursor: pointer;
+  border-radius: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 205 41 / var(--tw-bg-opacity));
   padding: 0.75rem;
@@ -722,8 +733,20 @@ td {
   text-decoration-line: none;
 }
 
-.main {
+.box_auth {
+  display: flex;
   height: 75%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 16 63 / var(--tw-bg-opacity));
+}
+
+.card_auth{
+  width: 40%;
+  background: white;
+  padding: 1em;
 }
 
 .sr-only {
@@ -1458,6 +1481,10 @@ td {
   font-weight: 700;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .italic {
   font-style: italic;
 }
@@ -1468,6 +1495,10 @@ td {
 
 .leading-snug {
   line-height: 1.375;
+}
+
+.leading-tight {
+  line-height: 1.25;
 }
 
 .text-accentPink {
