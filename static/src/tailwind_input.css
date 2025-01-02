@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-
-
-
+@layer base{
     h1 {
         @apply text-4xl font-bold text-gray-700
     }
@@ -28,9 +25,10 @@
 
     body {
         font-family: Arial, sans-serif;
-
-    }
-
+    } 
+}
+@layer components {
+  
     table {
         @apply divide-y divide-gray-700
     }
@@ -62,8 +60,8 @@
     .button_secondary {
         @apply bg-accentYellow text-black no-underline p-3 cursor-pointer rounded;
     }
-
-
-
+   .main{
+       @apply h-3/4;
+   }
 }
 
