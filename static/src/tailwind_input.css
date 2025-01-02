@@ -66,13 +66,17 @@
     }
 
    .box_auth{
-       @apply h-3/4 flex items-center  justify-center  bg-darkPrimary rounded-lg;
+       @apply h-3/4 flex items-center  justify-center  bg-darkPrimary rounded-t-lg;
+   }
+
+  .box_auth_not_fixed{
+       @apply h-screen flex items-center  justify-center  bg-darkPrimary rounded-t-lg;
    }
 
    .card_auth{
        width: 40%;
        background: white;
-       padding: 1em;
+       padding: 2em;
    }
 }
 

@@ -738,7 +738,19 @@ td {
   height: 75%;
   align-items: center;
   justify-content: center;
-  border-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 16 63 / var(--tw-bg-opacity));
+}
+
+.box_auth_not_fixed {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(15 16 63 / var(--tw-bg-opacity));
 }
@@ -746,7 +758,7 @@ td {
 .card_auth{
   width: 40%;
   background: white;
-  padding: 1em;
+  padding: 2em;
 }
 
 .sr-only {
@@ -1414,10 +1426,6 @@ td {
 
 .pt-1 {
   padding-top: 0.25rem;
-}
-
-.pt-10 {
-  padding-top: 2.5rem;
 }
 
 .pt-14 {

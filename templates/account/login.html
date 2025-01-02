@@ -6,7 +6,7 @@
 {% block content %}
 <div class="box_auth">
            <div class="card_auth">
-            <h5 class="p-3 my-5  m text-xl flex justify-center items-center font-medium leading-tight">Login </h5>
+            <h5 class="p-3 my-5  text-xl flex justify-center items-center font-medium leading-tight">Login </h5>
                 <form method="post" class="p-5">
                     {% csrf_token %}
                     <fieldset class="form-group ">
@@ -16,7 +16,7 @@
                         <button class="button_auth w-full" type="submit">Log In</button>
                             <p class="text-center"> Don't have an account, </p>
                         <p class="text-center"> 
-                            <a  href="{% url 'account_signup' %}">Signup!</a>
+                            <a  href="{% url "account_signup" %}">Signup!</a>
                         </p> 
                     </div>
                 </form>
