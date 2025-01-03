@@ -28,7 +28,7 @@ def test_register(client):
     )
     assertRedirects(
         response,
-        "/accounts/confirm-email/",
+        "/en/accounts/confirm-email/",
         status_code=302,
         target_status_code=200,
         fetch_redirect_response=True,
@@ -57,7 +57,7 @@ def test_valid_email_sending_for_forgotten_password(user, client):
     )
     assertRedirects(
         response,
-        "/accounts/password/reset/done/",
+        "/en/accounts/password/reset/done/",
         status_code=302,
         target_status_code=200,
         fetch_redirect_response=True,

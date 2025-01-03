@@ -4,6 +4,8 @@ import dj_database_url
 
 SECRET_KEY = "not really a secret"
 DEBUG = True
+BASE_URL = "localhost"
+ALLOWED_HOSTS = []
 
 MIDDLEWARE += [  # noqa: F405
     "django_browser_reload.middleware.BrowserReloadMiddleware",

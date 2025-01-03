@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from typing import List
 
 from django.urls import reverse
+from django.utils.translation import gettext as _
 
 
 @dataclass
@@ -12,7 +13,7 @@ class HeaderLink:
     children: List["HeaderLink"] = field(default_factory=list)
 
 header_menu_items = [
-    HeaderLink(label="Home", href="/"),
+    HeaderLink(_("Home"), href="/"),
     # HeaderLink(
     #     label="About",
     #     children=[
@@ -32,7 +33,7 @@ user_loggedin_link = HeaderLink(
 )
 
 user_not_loggedin_link = HeaderLink(
-    label='LogIn',
+    label=_("LogIn"),
     btn = True,
     href=reverse("account_login")
 )
