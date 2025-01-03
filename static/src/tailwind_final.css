@@ -761,6 +761,17 @@ td {
   padding: 2em;
 }
 
+.title_auth {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

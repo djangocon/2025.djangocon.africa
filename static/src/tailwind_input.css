@@ -78,5 +78,9 @@
        background: white;
        padding: 2em;
    }
+
+   .title_auth{
+     @apply p-3 my-5 text-3xl text-center font-medium leading-tight; 
+   }
 }
 
