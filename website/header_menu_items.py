@@ -26,6 +26,7 @@ user_loggedin_link = HeaderLink(
     children=[
         # HeaderLink("Profile", href="todo"),
         HeaderLink("Talk Proposals", href=reverse("my_proposals")),
+        HeaderLink("Change Password", href=reverse("account_change_password")),
         HeaderLink("Logout", href=reverse("account_logout")),
     ],
 )
