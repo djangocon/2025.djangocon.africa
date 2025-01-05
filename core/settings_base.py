@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "custom_auth",
     "allauth",
     "allauth.account",
+    "sponsors",
 ]
 
 MIDDLEWARE = [
