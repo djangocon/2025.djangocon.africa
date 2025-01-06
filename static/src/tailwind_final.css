@@ -692,6 +692,7 @@ td {
 
 .button {
   cursor: pointer;
+  border-radius: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(44 5 242 / var(--tw-bg-opacity));
   padding: 0.75rem;
@@ -705,17 +706,6 @@ td {
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(15 16 63 / var(--tw-bg-opacity));
-  padding: 0.75rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  text-decoration-line: none;
-}
-
-.button_auth {
-  cursor: pointer;
-  border-radius: 0.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(44 5 242 / var(--tw-bg-opacity));
   padding: 0.75rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
