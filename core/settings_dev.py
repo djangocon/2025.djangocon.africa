@@ -37,9 +37,11 @@ DATABASES = {
     )
 }
 
-# remove comment if you don't want to send email on dev environnement
-# EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
-# EMAIL_FILE_PATH = BASE_DIR / "gitignore/emails"  # noqa: F405
+# comment this if you  want to use a MailJet account for  sending email on
+# Dev env
+
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = BASE_DIR / "gitignore/emails"  # noqa: F405
 
 
 FEATURE_FLAGS["USER_LOGIN_REG"] = True  # noqa: F405

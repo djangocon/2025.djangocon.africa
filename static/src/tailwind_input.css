@@ -58,7 +58,7 @@
     }
 
     .button_auth {
-        @apply bg-black text-white no-underline p-3 cursor-pointer rounded;
+        @apply bg-accentPurple text-white no-underline p-3 cursor-pointer rounded-lg;
     }
 
     .button_secondary {
@@ -77,10 +77,11 @@
        width: 40%;
        background: white;
        padding: 2em;
+       @apply rounded-lg;
    }
 
    .title_auth{
-     @apply p-3 my-5 text-3xl text-center font-medium leading-tight; 
+     @apply p-3 my-5 text-2xl text-center font-medium leading-tight; 
    }
 }
 
