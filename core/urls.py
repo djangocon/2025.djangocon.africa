@@ -23,7 +23,6 @@ urlpatterns = [
     path("", include("website.urls")),
     path("accounts/", include("allauth.urls")),
     path("proposals/", include("proposals.urls")),
-    path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
     path('i18n/', include('django.conf.urls.i18n')),
 ]

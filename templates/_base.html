@@ -5,10 +5,15 @@
 
 {% partialdef header-menu-item-large %}
 
-{% if link.href %}
+{% if link.href and link.btn %}
+<a href="{{link.href}}" class="button_primary">
+    {{ link.label | safe }}
+</a>
+{% elif link.href and not link.btn %}
 <a href="{{link.href}}" class="header_button">
     {{ link.label | safe }}
 </a>
+
 {% else %}
 <div x-data="{ open: false }" class="relative inline-block">
 
@@ -49,14 +54,12 @@
     <link href="{% static 'images/icon.png' %}" rel="shortcut icon">
 </head>
 
-<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
-
-
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' class="max-w-7xl mx-auto">
     <!-- Header bar
     To edit the header menu items look at header_menu_items.py
     -->
     <nav>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5">
+        <div class="px-4 sm:px-6 lg:px-8 pt-5">
             <div class="flex justify-between">
                 <a class="hover:cursor-pointer ">
                     <img src="{% static 'images/logo.svg' %}" alt="logo" class="h-8" />
@@ -82,17 +85,17 @@
         </div>
         
     </nav>
-    <section class="max-w-7xl mx-auto pt-14">
-        {% block content %}
-        {% endblock %}
-        <section class="bg-darkPrimary text-white text-2xl text-center py-8">
+    <div class="pt-14">
+        <section>
+            {% block content %}
+            {% endblock %}
+        </section>
+    </div>
+        <footer class="bg-darkPrimary text-white text-2xl text-center py-8">
             <a target="_blank" href="https://x.com/djcafrica"><i class="fab fa-twitter"></i></a>
-            <a target="_blank" href="https://github.com/djangocon/2025.djangocon.africa"><i
-                    class="fab fa-github"></i></a>
+            <a target="_blank" href="https://github.com/djangocon/2025.djangocon.africa"><i class="fab fa-github"></i></a>
             <a target="_blank" href="https://fosstodon.org/@djangoconafrica"><i class="fab fa-mastodon"></i></a>
             <a target="_blank" href="https://www.facebook.com/djcafrica/"><i class="fab fa-facebook"></i></a>
-        </section>
-    </section>
+        </footer>
 </body>
-
 </html>

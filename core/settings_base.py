@@ -180,7 +180,18 @@ ACCOUNT_LOGOUT_REDIRECT_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/"
 ACCOUNT_LOGIN_ON_PASSWORD_RESET = True  # logged automatiquely when success
 ACCOUNT_LOGOUT_ON_GET = True
-
+ACCOUNT_EMAIL_SUBJECT_PREFIX = '[hello@djangocon.africa.com]'
 
 # override in dev and prod settings as needed
 FEATURE_FLAGS = {"USER_LOGIN_REG": False}  # user login and registration is disabled
+
+# MailJet Config
+EMAIL_BACKEND = 'django_mailjet.backends.MailjetBackend'
+EMAIL_HOST = 'in-v3.mailjet.com'
+MAILJET_API_KEY = os.environ.get("MJ_APIKEY_PUBLIC")
+MAILJET_API_SECRET = os.environ.get("MJ_APIKEY_PRIVATE")
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_TIMEOUT = 30
+DEFAULT_FROM_EMAIL = os.environ.get("SENDER_EMAIL")
