@@ -55,44 +55,39 @@
     <!-- Header bar
     To edit the header menu items look at header_menu_items.py
     -->
-    <nav>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5">
+    <header class="bg-deepTeal">
+        <div class="dj-container pt-10">
             <div class="flex justify-between">
                 <a class="hover:cursor-pointer ">
-                    <img src="{% static 'images/logo.svg' %}" alt="logo" class="h-8" />
+                    <img src="{% static 'images/logo.svg' %}" alt="logo"  />
                 </a>
-                <div class="flex items-center space-x-4">
-                    {% for link in header_menu_items %}
-                    {% partial header-menu-item-large %}
-                    {% endfor %}
-
-                    {% if FEATURE_FLAGS.USER_LOGIN_REG %}
-                    {% if user.is_authenticated %}
-                    {% with link=user_loggedin_link %}
-                    {% partial header-menu-item-large %}
-                    {% endwith %}
-                    {% else %}
-                    {% with link=user_not_loggedin_link %}
-                    {% partial header-menu-item-large %}
-                    {% endwith %}
-                    {% endif %}
-                    {% endif %}
-                </div>
+                {% include "_language_selector.html" %}
             </div>
         </div>
-        
-    </nav>
-    <section class="max-w-7xl mx-auto pt-14">
+    </header>
+    <section class="">
         {% block content %}
         {% endblock %}
-        <section class="bg-darkPrimary text-white text-2xl text-center py-8">
-            <a target="_blank" href="https://x.com/djcafrica"><i class="fab fa-twitter"></i></a>
-            <a target="_blank" href="https://github.com/djangocon/2025.djangocon.africa"><i
-                    class="fab fa-github"></i></a>
-            <a target="_blank" href="https://fosstodon.org/@djangoconafrica"><i class="fab fa-mastodon"></i></a>
-            <a target="_blank" href="https://www.facebook.com/djcafrica/"><i class="fab fa-facebook"></i></a>
-        </section>
     </section>
+    <footer>
+        <img src="{% static 'images/footer/desktop-footer.png' %}" alt="footer-bg" class="w-full" />
+        <div class="bg-[#313114] text-white text-center pb-12">
+            <div class="dj-container flex flex-col items-center gap-y-6">
+                <img src="{% static 'images/footer-logo.svg' %}" alt="logo" />
+                <div class="flex gap-x-4">
+                    <a target="_blank" href="https://github.com/djangocon"><img src="{% static 'icons/github-icon.svg' %}" class="size-[44px]"/></a>
+                    <a target="_blank" href="https://mastodon.social/@djangoconafrica@fosstodon.org"><img src="{% static 'icons/mastodon-icon.svg' %}" class="size-[44px]"/></a>
+                    <a target="_blank" href="https://bsky.app/profile/djcafrica.bsky.social"><img src="{% static 'icons/bluesky-icon.svg' %}" class="size-[44px]"/></a>
+                    <a target="_blank" href="https://x.com/djcafrica"><img src="{% static 'icons/x-icon.svg' %}" class="size-[44px]"/></a>
+                    <a target="_blank" href="https://facebook.com/djcafrica"><img src="{% static 'icons/facebook-icon.svg' %}" class="size-[44px]"/></a>
+                    <a target="_blank" href="https://linkedin.com/company/djcafrica"><img src="{% static 'icons/linkedin-icon.svg' %}" class="size-[44px]"/></a>
+                    <a target="_blank" href="hello@djangocon.africa"><img src="{% static 'icons/email-icon.svg' %}" class="size-[44px]"/></a>
+                </div>
+                <p>Website designed by <a href="https://www.linkedin.com/in/hopeadoli" target="_blank" class="underline cursor-pointer">Hope Adoli</a> and built with <span class="text-red-800">❤</span> by <a class="underline cursor-pointer">the community</a></p>
+                <p>Other Django Events: <a class="underline cursor-pointer">DjangoCon US</a> • <a class="underline cursor-pointer">DjangoCon Europe</a> • <a class="underline cursor-pointer">DjangoCon Australia</a></p>
+                <p>Our <a class="underline cursor-pointer">Code of Conduct</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
