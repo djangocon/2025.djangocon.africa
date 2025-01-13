@@ -2,10 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+    @font-face {
+        font-family: 'BebasNeue';
+        src: url('/static/fonts/bebas-neue/BebasNeue-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Archivo';
+        src: url('/static/fonts/archivo/Archivo-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Chivomono';
+        src: url('/static/fonts/chivomono/ChivoMono-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
 @layer components {
-
-
-
     h1 {
         @apply text-4xl font-bold text-gray-700
     }
@@ -27,8 +48,7 @@
     }
 
     body {
-        font-family: Arial, sans-serif;
-
+        font-family: Chivomono, sans-serif;
     }
 
     table {
