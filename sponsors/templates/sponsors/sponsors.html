@@ -1,0 +1,40 @@
+{% load sponsors %}
+{% sponsors as all_sponsors %}
+{% packages as all_packages %}
+
+<h1>Here are the list of sponsors!</h1>
+<ul>
+    {% for sponsor in all_sponsors.sponsors %}
+        <li>Name: {{ sponsor.name }}</li>
+        <li>Description: {{ sponsor.description }}</li>
+        <li>Url: {{ sponsor.url }}</li>
+        <ul>
+            {% for package in sponsor.packages.all %}
+                <li>{{ package.name }} ({{ package.currency }}{{ package.amount }})</li>
+            {% endfor %}
+        </ul>
+        {% sponsor_tagged_image sponsor "main_logo" as logo_url %}
+        {% if logo_url %}
+            <img width="30%" height="30%" src="{{ logo_url }}" alt="{{ sponsor.name }}" title="{{ sponsor.name }}" />
+        {% else %}
+            <span class="nologo">{{ sponsor.name }}</span>
+        {% endif %}
+        <br />
+        ---------
+    {% empty %}
+        <li>No sponsors</li>
+    {% endfor %}
+</ul>
+
+
+<h1>Here are the list of packages!</h1>
+<ul>
+    {% for package in all_packages.packages %}
+        <li>Type: {{ package.name }}</li>
+        <li>Currency: {{ package.currency }}</li>
+        <li>Amount: {{ package.amount }}</li>
+        ---------
+    {% empty %}
+        <li>No packages</li>
+    {% endfor %}
+</ul>

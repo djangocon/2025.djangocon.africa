@@ -3,7 +3,7 @@ from django.core.validators import MinValueValidator
 from django.utils.translation import gettext_lazy as _
 
 
-class SponsorshipFile(models.Model):
+class File(models.Model):
     """File for use in sponsor and sponsorship package description."""
     name = models.CharField(max_length=255)
     description = models.TextField(
@@ -43,7 +43,7 @@ class SponsorshipPackage(models.Model):
         help_text=_("A short description of the sponsorship package.")
     )
     files = models.ManyToManyField(
-        SponsorshipFile,
+        File,
         related_name="packages",
         blank=True,
         help_text=_("The files of the sponsorship package.")
@@ -53,7 +53,7 @@ class SponsorshipPackage(models.Model):
         ordering = ["order", "-amount", "name"]
 
     def __str__(self):
-        return u"%s (amount: %.0f)" % (self.name, self.amount)
+        return u"%s (amount: %.0f)" % (self.name, self.amount,)
 
 
 class Sponsor(models.Model):
@@ -64,7 +64,6 @@ class Sponsor(models.Model):
         SponsorshipPackage,
         related_name="sponsors",
     )
-    # TODO: check markitup package
     description = models.TextField(
         help_text=_("A description of the sponsor.")
     )
@@ -74,7 +73,30 @@ class Sponsor(models.Model):
         help_text=_("The URL of the sponsor if needed.")
     )
 
+    def __str__(self):
+        return u"%s" % (self.name,)
+
     class Meta:
         ordering = ["order", "name", "id"]
 
+
+class TaggedFile(models.Model):
+    """Tags for files associated with a given sponsor"""
+    tag_name = models.CharField(
+        max_length=255,
+        null=False,
+        help_text=_("The name of the tag.")
+    )
+    tagged_file = models.ForeignKey(
+        File,
+        on_delete=models.CASCADE
+    )
+    sponsor = models.ForeignKey(
+        Sponsor,
+        related_name="files",
+        on_delete=models.CASCADE
+    )
+
+    def __str__(self):
+        return u"%s - (%s)" % (self.sponsor.name, self.tag_name,)
 
