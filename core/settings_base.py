@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
+from django.utils.translation import gettext_lazy as _
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -66,6 +67,7 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "website.context.context",
+                "core.context_processors.language_context",
             ],
         },
     },
@@ -104,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "en"
 
 TIME_ZONE = "UTC"
 
@@ -115,8 +117,8 @@ USE_L10N = True
 USE_TZ = True
 
 LANGUAGES = [
-    ('en', 'English'),
-    ('fr', 'French'),
+    ('en', _('English')),
+    ('fr', _('French')),
 ]
 
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
@@ -184,3 +186,8 @@ ACCOUNT_LOGOUT_ON_GET = True
 
 # override in dev and prod settings as needed
 FEATURE_FLAGS = {"USER_LOGIN_REG": False}  # user login and registration is disabled
+
+LANGUAGE_COOKIE_NAME = 'django_language'
+LANGUAGE_COOKIE_AGE = None
+LANGUAGE_COOKIE_PATH = '/'
+SESSION_COOKIE_AGE = 86400  # 24 hours in seconds
