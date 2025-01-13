@@ -81,3 +81,6 @@
 
 }
 
+.dj-container {
+    @apply mx-auto max-w-[1360px] w-full px-4 sm:px-6 lg:px-8;
+}
