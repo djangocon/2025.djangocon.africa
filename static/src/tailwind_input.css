@@ -28,23 +28,23 @@
 
 @layer components {
     h1 {
-        @apply text-4xl font-bold text-gray-700
+        @apply font-bebasneue font-bold text-6xl md:text-7xl lg:text-9xl
     }
 
     h2 {
-        @apply text-3xl font-bold text-gray-600
+        @apply font-archivo text-[32px] leading-[40px] md:text-4xl md:leading-[47px] font-bold
     }
 
     h3 {
-        @apply text-2xl font-bold text-gray-600
+        @apply font-archivo text-[20px] font-bold
     }
 
     p {
-        @apply text-lg text-gray-700
+        @apply text-lg
     }
 
     ul {
-        @apply list-disc list-inside ml-6 space-y-2 text-lg text-gray-700
+        @apply list-disc list-inside ml-6 space-y-2 text-lg
     }
 
     body {
