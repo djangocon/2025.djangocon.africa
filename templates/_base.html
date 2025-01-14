@@ -55,20 +55,24 @@
     <!-- Header bar
     To edit the header menu items look at header_menu_items.py
     -->
-    <header class="bg-deepTeal">
+    <header class="w-full {% if is_white_header %}bg-white text-black{% else %}bg-deepTeal text-white{% endif %}">
         <div class="dj-container pt-10">
             <div class="flex justify-between">
-                <a class="hover:cursor-pointer ">
-                    <img src="{% static 'images/logo.svg' %}" alt="logo"  />
+                <a class="hover:cursor-pointer">
+                    {% if is_white_header %}
+                        <img src="{% static 'images/logo-black.svg' %}" alt="logo" />
+                    {% else %}
+                        <img src="{% static 'images/logo.svg' %}" alt="logo"/>
+                    {% endif %}
                 </a>
                 {% include "_language_selector.html" %}
             </div>
         </div>
     </header>
-    <section class="">
+    <main>
         {% block content %}
         {% endblock %}
-    </section>
+    </main>
     <footer>
         <img src="{% static 'images/footer/desktop-footer.png' %}" alt="footer-bg" class="w-full" />
         <div class="bg-[#313114] text-white text-center pb-12">
