@@ -58,7 +58,7 @@
     <header class="w-full {% if is_white_header %}bg-white text-black{% else %}bg-deepTeal text-white{% endif %}">
         <div class="dj-container pt-10">
             <div class="flex justify-between">
-                <a class="hover:cursor-pointer">
+                <a class="hover:cursor-pointer" href="/">
                     {% if is_white_header %}
                         <img src="{% static 'images/logo-black.svg' %}" alt="logo" />
                     {% else %}
@@ -79,17 +79,17 @@
             <div class="dj-container flex flex-col items-center gap-y-6">
                 <img src="{% static 'images/footer-logo.svg' %}" alt="logo" />
                 <div class="flex gap-x-4">
-                    <a target="_blank" href="https://github.com/djangocon"><img src="{% static 'icons/github-icon.svg' %}" class="size-[44px]"/></a>
-                    <a target="_blank" href="https://mastodon.social/@djangoconafrica@fosstodon.org"><img src="{% static 'icons/mastodon-icon.svg' %}" class="size-[44px]"/></a>
-                    <a target="_blank" href="https://bsky.app/profile/djcafrica.bsky.social"><img src="{% static 'icons/bluesky-icon.svg' %}" class="size-[44px]"/></a>
-                    <a target="_blank" href="https://x.com/djcafrica"><img src="{% static 'icons/x-icon.svg' %}" class="size-[44px]"/></a>
-                    <a target="_blank" href="https://facebook.com/djcafrica"><img src="{% static 'icons/facebook-icon.svg' %}" class="size-[44px]"/></a>
-                    <a target="_blank" href="https://linkedin.com/company/djcafrica"><img src="{% static 'icons/linkedin-icon.svg' %}" class="size-[44px]"/></a>
-                    <a target="_blank" href="hello@djangocon.africa"><img src="{% static 'icons/email-icon.svg' %}" class="size-[44px]"/></a>
+                    <a target="_blank" href="https://github.com/djangocon"><img src="{% static 'icons/github-icon.svg' %}" alt="github icon" class="size-[44px]"/></a>
+                    <a target="_blank" href="https://mastodon.social/@djangoconafrica@fosstodon.org"><img src="{% static 'icons/mastodon-icon.svg' %}" alt="mastodon icon" class="size-[44px]"/></a>
+                    <a target="_blank" href="https://bsky.app/profile/djcafrica.bsky.social"><img src="{% static 'icons/bluesky-icon.svg' %}" alt="bluesky icon" class="size-[44px]"/></a>
+                    <a target="_blank" href="https://x.com/djcafrica"><img src="{% static 'icons/x-icon.svg' %}" alt="x icon" class="size-[44px]"/></a>
+                    <a target="_blank" href="https://facebook.com/djcafrica"><img src="{% static 'icons/facebook-icon.svg' %}" alt="facebook icon" class="size-[44px]"/></a>
+                    <a target="_blank" href="https://linkedin.com/company/djcafrica"><img src="{% static 'icons/linkedin-icon.svg' %}" alt="linkedin icon" class="size-[44px]"/></a>
+                    <a href="mailto:hello@djangocon.africa"><img src="{% static 'icons/email-icon.svg' %}" alt="email icon" class="size-[44px]"/></a>
                 </div>
-                <p>Website designed by <a href="https://www.linkedin.com/in/hopeadoli" target="_blank" class="underline cursor-pointer">Hope Adoli</a> and built with <span class="text-red-800">❤</span> by <a class="underline cursor-pointer">the community</a></p>
-                <p>Other Django Events: <a class="underline cursor-pointer">DjangoCon US</a> • <a class="underline cursor-pointer">DjangoCon Europe</a> • <a class="underline cursor-pointer">DjangoCon Australia</a></p>
-                <p>Our <a class="underline cursor-pointer">Code of Conduct</a></p>
+                <p>Website designed by <a href="https://www.linkedin.com/in/hopeadoli" target="_blank" class="underline cursor-pointer">Hope Adoli</a> and built with <span class="text-red-800">❤</span> by <a class="underline cursor-pointer" href="/">the community</a></p>
+                <p>Other Django Events: <a class="underline cursor-pointer" href="https://djangocon.us" target="_blank">DjangoCon US</a> • <a class="underline cursor-pointer" href="https://djangocon.eu" target="_blank">DjangoCon Europe</a> • <a class="underline cursor-pointer" href="https://djangocon.com.au" target="_blank">DjangoCon Australia</a></p>
+                <p>Our <a class="underline cursor-pointer" href="/coc">Code of Conduct</a></p>
             </div>
         </div>
     </footer>
