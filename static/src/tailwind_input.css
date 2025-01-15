@@ -28,7 +28,7 @@
 
 @layer components {
     h1 {
-        @apply font-bebasneue font-bold text-6xl md:text-7xl lg:text-9xl
+        @apply font-bebasneue font-bold text-[88px] md:text-7xl lg:text-[192px] leading-none
     }
 
     h2 {
@@ -44,7 +44,7 @@
     }
 
     ul {
-        @apply list-disc list-inside ml-6 space-y-2 text-lg
+        @apply list-disc list-inside ml-2 text-lg
     }
 
     body {
