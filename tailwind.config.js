@@ -60,11 +60,18 @@ const accentPink = "#FF93DD"
 
 const accentGreen = "#048041"
 
+const deepTeal = '#004B65'
+
 module.exports = {
   content: ["./**/*.html", '!./dev_db',
   ],
   theme: {
     extend: {
+      fontFamily: {
+        bebasneue: ['BebasNeue', 'sans-serif'],
+        chivomono: ['Chivomono', 'sans-serif'],
+        archivo: ['Archivo', 'sans-serif']
+      },
       colors: {
         // tz_flag_green,
         // tz_flag_yellow,
@@ -74,8 +81,12 @@ module.exports = {
         accentPurple,
         accentYellow,
         accentGreen,
-        accentPink
+        accentPink,
+        deepTeal
       },
+      backgroundImage: {
+        'dotted-world-map': "url('/static/images/dotted-world-map.svg')",
+    },
     },
   },
   plugins: [],

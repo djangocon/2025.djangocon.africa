@@ -1,0 +1,105 @@
+{% extends "_base.html" %}
+{% load static %}
+{% load partials %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="bg-white dj-container pt-[72px] md:pt-[88px] pb-16">
+  <h1 class="mb-6 text-center">Introducing DjangoCon Africa 🌍 2024 🎉</h1>
+  <div
+    class="flex gap-x-14 gap-y-6 items-center justify-center flex-col md:flex-row"
+  >
+    <p>By Team • 28 Jan. 2024</p>
+    <button
+      class="flex items-center gap-x-2 rounded-full border border-black/10 px-4 py-2.5"
+    >
+      Share
+      <img src="{% static 'icons/share-icon.svg' %}" alt="share" />
+    </button>
+  </div>
+
+  <div class="flex flex-col gap-y-8 md:max-w-[740px] mx-auto pt-10 lg:pt-16">
+    <div>
+      <div class="mb-4">
+        <img
+          src="{% static 'images/first-djangocon-africa.png' %}"
+          alt="DjangoCon Africa 2023"
+          class="w-full md:h-[470px] object-cover rounded-3xl"
+        />
+      </div>
+      <p>
+        The African Django community is excited to announce the first DjangoCon
+        Africa event, taking place this year in Zanzibar, Tanzania, from 6th -
+        11th November 2023. The first event since the global pandemic postponed
+        our planning in 2020. We are thrilled to convene, support one another
+        and give back to the African Python web community now that travel and
+        health safety guidelines have normalized. DjangoCon Africa 2023 will be
+        held at the State University of Zanzibar where we have three meeting
+        rooms, one auditorium, 15 minutes away from food and activities, and
+        convenient access to students, professionals, and international
+        travelers.
+      </p>
+    </div>
+
+    <div>
+      <h2 class="mb-4">About DjangoCon Africa</h2>
+      <p>
+        DjangoCon Africa will include 3 days of single-track talks, 2 days of
+        workshops and sprints, and one day of touring for international
+        visitors. <br />
+        The event will also include a Django Girls workshop to be held the
+        weekend before DjangoCon Africa. To make the conference as inclusive as
+        possible, the event will offer financial aid to members of
+        under-represented communities in software to ensure they can also
+        attend.<br />
+        The CFP, which is open to all, will also be announced as soon as
+        the month of June.
+      </p>
+    </div>
+
+    <div>
+      <h2 class="mb-4">Sponsorship</h2>
+      <p>
+        The success of DjangoCon Africa lies hugely in the sponsorship of
+        organizations and individuals within the Python/Django community. We are
+        appealing to organizations and individuals to help us make DjangoCon
+        Africa possible by sponsoring the event. If you are interested in
+        sponsoring DjangoCon Africa 2023, please contact the team at
+        sponsors@djangocon.africa.
+      </p>
+    </div>
+
+    <div>
+      <h2 class="mb-4">About Tanzania</h2>
+      <p class="mb-4">
+        Tanzania is a country in East Africa widely known for its vast
+        wilderness areas which include the Serengeti National Park and the
+        Kilimanjaro National Park, home to Africa’s highest mountain,
+        Kilimanjaro. Its offshore islands are Zanzibar, which has Arabic
+        influences, and Mafia which is a marine park home to whale sharks and
+        coral reefs.
+      </p>
+      <img
+        src="{% static 'images/tanzania-01.png' %}"
+        alt="Tanzania image"
+        class="w-full md:h-[470px] object-cover rounded-3xl mb-8"
+      />
+      <p class="mb-4">
+        Tanzania is a country in East Africa widely known for its vast
+        wilderness areas which include the Serengeti National Park and the
+        Kilimanjaro National Park, home to Africa’s highest mountain,
+        Kilimanjaro. Its offshore islands are Zanzibar, which has Arabic
+        influences, and Mafia which is a marine park home to whale sharks and
+        coral reefs.
+      </p>
+      <img
+        src="{% static 'images/tanzania-02.png' %}"
+        alt="Tanzania image"
+        class="w-full md:h-[470px] object-cover rounded-3xl"
+      />
+    </div>
+  </div>
+</div>
+
+{% endblock %}

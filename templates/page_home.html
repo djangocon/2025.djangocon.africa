@@ -5,143 +5,387 @@
 
 {% block content %}
 
-
-
-<div class="flex flex-col gap-10">
-
-    <section id="hero" class="flex flex-col lg:flex-row px-2 ">
-        <div class="lg:w-7/12">
-
-
-            <h1 class="text-6xl pb-2 leading-snug text-darkPrimary">DjangoCon Africa <br />2025
-            </h1>
-
-            <div class="pb-4">
-                <p class="font-bold">📍 Arusha, Tanzania</p>
-                <p class="font-bold">📆 11 - 15 August </p>
-            </div>
-
-            <div class="lg:pt-10 gap-2 flex flex-col">
-
-                <p>
-                    {% translate "Welcome to DjangoCon Africa 2025! Get ready for five amazing days packed with talks, workshops," %}
-                    {% translate "learning, and collaboration. It’s a chance to connect with the international Django community," %} 
-                    {% translate "share ideas, and be part of something special." %}
-                </p>
-                <p>
-                    {% translate "This year’s DjangoCon will take place in the stunning city of Arusha, known for its vibrant culture" %}
-                    {% translate "and breathtaking landscapes." %}
-
-                </p>
-                <p>{% translate "Follow our socials to stay up to date." %}</p>
-            </div>
-
-
-
-        </div>
-
-        <div class="hidden  lg:w-6/12 pt-5 md:pt-0 lg:flex items-center mx-auto">
-            <img src="{% static 'images/hero.png' %}" />
-        </div>
-
-    </section>
-
-
-    <div>
-
-        {% include "_partials.html#separator-top-waves" %}
-
-        <section class="bg-darkPrimary px-10">
-            <div class="">
-                <div class="w-fit mx-auto">
-                    <h2 class="text-white text-6xl ">{% translate "What’s happening at DjangoCon Africa" %} <br /> <span
-                            class="text-accentPink">2025</span>
-                    </h2>
-                </div>
-            </div>
-
-            <div class="flex flex-col lg:flex-row mt-5 gap-5 pb-20">
-
-                <div class="grid md:grid-cols-2 gap-3 p-5">
-
-                    <div class="bg-lightPrimary p-5">
-                        <h3 class="text-accentPink pb-2">{% translate "Workshops" %}</h3>
-                        <p class="text-white pl-2">{% translate "Get hands on experience with different tools and technologies" %}</p>
-                    </div>
-
-                    <div class="bg-lightPrimary p-5">
-                        <h3 class="text-accentPink pb-2">Django Girls</h3>
-                        <p class="text-white pl-2">
-                            {% translate "A Django workshop aimed at getting more women and girls introduced to web development" %}
-                        </p>
-                    </div>
-
-                    <div class="bg-lightPrimary p-5">
-                        <h3 class="text-accentPink pb-2">{% translate "Talks" %}</h3>
-                        <p class="text-white pl-2">{% translate "Many exciting talks from across Africa and the world!" %}
-                        </p>
-                    </div>
-
-                    <div class="bg-lightPrimary p-5">
-                        <h3 class="text-accentPink pb-2">{% translate "Sprints" %}</h3>
-                        <p class="text-white pl-2">{% translate "Work on open source projects." %}
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="w-full">
-
-                    <img src="{% static 'images/photos/IMG_5854.JPG' %}"
-                        class="lg:h-full lg:w-auto object-cover w-full" />
-                </div>
-            </div>
-
-        </section>
-        {% include "_partials.html#separator-bottom-waves" %}
-
-
+<main>
+  <section
+    class="bg-deepTeal pt-20 md:pt-[104px] pb-8 md:pb-12 bg-dotted-world-map bg-no-repeat bg-cover"
+  >
+    <div class="dj-container text-center">
+      <h1 class="mb-6 text-white">
+        DJANGOCON
+        <br />
+        AFRICA 2025
+      </h1>
+      <p class="text-[20px] leading-8 md:max-w-2xl mx-auto text-white">
+        Join us for 5 days of inspiration, education and networking at DjangoCon
+        Africa from 25-31 August, 2025 in
+        <a
+          href="https://maps.app.goo.gl/TqQ9QLonUdRcdnXg8"
+          target="_blank"
+          class="underline"
+          >Arusha, Tanzania</a
+        >
+      </p>
     </div>
-
-
-
-    <section class="flex flex-row gap-5 pb-10 pl-5">
-        <div class="flex flex-col gap-2 w-10/12">
-
-            <div class="">
-                <div class="w-fit mx-auto">
-                    <h2 class="text-6xl "><span class="text-accentYellow">{% translate "First" %}</span> DjangoCon Africa
-                    </h2>
-                </div>
-            </div>
-
-
-            <p>{% translate "In 2023 we hosted the first ever DjangoCon Africa." %}</p>
-
-            <p>{% translate "DjangoCon Africa took place in Zanzibar, Tanzania 6th-11th November 2023." %}</p>
-
-            <p>{% translate "We had roughly 200 attendees, of whom 103 were women." %}</p>
-            <p>{% translate "The attendees represented at least 22 countries from around the world." %}</p>
-
-            <p>{% translate "We held 26 talks on topics covering programming, society, careers, education, disability, agriculture" %}
-                {% translate "- the full range of topics you’d expect at a DjangoCon, with the African perspective often at the forefront." %}</p>
-
-            <div class="pt-5">
-
-                <a href="https://2023.djangocon.africa/news/report/" target="_blank" class="button">{% translate "Read the report" %}
-                    ></a>
-            </div>
-
-        </div>
-
+  </section>
+  <section class="relative">
+    <div class="absolute top-0 left-0 w-full h-1/2 bg-deepTeal"></div>
+    <div class="absolute top-1/2 left-0 w-full h-1/2 bg-white"></div>
+    <div class="dj-container">
+      <div class="relative overflow-hidden rounded-lg pt-[56.25%] z-10">
+        <iframe
+          class="absolute top-0 left-0 w-full h-full"
+          src="https://www.youtube.com/embed/ohTNwfVmx0A?autoplay=1"
+          title="DjangoCon Africa 2025 Preview"
+          frameborder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+  <section class="bg-white mb-16 md:mb-10">
+    <div class="dj-container flex gap-x-12 gap-y-6 flex-col md:flex-row mt-5">
+      <div class="lg:w-1/2 m-auto md:pt-[30px] md:pb-5">
+        <h2 class="mb-4">First DjangoCon Africa</h2>
+        <p class="mb-4">
+          In 2023 we hosted the first ever DjangoCon Africa. DjangoCon Africa
+          took place in Zanzibar, Tanzania 6th-11th November 2023.
+          <br /><br />
+          We had roughly 200 attendees, of whom 103 were women. The attendees
+          represented at least 22 countries from around the world.
+          <br /><br />
+          We held 26 talks on topics covering programming, society, careers,
+          education, disability, agriculture - the full range of topics you’d
+          expect at a DjangoCon, with the African perspective often at the
+          forefront.
+        </p>
+        <a
+          href="https://2023.djangocon.africa/news/report/"
+          target="_blank"
+          class="bg-deepTeal text-white rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90"
+        >
+          Read the 2023 report
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+      <div class="lg:w-1/2">
+        <img
+          src="{% static 'images/first-djangocon-africa.png' %}"
+          alt="DjangoCon Africa 2023"
+          class="w-full h-full object-cover rounded-lg"
+        />
+      </div>
+    </div>
+  </section>
+  <section class="dj-container pb-10">
+    <h2 class="md:max-w-[447px] mb-4 md:mb-8">
+      What will be happening at DjangoCon Africa
+    </h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3">
+      <div
+        class="border pb-6 md:pt-6 md:px-6 border-x-0 md:border-x-[1px] border-t-0 md:border-t-[1px]"
+      >
+        <h3 class="mb-4">💬 Talks</h3>
+        <p>
+          Three days of talks, on programming, technology, careers, society and
+          business, with speakers from across the world.
+        </p>
+      </div>
+      <div
+        class="border py-6 md:px-6 border-x-0 md:border-x-[1px] -mt-[1px] -ml-[1px]"
+      >
+        <h3 class="mb-4">🖥️ Workshops and tutorials</h3>
+        <p>
+          Hands-on training and learning sessions, led by experts in the field.
+          Details to be published soon.
+        </p>
+      </div>
+      <div
+        class="border py-6 md:px-6 border-x-0 md:border-x-[1px] -mt-[1px] -ml-[1px]"
+      >
+        <h3 class="mb-4">🤝 Collaboration</h3>
+        <p>
+          Work together on code, and contribute to major projects - including
+          Django itself.
+        </p>
+      </div>
+      <div
+        class="border py-6 md:px-6 border-x-0 md:border-x-[1px] -mt-[1px] -ml-[1px]"
+      >
+        <h3 class="mb-4">👩‍💻 Django Girls</h3>
+        <p>
+          A training workshop aimed at women, providing an introduction to web
+          application development. Tens of thousands of women across the world
+          have had their introduction to Django through this hugely successful
+          programme
+        </p>
+      </div>
+      <div
+        class="border pt-6 pb-6 md:px-6 border-x-0 md:border-x-[1px] border-b-0 md:border-b-[1px] -mt-[1px] -ml-[1px]"
+      >
+        <h3 class="mb-4">🔎 Discovery</h3>
+        <p>
+          DjangoCon Africa is an opportunity to discover places and people as
+          well as technology. It will bring together participants from across
+          Africa and the rest of the world, for mutual understanding of
+          contexts, challenges and opportunities.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="py-10">
+    <div
+      class="dj-container flex gap-x-6 lg:gap-x-10 xl:gap-x-12 flex-col md:flex-row gap-y-9"
+    >
+      <div class="w-full md:w-1/2 md:sticky top-10 self-start">
+        <h2 class="mb-4">Sponsors</h2>
+        <p class="mb-4">
+          DjangoCon Africa is made possible by the generous sponsorships of
+          various teams and organisations around the world.
+        </p>
+        <a
+          href="mailto:hello@djangocon.africa?subject=Sponsor DjangoCon Africa 2025"
+          class="bg-deepTeal text-white rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90"
+        >
+          Sponsor us
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+      <div class="w-full md:w-1/2 flex flex-col gap-y-10">
         <div>
-            <img src="{% static 'images/first-djangocon-africa.png' %}" class="hidden lg:block" />
-
+          <h3 class="mb-3">💎 Diamond</h3>
+          <div
+            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
+          >
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+          </div>
         </div>
-
-    </section>
-
-
-</div>
+        <div>
+          <h3 class="mb-3">💛 Gold</h3>
+          <div
+            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
+          >
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-3">🪙 Silver</h3>
+          <div
+            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
+          >
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-3">🔶 Bronze</h3>
+          <div
+            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
+          >
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-3">🫶🏽 Opportunity Grant</h3>
+          <div
+            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
+          >
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-3">🙏🏾 Special</h3>
+          <div
+            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
+          >
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-3">🫂 Community</h3>
+          <div
+            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
+          >
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-3">🤝 Partners</h3>
+          <div
+            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
+          >
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+            <img
+              src="{% static 'images/sponsors/caktus.png' %}"
+              alt="Sponsor logo"
+              class="aspect-square rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="dj-container md:pt-20 flex justify-center items-center">
+    <div class="md:max-w-xl">
+      <h2 class="mb-6 md:text-center">Latest news</h2>
+      <a href="news/announcing-djangocon-africa-2025/">
+        <div class="border-b pb-6 md:border md:p-6">
+          <h3 class="mb-4">Introducing DjangoCon Africa 🌍 2025 🎉</h3>
+          <p class="mb-6">
+            The African Django community is excited to announce the first
+            DjangoCon Africa event, taking...
+          </p>
+          <p>12 Jan • By Team</p>
+        </div>
+      </a>
+    </div>
+  </section>
+</main>
 
 {% endblock %}
