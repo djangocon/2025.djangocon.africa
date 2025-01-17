@@ -8,6 +8,7 @@
         <li>Name: {{ sponsor.name }}</li>
         <li>Description: {{ sponsor.description }}</li>
         <li>Url: {{ sponsor.url }}</li>
+        <li>Hiring: {{ sponsor.hiring }}</li>
         <ul>
             {% for package in sponsor.packages.all %}
                 <li>{{ package.name }} ({{ package.currency }}{{ package.amount }})</li>

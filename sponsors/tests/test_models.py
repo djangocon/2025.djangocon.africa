@@ -15,9 +15,9 @@ def create_package(name: str, amount: float) -> SponsorshipPackage:
     return package
 
 
-def create_sponsor(name: str, packages: List[Tuple[str, float]]) -> Sponsor:
+def create_sponsor(name: str, packages: List[Tuple[str, float]], hiring: bool = False) -> Sponsor:
     """Create a sponsor with the given name and packages."""
-    sponsor = Sponsor.objects.create(name=name)
+    sponsor = Sponsor.objects.create(name=name, hiring=hiring)
     for name, amount in packages:
         package = create_package(name, amount)
         sponsor.packages.add(package)
@@ -57,11 +57,12 @@ class TestSponsorshipModels:
         """Create sponsor with single sponsorship packages."""
         sponsor = create_sponsor(u"Django", [
             (u"Gold", 1000)
-        ])
+        ], hiring=True)
 
         assert sponsor is not None
         assert sponsor.name == u"Django"
         assert sponsor.packages.count() == 1
+        assert sponsor.hiring
 
         package = sponsor.packages.first()
 

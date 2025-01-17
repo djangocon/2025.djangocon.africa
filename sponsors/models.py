@@ -72,6 +72,10 @@ class Sponsor(models.Model):
         blank=True,
         help_text=_("The URL of the sponsor if needed.")
     )
+    hiring = models.BooleanField(
+        default=False,
+        help_text=_("Whether the sponsor is hiring or not.")
+    )
 
     def __str__(self):
         return u"%s" % (self.name,)
