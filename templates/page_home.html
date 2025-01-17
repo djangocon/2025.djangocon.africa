@@ -5,7 +5,7 @@
 
 {% block content %}
 
-<main>
+<main class="bg-white">
   <section
     class="bg-deepTeal pt-20 md:pt-[104px] pb-8 md:pb-12 bg-dotted-world-map bg-no-repeat bg-cover"
   >
@@ -44,8 +44,10 @@
     </div>
   </section>
   <section class="bg-white mb-16 md:mb-10">
-    <div class="dj-container flex gap-x-12 gap-y-6 flex-col md:flex-row mt-5">
-      <div class="lg:w-1/2 m-auto md:pt-[30px] md:pb-5">
+    <div
+      class="dj-container flex gap-x-8 md:gap-x-12 gap-y-6 flex-col md:flex-row mt-5 items-center"
+    >
+      <div class="md:w-1/2 m-auto md:pt-[30px] md:pb-5">
         <h2 class="mb-4">First DjangoCon Africa</h2>
         <p class="mb-4">
           In 2023 we hosted the first ever DjangoCon Africa. DjangoCon Africa
@@ -68,11 +70,11 @@
           <i class="fas fa-chevron-right"></i>
         </a>
       </div>
-      <div class="lg:w-1/2">
+      <div class="md:w-1/2">
         <img
           src="{% static 'images/first-djangocon-africa.png' %}"
           alt="DjangoCon Africa 2023"
-          class="w-full h-full object-cover rounded-lg"
+          class="w-full h-auto object-cover rounded-2xl"
         />
       </div>
     </div>
@@ -134,246 +136,69 @@
     </div>
   </section>
   <section class="py-10">
-    <div
-      class="dj-container flex gap-x-6 lg:gap-x-10 xl:gap-x-12 flex-col md:flex-row gap-y-9"
-    >
-      <div class="w-full md:w-1/2 md:sticky top-10 self-start">
-        <h2 class="mb-4">Sponsors</h2>
-        <p class="mb-4">
-          DjangoCon Africa is made possible by the generous sponsorships of
-          various teams and organisations around the world.
-        </p>
-        <a
-          href="mailto:hello@djangocon.africa?subject=Sponsor DjangoCon Africa 2025"
-          class="bg-deepTeal text-white rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90"
-        >
-          Sponsor us
-          <i class="fas fa-chevron-right"></i>
-        </a>
-      </div>
-      <div class="w-full md:w-1/2 flex flex-col gap-y-10">
+    <div class="dj-container">
+      <h2 class="mb-4">Sponsors</h2>
+      <p class="mb-4 md:max-w-xl">
+        DjangoCon Africa is made possible by the generous sponsorships of
+        various teams and organisations around the world.
+      </p>
+      <a
+        href="mailto:hello@djangocon.africa?subject=Sponsor DjangoCon Africa 2025"
+        class="bg-deepTeal text-white rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90"
+      >
+        Sponsor us
+        <i class="fas fa-chevron-right"></i>
+      </a>
+
+      <div class="flex flex-col md:flex-row gap-x-24 gap-y-12 mt-9 md:mt-12">
         <div>
-          <h3 class="mb-3">💎 Diamond</h3>
-          <div
-            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
+          <h3 class="mb-3">🪪 Lanyard sponsor</h3>
+          <a
+            href="https://www.caktusgroup.com/"
+            target="_blank"
+            class="inline-block"
           >
             <img
               src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
+              alt="Caktus logo"
+              class="size-[136px] aspect-square"
             />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-          </div>
+          </a>
         </div>
         <div>
-          <h3 class="mb-3">💛 Gold</h3>
-          <div
-            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
+          <h3 class="mb-3">🌍 Hosting sponsor</h3>
+          <a
+            href="https://www.pythonanywhere.com/"
+            target="_blank"
+            class="inline-block"
           >
             <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
+              src="{% static 'images/sponsors/pythonanywhere.png' %}"
+              alt="Pythonanywhere logo"
+              class="size-[136px] aspect-square"
             />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-          </div>
+          </a>
         </div>
         <div>
-          <h3 class="mb-3">🪙 Silver</h3>
-          <div
-            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
+          <h3 class="mb-3">📣 Social Media sponsor</h3>
+          <a
+            href="https://www.typefully.com/"
+            target="_blank"
+            class="inline-block"
           >
             <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
+              src="{% static 'images/sponsors/typefully.png' %}"
+              alt="Typefully logo"
+              class="size-[136px] aspect-square"
             />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-          </div>
-        </div>
-        <div>
-          <h3 class="mb-3">🔶 Bronze</h3>
-          <div
-            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
-          >
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-          </div>
-        </div>
-        <div>
-          <h3 class="mb-3">🫶🏽 Opportunity Grant</h3>
-          <div
-            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
-          >
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-          </div>
-        </div>
-        <div>
-          <h3 class="mb-3">🙏🏾 Special</h3>
-          <div
-            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
-          >
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-          </div>
-        </div>
-        <div>
-          <h3 class="mb-3">🫂 Community</h3>
-          <div
-            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
-          >
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-          </div>
-        </div>
-        <div>
-          <h3 class="mb-3">🤝 Partners</h3>
-          <div
-            class="grid grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-x-2 sm:gap-x-5 gap-y-5"
-          >
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Sponsor logo"
-              class="aspect-square rounded-lg"
-            />
-          </div>
+          </a>
         </div>
       </div>
     </div>
   </section>
-  <section class="dj-container md:pt-20 flex justify-center items-center">
+  <section class="dj-container pt-20">
     <div class="md:max-w-xl">
-      <h2 class="mb-6 md:text-center">Latest news</h2>
+      <h2 class="mb-6">Latest news</h2>
       <a href="news/announcing-djangocon-africa-2025/">
         <div class="border-b pb-6 md:border md:p-6">
           <h3 class="mb-4">Introducing DjangoCon Africa 🌍 2025 🎉</h3>
