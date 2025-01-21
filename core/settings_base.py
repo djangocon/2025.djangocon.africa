@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "custom_auth",
     "allauth",
     "allauth.account",
+    "sponsors",
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,9 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 
 STORAGES = {
-    # ...
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage"
+    },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
@@ -102,6 +105,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# MEDIA
+# ------------------------------------------------------------------------------
+# https://docs.djangoproject.com/en/dev/ref/settings/#media-root
+MEDIA_ROOT = BASE_DIR / "media"
+# https://docs.djangoproject.com/en/dev/ref/settings/#media-url
+MEDIA_URL = "/media/"
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -168,19 +177,16 @@ ACCOUNT_FORMS = {
     "signup": "custom_auth.forms.CustomSignupForm",
 }
 
-SITE_ID = 1  # new
 ACCOUNT_EMAIL_VERIFICATION = True
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
-ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
-ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_LOGOUT_REDIRECT_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/"
-ACCOUNT_LOGIN_ON_PASSWORD_RESET = True  # logged automatiquely when success
+ACCOUNT_LOGIN_ON_PASSWORD_RESET = True  # logged automatically when success
 ACCOUNT_LOGOUT_ON_GET = True
 
 
