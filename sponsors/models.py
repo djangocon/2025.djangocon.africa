@@ -48,6 +48,11 @@ class SponsorshipPackage(models.Model):
         blank=True,
         help_text=_("The files of the sponsorship package.")
     )
+    symbol = models.CharField(
+        max_length=100,
+        blank=True,
+        help_text=_("The symbol of the sponsorship package.")
+    )
 
     class Meta:
         ordering = ["order", "-amount", "name"]

@@ -11,7 +11,7 @@
         <li>Hiring: {{ sponsor.hiring }}</li>
         <ul>
             {% for package in sponsor.packages.all %}
-                <li>{{ package.name }} ({{ package.currency }}{{ package.amount }})</li>
+                <li>{{ package.symbol }}{{ package.name }} ({{ package.currency }}{{ package.amount }})</li>
             {% endfor %}
         </ul>
         {% sponsor_tagged_image sponsor "main_logo" as logo_url %}
