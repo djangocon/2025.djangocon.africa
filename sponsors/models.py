@@ -81,6 +81,11 @@ class Sponsor(models.Model):
         default=False,
         help_text=_("Whether the sponsor is hiring or not.")
     )
+    hiring_url = models.URLField(
+        default="",
+        blank=True,
+        help_text=_("Hiring URL of the sponsor.")
+    )
 
     def __str__(self):
         return u"%s" % (self.name,)
