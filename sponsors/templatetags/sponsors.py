@@ -13,6 +13,17 @@ def sponsors():
     }
 
 
+@register.inclusion_tag("sponsors/mini_sponsors_block.html")
+def mini_sponsors():
+    pass
+
+
+@register.simple_tag
+def sponsor_by_pkg_name(*args):
+    sponsor_list = Sponsor.objects.all().order_by('packages', 'order', 'id')
+    return sponsor_list.filter(packages__name__in=args)
+
+
 @register.simple_tag
 def packages():
     return {
