@@ -2,6 +2,7 @@
 {% load static %}
 {% load partials %}
 {% load i18n %}
+{% load sponsors %}
 
 {% block content %}
 
@@ -149,51 +150,7 @@
         Sponsor us
         <i class="fas fa-chevron-right"></i>
       </a>
-
-      <div class="flex flex-col md:flex-row gap-x-24 gap-y-12 mt-9 md:mt-12">
-        <div>
-          <h3 class="mb-3">🪪 Lanyard sponsor</h3>
-          <a
-            href="https://www.caktusgroup.com/"
-            target="_blank"
-            class="inline-block"
-          >
-            <img
-              src="{% static 'images/sponsors/caktus.png' %}"
-              alt="Caktus logo"
-              class="size-[136px] aspect-square"
-            />
-          </a>
-        </div>
-        <div>
-          <h3 class="mb-3">🌍 Hosting sponsor</h3>
-          <a
-            href="https://www.pythonanywhere.com/"
-            target="_blank"
-            class="inline-block"
-          >
-            <img
-              src="{% static 'images/sponsors/pythonanywhere.png' %}"
-              alt="Pythonanywhere logo"
-              class="size-[136px] aspect-square"
-            />
-          </a>
-        </div>
-        <div>
-          <h3 class="mb-3">📣 Social Media sponsor</h3>
-          <a
-            href="https://www.typefully.com/"
-            target="_blank"
-            class="inline-block"
-          >
-            <img
-              src="{% static 'images/sponsors/typefully.png' %}"
-              alt="Typefully logo"
-              class="size-[136px] aspect-square"
-            />
-          </a>
-        </div>
-      </div>
+      {% mini_sponsors %}
     </div>
   </section>
   <section class="dj-container pt-20">

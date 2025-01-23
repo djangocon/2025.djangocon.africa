@@ -1,0 +1,23 @@
+{% load sponsors %}
+{% load static %}
+
+{% sponsor_by_pkg_name 'Lanyard' 'Hosting' 'Social Media' as sponsor_list %}
+<div class="flex flex-col md:flex-row gap-x-24 gap-y-12 mt-9 md:mt-12">
+    {% for sponsor in sponsor_list %}
+        <div>
+          <h3 class="mb-3">{{ sponsor.packages.first.symbol }} {{ sponsor.packages.first.name }} sponsor</h3>
+              <a
+                href="{{ sponsor.url }}"
+                target="_blank"
+                class="inline-block"
+              >
+                {% sponsor_tagged_image sponsor "main_logo" as logo_url %}
+                <img
+                  src="{{ logo_url }}"
+                  alt="{{ sponsor.name }} logo"
+                  class="size-[136px] aspect-square"
+                />
+              </a>
+        </div>
+    {% endfor %}
+</div>
