@@ -166,6 +166,7 @@ DB_HOST = os.environ.get("DATABASE_HOST")
 DB_PASSWORD = os.environ.get("DATABASE_PASSWORD")
 DB_NAME = os.environ.get("DATABASE_NAME")
 DB_PORT = os.environ.get("DATABASE_PORT", 5432)
+ADMIN_PATH = os.environ.get("ADMIN_PATH", "/admin")
 
 # django-allauth configurations
 AUTHENTICATION_BACKENDS = [

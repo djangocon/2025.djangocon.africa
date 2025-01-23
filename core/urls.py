@@ -26,11 +26,15 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path("proposals/", include("proposals.urls")),
     path("sponsors/", include("sponsors.urls")),
-    path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
     path('i18n/', include('django.conf.urls.i18n')),
     path('set_language/', set_language, name='set_language'),
 ]
+
+if settings.DEBUG:
+    urlpatterns.append(path("admin/", admin.site.urls))
+else:
+    urlpatterns.append(path(settings.ADMIN_PATH, admin.site.urls))
 
 # Media and static files
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
@@ -40,5 +44,4 @@ urlpatterns += i18n_patterns(
     path("accounts/", include("allauth.urls")),
     path("proposals/", include("proposals.urls")),
     path("sponsors/", include("sponsors.urls")),
-    path("admin/", admin.site.urls),
 )
