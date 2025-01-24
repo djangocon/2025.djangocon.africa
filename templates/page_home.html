@@ -17,8 +17,10 @@
         AFRICA 2025
       </h1>
       <p class="text-[20px] leading-8 md:max-w-2xl mx-auto text-white">
+        {% blocktranslate %}
         Join us for 5 days of inspiration, education and networking at DjangoCon
         Africa from 11 - 15 August, 2025 in
+        {% endblocktranslate %}
         <a
           href="https://maps.app.goo.gl/TqQ9QLonUdRcdnXg8"
           target="_blank"
@@ -49,25 +51,31 @@
       class="dj-container flex gap-x-8 md:gap-x-12 gap-y-6 flex-col md:flex-row mt-5 items-center"
     >
       <div class="md:w-1/2 m-auto md:pt-[30px] md:pb-5">
-        <h2 class="mb-4">First DjangoCon Africa</h2>
+        <h2 class="mb-4">{% translate "First DjangoCon Africa" %}</h2>
         <p class="mb-4">
+          {% blocktranslate %}
           In 2023 we hosted the first ever DjangoCon Africa. DjangoCon Africa
           took place in Zanzibar, Tanzania 6th-11th November 2023.
+          {% endblocktranslate %}
           <br /><br />
+          {% blocktranslate %}
           We had roughly 200 attendees, of whom 103 were women. The attendees
           represented at least 22 countries from around the world.
+          {% endblocktranslate %}
           <br /><br />
+          {% blocktranslate %}
           We held 26 talks on topics covering programming, society, careers,
           education, disability, agriculture - the full range of topics you’d
           expect at a DjangoCon, with the African perspective often at the
           forefront.
+          {% endblocktranslate %}
         </p>
         <a
           href="https://2023.djangocon.africa/news/report/"
           target="_blank"
           class="bg-deepTeal text-white rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90"
         >
-          Read the 2023 report
+          {% translate "Read the 2023 report" %}
           <i class="fas fa-chevron-right"></i>
         </a>
       </div>
@@ -82,34 +90,40 @@
   </section>
   <section class="dj-container pb-10">
     <h2 class="md:max-w-[447px] mb-4 md:mb-8">
-      What will be happening at DjangoCon Africa
+      {% translate "What will be happening at DjangoCon Africa" %}
     </h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3">
       <div
         class="border pb-6 md:pt-6 md:px-6 border-x-0 md:border-x-[1px] border-t-0 md:border-t-[1px]"
       >
-        <h3 class="mb-4">💬 Talks</h3>
+        <h3 class="mb-4">💬 {% translate "Talks" %}</h3>
         <p>
+          {% blocktranslate %}
           Three days of talks, on programming, technology, careers, society and
           business, with speakers from across the world.
+          {% endblocktranslate %}
         </p>
       </div>
       <div
         class="border py-6 md:px-6 border-x-0 md:border-x-[1px] -mt-[1px] -ml-[1px]"
       >
-        <h3 class="mb-4">🖥️ Workshops and tutorials</h3>
+        <h3 class="mb-4">🖥️ {% translate "Workshops and tutorials" %}</h3>
         <p>
+          {% blocktranslate %}
           Hands-on training and learning sessions, led by experts in the field.
           Details to be published soon.
+          {% endblocktranslate %}
         </p>
       </div>
       <div
         class="border py-6 md:px-6 border-x-0 md:border-x-[1px] -mt-[1px] -ml-[1px]"
       >
-        <h3 class="mb-4">🤝 Collaboration</h3>
+        <h3 class="mb-4">🤝 {% translate "Collaboration" %}</h3>
         <p>
+          {% blocktranslate %}
           Work together on code, and contribute to major projects - including
           Django itself.
+          {% endblocktranslate %}
         </p>
       </div>
       <div
@@ -117,37 +131,43 @@
       >
         <h3 class="mb-4">👩‍💻 Django Girls</h3>
         <p>
+          {% blocktranslate %}
           A training workshop aimed at women, providing an introduction to web
           application development. Tens of thousands of women across the world
           have had their introduction to Django through this hugely successful
-          programme
+          programme.
+          {% endblocktranslate %}
         </p>
       </div>
       <div
         class="border pt-6 pb-6 md:px-6 border-x-0 md:border-x-[1px] border-b-0 md:border-b-[1px] -mt-[1px] -ml-[1px]"
       >
-        <h3 class="mb-4">🔎 Discovery</h3>
+        <h3 class="mb-4">🔎 {% translate "Discovery" %}</h3>
         <p>
+          {% blocktranslate %}
           DjangoCon Africa is an opportunity to discover places and people as
           well as technology. It will bring together participants from across
           Africa and the rest of the world, for mutual understanding of
           contexts, challenges and opportunities.
+          {% endblocktranslate %}
         </p>
       </div>
     </div>
   </section>
   <section class="py-10">
     <div class="dj-container">
-      <h2 class="mb-4">Sponsors</h2>
+      <h2 class="mb-4">{% translate "Sponsors"%}</h2>
       <p class="mb-4 md:max-w-xl">
+        {% blocktranslate %}
         DjangoCon Africa is made possible by the generous sponsorships of
         various teams and organisations around the world.
+        {% endblocktranslate %}
       </p>
       <a
         href="mailto:hello@djangocon.africa?subject=Sponsor DjangoCon Africa 2025"
         class="bg-deepTeal text-white rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90"
       >
-        Sponsor us
+        {% translate "Sponsor us" %}
         <i class="fas fa-chevron-right"></i>
       </a>
       {% mini_sponsors %}
@@ -158,12 +178,14 @@
       <h2 class="mb-6">Latest news</h2>
       <a href="news/announcing-djangocon-africa-2025/">
         <div class="border-b pb-6 md:border md:p-6">
-          <h3 class="mb-4">Introducing DjangoCon Africa 🌍 2025 🎉</h3>
+          <h3 class="mb-4">{% translate "Introducing DjangoCon Africa 🌍 2025 🎉" %}</h3>
           <p class="mb-6">
+            {% blocktranslate %}
             The African Django community is excited to announce the first
             DjangoCon Africa event, taking...
+            {% endblocktranslate %}
           </p>
-          <p>23 Jan • By Team</p>
+          <p>{% translate "23 Jan • By Team" %}</p>
         </div>
       </a>
     </div>

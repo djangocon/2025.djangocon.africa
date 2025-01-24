@@ -84,3 +84,11 @@ In this case use:
 npm run tailwind_watch
 ```
 
+## Translations for the website
+Django internationalisation has been enabled for this website and we support English and French for now. To ensure that every page supports translations please follow the following guidelines in the templates:
+1. Include `{% load i18n %}` at the top of the file to support translations.
+2. For one line sentences use the `{% translate "Some one line sentence or heading" %}` tag and put the text in the double qoutes.
+3. For paragraphs, use the `{% blocktranslate %} A paragraph of text {% endblocktranslate %}`. The `{% blocktranslate %}` tag does not support other tags such as `{% static %}` inside it so make sure to close it before other template tags and then open another one. However is supports variable tags such as `{{ number }}` inside it.
+4. To generate messages for translations, use the `django-admin makemesssages -l fr` and all the files with translate tags will be added to `locale/fr/LC_MESSAGES/django.po`. This is the file translators should edit to support translation into French.
+5. To compile messages use the `django-admin compilemessages` command. For more information on Django translations read the Django documentation
+https://docs.djangoproject.com/en/5.1/topics/i18n/translation/.

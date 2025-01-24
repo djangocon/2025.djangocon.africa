@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-29 21:47+0100\n"
+"POT-Creation-Date: 2025-01-23 12:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: core/settings_base.py:129
+msgid "English"
+msgstr ""
+
+#: core/settings_base.py:130
+msgid "French"
+msgstr ""
+
 #: proposals/forms.py:22
 msgid "Notes to the reviewer. These notes will not be displayed publicly"
 msgstr ""
@@ -26,6 +34,54 @@ msgstr ""
 msgid ""
 "Are there other speakers involved in your talk? List only their email "
 "addresses here"
+msgstr ""
+
+#: sponsors/models.py:11
+msgid "A Description of the file."
+msgstr ""
+
+#: sponsors/models.py:26
+msgid "The name of the sponsorship package."
+msgstr ""
+
+#: sponsors/models.py:35
+msgid "Currency symbol of the sponsorship package."
+msgstr ""
+
+#: sponsors/models.py:40
+msgid "The amount of the sponsorship package."
+msgstr ""
+
+#: sponsors/models.py:43
+msgid "A short description of the sponsorship package."
+msgstr ""
+
+#: sponsors/models.py:49
+msgid "The files of the sponsorship package."
+msgstr ""
+
+#: sponsors/models.py:54
+msgid "The symbol of the sponsorship package."
+msgstr ""
+
+#: sponsors/models.py:73
+msgid "A description of the sponsor."
+msgstr ""
+
+#: sponsors/models.py:78
+msgid "The URL of the sponsor if needed."
+msgstr ""
+
+#: sponsors/models.py:82
+msgid "Whether the sponsor is hiring or not."
+msgstr ""
+
+#: sponsors/models.py:87
+msgid "Hiring URL of the sponsor."
+msgstr ""
+
+#: sponsors/models.py:102
+msgid "The name of the tag."
 msgstr ""
 
 #: templates/account/account_inactive.html:5
@@ -276,419 +332,707 @@ msgid ""
 "email address</a>."
 msgstr ""
 
-#: templates/page_home.html:27
+#: templates/page_coc.html:9
+msgid "Code of Conduct"
+msgstr ""
+
+#: templates/page_coc.html:12
 msgid ""
-"Welcome to DjangoCon Africa 2025! Get ready for five amazing days packed "
-"with talks, workshops,"
+"\n"
+"      Everybody who participates at DjangoCon Africa in one way or another "
+"is\n"
+"      required to conform to this Code of Conduct (CoC). This includes\n"
+"      attendees, speakers, sponsors, organisers and volunteers. <br /><br /"
+">\n"
+"      We will introduce a Code of Conduct team that will be primarily\n"
+"      responsible for handling any incidents at the conference. The CoC "
+"applies\n"
+"      before and throughout the event (including related activities such as\n"
+"      social events, and social media).\n"
+"      "
 msgstr ""
 
-#: templates/page_home.html:28
+#: templates/page_coc.html:23
+msgid "Why do we have a Code of Conduct?"
+msgstr ""
+
+#: templates/page_coc.html:24
+msgid "Our goals with having this Code of Conduct are:"
+msgstr ""
+
+#: templates/page_coc.html:27
 msgid ""
-"learning, and collaboration. It’s a chance to connect with the international "
-"Django community,"
+"\n"
+"          Helping everyone feel safe and included. Many attendees are first\n"
+"          timers, or have had poor experiences in other events. We want to "
+"set\n"
+"          the expectation that harassment and other unpleasant behavior are "
+"not\n"
+"          acceptable. So that if people do have an unpleasant experience, "
+"they\n"
+"          know that’s not neither the norm nor acceptable to us as a "
+"community.\n"
+"          "
 msgstr ""
 
-#: templates/page_home.html:29
-msgid "share ideas, and be part of something special."
-msgstr ""
-
-#: templates/page_home.html:32
+#: templates/page_coc.html:36
 msgid ""
-"This year’s DjangoCon will take place in the stunning city of Arusha, known "
-"for its vibrant culture"
+"\n"
+"          Helping to build trust that if an incident is reported, we will "
+"not\n"
+"          respond with victim blaming, and that we will do a thorough\n"
+"          investigation. Even, for example, if the incident concerns someone "
+"in\n"
+"          a position of power.\n"
+"          "
 msgstr ""
 
-#: templates/page_home.html:33
-msgid "and breathtaking landscapes."
+#: templates/page_coc.html:44
+msgid ""
+"\n"
+"          Informing everyone of the expected behavior. We are a diverse\n"
+"          community, and having a Code of Conduct makes the expectations of\n"
+"          everybody’s behavior explicit and transparent.\n"
+"          "
 msgstr ""
 
-#: templates/page_home.html:36
-#, fuzzy
-#| msgid "Follow our socials to stay up to date"
-msgid "Follow our socials to stay up to date."
-msgstr "Abonnez-vous à nos pages pour ne manquer aucune information."
-
-#: templates/page_home.html:57
-#, fuzzy
-#| msgid "What’s happening at DjangoCon"
-msgid "What’s happening at DjangoCon Africa"
-msgstr "Ce qui se passe à DjangoCon"
-
-#: templates/page_home.html:68
-msgid "Workshops"
-msgstr "Ateliers"
-
-#: templates/page_home.html:69
-#, fuzzy
-#| msgid "Get hands on experiene with different tools and technologies."
-msgid "Get hands on experience with different tools and technologies"
+#: templates/page_coc.html:51
+msgid ""
+"\n"
+"          Having a framework for report handling. The Code of Conduct is "
+"the\n"
+"          basis for dealing with a report, assessing whether the CoC was\n"
+"          violated, and what action should be taken.\n"
+"          "
 msgstr ""
-"Obtenez une expérience pratique avec différents outils et technologies."
 
-#: templates/page_home.html:75
+#: templates/page_coc.html:61
+msgid "Our Code of Conduct"
+msgstr ""
+
+#: templates/page_coc.html:64
+msgid ""
+"\n"
+"          Be kind and considerate to others. Do not insult or put down "
+"other\n"
+"          attendees. Behave professionally.\n"
+"          "
+msgstr ""
+
+#: templates/page_coc.html:70
+msgid ""
+"\n"
+"          We are dedicated to providing a harassment-free conference "
+"experience\n"
+"          for everyone, regardless of race, ethnicity, culture, national "
+"origin,\n"
+"          colour, immigration status, social and economic class, "
+"educational\n"
+"          level, sex, sexual orientation, gender identity and expression, "
+"age,\n"
+"          size, family status, political belief, religion, and mental and\n"
+"          physical ability.\n"
+"          "
+msgstr ""
+
+#: templates/page_coc.html:80
+msgid ""
+"\n"
+"          We do not tolerate harassment of conference participants in any "
+"form.\n"
+"          This includes offensive comments related to the categories above,\n"
+"          deliberate intimidation, stalking, following, harassing "
+"photography or\n"
+"          recording, sustained disruption of talks or other events, violent\n"
+"          threats or language, inappropriate physical contact, and "
+"unwelcome\n"
+"          sexual attention.\n"
+"          "
+msgstr ""
+
+#: templates/page_coc.html:90
+msgid ""
+"\n"
+"          Advocating for, or encouraging, any of the above behavior is also "
+"not\n"
+"          acceptable.\n"
+"          "
+msgstr ""
+
+#: templates/page_coc.html:96
+msgid ""
+"\n"
+"          Sexual language and imagery are not appropriate for any venue to "
+"which\n"
+"          the CoC applies.\n"
+"          "
+msgstr ""
+
+#: templates/page_coc.html:102
+msgid "Don’t publish individual photographs of people without their consent."
+msgstr ""
+
+#: templates/page_coc.html:105
+msgid ""
+"\n"
+"          Be careful in the words that you choose. Remember that sexist, "
+"racist,\n"
+"          and other exclusionary jokes can be offensive and unwelcoming to "
+"those\n"
+"          around you.\n"
+"          "
+msgstr ""
+
+#: templates/page_coc.html:112
+msgid ""
+"\n"
+"          Excessive swearing and offensive jokes are not appropriate for\n"
+"          DjangoCon Africa.\n"
+"          "
+msgstr ""
+
+#: templates/page_coc.html:121
+msgid "Where does the Code of Conduct apply?"
+msgstr ""
+
+#: templates/page_coc.html:123
+msgid ""
+"\n"
+"        This Code of Conduct applies to all conference related spaces. That\n"
+"        includes, but is not limited to:\n"
+"        "
+msgstr ""
+
+#: templates/page_coc.html:129
+msgid "The conference venue(s)"
+msgstr ""
+
+#: templates/page_coc.html:130
+msgid "The conference hotel(s)"
+msgstr ""
+
+#: templates/page_coc.html:131
+msgid "Any conference related social activities"
+msgstr ""
+
+#: templates/page_coc.html:133
+msgid ""
+"\n"
+"          Slack channels, tweets with the conference hashtag, and other "
+"online\n"
+"          media\n"
+"          "
+msgstr ""
+
+#: templates/page_coc.html:141
+msgid ""
+"\n"
+"        The Code of Conduct does not exclusively apply to events on the\n"
+"        conference agenda. For example, if after a scheduled social event "
+"you go\n"
+"        to a bar with a group of fellow participants, and someone harasses "
+"you\n"
+"        there, we would still treat that as a CoC violation.\n"
+"        "
+msgstr ""
+
+#: templates/page_coc.html:151
+msgid "What can happen if the CoC is violated?"
+msgstr ""
+
+#: templates/page_coc.html:153
+msgid ""
+"\n"
+"        In case of a Code of Conduct violation, some of the most common "
+"actions\n"
+"        organisers may take are:\n"
+"        "
+msgstr ""
+
+#: templates/page_coc.html:159
+msgid "Demanding that a participant stops their behavior."
+msgstr ""
+
+#: templates/page_coc.html:161
+msgid ""
+"\n"
+"          Demanding that a participant prevents further contact with "
+"certain\n"
+"          other participants.\n"
+"          "
+msgstr ""
+
+#: templates/page_coc.html:166
+msgid "Not publishing the video of a conference talk."
+msgstr ""
+
+#: templates/page_coc.html:167
+msgid "Cancelling a conference talk."
+msgstr ""
+
+#: templates/page_coc.html:168
+msgid "Removing a participant from the conference, without refund."
+msgstr ""
+
+#: templates/page_coc.html:172
+msgid ""
+"\n"
+"        The action taken is at the discretion of the Code of Conduct team.\n"
+"        Participants are expected to comply immediately, and further action "
+"may\n"
+"        be taken in case a participant does not comply. A record will be "
+"kept of\n"
+"        all incidents.\n"
+"        "
+msgstr ""
+
+#: templates/page_coc.html:182
+msgid "Where to report incidents"
+msgstr ""
+
+#: templates/page_coc.html:184
+msgid ""
+"\n"
+"        If a Code of Conduct incident happens to you, or witness it "
+"happening to\n"
+"        someone else, please contact the CoC team immediately either in "
+"person,\n"
+"        or by sending an email to "
+msgstr ""
+
+#: templates/page_coc.html:191
+msgid ""
+" In urgent cases, you can also phone us on. <br />\n"
+"        Our Code of Conduct team consists of:\n"
+"        "
+msgstr ""
+
+#: templates/page_coc.html:203
+msgid ""
+"\n"
+"        The team members will be introduced in person at the conference. You "
+"can\n"
+"        approach any of them at any time to discuss an incident or concern. "
+"You\n"
+"        can also ask any other staff to help you find them at the "
+"conference.\n"
+"        "
+msgstr ""
+
+#: templates/page_coc.html:212
+msgid "Guidelines for reporting incidents"
+msgstr ""
+
+#: templates/page_coc.html:214
+msgid ""
+"\n"
+"        Please do not feel like you may be a burden to us by reporting\n"
+"        incidents. Even if you happen to report multiple incidents during "
+"the\n"
+"        conference. We rather consider reports an opportunity for us to act: "
+"by\n"
+"        knowing about an incident, we can act on it, and often prevent it "
+"from\n"
+"        continuing or repeating. But if we don’t know, we can’t take "
+"action.\n"
+"        "
+msgstr ""
+
+#: templates/page_coc.html:222
+msgid ""
+"\n"
+"        If you are not sure whether the situation was a Code of Conduct\n"
+"        violation, or whether it applied to that particular space, we "
+"encourage\n"
+"        you to still report it. We would much rather have a few extra "
+"reports\n"
+"        where we decide to take no action, rather than miss a report of an\n"
+"        actual violation. We do not look negatively on you if we find the\n"
+"        incident is not a violation. And knowing about incidents that are "
+"not\n"
+"        violations, or happen outside our spaces, can also help us to "
+"improve\n"
+"        the Code of Conduct or the processes surrounding it.\n"
+"        "
+msgstr ""
+
+#: templates/page_coc.html:232
+msgid "In your report please include, when possible:"
+msgstr ""
+
+#: templates/page_coc.html:235
+msgid "Your contact info (so we can get in touch with you)"
+msgstr ""
+
+#: templates/page_coc.html:237
+msgid ""
+"\n"
+"          Names (real, nicknames, or pseudonyms) of any individuals "
+"involved. If\n"
+"          there were other witnesses besides you, please try to include them "
+"as\n"
+"          well.\n"
+"          "
+msgstr ""
+
+#: templates/page_coc.html:244
+msgid ""
+"\n"
+"          When and where the incident occurred. Please be as specific as\n"
+"          possible.\n"
+"          "
+msgstr ""
+
+#: templates/page_coc.html:250
+msgid ""
+"\n"
+"          Your account of what occurred. If there is a written record (e.g.\n"
+"          tweets or slack messages) please include screenshots, or otherwise "
+"a\n"
+"          link.\n"
+"          "
+msgstr ""
+
+#: templates/page_coc.html:256
+msgid "Any extra context you believe existed for the incident."
+msgstr ""
+
+#: templates/page_coc.html:257
+msgid "If you believe this incident is ongoing."
+msgstr ""
+
+#: templates/page_coc.html:258
+msgid "Any other information you believe we should have."
+msgstr ""
+
+#: templates/page_coc.html:262
+msgid ""
+"\n"
+"        If you don’t have some of this information, or not at this time, "
+"please\n"
+"        still make the report anyways. <br /><br />\n"
+"        If you feel unsafe reporting in person, you may choose someone to\n"
+"        represent you. In this case, we’d need their contact information, "
+"but\n"
+"        we’d ask you to make clear that this person represents you.\n"
+"        "
+msgstr ""
+
+#: templates/page_coc.html:273
+msgid "Other assistance"
+msgstr ""
+
+#: templates/page_coc.html:275
+msgid ""
+"\n"
+"        Conference staff will be happy to help participants contact hotel/"
+"venue\n"
+"        security or local law enforcement, provide escorts, or otherwise "
+"assist\n"
+"        those experiencing harassment to feel safe for the duration of the\n"
+"        conference. However, we will not contact security or law "
+"enforcement\n"
+"        without your consent, except when not doing so would create "
+"significant\n"
+"        danger for other participants. "
+msgstr ""
+
+#: templates/page_coc.html:282
+msgid ""
+"We value your attendance, and look forward to seeing you at DjangoCon Africa."
+msgstr ""
+
+#: templates/page_coc.html:283
+msgid "This Code of Conduct was adapted from"
+msgstr ""
+
+#: templates/page_coc.html:287
+msgid "Code of Conduct written by"
+msgstr ""
+
+#: templates/page_home.html:20
+msgid ""
+"\n"
+"        Join us for 5 days of inspiration, education and networking at "
+"DjangoCon\n"
+"        Africa from 11 - 15 August, 2025 in\n"
+"        "
+msgstr ""
+
+#: templates/page_home.html:54
+#, fuzzy
+#| msgid "DjangoCon Africa"
+msgid "First DjangoCon Africa"
+msgstr "DjangoCon Africa"
+
+#: templates/page_home.html:56
 #, fuzzy
 #| msgid ""
-#| "A Django workshop aimed at getting more women and girls introduced to web "
-#| "development."
+#| "DjangoCon Africa took place in Zanzibar, Tanzania 6th-11th November 2023."
 msgid ""
-"A Django workshop aimed at getting more women and girls introduced to web "
-"development"
-msgstr ""
-"Un atelier Django visant à initier davantage de femmes et de filles au "
-"développement Web."
-
-#: templates/page_home.html:80
-msgid "Talks"
-msgstr ""
-
-#: templates/page_home.html:81
-msgid "Many exciting talks from across Africa and the world!"
-msgstr ""
-
-#: templates/page_home.html:86
-msgid "Sprints"
-msgstr ""
-
-#: templates/page_home.html:87
-msgid "Work on open source projects."
-msgstr ""
-
-#: templates/page_home.html:113
-msgid "First"
-msgstr "Première édition"
-
-#: templates/page_home.html:119
-msgid "In 2023 we hosted the first ever DjangoCon Africa."
-msgstr "En 2023, nous avons accueilli la toute première DjangoCon Africa."
-
-#: templates/page_home.html:121
-msgid ""
-"DjangoCon Africa took place in Zanzibar, Tanzania 6th-11th November 2023."
+"\n"
+"          In 2023 we hosted the first ever DjangoCon Africa. DjangoCon "
+"Africa\n"
+"          took place in Zanzibar, Tanzania 6th-11th November 2023.\n"
+"          "
 msgstr ""
 "DjangoCon Africa a eu lieu à Zanzibar, en Tanzanie, du 6 au 11 Novembre 2023."
 
-#: templates/page_home.html:123
-msgid "We had roughly 200 attendees, of whom 103 were women."
-msgstr "Nous avons accueilli environ 200 participants, dont 103 femmes."
-
-#: templates/page_home.html:124
-msgid "The attendees represented at least 22 countries from around the world."
-msgstr "Les participants représentaient au moins 22 pays du monde entier."
-
-#: templates/page_home.html:126
-msgid ""
-"We held 26 talks on topics covering programming, society, careers, "
-"education, disability, agriculture"
-msgstr ""
-"Nous avons animé 26 sessions autour de thèmes tels que la programmation, la "
-"société, les carrières, l'éducation, le handicap, l'agriculture, soit "
-
-#: templates/page_home.html:127
+#: templates/page_home.html:61
 #, fuzzy
 #| msgid ""
-#| "- the full range of topics you’d expect at a DjangoCon, with the African "
-#| "perspective often at the forefront."
+#| "The attendees represented at least 22 countries from around the world."
 msgid ""
-"- the full range of topics you’d expect at a DjangoCon, with the African "
-"perspective often at the forefront."
-msgstr ""
-"toute la gamme de sujets auxquels on peut s'attendre lors d'une DjangoCon, "
-"avec la perspective africaine étant au premier plan."
+"\n"
+"          We had roughly 200 attendees, of whom 103 were women. The "
+"attendees\n"
+"          represented at least 22 countries from around the world.\n"
+"          "
+msgstr "Les participants représentaient au moins 22 pays du monde entier."
 
-#: templates/page_home.html:131
+#: templates/page_home.html:66
+#, fuzzy
+#| msgid ""
+#| "We held 26 talks on topics covering programming, society, careers, "
+#| "education, disability, agriculture - the full range of topics you’d "
+#| "expect at a DjangoCon, with the African perspective often at the "
+#| "forefront."
+msgid ""
+"\n"
+"          We held 26 talks on topics covering programming, society, "
+"careers,\n"
+"          education, disability, agriculture - the full range of topics "
+"you’d\n"
+"          expect at a DjangoCon, with the African perspective often at the\n"
+"          forefront.\n"
+"          "
+msgstr ""
+"Nous avons animé 26 sessions autour de thèmes tels que la programmation, la "
+"société, les carrières, l'éducation, le handicap, l'agriculture, soit toute "
+"la gamme de sujets auxquels on peut s'attendre lors d'une DjangoCon, avec la "
+"perspective africaine étant au premier plan."
+
+#: templates/page_home.html:78
 #, fuzzy
 #| msgid "Read the report >"
-msgid "Read the report"
+msgid "Read the 2023 report"
 msgstr "Lire le rapport >"
+
+#: templates/page_home.html:93
+#, fuzzy
+#| msgid "What’s happening at DjangoCon"
+msgid "What will be happening at DjangoCon Africa"
+msgstr "Ce qui se passe à DjangoCon"
+
+#: templates/page_home.html:99
+msgid "Talks"
+msgstr ""
+
+#: templates/page_home.html:101
+msgid ""
+"\n"
+"          Three days of talks, on programming, technology, careers, society "
+"and\n"
+"          business, with speakers from across the world.\n"
+"          "
+msgstr ""
+
+#: templates/page_home.html:110
+msgid "Workshops and tutorials"
+msgstr ""
+
+#: templates/page_home.html:112
+msgid ""
+"\n"
+"          Hands-on training and learning sessions, led by experts in the "
+"field.\n"
+"          Details to be published soon.\n"
+"          "
+msgstr ""
+
+#: templates/page_home.html:121
+msgid "Collaboration"
+msgstr ""
+
+#: templates/page_home.html:123
+msgid ""
+"\n"
+"          Work together on code, and contribute to major projects - "
+"including\n"
+"          Django itself.\n"
+"          "
+msgstr ""
+
+#: templates/page_home.html:134
+msgid ""
+"\n"
+"          A training workshop aimed at women, providing an introduction to "
+"web\n"
+"          application development. Tens of thousands of women across the "
+"world\n"
+"          have had their introduction to Django through this hugely "
+"successful\n"
+"          programme.\n"
+"          "
+msgstr ""
+
+#: templates/page_home.html:145
+msgid "Discovery"
+msgstr ""
+
+#: templates/page_home.html:147
+msgid ""
+"\n"
+"          DjangoCon Africa is an opportunity to discover places and people "
+"as\n"
+"          well as technology. It will bring together participants from "
+"across\n"
+"          Africa and the rest of the world, for mutual understanding of\n"
+"          contexts, challenges and opportunities.\n"
+"          "
+msgstr ""
+
+#: templates/page_home.html:159
+msgid "Sponsors"
+msgstr "Sponsors"
+
+#: templates/page_home.html:161
+msgid ""
+"\n"
+"        DjangoCon Africa is made possible by the generous sponsorships of\n"
+"        various teams and organisations around the world.\n"
+"        "
+msgstr ""
+
+#: templates/page_home.html:170
+#, fuzzy
+#| msgid "Sponsor Us"
+msgid "Sponsor us"
+msgstr "Sponsorisez-nous"
+
+#: templates/page_home.html:181 templates/page_news_detail.html:9
+msgid "Introducing DjangoCon Africa 🌍 2025 🎉"
+msgstr ""
+
+#: templates/page_home.html:183
+msgid ""
+"\n"
+"            The African Django community is excited to announce the first\n"
+"            DjangoCon Africa event, taking...\n"
+"            "
+msgstr ""
+
+#: templates/page_home.html:188
+msgid "23 Jan • By Team"
+msgstr ""
+
+#: templates/page_news_detail.html:13
+msgid "By Team • 23 Jan. 2025"
+msgstr ""
+
+#: templates/page_news_detail.html:32
+msgid ""
+"\n"
+"        The African Django community is excited to announce the second "
+"DjangoCon\n"
+"        Africa event, taking place this year in Arusha, Tanzania, from 11th "
+"-\n"
+"        15th August 2025.\n"
+"        "
+msgstr ""
+
+#: templates/page_news_detail.html:41
+#, fuzzy
+#| msgid "DjangoCon Africa"
+msgid "About DjangoCon Africa"
+msgstr "DjangoCon Africa"
+
+#: templates/page_news_detail.html:43
+msgid ""
+"\n"
+"        DjangoCon Africa will include 3 days of single-track talks, 2 days "
+"of\n"
+"        workshops and sprints, and one day of touring for international\n"
+"        visitors. "
+msgstr ""
+
+#: templates/page_news_detail.html:47
+msgid ""
+"\n"
+"        The event will also include a Django Girls workshop to be held the\n"
+"        weekend before DjangoCon Africa. To make the conference as inclusive "
+"as\n"
+"        possible, the event will offer financial aid to members of\n"
+"        under-represented communities in software to ensure they can also\n"
+"        attend. "
+msgstr ""
+
+#: templates/page_news_detail.html:53
+msgid ""
+"\n"
+"        The CFP, which is open to all, will also be announced as soon as\n"
+"        the month of June.\n"
+"        "
+msgstr ""
+
+#: templates/page_news_detail.html:61
+#, fuzzy
+#| msgid "Sponsors"
+msgid "Sponsorship"
+msgstr "Sponsors"
+
+#: templates/page_news_detail.html:63
+msgid ""
+"\n"
+"        The success of DjangoCon Africa lies hugely in the sponsorship of\n"
+"        organizations and individuals within the Python/Django community. We "
+"are\n"
+"        appealing to organizations and individuals to help us make "
+"DjangoCon\n"
+"        Africa possible by sponsoring the event. If you are interested in\n"
+"        sponsoring DjangoCon Africa 2025, please contact the team at\n"
+"        sponsors@djangocon.africa.\n"
+"        "
+msgstr ""
+
+#: templates/page_news_detail.html:75
+#, fuzzy
+#| msgid "Arusha, Tanzania"
+msgid "About Tanzania"
+msgstr "Arusha, Tanzanie"
+
+#: templates/page_news_detail.html:77
+msgid ""
+"\n"
+"        Tanzania is a country in East Africa widely known for its vast\n"
+"        wilderness areas which include the Serengeti National Park and the\n"
+"        Kilimanjaro National Park, home to Africa’s highest mountain,\n"
+"        Kilimanjaro. Its offshore islands are Zanzibar, which has Arabic\n"
+"        influences, and Mafia which is a marine park home to whale sharks "
+"and\n"
+"        coral reefs.\n"
+"        "
+msgstr ""
+
+#: templates/page_news_detail.html:92
+msgid ""
+"\n"
+"        Arusha is the home of Kilimanjaro National Park. Arusha is very "
+"accessible, \n"
+"        with two airports, Arusha Municipality Airport for domestic "
+"flights \n"
+"        and Kilimanjaro International Airport. For international travellers, "
+"it is \n"
+"        best and cheaper to book direct flight to Arusha, which will land at "
+"Kilimanjaro\n"
+"        International Airport. \n"
+"        "
+msgstr ""
 
 #: venv/lib/python3.12/site-packages/_pytest/config/argparsing.py:474
 #, python-format
 msgid "ambiguous option: %(option)s could match %(matches)s"
 msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/_termui_impl.py:518
-#, python-brace-format
-msgid "{editor}: Editing failed"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/_termui_impl.py:522
-#, python-brace-format
-msgid "{editor}: Editing failed: {e}"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/core.py:1120
-msgid "Aborted!"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/core.py:1309
-#: venv/lib/python3.12/site-packages/click/decorators.py:559
-msgid "Show this message and exit."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/core.py:1340
-#: venv/lib/python3.12/site-packages/click/core.py:1370
-#, python-brace-format
-msgid "(Deprecated) {text}"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/core.py:1387
-msgid "Options"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/core.py:1413
-#, python-brace-format
-msgid "Got unexpected extra argument ({args})"
-msgid_plural "Got unexpected extra arguments ({args})"
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/click/core.py:1429
-msgid "DeprecationWarning: The command {name!r} is deprecated."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/core.py:1636
-msgid "Commands"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/core.py:1668
-msgid "Missing command."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/core.py:1746
-msgid "No such command {name!r}."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/core.py:2310
-msgid "Value must be an iterable."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/core.py:2331
-#, python-brace-format
-msgid "Takes {nargs} values but 1 was given."
-msgid_plural "Takes {nargs} values but {len} were given."
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/click/core.py:2778
-#, python-brace-format
-msgid "env var: {var}"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/core.py:2808
-msgid "(dynamic)"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/core.py:2821
-#, python-brace-format
-msgid "default: {default}"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/core.py:2834
-msgid "required"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/decorators.py:465
-#, python-format
-msgid "%(prog)s, version %(version)s"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/decorators.py:528
-msgid "Show the version and exit."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:44
-#: venv/lib/python3.12/site-packages/click/exceptions.py:80
-#, python-brace-format
-msgid "Error: {message}"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:72
-#, python-brace-format
-msgid "Try '{command} {option}' for help."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:121
-#, python-brace-format
-msgid "Invalid value: {message}"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:123
-#, python-brace-format
-msgid "Invalid value for {param_hint}: {message}"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:179
-msgid "Missing argument"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:181
-msgid "Missing option"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:183
-msgid "Missing parameter"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:185
-#, python-brace-format
-msgid "Missing {param_type}"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:192
-#, python-brace-format
-msgid "Missing parameter: {param_name}"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:212
-#, python-brace-format
-msgid "No such option: {name}"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:224
-#, python-brace-format
-msgid "Did you mean {possibility}?"
-msgid_plural "(Possible options: {possibilities})"
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:262
-msgid "unknown error"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/exceptions.py:269
-msgid "Could not open file {filename!r}: {message}"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/formatting.py:156
-msgid "Usage:"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/parser.py:231
-msgid "Argument {name!r} takes {nargs} values."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/parser.py:413
-msgid "Option {name!r} does not take a value."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/parser.py:474
-msgid "Option {name!r} requires an argument."
-msgid_plural "Option {name!r} requires {nargs} arguments."
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/click/shell_completion.py:319
-msgid "Shell completion is not supported for Bash versions older than 4.4."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/shell_completion.py:326
-msgid "Couldn't detect Bash version, shell completion is not supported."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/termui.py:158
-msgid "Repeat for confirmation"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/termui.py:174
-msgid "Error: The value you entered was invalid."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/termui.py:176
-#, python-brace-format
-msgid "Error: {e.message}"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/termui.py:187
-msgid "Error: The two entered values do not match."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/termui.py:243
-msgid "Error: invalid input"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/termui.py:773
-msgid "Press any key to continue..."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:266
-#, python-brace-format
-msgid ""
-"Choose from:\n"
-"\t{choices}"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:298
-msgid "{value!r} is not {choice}."
-msgid_plural "{value!r} is not one of {choices}."
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:392
-msgid "{value!r} does not match the format {format}."
-msgid_plural "{value!r} does not match the formats {formats}."
-msgstr[0] ""
-msgstr[1] ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:414
-msgid "{value!r} is not a valid {number_type}."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:470
-#, python-brace-format
-msgid "{value} is not in the range {range}."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:611
-msgid "{value!r} is not a valid boolean."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:635
-msgid "{value!r} is not a valid UUID."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:822
-msgid "file"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:824
-msgid "directory"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:826
-msgid "path"
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:877
-msgid "{name} {filename!r} does not exist."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:886
-msgid "{name} {filename!r} is a file."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:894
-#, python-brace-format
-msgid "{name} '{filename}' is a directory."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:903
-msgid "{name} {filename!r} is not readable."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:912
-msgid "{name} {filename!r} is not writable."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:921
-msgid "{name} {filename!r} is not executable."
-msgstr ""
-
-#: venv/lib/python3.12/site-packages/click/types.py:988
-#, python-brace-format
-msgid "{len_type} values are required, but {len_value} was given."
-msgid_plural "{len_type} values are required, but {len_value} were given."
-msgstr[0] ""
-msgstr[1] ""
 
 #: venv/lib/python3.12/site-packages/django/contrib/messages/apps.py:15
 msgid "Messages"
@@ -1327,7 +1671,6 @@ msgid "Unknown"
 msgstr ""
 
 #: venv/lib/python3.12/site-packages/django/forms/widgets.py:795
-#: venv/lib/python3.12/site-packages/telepath/tests.py:243
 msgid "Yes"
 msgstr ""
 
@@ -1914,8 +2257,57 @@ msgstr ""
 msgid "LogIn"
 msgstr ""
 
-#~ msgid "DjangoCon Africa"
-#~ msgstr "DjangoCon Africa"
+#, fuzzy
+#~| msgid "Follow our socials to stay up to date"
+#~ msgid "Follow our socials to stay up to date."
+#~ msgstr "Abonnez-vous à nos pages pour ne manquer aucune information."
+
+#~ msgid "Workshops"
+#~ msgstr "Ateliers"
+
+#, fuzzy
+#~| msgid "Get hands on experiene with different tools and technologies."
+#~ msgid "Get hands on experience with different tools and technologies"
+#~ msgstr ""
+#~ "Obtenez une expérience pratique avec différents outils et technologies."
+
+#, fuzzy
+#~| msgid ""
+#~| "A Django workshop aimed at getting more women and girls introduced to "
+#~| "web development."
+#~ msgid ""
+#~ "A Django workshop aimed at getting more women and girls introduced to web "
+#~ "development"
+#~ msgstr ""
+#~ "Un atelier Django visant à initier davantage de femmes et de filles au "
+#~ "développement Web."
+
+#~ msgid "First"
+#~ msgstr "Première édition"
+
+#~ msgid "In 2023 we hosted the first ever DjangoCon Africa."
+#~ msgstr "En 2023, nous avons accueilli la toute première DjangoCon Africa."
+
+#~ msgid "We had roughly 200 attendees, of whom 103 were women."
+#~ msgstr "Nous avons accueilli environ 200 participants, dont 103 femmes."
+
+#~ msgid ""
+#~ "We held 26 talks on topics covering programming, society, careers, "
+#~ "education, disability, agriculture"
+#~ msgstr ""
+#~ "Nous avons animé 26 sessions autour de thèmes tels que la programmation, "
+#~ "la société, les carrières, l'éducation, le handicap, l'agriculture, soit "
+
+#, fuzzy
+#~| msgid ""
+#~| "- the full range of topics you’d expect at a DjangoCon, with the African "
+#~| "perspective often at the forefront."
+#~ msgid ""
+#~ "- the full range of topics you’d expect at a DjangoCon, with the African "
+#~ "perspective often at the forefront."
+#~ msgstr ""
+#~ "toute la gamme de sujets auxquels on peut s'attendre lors d'une "
+#~ "DjangoCon, avec la perspective africaine étant au premier plan."
 
 #, fuzzy
 #~| msgid ""
@@ -1947,36 +2339,8 @@ msgstr ""
 #~ msgid "11 - 15 August"
 #~ msgstr "11 - 15 Août"
 
-#~ msgid "Arusha, Tanzania"
-#~ msgstr "Arusha, Tanzanie"
-
 #~ msgid "Africa"
 #~ msgstr "Africa"
-
-#, fuzzy
-#~| msgid ""
-#~| "We held 26 talks on topics covering programming, society, careers, "
-#~| "education, disability, agriculture - the full range of topics you’d "
-#~| "expect at a DjangoCon, with the African perspective often at the "
-#~| "forefront."
-#~ msgid ""
-#~ "\n"
-#~ "                    We held 26 talks on topics covering programming, "
-#~ "society, careers, education, disability, agriculture\n"
-#~ "                    - the full range of topics you’d expect at a "
-#~ "DjangoCon, with the African perspective often at the forefront\n"
-#~ "                    "
-#~ msgstr ""
-#~ "Nous avons animé 26 sessions autour de thèmes tels que la programmation, "
-#~ "la société, les carrières, l'éducation, le handicap, l'agriculture, soit "
-#~ "toute la gamme de sujets auxquels on peut s'attendre lors d'une "
-#~ "DjangoCon, avec la perspective africaine étant au premier plan."
-
-#~ msgid "Sponsors"
-#~ msgstr "Sponsors"
-
-#~ msgid "Sponsor Us"
-#~ msgstr "Sponsorisez-nous"
 
 #~ msgid "Our Sponsors"
 #~ msgstr "Nos sponsors"
