@@ -1,0 +1,44 @@
+<nav class="hidden lg:flex items-center gap-x-5">
+    {% for item in header_menu_items %}
+        <div class="relative group">
+            {% if item.children %}
+                <div x-data="{ open: false }" class="relative inline-block">
+                    <div class="py-3 flex items-center hover:border-b-2
+                    {% if is_white_header %} hover:border-deepTeal{% else %} hover:border-white{% endif %}
+                    {% for child in item.children %}{% if request.path == child.href %} border-b-2 {% if is_white_header %} border-deepTeal{% else %}border-white{% endif %}{% endif %}{% endfor %}">
+                        <button
+                            @click="open = !open" @click.outside="open = false"
+                            class="flex items-center gap-x-1 py-2
+                                {% for child in item.children %}{% if request.path == child.href %} {% if is_white_header %}text-deepTeal{% else %}text-white{% endif %}{% endif %}{% endfor %}">
+                            <span class="text-base">{{ item.label }}</span>
+                            <i class="fas fa-chevron-down transition-transform opacity-30 duration-200"
+                            :class="{ 'rotate-180': open }"></i>
+                        </button>
+                    </div>
+                    <div
+                        x-show="open"
+                        class="absolute left-0 mt-1 w-fit rounded-md shadow-2xl ring-1 ring-black ring-opacity-5 bg-white"
+                        style="display: none;">
+                        <div class="py-1" role="menu">
+                            {% for child in item.children %}
+                                <a href="{{ child.href }}"
+                                   class="block px-4 py-3 text-nowrap text-black hover:bg-gray-100">
+                                    {{ child.label }}
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+            <div class="py-3 flex items-center hover:border-b-2
+            {% if is_white_header %} hover:border-deepTeal{% else %} hover:border-white{% endif %}
+            {% if request.path == item.href %} border-b-2 border-deepTeal {% endif %}">
+                <a href="{{ item.href }}"
+                    class="py-2 {% if request.path == item.href %}text-deepTeal {% endif %}">
+                    {{ item.label }}
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+</nav>

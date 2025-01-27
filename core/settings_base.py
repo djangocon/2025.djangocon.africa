@@ -125,6 +125,12 @@ USE_L10N = True
 
 USE_TZ = True
 
+LANGUAGE_FLAGS = {
+    'en': '🇬🇧',
+    'fr': '🇫🇷',
+}
+
+
 LANGUAGES = [
     ('en', _('English')),
     ('fr', _('French')),

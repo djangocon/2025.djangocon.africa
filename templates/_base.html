@@ -3,38 +3,7 @@
 {% load tailwind_filters %}
 {% load partials %}
 
-{% partialdef header-menu-item-large %}
-
-{% if link.href %}
-<a href="{{link.href}}" class="header_button">
-    {{ link.label | safe }}
-</a>
-{% else %}
-<div x-data="{ open: false }" class="relative inline-block">
-
-    <button @click="open = ! open" class="header_button">
-        {{ link.label | safe }}
-        <i class="fas fa-chevron-right" x-show="! open"></i>
-        <i class="fas fa-chevron-down" x-show="open"></i>
-    </button>
-
-    <div x-show="open" @click.outside="open = false"
-        class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50 flex flex-col gap-2 pt-2 pl-2"
-        style="display: none;">
-
-        {% for child in link.children %}
-        <a href="{{ child.href }}" class="header_button">{{ child.label }}</a>
-        {% endfor %}
-
-    </div>
-</div>
-{% endif %}
-
-{% endpartialdef %}
-
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,48 +19,11 @@
 </head>
 
 <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
-
-
-    <!-- Header bar
-    To edit the header menu items look at header_menu_items.py
-    -->
-    <header class="w-full {% if is_white_header %}bg-white text-black{% else %}bg-deepTeal text-white{% endif %}">
-        <div class="dj-container pt-10">
-            <div class="flex justify-between">
-                <a class="hover:cursor-pointer" href="/">
-                    {% if is_white_header %}
-                        <img src="{% static 'images/logo-black.svg' %}" alt="logo" />
-                    {% else %}
-                        <img src="{% static 'images/logo.svg' %}" alt="logo"/>
-                    {% endif %}
-                </a>
-                {% include "_language_selector.html" %}
-            </div>
-        </div>
-    </header>
+    {% include "partials/_header.html" %}
     <main>
         {% block content %}
         {% endblock %}
     </main>
-    <footer>
-        <img src="{% static 'images/footer/desktop-footer.png' %}" alt="footer-bg" class="w-full" />
-        <div class="bg-[#313114] text-white text-center pb-12">
-            <div class="dj-container flex flex-col items-center gap-y-6">
-                <img src="{% static 'images/footer-logo.svg' %}" alt="logo" />
-                <div class="flex gap-x-4">
-                    <a target="_blank" href="https://github.com/djangocon"><img src="{% static 'icons/github-icon.svg' %}" alt="github icon" class="size-[44px]"/></a>
-                    <a target="_blank" href="https://mastodon.social/@djangoconafrica@fosstodon.org"><img src="{% static 'icons/mastodon-icon.svg' %}" alt="mastodon icon" class="size-[44px]"/></a>
-                    <a target="_blank" href="https://bsky.app/profile/djcafrica.bsky.social"><img src="{% static 'icons/bluesky-icon.svg' %}" alt="bluesky icon" class="size-[44px]"/></a>
-                    <a target="_blank" href="https://x.com/djcafrica"><img src="{% static 'icons/x-icon.svg' %}" alt="x icon" class="size-[44px]"/></a>
-                    <a target="_blank" href="https://facebook.com/djcafrica"><img src="{% static 'icons/facebook-icon.svg' %}" alt="facebook icon" class="size-[44px]"/></a>
-                    <a target="_blank" href="https://linkedin.com/company/djcafrica"><img src="{% static 'icons/linkedin-icon.svg' %}" alt="linkedin icon" class="size-[44px]"/></a>
-                    <a href="mailto:hello@djangocon.africa"><img src="{% static 'icons/email-icon.svg' %}" alt="email icon" class="size-[44px]"/></a>
-                </div>
-                <p>Website designed by <a href="https://www.linkedin.com/in/hopeadoli" target="_blank" class="underline cursor-pointer">Hope Adoli</a> and built with <span class="text-red-800">❤</span> by <a class="underline cursor-pointer" href="/">the community</a></p>
-                <p>Other Django Events: <a class="underline cursor-pointer" href="https://djangocon.us" target="_blank">DjangoCon US</a> • <a class="underline cursor-pointer" href="https://djangocon.eu" target="_blank">DjangoCon Europe</a> • <a class="underline cursor-pointer" href="https://djangocon.com.au" target="_blank">DjangoCon Australia</a></p>
-                <p>Our <a class="underline cursor-pointer" href="/coc">Code of Conduct</a></p>
-            </div>
-        </div>
-    </footer>
+    {% include "partials/_footer.html" %}
 </body>
 </html>

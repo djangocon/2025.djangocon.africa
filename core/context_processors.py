@@ -8,4 +8,6 @@ def language_context(request):
     return {
         'current_language': current_language,
         'current_language_name': languages_dict.get(current_language, 'English'),
+        'current_language_flag': settings.LANGUAGE_FLAGS.get(current_language, '🇬🇧'),
+        'supported_languages': languages_dict,
     }
