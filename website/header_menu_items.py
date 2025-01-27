@@ -16,33 +16,33 @@ header_menu_items = [
     HeaderLink(
         label=_("Conference"),
         children=[
-            HeaderLink(label=_("About the conference"), href="/about"),
-            HeaderLink(label=_("Venue"), href="/venue"),
+            HeaderLink(label=_("About the conference"), href="#"),
+            HeaderLink(label=_("Venue"), href="#"),
             HeaderLink(label=_("Code of Conduct"), href="/coc"),
-            HeaderLink(label=_("Organisers"), href="/organisers"),
+            HeaderLink(label=_("Organisers"), href="#"),
         ]
     ),
     HeaderLink(
         label=_("Resources"),
         children=[
-            HeaderLink(label=_("Documentation"), href="/docs"),
-            HeaderLink(label=_("Resources"), href="/resources"),
+            HeaderLink(label=_("Documentation"), href="#"),
+            HeaderLink(label=_("Resources"), href="#"),
         ]
     ),
     HeaderLink(
         label=_("Speaking"),
-        href="/speaking",
+        href="#",
     ),
     HeaderLink(
         label=_("Sponsors"),
         children=[
-            HeaderLink(label=_("Our Sponsors"), href=reverse("sponsors")),
-            HeaderLink(label=_("Become a Sponsor"), href="/become-sponsor"),
+            HeaderLink(label=_("Our Sponsors"), href="#"),
+            HeaderLink(label=_("Become a Sponsor"), href="#"),
         ]
     ),
     HeaderLink(
         label=_("Schedule"),
-        href="/schedule",
+        href="#",
     ),
 ]
 
