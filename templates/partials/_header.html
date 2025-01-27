@@ -1,0 +1,31 @@
+{% load static %}
+
+<header class="w-full {% if is_white_header %}bg-white text-black{% else %}bg-deepTeal border-b-white/10 text-white{% endif %} sticky top-0 z-50 border-b">
+    <div class="dj-container flex h-16 items-center justify-between">
+        <a href="/">
+            {% if is_white_header %}
+                <img src="{% static 'images/logo-black.svg' %}" alt="logo" class="w-[150px]" />
+            {% else %}
+                <img src="{% static 'images/logo.svg' %}" alt="logo" class="w-[150px]" />
+            {% endif %}
+        </a>
+        {% include "partials/_navigation.html" %}
+        <div class="flex items-center gap-x-2">
+            {% include "partials/_language_selector.html" %}
+            <button class="hidden lg:block border h-10 px-4 py-2 rounded-full {% if is_white_header %} text-black hover:text-gray-700 border-black/10{% else %}text-white hover:text-gray-200 hover:bg-white/10 border-white/10{% endif %}">
+                Tickets
+            </button>
+            <button class="hidden lg:block border h-10 px-4 py-2 rounded-full {% if is_white_header %}text-black hover:text-gray-700 border-black/10{% else %}text-white hover:text-gray-200 border-white/10{% endif %}">
+                Account
+            </button>
+            <button
+                x-data @click="$dispatch('toggle-mobile-menu')"
+                class="lg:hidden flex items-center justify-center size-10 rounded-full {% if is_white_header %} border-black/10{% else %}text-white border-white/10{% endif %} border transition-colors"
+            >
+                <i class="fas fa-bars"></i>
+                <span class="sr-only">Toggle Menu</span>
+            </button>
+        </div>
+    </div>
+    {% include "partials/_mobile_nav.html" %}
+</header>
