@@ -1003,6 +1003,10 @@ td {
   height: 50px;
 }
 
+.h-\[calc\(100vh-64px\)\] {
+  height: calc(100vh - 64px);
+}
+
 .h-auto {
   height: auto;
 }
@@ -1178,6 +1182,10 @@ td {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
 .text-nowrap {

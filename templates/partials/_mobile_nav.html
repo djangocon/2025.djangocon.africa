@@ -3,11 +3,14 @@
 <div x-data="{ isOpen: false }"
      @toggle-mobile-menu.window="isOpen = !isOpen"
      x-show="isOpen"
-     class="fixed inset-0 z-50 bg-white text-black lg:hidden"
+     class="fixed inset-0 z-50 flex flex-col bg-white text-black lg:hidden"
+     x-effect="isOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'"
      style="display: none;">
     <div class="border-b">
         <div class="dj-container flex h-16 items-center justify-between">
-            <img src="{% static 'images/logo-black.svg' %}" alt="logo" class="w-[150px]" />
+            <a href="/">
+                <img src="{% static 'images/logo-black.svg' %}" alt="logo" class="w-[150px]" />
+            </a>
             <div class="flex items-center gap-x-2">
                 {% include "partials/_language_selector.html" with is_white_header=True  %}
                 <button
@@ -18,33 +21,35 @@
             </div>
         </div>
     </div>
-    <nav>
-        {% for item in header_menu_items %}
-            <div x-data="{ dropdownOpen: false }">
-                {% if item.children %}
-                    <button @click="dropdownOpen = !dropdownOpen"
-                            class="flex items-center justify-between w-full py-4 px-4 sm:px-6 text-left hover:bg-gray-100">
-                        <span class="text-4xl">{{ item.label }}</span>
-                        <i class="fas fa-chevron-down text-black/30 transition-transform duration-200 mr-2"
-                           :class="{ 'rotate-180': dropdownOpen }"></i>
-                    </button>
-                    <div x-show="dropdownOpen" class="px-4 sm:px-6" style="display: none;">
-                        {% for child in item.children %}
-                            <a href="{{ child.href }}" class="block py-3 border-b text-lg text-black text-opacity-80 hover:text-gray-900">
-                                {{ child.label }}
-                            </a>
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    <a href="{{ item.href }}" class="block py-4 px-4 sm:px-6 text-4xl hover:bg-gray-100">
-                        {{ item.label }}
-                    </a>
-                {% endif %}
-            </div>
-        {% endfor %}
-    </nav>
-    <div class="flex flex-col gap-y-4 px-4 sm:px-6 mt-6">
-        <a href="#" class="h-[50px] p-4 rounded-full bg-deepTeal text-center text-white hover:bg-deepTeal/90">Tickets</a>
-        <a href="#" class="border h-[50px] p-4 rounded-full text-center hover:bg-gray-100">Account</a>
+    <div class="h-[calc(100vh-64px)] overflow-y-auto">
+        <nav>
+            {% for item in header_menu_items %}
+                <div x-data="{ dropdownOpen: false }">
+                    {% if item.children %}
+                        <button @click="dropdownOpen = !dropdownOpen"
+                                class="flex items-center justify-between w-full py-4 px-4 sm:px-6 text-left hover:bg-gray-100">
+                            <span class="text-4xl">{{ item.label }}</span>
+                            <i class="fas fa-chevron-down text-black/30 transition-transform duration-200 mr-2"
+                                :class="{ 'rotate-180': dropdownOpen }"></i>
+                        </button>
+                        <div x-show="dropdownOpen" class="px-4 sm:px-6" style="display: none;">
+                            {% for child in item.children %}
+                                <a href="{{ child.href }}" class="block py-3 border-b text-lg text-black text-opacity-80 hover:text-gray-900">
+                                    {{ child.label }}
+                                </a>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <a href="{{ item.href }}" class="block py-4 px-4 sm:px-6 text-4xl hover:bg-gray-100">
+                            {{ item.label }}
+                        </a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </nav>
+        <div class="flex flex-col gap-y-4 px-4 sm:px-6 mt-6 mb-8">
+            <a href="#" class="h-[50px] p-4 rounded-full bg-deepTeal text-center text-white hover:bg-deepTeal/90">Tickets</a>
+            <a href="#" class="border h-[50px] p-4 rounded-full text-center hover:bg-gray-100">Account</a>
+        </div>
     </div>
 </div>
