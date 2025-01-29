@@ -1,42 +1,54 @@
+{% extends "_base.html" %}
+{% load static %}
+{% load partials %}
+{% load i18n %}
+
+{% block content %}
+
 {% load sponsors %}
 {% sponsors as all_sponsors %}
 {% packages as all_packages %}
-
-<h1>Here are the list of sponsors!</h1>
-<ul>
-    {% for sponsor in all_sponsors.sponsors %}
-        <li>Name: {{ sponsor.name }}</li>
-        <li>Description: {{ sponsor.description }}</li>
-        <li>Url: {{ sponsor.url }}</li>
-        <li>Hiring: {{ sponsor.hiring }}</li>
-        <li>Hiring URL: {{ sponsor.hiring_url }}</li>
+<div class="dj-container pt-[72px] md:pt-[88px] pb-16">
+    <h1 class="text-center">{% translate "Our Sponsors" %}</h1>
+    <div class="flex flex-col gap-y-8 md:max-w-[740px] mx-auto pt-10 lg:pt-8">
         <ul>
-            {% for package in sponsor.packages.all %}
-                <li>{{ package.symbol }}{{ package.name }} ({{ package.currency }}{{ package.amount }})</li>
+            {% for sponsor in all_sponsors.sponsors %}
+                <li>Name: {{ sponsor.name }}</li>
+                <li>Description: {{ sponsor.description }}</li>
+                <li>Url: {{ sponsor.url }}</li>
+                <li>Hiring: {{ sponsor.hiring }}</li>
+                <li>Hiring URL: {{ sponsor.hiring_url }}</li>
+                <ul>
+                    {% for package in sponsor.packages.all %}
+                        <li>{{ package.symbol }}{{ package.name }} ({{ package.currency }}{{ package.amount }})</li>
+                    {% endfor %}
+                </ul>
+                {% sponsor_tagged_image sponsor "main_logo" as logo_url %}
+                {% if logo_url %}
+                    <img width="30%" height="30%" src="{{ logo_url }}" alt="{{ sponsor.name }}" title="{{ sponsor.name }}" />
+                {% else %}
+                    <span class="nologo">{{ sponsor.name }}</span>
+                {% endif %}
+                <br />
+                ---------
+            {% empty %}
+                <li>No sponsors</li>
             {% endfor %}
         </ul>
-        {% sponsor_tagged_image sponsor "main_logo" as logo_url %}
-        {% if logo_url %}
-            <img width="30%" height="30%" src="{{ logo_url }}" alt="{{ sponsor.name }}" title="{{ sponsor.name }}" />
-        {% else %}
-            <span class="nologo">{{ sponsor.name }}</span>
-        {% endif %}
-        <br />
-        ---------
-    {% empty %}
-        <li>No sponsors</li>
-    {% endfor %}
-</ul>
 
-
-<h1>Here are the list of packages!</h1>
-<ul>
-    {% for package in all_packages.packages %}
-        <li>Type: {{ package.name }}</li>
-        <li>Currency: {{ package.currency }}</li>
-        <li>Amount: {{ package.amount }}</li>
-        ---------
-    {% empty %}
-        <li>No packages</li>
-    {% endfor %}
-</ul>
+    <div>
+        <h2 class="mb-4">{% translate "Sponsorship packages" %}</h2>
+        <ul>
+            {% for package in all_packages.packages %}
+                <li>Type: {{ package.name }}</li>
+                <li>Currency: {{ package.currency }}</li>
+                <li>Amount: {{ package.amount }}</li>
+                ---------
+            {% empty %}
+                <li>No packages</li>
+            {% endfor %}
+        </ul>
+    </div>
+    </div>
+</div>
+{% endblock %}

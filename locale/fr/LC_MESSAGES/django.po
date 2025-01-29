@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#: templates/page_speaker_resources.html:109
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-23 12:19+0100\n"
+"POT-Creation-Date: 2025-01-29 21:30+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +19,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: core/settings_base.py:129
+#: core/settings_base.py:135
 msgid "English"
 msgstr ""
 
-#: core/settings_base.py:130
+#: core/settings_base.py:136
 msgid "French"
 msgstr ""
 
@@ -83,6 +84,16 @@ msgstr ""
 #: sponsors/models.py:102
 msgid "The name of the tag."
 msgstr ""
+
+#: sponsors/templates/sponsors/sponsors.html:12 website/header_menu_items.py:36
+msgid "Our Sponsors"
+msgstr "Nos sponsors"
+
+#: sponsors/templates/sponsors/sponsors.html:40
+#, fuzzy
+#| msgid "Sponsors"
+msgid "Sponsorship packages"
+msgstr "Sponsors"
 
 #: templates/account/account_inactive.html:5
 #: templates/account/account_inactive.html:9
@@ -332,7 +343,7 @@ msgid ""
 "email address</a>."
 msgstr ""
 
-#: templates/page_coc.html:9
+#: templates/page_coc.html:9 website/header_menu_items.py:21
 msgid "Code of Conduct"
 msgstr ""
 
@@ -892,7 +903,7 @@ msgid ""
 "          "
 msgstr ""
 
-#: templates/page_home.html:159
+#: templates/page_home.html:159 website/header_menu_items.py:34
 msgid "Sponsors"
 msgstr "Sponsors"
 
@@ -904,7 +915,7 @@ msgid ""
 "        "
 msgstr ""
 
-#: templates/page_home.html:170
+#: templates/page_home.html:170 templates/page_sponsor_us.html:10
 #, fuzzy
 #| msgid "Sponsor Us"
 msgid "Sponsor us"
@@ -1027,6 +1038,858 @@ msgid ""
 "Kilimanjaro\n"
 "        International Airport. \n"
 "        "
+msgstr ""
+
+#: templates/page_speaker_resources.html:9
+msgid "Speaker’s Resources"
+msgstr ""
+
+#: templates/page_speaker_resources.html:12
+msgid "This page is based on the DjangoCon US Speaker Resource page."
+msgstr ""
+
+#: templates/page_speaker_resources.html:14
+msgid "Writing a great proposal"
+msgstr ""
+
+#: templates/page_speaker_resources.html:17
+msgid ""
+"\n"
+"                Make sure the title of your proposal is attention grabbing. "
+"Conferences typically need to review a lot of talk \n"
+"                proposals, so you want to make sure yours looks "
+"interesting.\n"
+"                "
+msgstr ""
+
+#: templates/page_speaker_resources.html:21
+msgid ""
+"\n"
+"                Try reading your proposal aloud - it should sound like "
+"normal human speech. If it leaves you breathless then \n"
+"                you probably need some punctuation.\n"
+"                "
+msgstr ""
+
+#: templates/page_speaker_resources.html:25
+msgid "Your proposal should not look like a wall of text."
+msgstr ""
+
+#: templates/page_speaker_resources.html:26
+msgid ""
+"\n"
+"                Make use of the “notes” section of the talk submission form. "
+"You can use this to leave messages for the talk reviewers. \n"
+"                Eg: you might want to say something like: “I have submitted "
+"a few proposals, but this is the one I am \n"
+"                most interested in talking about”, “I’m not sure about the "
+"title, here are some alternative titles that might work.” \n"
+"                or “Please connect me with a speaker mentor”.\n"
+"            "
+msgstr ""
+
+#: templates/page_speaker_resources.html:32
+msgid ""
+"\n"
+"                If you have multiple ideas then feel free to make multiple "
+"proposals. You can let the conference organizers pick \n"
+"                which one seems most appropriate.\n"
+"                "
+msgstr ""
+
+#: templates/page_speaker_resources.html:36
+msgid ""
+"\n"
+"                Don’t try to be extra fancy and add in big words that are "
+"unnecessary. The point of an abstract is to communicate \n"
+"                an idea, so you should focus on clear communication. Take a "
+"look at this.\n"
+"                "
+msgstr ""
+
+#: templates/page_speaker_resources.html:42
+msgid "Making an awesome presentation"
+msgstr ""
+
+#: templates/page_speaker_resources.html:44
+msgid ""
+"Minimal slides are best — avoid walls of text and long lists of bullets."
+msgstr ""
+
+#: templates/page_speaker_resources.html:45
+msgid ""
+"\n"
+"                Light background with dark text is easiest to read; be "
+"mindful that the projection screen is white. \n"
+"                Choose fonts with adequate spacing between letters, and "
+"avoid thin or cursive fonts.\n"
+"            "
+msgstr ""
+
+#: templates/page_speaker_resources.html:49
+msgid ""
+"\n"
+"                If your talk requires live coding or using the terminal, "
+"make sure your editor or terminal settings are legible. \n"
+"                Dark text on a light background (high contrast) with a large "
+"font is best.\n"
+"                "
+msgstr ""
+
+#: templates/page_speaker_resources.html:53
+msgid ""
+"Images, memes, and GIFs should be appropriate for a professional audience."
+msgstr ""
+
+#: templates/page_speaker_resources.html:54
+msgid ""
+"\n"
+"                Avoid or limit flashing videos or animated GIFs, as these "
+"may have negative effects for people with seizure \n"
+"                disorders, migraines, or ADD/ADHD.\n"
+"                "
+msgstr ""
+
+#: templates/page_speaker_resources.html:60
+msgid "At the conference"
+msgstr ""
+
+#: templates/page_speaker_resources.html:62
+msgid ""
+"\n"
+"                Please be in your presentation room at least 15 minutes "
+"before your talk in order to set up and meet your \n"
+"                session chair.\n"
+"                "
+msgstr ""
+
+#: templates/page_speaker_resources.html:66
+msgid ""
+"Remember to bring your laptop and charger, and any display adapters you "
+"might need."
+msgstr ""
+
+#: templates/page_speaker_resources.html:67
+msgid ""
+"Bring your presentation on a usb stick just in case something goes horribly "
+"wrong."
+msgstr ""
+
+#: templates/page_speaker_resources.html:68
+msgid "There will be a Quiet Room available on conference days."
+msgstr ""
+
+#: templates/page_speaker_resources.html:69
+msgid ""
+"\n"
+"                We may ask you to draft your slides as much as 3 weeks ahead "
+"of the conference. We won’t share the slides with \n"
+"                anyone outside of the conference organizing team.\n"
+"                "
+msgstr ""
+
+#: templates/page_speaker_resources.html:75
+msgid "Public speaking"
+msgstr ""
+
+#: templates/page_speaker_resources.html:76
+msgid ""
+"A lot of people find public speaking very stressful! Here are a few things "
+"that might help:"
+msgstr ""
+
+#: templates/page_speaker_resources.html:78
+msgid ""
+"\n"
+"                Our community is warm and welcoming, the fact that you are "
+"putting effort into contributing is something everyone \n"
+"                will appreciate.\n"
+"                "
+msgstr ""
+
+#: templates/page_speaker_resources.html:82
+msgid ""
+"\n"
+"                It is normal to stumble from time to time, if you trip over "
+"your words then be willing to laugh at yourself and the audience \n"
+"                will like you more. Or if you can’t laugh at yourself, just "
+"pause for a moment, take a breath or a sip of water and keep going. \n"
+"                The audience can wait for a few seconds while you gather "
+"your thoughts, it’s ok.\n"
+"                "
+msgstr ""
+
+#: templates/page_speaker_resources.html:87
+msgid ""
+"\n"
+"                If you are prone to anxiety then make a point of practicing "
+"your talk in front of an audience ahead of \n"
+"                time - your friends, family and colleagues can be very "
+"useful here.\n"
+"                "
+msgstr ""
+
+#: templates/page_speaker_resources.html:93
+msgid "Practicing your talk"
+msgstr ""
+
+#: templates/page_speaker_resources.html:94
+msgid ""
+"\n"
+"            Some people write out a script and then memorize that. Some "
+"people are expert freestylers. \n"
+"            Both approaches work well, but both need serious preparation.\n"
+"            "
+msgstr ""
+
+#: templates/page_speaker_resources.html:100
+msgid "If you write and memorize your script:"
+msgstr ""
+
+#: templates/page_speaker_resources.html:102
+msgid "Realize that memorizing a 30 minute talk is going to take a lot of time"
+msgstr ""
+
+#: templates/page_speaker_resources.html:103
+msgid ""
+"\n"
+"                If you need cue cards or speaker notes then keep them brief "
+"- if you just stare down at your notes \n"
+"                that would be bad. Practice looking up and away from your "
+"notes.\n"
+"                "
+msgstr ""
+
+#: templates/page_speaker_resources.html:111
+msgid ""
+"Practice talking through your slides over and over until you don’t stumble."
+msgstr ""
+
+#: templates/page_speaker_resources.html:112
+#, python-format
+msgid ""
+"\n"
+"                This method might sound easier, but you probably need to "
+"know about 30%% more about your topic if you \n"
+"                want to freestyle effectively.\n"
+"                "
+msgstr ""
+
+#: templates/page_speaker_resources.html:118
+msgid "Always:"
+msgstr ""
+
+#: templates/page_speaker_resources.html:120
+msgid "Make sure you use a timer while practicing."
+msgstr ""
+
+#: templates/page_speaker_resources.html:125
+msgid "Audience Questions"
+msgstr ""
+
+#: templates/page_speaker_resources.html:126
+msgid "For a lot of people, this can be the scariest part!"
+msgstr ""
+
+#: templates/page_speaker_resources.html:128
+msgid ""
+"If someone asks you a question then feel free to take a moment to think "
+"before answering."
+msgstr ""
+
+#: templates/page_speaker_resources.html:129
+msgid ""
+"If you aren’t sure what the question means then you can ask for clarity or "
+"try to paraphrase the question."
+msgstr ""
+
+#: templates/page_speaker_resources.html:130
+msgid ""
+"Once you have attempted to answer the question you can ask “Does that answer "
+"your question?”"
+msgstr ""
+
+#: templates/page_speaker_resources.html:131
+msgid ""
+"\n"
+"                If you don’t know the answer to a question then be willing "
+"to say “I don’t know”. It’s really ok to not \n"
+"                have perfect knowledge. Don’t pretend to know things you "
+"don’t and don’t try to distract people from the main \n"
+"                question, just be honest about what you know.\n"
+"                "
+msgstr ""
+
+#: templates/page_speaker_resources.html:138
+msgid "Additional Resources"
+msgstr ""
+
+#: templates/page_speaker_resources.html:139
+msgid ""
+"\n"
+"            We understand how it can feel to be a first-time speaker if this "
+"is your first time. That’s why we’ve provided links \n"
+"            to valuable resources to support you, whether you’re new to "
+"speaking or fully experienced, a little extra help never hurts!\n"
+"            "
+msgstr ""
+
+#: templates/page_speaker_resources.html:145
+msgid "Write a Conference Abstract"
+msgstr ""
+
+#: templates/page_speaker_resources.html:147
+msgid "Public speaking hack for Engaging Presentation"
+msgstr ""
+
+#: templates/page_speaker_resources.html:149
+msgid "How I prepare Conference Talks"
+msgstr ""
+
+#: templates/page_speaker_resources.html:151
+msgid "Pro Tips for Conference talks"
+msgstr ""
+
+#: templates/page_speaker_resources.html:153
+msgid "Ultimate Guide to Memorable Tech Talks"
+msgstr ""
+
+#: templates/page_speaker_resources.html:154
+msgid "Conference Speaking"
+msgstr ""
+
+#: templates/page_speaking.html:9
+#, fuzzy
+#| msgid "DjangoCon Africa"
+msgid "Speaking at DjangoCon Africa"
+msgstr "DjangoCon Africa"
+
+#: templates/page_speaking.html:11
+msgid ""
+"Welcome Back to DjangoCon Africa 2025, we are very much excited just as you "
+"are!"
+msgstr ""
+
+#: templates/page_speaking.html:13
+msgid ""
+"\n"
+"                To get started, do well to check Proposal guidelines where "
+"you will find the steps and guidelines to \n"
+"                submit your proposal. Keep in mind that there is a limit of "
+"5 proposal submissions per person.\n"
+"            "
+msgstr ""
+
+#: templates/page_speaking.html:20
+#, fuzzy
+#| msgid "DjangoCon Africa"
+msgid "Why Speak at DjangoCon Africa"
+msgstr "DjangoCon Africa"
+
+#: templates/page_speaking.html:24
+msgid ""
+"Share new tools, resources, experiences, practices, and ideas with the "
+"Django community and beyond."
+msgstr ""
+
+#: templates/page_speaking.html:25
+msgid ""
+"Connect with other Django professionals, expand your network, and build "
+"relationships that can benefit your \n"
+"            career and personal growth."
+msgstr ""
+
+#: templates/page_speaking.html:27
+msgid ""
+"Your talk will be professionally recorded and made available on our official "
+"YouTube channel for a global \n"
+"            audience to access and learn from. (optional)"
+msgstr ""
+
+#: templates/page_speaking.html:29
+msgid ""
+"A professional photographer will be present to capture high-quality images "
+"of your talk, providing a lasting \n"
+"            visual record of your presentation. (Optional)"
+msgstr ""
+
+#: templates/page_speaking.html:31
+msgid ""
+"Reach a wide audience and share your insights, experiences, and discoveries "
+"with the Django community and beyond."
+msgstr ""
+
+#: templates/page_speaking.html:32
+msgid "Give back to Django Community."
+msgstr ""
+
+#: templates/page_speaking.html:35
+msgid "Selection Process"
+msgstr ""
+
+#: templates/page_speaking.html:36
+msgid ""
+"\n"
+"        Reviewing submissions for DjangoCon Africa can be a challenging "
+"task, with many excellent talks and tutorials vying \n"
+"        for a limited number of slots. To ensure transparency and fairness, "
+"we're committed to making our selection process \n"
+"        clear to all submitters and attendees. Our main approach is "
+"community driven and it involves a team of volunteers \n"
+"        and organizers who will review submissions anonymously and "
+"collectively decide which ones to feature.\n"
+"        "
+msgstr ""
+
+#: templates/page_speaking.html:44
+msgid ""
+" \n"
+"        Also we will be sharing our guidelines and reviewing process, we aim "
+"to provide a better understanding of what attendees \n"
+"        can expect from the conference and why certain talks are selected. "
+"Additionally, we may prioritize speakers from underrepresented \n"
+"        or marginalized groups to amplify the conference's social impact.\n"
+"        "
+msgstr ""
+
+#: templates/page_speaking.html:51
+msgid ""
+"\n"
+"        We'll document our selection process on this website and announce "
+"updates via our social media channels, \n"
+"        including <a href=\"https://twitter.com/djcafrica\">Twitter/X</a>, "
+"<a href=\"https://linkedin.com/company/djcafrica\">LinkedIn</a>, \n"
+"        <a href=\"https://instagram.com/djcafrica\">Instagram</a>, <a "
+"href=\"https://facebook.com/djcafrica\">Facebook</a>, \n"
+"        <a href=\"https://fosstodon.org/@djangoconafrica/"
+"111065411415401242\">Mastodon</a>, \n"
+"        <a href=\"https://bsky.app/profile/djcafrica.bsky.social\">Bluesky</"
+"a>.\n"
+"        "
+msgstr ""
+
+#: templates/page_speaking.html:60
+msgid "Presentation Types"
+msgstr ""
+
+#: templates/page_speaking.html:62
+msgid ""
+"The following are the presentation types that will be accepted in Django "
+"Africa Conference 2025"
+msgstr ""
+
+#: templates/page_speaking.html:64
+msgid "Talk"
+msgstr ""
+
+#: templates/page_speaking.html:65
+msgid "Length: 20 - 45 minutes"
+msgstr ""
+
+#: templates/page_speaking.html:68
+msgid ""
+"\n"
+"    We're seeking innovative and captivating talks that cater to the diverse "
+"interests of our attendees. While Django \n"
+"    expertise is a plus, we're also interested in talks that explore broader "
+"themes, such as community, web development, \n"
+"    user experience, Education, Open Source and more.\n"
+"    "
+msgstr ""
+
+#: templates/page_speaking.html:75
+msgid ""
+"\n"
+"        No Worries if you're a first time speaker - we're excited to provide "
+"a platform for you to \n"
+"        share your ideas and kickstart your speaking journey!\n"
+"    "
+msgstr ""
+
+#: templates/page_speaking.html:81
+msgid "Workshop and Tutorials"
+msgstr ""
+
+#: templates/page_speaking.html:83
+msgid "Length: 1.5 - 2hrs."
+msgstr ""
+
+#: templates/page_speaking.html:86
+msgid ""
+"\n"
+"        This year we are open to any topic as long as it will develop or "
+"improve the experiences and knowledge of our attendee’s.\n"
+"        "
+msgstr ""
+
+#: templates/page_speaking.html:91
+msgid ""
+"\n"
+"        Workshop and Tutorials can be targeted at any experience level, just "
+"be sure to indicate clearly what you expect your \n"
+"        students to already know or have experience with in your proposal!\n"
+"        "
+msgstr ""
+
+#: templates/page_speaking.html:97
+msgid ""
+"\n"
+"        Still unsure if you should submit? Not only will we cover your "
+"DjangoCon ticket, we will provide you with the right \n"
+"        platform to make it possible.\n"
+"        "
+msgstr ""
+
+#: templates/page_speaking.html:104
+msgid "Lightning Talks"
+msgstr ""
+
+#: templates/page_speaking.html:106
+msgid "Length: 5 - 10 minutes"
+msgstr ""
+
+#: templates/page_speaking.html:109
+msgid "Not ready for a full talk or tutorial?"
+msgstr ""
+
+#: templates/page_speaking.html:113
+msgid "Want to take the leap and give your first conference talk?"
+msgstr ""
+
+#: templates/page_speaking.html:117
+msgid ""
+"\n"
+"        Our lightning talks are the perfect opportunity! These short, 5-"
+"minute talks (with or without slides) are all about \n"
+"        sharing your ideas and experiences with the community. Don't be "
+"nervous or shy - remember, it's just 5 minutes! \n"
+"        We'll have a dedicated lightning talk slot at the end of each day "
+"during the conference. Sign-ups will take place \n"
+"        during the event, so be sure to mark your calendar and join us!\n"
+"        "
+msgstr ""
+
+#: templates/page_speaking.html:125
+msgid "Proposal Guidelines"
+msgstr ""
+
+#: templates/page_speaking.html:127
+msgid "We will appreciate it more, if you Submit your talk in time."
+msgstr ""
+
+#: templates/page_speaking.html:128
+msgid "All talks will be in English."
+msgstr ""
+
+#: templates/page_speaking.html:129
+msgid ""
+" Read, understand, and agree to our Code of Conduct. As a speaker, your talk "
+"and your \n"
+"            slides will need to follow our Code of Conduct – if you are not "
+"sure what that means, or have some issue \n"
+"            you are not sure about, just ask us or email "
+"hello@djangocon.africa."
+msgstr ""
+
+#: templates/page_speaking.html:132
+msgid ""
+" Make sure you spend some time and effort on your proposal. Typos, lack of "
+"formatting, and \n"
+"            half finished sentences are unnecessary and make your proposal "
+"hard to be taken seriously. \n"
+"            (Ask a mentor, Check the links in our speakers resources, or a "
+"friend to help if this is difficult for you.)\n"
+"            "
+msgstr ""
+
+#: templates/page_speaking.html:136
+msgid ""
+" Don't overdo it – two or three paragraphs are plenty of space to give us an "
+"idea of your talk, \n"
+"            we don't require an entire thesis."
+msgstr ""
+
+#: templates/page_speaking.html:138
+msgid ""
+" Original content: Since we have little space and lots of submissions, we "
+"prefer original content. \n"
+"            If your talk is so awesome that you want to give it in multiple "
+"places, we'd ask you to consider putting a new spin on it, \n"
+"            if at all possible."
+msgstr ""
+
+#: templates/page_speaking.html:141
+msgid ""
+"Please do well to minimise the use of AI or other technological assistance "
+"as much as possible."
+msgstr ""
+
+#: templates/page_speaking.html:144
+msgid "Suggested Topics"
+msgstr ""
+
+#: templates/page_speaking.html:147
+msgid "Django internals and challenges in modern web development."
+msgstr ""
+
+#: templates/page_speaking.html:148
+msgid "Wild ideas, clever hacks, surprising or cool use cases."
+msgstr ""
+
+#: templates/page_speaking.html:149
+msgid "Improving Django and Python developers’ lives."
+msgstr ""
+
+#: templates/page_speaking.html:150
+msgid "Pushing Django to its limits."
+msgstr ""
+
+#: templates/page_speaking.html:151
+msgid ""
+" The Django and Python community, culture, history, past, present & future, "
+"the why, \n"
+"            the who and the what of it all."
+msgstr ""
+
+#: templates/page_speaking.html:153
+msgid "Security"
+msgstr ""
+
+#: templates/page_speaking.html:154
+msgid "Emerging technologies and industries – AI, Blockchain, Open Source etc."
+msgstr ""
+
+#: templates/page_speaking.html:155
+msgid "Diversity, Equity and Inclusion"
+msgstr ""
+
+#: templates/page_speaking.html:156
+msgid "Whatever you deem appropriate - it’s your conference after all"
+msgstr ""
+
+#: templates/page_speaking.html:161
+msgid ""
+"This year's edition will feature a new Pan-African open source event running "
+"alongside DjangoCon Africa - UbuCon at DjangoCon Africa!"
+msgstr ""
+
+#: templates/page_speaking.html:164
+msgid ""
+"\n"
+"        We invite proposals on any of these topics, and more: Desktop, Cloud "
+"and Infrastructure, Linux Containers and \n"
+"        Container Orchestration, DevOps, Virtualisation, Automation, "
+"Networking Windows Subsystem for Linux(WSL), \n"
+"        IoT, Embedded, Robotics, Appliances, Packaging, Documentation, QA "
+"and Bug triage, Security, Compliance and Kernel, \n"
+"        Data and AI, Video, Audio and Image editing, Open source tools, "
+"Community, Diversity, Local Outreach and Social Context.\n"
+"        "
+msgstr ""
+
+#: templates/page_speaking.html:172
+msgid "Speaker Perks"
+msgstr ""
+
+#: templates/page_speaking.html:175
+msgid ""
+"\n"
+"        As a speaker at DjangoCon Africa, you will enjoy premium access to "
+"our complimentary dinner and prioritised in Opportunity Grants. \n"
+"        However, if you need financial assistance of any sort to attend the "
+"conference, you will need to apply for an opportunity grant \n"
+"        separately and mention that you applied during your speaking "
+"application or proposal.\n"
+"        Please note that speakers are considered as first choice in issuing "
+"grants across.\n"
+"        "
+msgstr ""
+
+#: templates/page_speaking.html:183
+msgid "Company Support"
+msgstr ""
+
+#: templates/page_speaking.html:186
+msgid ""
+"\n"
+"        If your company or employer has supported your talk preparation, "
+"such as allowing you to work on it during office hours, you're welcome \n"
+"        to acknowledge their support during your presentation. However, "
+"please ensure that the talk's content remains unbiased and focused on \n"
+"        sharing your expertise, rather than promoting commercial interests.\n"
+"        "
+msgstr ""
+
+#: templates/page_speaking.html:194
+msgid ""
+"\n"
+"        Don't let self-doubt hold you back - DjangoCon Africa is eager to "
+"showcase your unique perspective and expertise, and reading \n"
+"        inspiring stories from past speakers can help boost your confidence "
+"and encourage you to submit your proposal.\n"
+"        "
+msgstr ""
+
+#: templates/page_speaking.html:201
+msgid ""
+"\n"
+"        If you would like to ask a question, you are always welcome to write "
+"the Content Committee:  \n"
+"        <a "
+"href=\"mailto:content@djangocon.africa\">content@djangocon.africa</a>.\n"
+"        "
+msgstr ""
+
+#: templates/page_sponsor_us.html:13
+msgid "Join us for another exciting edition of DjangoCon Africa!"
+msgstr ""
+
+#: templates/page_sponsor_us.html:16
+msgid ""
+"\n"
+"            Be a part of a thriving community of developers and position "
+"your brand at the forefront of the rapidly growing \n"
+"            technology sector in Africa. With an expected 300 attendees from "
+"both the local and international community, \n"
+"            sponsoring this landmark event is a unique opportunity to "
+"connect with and reach a highly engaged audience.\n"
+"            "
+msgstr ""
+
+#: templates/page_sponsor_us.html:28
+msgid "Download Sponsorship Brochure"
+msgstr ""
+
+#: templates/page_sponsor_us.html:32
+msgid "Look who’s sponsoring us"
+msgstr ""
+
+#: templates/page_sponsor_us.html:36
+msgid ""
+"\n"
+"            If you are interested in becoming a sponsor or if you have any "
+"questions, then please email us at \n"
+"            <a href=\"mailto:sponsors@djangocon.africa\"></"
+"a>sponsors@djangocon.africa.\n"
+"            "
+msgstr ""
+
+#: templates/page_sponsor_us.html:42
+#, fuzzy
+#| msgid "Sponsors"
+msgid "Why sponsor?"
+msgstr "Sponsors"
+
+#: templates/page_sponsor_us.html:44
+msgid ""
+"\n"
+"                If you are making anything that is useful to Django "
+"developers, such as developer tools, SaaS products or \n"
+"                hosting platforms, this is the perfect marketing "
+"opportunity. Africa is a fresh and ready market; and a booth at \n"
+"                our conference will enable to meet new potential customers "
+"for your products.\n"
+"                "
+msgstr ""
+
+#: templates/page_sponsor_us.html:50
+msgid ""
+"\n"
+"                DjangoCon Africa will uphold the tradition of existing "
+"DjangoCons all over the world of investing in great efforts \n"
+"                in being a diverse conference. Africa itself is very diverse "
+"with a total of 54 countries made up of many different \n"
+"                ethnicities. Only with the help of our sponsors can we be "
+"able to bring people from all social backgrounds and different \n"
+"                parts of the world together at our very first event.\n"
+"                "
+msgstr ""
+
+#: templates/page_sponsor_us.html:58
+msgid ""
+"\n"
+"                There is no better place to recruit Django developers than a "
+"DjangoCon! DjangoCon Africa is the largest single\n"
+"                gathering of Django developers in Africa. Sponsoring the "
+"very first DjangoCon Africa will put you directly in front \n"
+"                of a fresh candidate pool.\n"
+"                "
+msgstr ""
+
+#: templates/page_sponsor_us.html:65
+msgid ""
+"\n"
+"                If you use Django or related projects to build your software "
+"products, sponsoring DjangoCon Africa is a good way \n"
+"                to give back to the community and say “thank you” to its "
+"members. Any open source community survives on the goodwill \n"
+"                of its members and the conference is an important gathering "
+"to meet and discuss the future of Django. At the same time, \n"
+"                sponsoring allows us to keep ticket prices affordable and "
+"even offer financial aid for developers from marginalized \n"
+"                groups who could not otherwise join.\n"
+"                "
+msgstr ""
+
+#: templates/page_sponsor_us.html:74
+msgid ""
+"\n"
+"                Your own employees can profit a lot from attending DjangoCon "
+"Africa. Not only does the conference provide valuable \n"
+"                education in form of talks and workshops that improve their "
+"professional talks and technical skills, it is also the \n"
+"                best single place to start and build a network within a "
+"community of potential future partners.\n"
+"                "
+msgstr ""
+
+#: templates/page_sponsor_us.html:82
+msgid "Where does your money go to?"
+msgstr ""
+
+#: templates/page_sponsor_us.html:84
+msgid ""
+"\n"
+"        Djangocon Africa is run by volunteers on a non-profit basis. All the "
+"money we receive will go towards covering \n"
+"        the costs of the event and reducing the cost for our attendees. This "
+"includes:\n"
+"        "
+msgstr ""
+
+#: templates/page_sponsor_us.html:89
+msgid "catering and refreshments"
+msgstr ""
+
+#: templates/page_sponsor_us.html:90
+msgid "venue rent"
+msgstr ""
+
+#: templates/page_sponsor_us.html:91
+msgid "technical services"
+msgstr ""
+
+#: templates/page_sponsor_us.html:92
+msgid ""
+"financial assistance for accommodation and travel for attendees and speakers "
+"on a low budget."
+msgstr ""
+
+#: templates/page_sponsor_us.html:93
+msgid "video recordings for talks"
+msgstr ""
+
+#: templates/page_sponsor_us.html:94
+msgid "conference merchandise and program booklet"
+msgstr ""
+
+#: templates/page_sponsor_us.html:95
+msgid "basic running expenses"
+msgstr ""
+
+#: templates/page_sponsor_us.html:96
+msgid ""
+"Anything left over will be used for supporting future non-profit events."
 msgstr ""
 
 #: venv/lib/python3.12/site-packages/_pytest/config/argparsing.py:474
@@ -2241,19 +3104,41 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
-#: website/header_menu_items.py:15
-msgid "Home"
+#: website/header_menu_items.py:17
+msgid "About"
+msgstr ""
+
+#: website/header_menu_items.py:26
+msgid "Speaking"
 msgstr ""
 
 #: website/header_menu_items.py:28
+#, fuzzy
+#| msgid "DjangoCon Africa"
+msgid "Speaking at Djangocon Africa"
+msgstr "DjangoCon Africa"
+
+#: website/header_menu_items.py:29
+msgid "Speaker Resources"
+msgstr ""
+
+#: website/header_menu_items.py:30
+msgid "Call for Proposals"
+msgstr ""
+
+#: website/header_menu_items.py:37
+msgid "Become a Sponsor"
+msgstr ""
+
+#: website/header_menu_items.py:47
 msgid "Talk Proposals"
 msgstr ""
 
-#: website/header_menu_items.py:29
+#: website/header_menu_items.py:48
 msgid "Logout"
 msgstr ""
 
-#: website/header_menu_items.py:34
+#: website/header_menu_items.py:53
 msgid "LogIn"
 msgstr ""
 
@@ -2341,9 +3226,6 @@ msgstr ""
 
 #~ msgid "Africa"
 #~ msgstr "Africa"
-
-#~ msgid "Our Sponsors"
-#~ msgstr "Nos sponsors"
 
 #~ msgid "Donate"
 #~ msgstr "Faire un don"
