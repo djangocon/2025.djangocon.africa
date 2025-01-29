@@ -11,6 +11,11 @@
 <div class="dj-container pt-[72px] md:pt-[88px] pb-16">
     <h1 class="text-center">{% translate "Our Sponsors" %}</h1>
     <div class="flex flex-col gap-y-8 md:max-w-[740px] mx-auto pt-10 lg:pt-8">
+        <p>{% blocktranslate %}
+            DjangoCon Africa is made possible by the generous support of our sponsors. We are thankful for their support 
+            and encourage you to learn more about them. We're grateful to them all!
+            {% endblocktranslate %}
+        </p>
         <ul>
             {% for sponsor in all_sponsors.sponsors %}
                 <li>Name: {{ sponsor.name }}</li>
