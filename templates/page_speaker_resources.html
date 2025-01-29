@@ -1,0 +1,160 @@
+{% extends "_base.html" %}
+{% load static %}
+{% load partials %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="dj-container pt-[72px] md:pt-[88px] pb-16">
+    <h1 class="text-center">{% translate "Speaker’s Resources" %}</h1>
+    <div class="flex flex-col gap-y-8 md:max-w-[740px] mx-auto pt-10 lg:pt-8">
+
+        <p>{% translate "This page is based on the DjangoCon US Speaker Resource page." %}</p>
+
+        <h2>{% translate "Writing a great proposal" %}</h2>
+
+        <ul>
+            <li>{% blocktranslate %}
+                Make sure the title of your proposal is attention grabbing. Conferences typically need to review a lot of talk 
+                proposals, so you want to make sure yours looks interesting.
+                {% endblocktranslate %}</li>
+            <li>{% blocktranslate %}
+                Try reading your proposal aloud - it should sound like normal human speech. If it leaves you breathless then 
+                you probably need some punctuation.
+                {% endblocktranslate %}</li>
+            <li>{% translate "Your proposal should not look like a wall of text." %}</li>
+            <li>{% blocktranslate %}
+                Make use of the “notes” section of the talk submission form. You can use this to leave messages for the talk reviewers. 
+                Eg: you might want to say something like: “I have submitted a few proposals, but this is the one I am 
+                most interested in talking about”, “I’m not sure about the title, here are some alternative titles that might work.” 
+                or “Please connect me with a speaker mentor”.
+            {% endblocktranslate %}</li>
+            <li>{% blocktranslate %}
+                If you have multiple ideas then feel free to make multiple proposals. You can let the conference organizers pick 
+                which one seems most appropriate.
+                {% endblocktranslate %}</li>
+            <li>{% blocktranslate %}
+                Don’t try to be extra fancy and add in big words that are unnecessary. The point of an abstract is to communicate 
+                an idea, so you should focus on clear communication. Take a look at this.
+                {% endblocktranslate %}</li>
+        </ul>
+
+        <h2>{% translate "Making an awesome presentation" %}</h2>
+        <ul>
+            <li>{% translate "Minimal slides are best — avoid walls of text and long lists of bullets." %}</li>
+            <li>{% blocktranslate %}
+                Light background with dark text is easiest to read; be mindful that the projection screen is white. 
+                Choose fonts with adequate spacing between letters, and avoid thin or cursive fonts.
+            {% endblocktranslate %}</li>
+            <li>{% blocktranslate %}
+                If your talk requires live coding or using the terminal, make sure your editor or terminal settings are legible. 
+                Dark text on a light background (high contrast) with a large font is best.
+                {% endblocktranslate %}</li>
+            <li>{% translate "Images, memes, and GIFs should be appropriate for a professional audience." %}</li>
+            <li>{% blocktranslate %}
+                Avoid or limit flashing videos or animated GIFs, as these may have negative effects for people with seizure 
+                disorders, migraines, or ADD/ADHD.
+                {% endblocktranslate %}</li>
+        </ul>
+
+        <h2>{% translate "At the conference" %}</h2>
+        <ul>
+            <li>{% blocktranslate %}
+                Please be in your presentation room at least 15 minutes before your talk in order to set up and meet your 
+                session chair.
+                {% endblocktranslate %}</li>
+            <li>{% translate "Remember to bring your laptop and charger, and any display adapters you might need." %}</li>
+            <li>{% translate "Bring your presentation on a usb stick just in case something goes horribly wrong." %}</li>
+            <li>{% translate "There will be a Quiet Room available on conference days." %}</li>
+            <li>{% blocktranslate %}
+                We may ask you to draft your slides as much as 3 weeks ahead of the conference. We won’t share the slides with 
+                anyone outside of the conference organizing team.
+                {% endblocktranslate %}</li>
+        </ul>
+
+        <h2>{% translate "Public speaking" %}</h2>
+        <p>{% translate "A lot of people find public speaking very stressful! Here are a few things that might help:" %}</p>
+        <ul>
+            <li>{% blocktranslate %}
+                Our community is warm and welcoming, the fact that you are putting effort into contributing is something everyone 
+                will appreciate.
+                {% endblocktranslate %}</li>
+            <li>{% blocktranslate %}
+                It is normal to stumble from time to time, if you trip over your words then be willing to laugh at yourself and the audience 
+                will like you more. Or if you can’t laugh at yourself, just pause for a moment, take a breath or a sip of water and keep going. 
+                The audience can wait for a few seconds while you gather your thoughts, it’s ok.
+                {% endblocktranslate %}</li>
+            <li>{% blocktranslate %}
+                If you are prone to anxiety then make a point of practicing your talk in front of an audience ahead of 
+                time - your friends, family and colleagues can be very useful here.
+                {% endblocktranslate %}</li>
+        </ul>      
+
+        <h2>{% translate "Practicing your talk" %}</h2>
+        <p>{% blocktranslate %}
+            Some people write out a script and then memorize that. Some people are expert freestylers. 
+            Both approaches work well, but both need serious preparation.
+            {% endblocktranslate %}
+        </p> 
+
+        <h3>{% translate "If you write and memorize your script:" %}</h3>
+        <ul>
+            <li>{% translate "Realize that memorizing a 30 minute talk is going to take a lot of time" %}</li>
+            <li>{% blocktranslate %}
+                If you need cue cards or speaker notes then keep them brief - if you just stare down at your notes 
+                that would be bad. Practice looking up and away from your notes.
+                {% endblocktranslate %}</li>
+        </ul>
+        
+        <h3>{% translate "" %}</h3>If you are a freestyler:
+        <ul>
+            <li>{% translate "Practice talking through your slides over and over until you don’t stumble." %}</li>
+            <li>{% blocktranslate %}
+                This method might sound easier, but you probably need to know about 30% more about your topic if you 
+                want to freestyle effectively.
+                {% endblocktranslate %}</li>
+        </ul>
+        
+        <h3>{% translate "Always:" %}</h3>
+        <ul>
+            <li>{% translate "Make sure you use a timer while practicing." %}</li>
+            
+        </ul>
+        
+
+        <h2>{% translate "Audience Questions" %}</h2>
+        <p>{% translate "For a lot of people, this can be the scariest part!" %}</p>
+        <ul>
+            <li>{% translate "If someone asks you a question then feel free to take a moment to think before answering." %}</li>
+            <li>{% translate "If you aren’t sure what the question means then you can ask for clarity or try to paraphrase the question." %}</li>
+            <li>{% translate "Once you have attempted to answer the question you can ask “Does that answer your question?”" %}</li>
+            <li>{% blocktranslate %}
+                If you don’t know the answer to a question then be willing to say “I don’t know”. It’s really ok to not 
+                have perfect knowledge. Don’t pretend to know things you don’t and don’t try to distract people from the main 
+                question, just be honest about what you know.
+                {% endblocktranslate %}</li>
+        </ul>
+        
+        <h2>{% translate "Additional Resources" %}</h2>
+        <p>{% blocktranslate %}
+            We understand how it can feel to be a first-time speaker if this is your first time. That’s why we’ve provided links 
+            to valuable resources to support you, whether you’re new to speaking or fully experienced, a little extra help never hurts!
+            {% endblocktranslate %} 
+            <ul>
+                <li><a href="https://www.everythingtechnicalwriting.com/write-a-conference-talk-abstract/">
+                    {% translate "Write a Conference Abstract" %}</a></li>
+                <li><a href="https://www.everythingtechnicalwriting.com/public-speaking-hacks-for-engaging-presentations//">
+                    {% translate "Public speaking hack for Engaging Presentation" %}</a></li>
+                <li><a href="https://www.sheenaoc.com/articles/2024-10-28-how-i_prepare-conference-talks">
+                    {% translate "How I prepare Conference Talks" %}</a></li>
+                <li><a href="https://www.craigkerstiens.com/2012/06/19/pro-tips-for-conference-talks/">
+                    {% translate "Pro Tips for Conference talks" %}</a></li>
+                <li><a href="https://nnja.medium.com/the-ultimate-guide-to-memorable-tech-talks-e7c350778d4b">
+                    {% translate "Ultimate Guide to Memorable Tech Talks" %}</a></li>
+                <li><a href="https://hynek.me/articles/speaking/">{% translate "Conference Speaking" %}</a></li>
+            </ul>
+
+    <div>
+</div>
+
+{% endblock %}

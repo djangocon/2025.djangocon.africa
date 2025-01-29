@@ -11,3 +11,15 @@ def page_coc(request):
 
 def page_news_detail(request, slug):
     return render(request, "page_news_detail.html", {"is_white_header": True})
+
+
+def page_speaking(request):
+    return render(request, "page_speaking.html", {"is_white_header": True})
+
+
+def page_speaker_resources(request):
+    return render(request, "page_speaker_resources.html", {"is_white_header": True})
+
+
+def page_sponsor_us(request):
+    return render(request, "page_sponsor_us.html", {"is_white_header": True})

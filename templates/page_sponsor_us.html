@@ -1,0 +1,102 @@
+{% extends "_base.html" %}
+{% load static %}
+{% load partials %}
+{% load i18n %}
+{% load sponsors %}
+
+{% block content %}
+
+<div class="dj-container pt-[72px] md:pt-[88px] pb-16">
+    <h1 class="text-center">{% translate "Sponsor us" %}</h1>
+    <div class="flex flex-col gap-y-8 md:max-w-[740px] mx-auto pt-10 lg:pt-8">
+        <p>
+            {% translate "Join us for another exciting edition of DjangoCon Africa!" %}
+        </p>
+        <p>
+            {% blocktranslate %}
+            Be a part of a thriving community of developers and position your brand at the forefront of the rapidly growing 
+            technology sector in Africa. With an expected 300 attendees from both the local and international community, 
+            sponsoring this landmark event is a unique opportunity to connect with and reach a highly engaged audience.
+            {% endblocktranslate %}
+        </p>
+         
+
+         <a
+         href="https://drive.google.com/file/d/1a3JKWvnIqSCDGk7cwc3QWexiFDPJ2uAv/view?usp=drive_link"
+         class="bg-deepTeal text-white rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90"
+       >
+         {% translate "Download Sponsorship Brochure" %}
+         <i class="fas fa-chevron-right"></i>
+       </a>
+
+        <h2>{% translate "Look who’s sponsoring us" %}</h2>
+        {% mini_sponsors %}
+
+        <p>
+            {% blocktranslate %}
+            If you are interested in becoming a sponsor or if you have any questions, then please email us at 
+            <a href="mailto:sponsors@djangocon.africa"></a>sponsors@djangocon.africa.
+            {% endblocktranslate %}
+        </p>
+
+        <h2>{% translate "Why sponsor?" %}</h2>
+        <ul>
+            <li>{% blocktranslate %}
+                If you are making anything that is useful to Django developers, such as developer tools, SaaS products or 
+                hosting platforms, this is the perfect marketing opportunity. Africa is a fresh and ready market; and a booth at 
+                our conference will enable to meet new potential customers for your products.
+                {% endblocktranslate %}</li>
+            <li>
+                {% blocktranslate %}
+                DjangoCon Africa will uphold the tradition of existing DjangoCons all over the world of investing in great efforts 
+                in being a diverse conference. Africa itself is very diverse with a total of 54 countries made up of many different 
+                ethnicities. Only with the help of our sponsors can we be able to bring people from all social backgrounds and different 
+                parts of the world together at our very first event.
+                {% endblocktranslate %}
+            </li>
+            <li>
+                {% blocktranslate %}
+                There is no better place to recruit Django developers than a DjangoCon! DjangoCon Africa is the largest single
+                gathering of Django developers in Africa. Sponsoring the very first DjangoCon Africa will put you directly in front 
+                of a fresh candidate pool.
+                {% endblocktranslate %}
+            </li>
+            <li>
+                {% blocktranslate %}
+                If you use Django or related projects to build your software products, sponsoring DjangoCon Africa is a good way 
+                to give back to the community and say “thank you” to its members. Any open source community survives on the goodwill 
+                of its members and the conference is an important gathering to meet and discuss the future of Django. At the same time, 
+                sponsoring allows us to keep ticket prices affordable and even offer financial aid for developers from marginalized 
+                groups who could not otherwise join.
+                {% endblocktranslate %}
+            </li>
+            <li>
+                {% blocktranslate %}
+                Your own employees can profit a lot from attending DjangoCon Africa. Not only does the conference provide valuable 
+                education in form of talks and workshops that improve their professional talks and technical skills, it is also the 
+                best single place to start and build a network within a community of potential future partners.
+                {% endblocktranslate %}
+            </li>
+        </ul>
+
+        <h2>{% translate "Where does your money go to?" %}</h2>
+
+        {% blocktranslate %}
+        Djangocon Africa is run by volunteers on a non-profit basis. All the money we receive will go towards covering 
+        the costs of the event and reducing the cost for our attendees. This includes:
+        {% endblocktranslate %}
+        <ul>
+            <li>{% translate "catering and refreshments" %}</li>
+            <li>{% translate "venue rent" %}</li>
+            <li>{% translate "technical services" %}</li>
+            <li>{% translate "financial assistance for accommodation and travel for attendees and speakers on a low budget." %}</li>
+            <li>{% translate "video recordings for talks" %}</li>
+            <li>{% translate "conference merchandise and program booklet" %}</li>
+            <li>{% translate "basic running expenses" %}</li>
+            <li>{% translate "Anything left over will be used for supporting future non-profit events." %}</li>
+        </ul> 
+
+    <div>
+</div>
+        
+{% endblock %}
