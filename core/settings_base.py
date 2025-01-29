@@ -69,6 +69,7 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "website.context.context",
                 "core.context_processors.language_context",
+                "core.context_processors.social_media_links",
             ],
         },
     },
@@ -136,6 +137,16 @@ LANGUAGES = [
     ('fr', _('French')),
 ]
 
+
+SOCIAL_MEDIA_LINKS = {
+    "Twitter/X": "https://twitter.com/djcafrica",
+    "LinkedIn": "https://linkedin.com/company/djcafrica",
+    "Instagram": "https://instagram.com/djcafrica",
+    "Facebook": "https://facebook.com/djcafrica",
+    "Masterdon": "https://fosstodon.org/@djangoconafrica/111065411415401242",
+    "Bluesky": "https://bsky.app/profile/djcafrica.bsky.social",
+}
+
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
 
 
@@ -198,7 +209,8 @@ ACCOUNT_LOGOUT_ON_GET = True
 
 
 # override in dev and prod settings as needed
-FEATURE_FLAGS = {"USER_LOGIN_REG": False}  # user login and registration is disabled
+# user login and registration is disabled
+FEATURE_FLAGS = {"USER_LOGIN_REG": False}
 
 LANGUAGE_COOKIE_NAME = 'django_language'
 LANGUAGE_COOKIE_AGE = None
