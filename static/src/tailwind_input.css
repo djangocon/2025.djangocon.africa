@@ -44,7 +44,7 @@
     }
 
     ul {
-        @apply list-disc list-inside ml-2 text-lg
+        @apply list-disc list-inside ml-2 text-lg space-y-5
     }
 
     body {
