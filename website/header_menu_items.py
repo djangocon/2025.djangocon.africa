@@ -11,14 +11,39 @@ class HeaderLink:
     href: str = ""
     children: List["HeaderLink"] = field(default_factory=list)
 
+
 header_menu_items = [
-    HeaderLink(_("Home"), href="/"),
-    # HeaderLink(
-    #     label="About",
-    #     children=[
-    #         #   HeaderLink("Team", href=reverse("page_team")),
-    #     ],
-    # ),
+    HeaderLink(
+        label=_("Conference"),
+        children=[
+            HeaderLink(label=_("About the conference"), href="#"),
+            HeaderLink(label=_("Venue"), href="#"),
+            HeaderLink(label=_("Code of Conduct"), href="/coc"),
+            HeaderLink(label=_("Organisers"), href="#"),
+        ]
+    ),
+    HeaderLink(
+        label=_("Resources"),
+        children=[
+            HeaderLink(label=_("Documentation"), href="#"),
+            HeaderLink(label=_("Resources"), href="#"),
+        ]
+    ),
+    HeaderLink(
+        label=_("Speaking"),
+        href="#",
+    ),
+    HeaderLink(
+        label=_("Sponsors"),
+        children=[
+            HeaderLink(label=_("Our Sponsors"), href="#"),
+            HeaderLink(label=_("Become a Sponsor"), href="#"),
+        ]
+    ),
+    HeaderLink(
+        label=_("Schedule"),
+        href="#",
+    ),
 ]
 
 user_loggedin_link = HeaderLink(
