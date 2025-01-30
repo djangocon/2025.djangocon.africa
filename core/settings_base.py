@@ -137,18 +137,7 @@ LANGUAGES = [
     ('fr', _('French')),
 ]
 
-
-SOCIAL_MEDIA_LINKS = {
-    "Twitter/X": "https://twitter.com/djcafrica",
-    "LinkedIn": "https://linkedin.com/company/djcafrica",
-    "Instagram": "https://instagram.com/djcafrica",
-    "Facebook": "https://facebook.com/djcafrica",
-    "Masterdon": "https://fosstodon.org/@djangoconafrica/111065411415401242",
-    "Bluesky": "https://bsky.app/profile/djcafrica.bsky.social",
-}
-
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/

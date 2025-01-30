@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.utils.translation import get_language
+from website import constants
 
 
 def language_context(request):
@@ -14,5 +15,5 @@ def language_context(request):
 
 def social_media_links(request):
     return {
-        "social_media_links": settings.SOCIAL_MEDIA_LINKS
+        "social_media_links": constants.SOCIAL_MEDIA_LINKS
     }
