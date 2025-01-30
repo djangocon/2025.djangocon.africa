@@ -31,7 +31,7 @@ header_menu_items = [
     ),
     HeaderLink(
         label=_("Speaking"),
-        href="#",
+        href="/speaking",
     ),
     HeaderLink(
         label=_("Sponsors"),
