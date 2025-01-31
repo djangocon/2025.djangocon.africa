@@ -16,34 +16,28 @@ header_menu_items = [
     HeaderLink(
         label=_("Conference"),
         children=[
-            HeaderLink(label=_("About the conference"), href="#"),
-            HeaderLink(label=_("Venue"), href="#"),
+            # HeaderLink(label=_("About the conference"), href="#"),
+            # HeaderLink(label=_("Venue"), href="#"),
             HeaderLink(label=_("Code of Conduct"), href="/coc"),
-            HeaderLink(label=_("Organisers"), href="#"),
-        ]
-    ),
-    HeaderLink(
-        label=_("Resources"),
-        children=[
-            HeaderLink(label=_("Documentation"), href="#"),
-            HeaderLink(label=_("Resources"), href="#"),
+            # HeaderLink(label=_("Organisers"), href="#"),
         ]
     ),
     HeaderLink(
         label=_("Speaking"),
-        href="/speaking",
+        children =[
+            HeaderLink(label=_("Speaking at Djangocon Africa"), href="/speaking"),
+            HeaderLink(label=_("Speaker Resources"), href="/speaker_resources"),
+            HeaderLink(label=_("Call for Proposals"), href="https://pretalx.com/djangocon-africa-2025/cfp"),
+        ]
     ),
     HeaderLink(
         label=_("Sponsors"),
         children=[
-            HeaderLink(label=_("Our Sponsors"), href="#"),
-            HeaderLink(label=_("Become a Sponsor"), href="#"),
+            HeaderLink(label=_("Become a Sponsor"), href="/sponsor_us"),
+            HeaderLink(label=_("Our Sponsors"), href="/sponsors"),
         ]
     ),
-    HeaderLink(
-        label=_("Schedule"),
-        href="#",
-    ),
+    # HeaderLink(label=_("Schedule"), href="#",),
 ]
 
 user_loggedin_link = HeaderLink(
