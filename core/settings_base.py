@@ -69,6 +69,7 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "website.context.context",
                 "core.context_processors.language_context",
+                "core.context_processors.social_media_links",
             ],
         },
     },
@@ -138,7 +139,6 @@ LANGUAGES = [
 
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
@@ -198,7 +198,8 @@ ACCOUNT_LOGOUT_ON_GET = True
 
 
 # override in dev and prod settings as needed
-FEATURE_FLAGS = {"USER_LOGIN_REG": False}  # user login and registration is disabled
+# user login and registration is disabled
+FEATURE_FLAGS = {"USER_LOGIN_REG": False}
 
 LANGUAGE_COOKIE_NAME = 'django_language'
 LANGUAGE_COOKIE_AGE = None

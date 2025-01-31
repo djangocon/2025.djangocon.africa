@@ -6,8 +6,8 @@
 {% block content %}
 
 <div class="dj-container pt-[72px] md:pt-[88px] pb-16">
-    <h1 class="text-center">{% translate "Speaking at DjangoCon Africa" %}</h1>
-    <div class="flex flex-col gap-y-8 md:max-w-[740px] mx-auto pt-10 lg:pt-8">
+  <h1 class="text-center">{% translate "Speaking at DjangoCon Africa" %}</h1>
+  <div class="flex flex-col gap-y-8 md:max-w-[740px] mx-auto pt-10 lg:pt-8">
         <p>{% translate "Welcome Back to DjangoCon Africa 2025, we are very much excited just as you are!" %}</p>
         <p>
             {% blocktranslate %}
@@ -62,8 +62,7 @@
     {% translate "The following are the presentation types that will be accepted in Django Africa Conference 2025" %}
 
     <h3>{% translate "Talk" %}</h3>
-    <ul><li>{% translate "Length: 20 - 45 minutes" %}</li></ul>
-
+    <p class="font-bold">{% translate "Length: 20 - 45mins" %}</p>
     <p>
     {% blocktranslate %}
     We're seeking innovative and captivating talks that cater to the diverse interests of our attendees. While Django 
@@ -79,9 +78,7 @@
     </p>
 
    <h3>{% translate "Workshop and Tutorials" %}</h3>
-    <ul>
-        <li>{% translate "Length: 1.5 - 2hrs." %}</li>
-    </ul>
+    <p class="font-bold">{% translate "Length: 1.5 - 2hrs" %}</p>
     <p>
         {% blocktranslate %}
         This year we are open to any topic as long as it will develop or improve the experiences and knowledge of our attendee’s.
@@ -102,9 +99,7 @@
 
 
     <h3>{% translate "Lightning Talks" %}</h3>
-    <ul>
-        <li>{% translate "Length: 5 - 10 minutes" %}</li>
-    </ul>
+    <p class="font-bold">{% translate "Length: 5 - 10mins" %}</p>
     <p>
         {% translate "Not ready for a full talk or tutorial?" %}
     </p>

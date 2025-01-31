@@ -14,7 +14,7 @@ class HeaderLink:
 
 header_menu_items = [
     HeaderLink(
-        label=_("About"),
+        label=_("Conference"),
         children=[
             # HeaderLink(label=_("About the conference"), href="#"),
             # HeaderLink(label=_("Venue"), href="#"),
@@ -23,7 +23,7 @@ header_menu_items = [
         ]
     ),
     HeaderLink(
-        label=_("Speaking"),
+
         children =[
             HeaderLink(label=_("Speaking at Djangocon Africa"), href="/speaking"),
             HeaderLink(label=_("Speaker Resources"), href="/speaker_resources"),
