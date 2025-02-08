@@ -12,4 +12,5 @@ def context(request):
         "user_loggedin_link": user_loggedin_link,
         "user_not_loggedin_link": user_not_loggedin_link,
         "FEATURE_FLAGS": settings.FEATURE_FLAGS,
+        "is_white_header": True,
     }
