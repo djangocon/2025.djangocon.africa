@@ -10,4 +10,5 @@ urlpatterns = [
     path("speaking", views.page_speaking, name="speaking"),
     path("speaker_resources", views.page_speaker_resources, name="speaker_resources"),
     path("sponsor_us", views.page_sponsor_us, name="sponsor_us"),
+    path("grant", views.grant, name="grant"),
 ]

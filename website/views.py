@@ -23,3 +23,7 @@ def page_speaker_resources(request):
 
 def page_sponsor_us(request):
     return render(request, "page_sponsor_us.html", {"is_white_header": True})
+
+
+def grant(request):
+    return render(request, "page_grant.html", {"is_white_header": True})

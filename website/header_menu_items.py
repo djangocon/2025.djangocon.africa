@@ -37,6 +37,10 @@ header_menu_items = [
             HeaderLink(label=_("Our Sponsors"), href="/sponsors"),
         ]
     ),
+    HeaderLink(
+        label=_("Grant"),
+        href="/grant",
+    )
     # HeaderLink(label=_("Schedule"), href="#",),
 ]
 
