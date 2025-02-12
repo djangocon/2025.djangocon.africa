@@ -38,8 +38,8 @@ header_menu_items = [
         ]
     ),
     HeaderLink(
-        label=_("Grant"),
-        href="/grant",
+        label=_("Opportunity Grants"),
+        href="/opportunity_grants",
     )
     # HeaderLink(label=_("Schedule"), href="#",),
 ]

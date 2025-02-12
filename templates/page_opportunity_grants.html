@@ -100,6 +100,23 @@
             {% endblocktranslate %}
         </p>
 
+        <p>
+            {% if og_state %}
+                {% if og_state.is_open %}
+                    {% if og_is_before %}
+                        <a href="{{ og_state.link }}"
+                            class="bg-deepTeal text-white rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90">
+                                {% translate "Apply" %}
+                        </a>
+                    {% else %}
+                        <a class="rounded-full border border-deepTeal-400 h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 pointer-events-none cursor-not-allowed" disabled>
+                                {% translate "Closed" %}
+                        </a>
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        </p>
+
     </div>
 
 </div>
