@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from website.models import OpportunityGrants
+
+from datetime import datetime
 
 
 def page_home(request):
@@ -23,3 +26,16 @@ def page_speaker_resources(request):
 
 def page_sponsor_us(request):
     return render(request, "page_sponsor_us.html", {"is_white_header": True})
+
+
+def opportunity_grants(request):
+    og_state = OpportunityGrants.objects.first()
+    return render(
+        request,
+        "page_opportunity_grants.html",
+        {
+            "is_white_header": True,
+            "og_state": og_state,
+            "og_is_before": og_state.closing_date > datetime.now(og_state.closing_date.tzinfo) if og_state else None,
+        }
+    )
