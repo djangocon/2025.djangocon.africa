@@ -9,6 +9,23 @@
     <h1 class="text-center">{% translate "Opportunity Grants" %}</h1>
     <div class="flex flex-col gap-y-8 md:max-w-[740px] mx-auto pt-10 lg:pt-8">
 
+        <p class="font-bold text-2xl">
+            {% if og_state.is_open and og_is_before %}
+                <span class="bg-yellow-300 inline">
+                    {% translate "DjangoCon Africa opportunity grants are now open until " %}
+                    {{ og_state.closing_date|date:"d F Y" }}.
+                </span>
+            {% else %}
+                <span class="bg-yellow-300 inline">
+                    {% translate "Our opportunity grant application window is now closed." %}
+                </span>
+            {% endif %}
+            <span class="bg-yellow-300 inline">
+                {% translate "If you have any questions, feel free to reach out to the opportunity grants team at" %}
+                <a href="mailto:hello@djangocon.africa" class="underline">hello@djangocon.africa</a>
+            </span>
+        </p>
+
         <p>
             {% blocktranslate %}
                 DjangoCon Africa 2025 offers grants to attendees and speakers so that those who might otherwise not be able to attend won’t hesitate to participate. Some expenses for the conference attendance (which can include travel, hotel, registration, etc.) will be covered for opportunity grant recipients. We will reimburse grant recipients on the first day of the conference.
