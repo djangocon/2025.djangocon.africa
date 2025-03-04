@@ -575,6 +575,16 @@ video {
 }
 
 @font-face {
+  font-family: 'Archivo';
+
+  src: url('/static/fonts/archivo/Archivo-Medium.ttf') format('truetype');
+
+  font-weight: 500;
+
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Chivomono';
 
   src: url('/static/fonts/chivomono/ChivoMono-Regular.ttf') format('truetype');
@@ -769,6 +779,10 @@ td {
   visibility: hidden;
 }
 
+.collapse {
+  visibility: collapse;
+}
+
 .static {
   position: static;
 }
@@ -828,14 +842,6 @@ td {
 
 .top-20 {
   top: 5rem;
-}
-
-.bottom-20 {
-  bottom: 5rem;
-}
-
-.top-1 {
-  top: 0.25rem;
 }
 
 .z-10 {
@@ -926,14 +932,6 @@ td {
 
 .mt-9 {
   margin-top: 2.25rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mt-12 {
-  margin-top: 3rem;
 }
 
 .block {
@@ -1027,14 +1025,6 @@ td {
   height: 100%;
 }
 
-.h-1 {
-  height: 0.25rem;
-}
-
-.h-40 {
-  height: 10rem;
-}
-
 .max-h-32 {
   max-height: 8rem;
 }
@@ -1076,27 +1066,6 @@ td {
   max-width: 48rem;
 }
 
-<<<<<<< HEAD
-=======
-.max-w-2xl {
-  max-width: 42rem;
-}
-
-.max-w-40 {
-  max-width: 10rem;
-}
-
->>>>>>> cbc118b (Make white header default)
-.max-w-xl {
-  max-width: 36rem;
-}
-
-<<<<<<< HEAD
-=======
-.flex-1 {
-  flex: 1 1 0%;
-}
-
 .table-auto {
   table-layout: auto;
 }
@@ -1105,7 +1074,6 @@ td {
   border-collapse: collapse;
 }
 
->>>>>>> cbc118b (Make white header default)
 .rotate-180 {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1135,10 +1103,6 @@ td {
   cursor: pointer;
 }
 
-.resize {
-  resize: both;
-}
-
 .list-none {
   list-style-type: none;
 }
@@ -1147,14 +1111,6 @@ td {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1183,10 +1139,6 @@ td {
 
 .gap-6 {
   gap: 1.5rem;
-}
-
-.gap-16 {
-  gap: 4rem;
 }
 
 .gap-x-1 {
@@ -1240,11 +1192,6 @@ td {
   row-gap: 2rem;
 }
 
-.gap-x-12 {
-  -moz-column-gap: 3rem;
-       column-gap: 3rem;
-}
-
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1274,10 +1221,6 @@ td {
 
 .overflow-y-auto {
   overflow-y: auto;
-}
-
-.text-wrap {
-  text-wrap: wrap;
 }
 
 .text-nowrap {
@@ -1399,18 +1342,8 @@ td {
   border-color: rgb(255 255 255 / 0.1);
 }
 
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
 .border-b-white\/10 {
   border-bottom-color: rgb(255 255 255 / 0.1);
-}
-
-.border-b-white {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .bg-\[\#313114\] {
@@ -1467,11 +1400,6 @@ td {
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
 
-.bg-yellow-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
-}
-
 .bg-dotted-world-map {
   background-image: url('/static/images/dotted-world-map.svg');
 }
@@ -1495,10 +1423,6 @@ td {
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-6 {
-  padding: 1.5rem;
 }
 
 .px-2 {
@@ -1613,14 +1537,6 @@ td {
   padding-top: 72px;
 }
 
-.pt-16 {
-  padding-top: 4rem;
-}
-
-.pt-8 {
-  padding-top: 2rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -1678,10 +1594,6 @@ td {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.uppercase {
-  text-transform: uppercase;
 }
 
 .italic {
@@ -1875,34 +1787,6 @@ td {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-}
-
-.marker\:accent-purple-50 *::marker {
-  accent-color: #faf5ff;
-}
-
-.marker\:accent-purple-50::marker {
-  accent-color: #faf5ff;
-}
-
-.selection\:text-purple-900 *::-moz-selection {
-  --tw-text-opacity: 1;
-  color: rgb(88 28 135 / var(--tw-text-opacity));
-}
-
-.selection\:text-purple-900 *::selection {
-  --tw-text-opacity: 1;
-  color: rgb(88 28 135 / var(--tw-text-opacity));
-}
-
-.selection\:text-purple-900::-moz-selection {
-  --tw-text-opacity: 1;
-  color: rgb(88 28 135 / var(--tw-text-opacity));
-}
-
-.selection\:text-purple-900::selection {
-  --tw-text-opacity: 1;
-  color: rgb(88 28 135 / var(--tw-text-opacity));
 }
 
 .hover\:border-b-2:hover {

@@ -19,6 +19,13 @@
     }
 
     @font-face {
+        font-family: 'Archivo';
+        src: url('/static/fonts/archivo/Archivo-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    @font-face {
         font-family: 'Chivomono';
         src: url('/static/fonts/chivomono/ChivoMono-Regular.ttf') format('truetype');
         font-weight: 400;
