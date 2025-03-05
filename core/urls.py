@@ -29,6 +29,7 @@ urlpatterns = [
     path("__reload__/", include("django_browser_reload.urls")),
     path('i18n/', include('django.conf.urls.i18n')),
     path('set_language/', set_language, name='set_language'),
+    path("news/", include("news.urls")),
 ]
 
 if settings.DEBUG:
@@ -44,4 +45,5 @@ urlpatterns += i18n_patterns(
     path("accounts/", include("allauth.urls")),
     path("proposals/", include("proposals.urls")),
     path("sponsors/", include("sponsors.urls")),
+    path("news/", include("news.urls")),
 )
