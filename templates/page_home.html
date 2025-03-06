@@ -157,6 +157,29 @@
   </section>
   <section class="py-10">
     <div class="dj-container">
+      <h2 class="mb-4">{% translate "Our Schedule" %}</h2>
+      <div class="border md:border-l-0 border-b-0 md:border-b rounded-2xl overflow-hidden">
+        <div class="md:divide-y">
+          {% for row in schedule %}
+            <div class="grid md:grid-cols-2">
+              {% for cell in row %}
+                <div class="p-6 space-y-4 border-b md:border-b-0 md:border-l">
+                  {% for event_data in cell %}
+                    <p class="{% if event_data.2 %}line-through text-gray-400{% endif %}">
+                      <span class="text-neutral-400 font-medium">{{ event_data.0 }}:</span>
+                      <span>{{ event_data.1 }}</span>
+                    </p>
+                  {% endfor %}
+                </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-10">
+    <div class="dj-container">
       <h2 class="mb-4">{% translate "Sponsors"%}</h2>
       <p class="mb-4 md:max-w-xl">
         {% blocktranslate %}

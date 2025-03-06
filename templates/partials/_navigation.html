@@ -5,11 +5,19 @@
                 <div x-data="{ open: false }" class="relative inline-block">
                     <div class="py-3 flex items-center hover:border-b-2
                     {% if is_white_header %} hover:border-deepTeal{% else %} hover:border-white{% endif %}
-                    {% for child in item.children %}{% if request.path == child.href %} border-b-2 {% if is_white_header %} border-deepTeal{% else %}border-white{% endif %}{% endif %}{% endfor %}">
+                    {% for child in item.children %}
+                        {% if request.path|slice:"3:" == child.href or request.path == child.href %}
+                            border-b-2 {% if is_white_header %} border-deepTeal{% else %}border-white{% endif %}
+                        {% endif %}
+                    {% endfor %}">
                         <button
                             @click="open = !open" @click.outside="open = false"
                             class="flex items-center gap-x-1 py-2
-                                {% for child in item.children %}{% if request.path == child.href %} {% if is_white_header %}text-deepTeal{% else %}text-white{% endif %}{% endif %}{% endfor %}">
+                                {% for child in item.children %}
+                                    {% if request.path|slice:"3:" == child.href or request.path == child.href %}
+                                        {% if is_white_header %}text-deepTeal{% else %}text-white{% endif %}
+                                    {% endif %}
+                                {% endfor %}">
                             <span class="text-base">{{ item.label }}</span>
                             <i class="fas fa-chevron-down transition-transform opacity-30 duration-200"
                             :class="{ 'rotate-180': open }"></i>
@@ -32,9 +40,13 @@
             {% else %}
             <div class="py-3 flex items-center hover:border-b-2
             {% if is_white_header %} hover:border-deepTeal{% else %} hover:border-white{% endif %}
-            {% if request.path == item.href %} border-b-2 border-deepTeal {% endif %}">
+            {% if request.path|slice:"3:" == item.href or request.path == item.href %}
+                border-b-2 {% if is_white_header %}border-deepTeal{% else %}border-white{% endif %}
+            {% endif %}">
                 <a href="{{ item.href }}"
-                    class="py-2 {% if request.path == item.href %}text-deepTeal {% endif %}">
+                    class="py-2 {% if request.path|slice:"3:" == item.href or request.path == item.href %}
+                        {% if is_white_header %}text-deepTeal{% else %}text-white{% endif %}
+                    {% endif %}">
                     {{ item.label }}
                 </a>
             </div>

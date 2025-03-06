@@ -34,7 +34,7 @@ header_menu_items = [
         label=_("Sponsors"),
         children=[
             HeaderLink(label=_("Become a Sponsor"), href="/sponsor_us"),
-            HeaderLink(label=_("Our Sponsors"), href="/sponsors"),
+            HeaderLink(label=_("Our Sponsors"), href="/sponsors/"),
         ]
     ),
     HeaderLink(
