@@ -192,7 +192,6 @@ DB_HOST = os.environ.get("DATABASE_HOST")
 DB_PASSWORD = os.environ.get("DATABASE_PASSWORD")
 DB_NAME = os.environ.get("DATABASE_NAME")
 DB_PORT = os.environ.get("DATABASE_PORT", 5432)
-ADMIN_PATH = os.environ.get("ADMIN_PATH", "/admin")
 
 # django-allauth configurations
 AUTHENTICATION_BACKENDS = [
@@ -225,6 +224,9 @@ LANGUAGE_COOKIE_NAME = 'django_language'
 LANGUAGE_COOKIE_AGE = None
 LANGUAGE_COOKIE_PATH = '/'
 SESSION_COOKIE_AGE = 86400  # 24 hours in seconds
+
+ADMIN_PATH = os.environ.get("ADMIN_PATH", "/admin")
+CMS_PATH = os.environ.get("CMS_PATH", "/cms")
 
 # WAGTAIL SETTINGS
 WAGTAIL_SITE_NAME = 'DjangoCon Africa'
