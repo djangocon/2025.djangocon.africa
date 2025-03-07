@@ -1,0 +1,89 @@
+{% extends "_base.html" %}
+{% load static %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load partials %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="dj-container pt-[72px] lg:pt-[88px] pb-16">
+  <h1 class="text-center lg:text-left">{% translate "Latest News" %}</h1>
+  <div class="flex flex-col lg:flex-row gap-y-4">
+    <div class="w-full flex-1 lg:pr-8 xl:pr-10">
+     <a href="{% pageurl latest_news %}">
+      {% image latest_news.specific.image original class="w-full h-auto sm:h-[470px] object-cover rounded-2xl" %}
+      <div class="flex flex-col lg:flex-row justify-between py-6">
+        <h3>{{ latest_news.specific.title }}</h3>
+        <p class="text-zinc-800 text-base">
+          By {{ latest_news.owner.first_name }} • {{ latest_news.specific.date|date:"F j, Y" }}
+        </p>
+      </div>
+     </a>
+
+      <div>
+        {% for news in published_news|slice:"1:" %}
+        <div
+          class="flex gap-x-4 py-4 border-b cursor-pointer hover:bg-neutral-50 {% if forloop.first %}border-t{% endif %} border-neutral-100"
+        >
+          <div class="w-[120px] h-24 rounded-2xl overflow-hidden">
+            {% if news.specific.image %}
+                {% image news.specific.image original class="w-full h-full object-cover" %}
+            {% else %}
+            <div class="w-[120px] h-24 rounded-2xl bg-zinc-300"></div>
+            {% endif %}
+          </div>
+          <div class="my-auto">
+            <h3 class="font-medium">
+              <a href="{% pageurl news %}"
+                >{{ news.specific.title }}</a
+              >
+            </h3>
+            <p class="text-zinc-800 text-base">
+              <span>By {{ news.owner.first_name }}</span> •
+              <span>{{ news.specific.date|date:"d M Y" }}</span>
+            </p>
+          </div>
+        </div>
+        {% empty %}
+            <p>No news available at the moment 😔</p>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="w-full lg:w-[452px]">
+      <div class="p-5 xl:p-8 w-full bg-deepTeal/5 lg:rounded-2xl lg:h-[470px]">
+        <h2 class="mb-6 text-2xl lg:text-[32px] leading-[40px] font-medium">
+          {% blocktranslate %}
+          5 days of inspiration, education and networking at DjangoCon Africa
+          from 25-31 August, 2025 in Arusha, Tanzania.
+          {% endblocktranslate %}
+        </h2>
+        <div class="space-y-2">
+          <button
+            class="bg-deepTeal text-white rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90"
+            aria-label="{% translate 'Secure a spot' %}"
+          >
+            {% translate "Secure a spot" %}
+          </button>
+          <a
+            href="{% url 'speaking' %}"
+            class="bg-transparent text-black rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-white/50 border"
+            aria-label="{% translate 'Apply to speak' %}"
+          >
+            {% translate "Apply to speak" %}
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <a
+            href="{% url 'sponsor_us' %}"
+            class="bg-transparent text-black rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-white/50 border"
+            aria-label="{% translate 'Sponsor us' %}"
+          >
+            {% translate "Sponsor us" %}
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
