@@ -226,7 +226,7 @@ LANGUAGE_COOKIE_PATH = '/'
 SESSION_COOKIE_AGE = 86400  # 24 hours in seconds
 
 ADMIN_PATH = os.environ.get("ADMIN_PATH", "/admin")
-CMS_PATH = os.environ.get("CMS_PATH", "/cms")
+CMS_PATH = os.environ.get("CMS_PATH", "cms/")
 
 # WAGTAIL SETTINGS
 WAGTAIL_SITE_NAME = 'DjangoCon Africa'
