@@ -10,6 +10,7 @@
   <h1 class="text-center lg:text-left">{% translate "Latest News" %}</h1>
   <div class="flex flex-col lg:flex-row gap-y-4">
     <div class="w-full flex-1 lg:pr-8 xl:pr-10">
+    {% if latest_news %}
      <a href="{% pageurl latest_news %}">
       {% image latest_news.specific.image original class="w-full h-auto sm:h-[470px] object-cover rounded-2xl" %}
       <div class="flex flex-col lg:flex-row justify-between py-6">
@@ -17,6 +18,7 @@
         <p class="text-zinc-800 text-base">
           By {{ latest_news.owner.first_name }} • {{ latest_news.specific.date|date:"F j, Y" }}
         </p>
+    {% endif %}
       </div>
      </a>
 
@@ -44,45 +46,48 @@
             </p>
           </div>
         </div>
-        {% empty %}
-            <p>No news available at the moment 😔</p>
         {% endfor %}
       </div>
     </div>
-    <div class="w-full lg:w-[452px]">
-      <div class="p-5 xl:p-8 w-full bg-deepTeal/5 lg:rounded-2xl lg:h-[470px]">
-        <h2 class="mb-6 text-2xl lg:text-[32px] leading-[40px] font-medium">
-          {% blocktranslate %}
-          5 days of inspiration, education and networking at DjangoCon Africa
-          from 25-31 August, 2025 in Arusha, Tanzania.
-          {% endblocktranslate %}
-        </h2>
-        <div class="space-y-2">
-          <button
-            class="bg-deepTeal text-white rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90"
-            aria-label="{% translate 'Secure a spot' %}"
-          >
-            {% translate "Secure a spot" %}
-          </button>
-          <a
-            href="{% url 'speaking' %}"
-            class="bg-transparent text-black rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-white/50 border"
-            aria-label="{% translate 'Apply to speak' %}"
-          >
-            {% translate "Apply to speak" %}
-            <i class="fas fa-chevron-right"></i>
-          </a>
-          <a
-            href="{% url 'sponsor_us' %}"
-            class="bg-transparent text-black rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-white/50 border"
-            aria-label="{% translate 'Sponsor us' %}"
-          >
-            {% translate "Sponsor us" %}
-            <i class="fas fa-chevron-right"></i>
-          </a>
+    {% if not published_news %}
+        <p class="text-left font-bold">No news available at the moment 😔</p>
+    {% endif %}
+    {% if published_news %}
+        <div class="w-full lg:w-[452px]">
+          <div class="p-5 xl:p-8 w-full bg-deepTeal/5 lg:rounded-2xl lg:h-[470px]">
+            <h2 class="mb-6 text-2xl lg:text-[32px] leading-[40px] font-medium">
+              {% blocktranslate %}
+              5 days of inspiration, education and networking at DjangoCon Africa
+              from 25-31 August, 2025 in Arusha, Tanzania.
+              {% endblocktranslate %}
+            </h2>
+            <div class="space-y-2">
+              <button
+                class="bg-deepTeal text-white rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90"
+                aria-label="{% translate 'Secure a spot' %}"
+              >
+                {% translate "Secure a spot" %}
+              </button>
+              <a
+                href="{% url 'speaking' %}"
+                class="bg-transparent text-black rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-white/50 border"
+                aria-label="{% translate 'Apply to speak' %}"
+              >
+                {% translate "Apply to speak" %}
+                <i class="fas fa-chevron-right"></i>
+              </a>
+              <a
+                href="{% url 'sponsor_us' %}"
+                class="bg-transparent text-black rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-white/50 border"
+                aria-label="{% translate 'Sponsor us' %}"
+              >
+                {% translate "Sponsor us" %}
+                <i class="fas fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+  {% endif %}
   </div>
 </div>
 

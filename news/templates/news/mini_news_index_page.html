@@ -20,9 +20,9 @@
                       </a>
                     </div>
                 </div>
-            {% empty %}
-                <p>No news available at the moment 😔</p>
             {% endfor %}
+        {% else %}
+            <p class="text-left font-bold">No news available at the moment 😔</p>
         {% endif %}
     </div>
 </section>
