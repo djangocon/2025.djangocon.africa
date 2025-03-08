@@ -2,7 +2,7 @@
 {% load static %}
 {% load partials %}
 {% load i18n %}
-{% load sponsors %}
+{% load sponsors news %}
 
 {% block content %}
 
@@ -174,23 +174,7 @@
       {% mini_sponsors %}
     </div>
   </section>
-  <section class="dj-container pt-20">
-    <div class="md:max-w-xl">
-      <h2 class="mb-6">Latest news</h2>
-      <a href="news/announcing-djangocon-africa-2025/">
-        <div class="border-b pb-6 md:border md:p-6">
-          <h3 class="mb-4">{% translate "Introducing DjangoCon Africa 🌍 2025 🎉" %}</h3>
-          <p class="mb-6">
-            {% blocktranslate %}
-            The African Django community is excited to announce the second
-            DjangoCon Africa event, taking...
-            {% endblocktranslate %}
-          </p>
-          <p>{% translate "23 Jan • By Team" %}</p>
-        </div>
-      </a>
-    </div>
-  </section>
+  {% mini_latest_news %}
 </main>
 
 {% endblock %}

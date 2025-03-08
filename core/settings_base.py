@@ -33,12 +33,31 @@ INSTALLED_APPS = [
     "template_partials",
     "crispy_forms",
     "crispy_tailwind",
+
+    # local apps
     "website",
     "proposals",
     "custom_auth",
     "allauth",
     "allauth.account",
     "sponsors",
+    "news",
+
+    # wagtail
+    'wagtail.contrib.forms',
+    'wagtail.contrib.redirects',
+    'wagtail.embeds',
+    'wagtail.sites',
+    'wagtail.users',
+    'wagtail.snippets',
+    'wagtail.documents',
+    'wagtail.images',
+    'wagtail.search',
+    'wagtail.admin',
+    'wagtail',
+
+    'taggit',
+    'modelcluster',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +71,7 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.locale.LocaleMiddleware",
+    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
 ROOT_URLCONF = "core.urls"
@@ -172,7 +192,6 @@ DB_HOST = os.environ.get("DATABASE_HOST")
 DB_PASSWORD = os.environ.get("DATABASE_PASSWORD")
 DB_NAME = os.environ.get("DATABASE_NAME")
 DB_PORT = os.environ.get("DATABASE_PORT", 5432)
-ADMIN_PATH = os.environ.get("ADMIN_PATH", "/admin")
 
 # django-allauth configurations
 AUTHENTICATION_BACKENDS = [
@@ -205,3 +224,11 @@ LANGUAGE_COOKIE_NAME = 'django_language'
 LANGUAGE_COOKIE_AGE = None
 LANGUAGE_COOKIE_PATH = '/'
 SESSION_COOKIE_AGE = 86400  # 24 hours in seconds
+
+ADMIN_PATH = os.environ.get("ADMIN_PATH", "/admin")
+CMS_PATH = os.environ.get("CMS_PATH", "cms/")
+
+# WAGTAIL SETTINGS
+WAGTAIL_SITE_NAME = 'DjangoCon Africa'
+WAGTAILADMIN_BASE_URL = "https://2025.djangocon.africa/"
+

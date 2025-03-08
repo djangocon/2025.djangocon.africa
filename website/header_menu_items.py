@@ -40,6 +40,10 @@ header_menu_items = [
     HeaderLink(
         label=_("Opportunity Grants"),
         href="/opportunity_grants",
+    ),
+    HeaderLink(
+        label=_("News"),
+        href="/news"
     )
     # HeaderLink(label=_("Schedule"), href="#",),
 ]

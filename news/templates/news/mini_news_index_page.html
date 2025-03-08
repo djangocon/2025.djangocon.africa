@@ -1,0 +1,28 @@
+{% load news %}
+{% load wagtailcore_tags %}
+
+{% latest_news 1 as published_news %}
+<section class="dj-container pt-20">
+    <div class="md:max-w-xl">
+      <h2 class="mb-6">Latest news</h2>
+        {% if published_news %}
+            {% for news_item in published_news %}
+                <div class="flex w-full">
+                    <div class="flex-1">
+                      <a href="{% pageurl news_item %}">
+                        <div class="border-b pb-6 md:border md:p-6">
+                          <h3 class="mb-3">{{ news_item.specific.title }}</h3>
+                          <p class="mb-6">
+                              {{ news_item.specific.caption }}
+                          </p>
+                          <p>{{ news_item.specific.date }} • By {{ news_item.owner.first_name }}</p>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="text-left font-bold">No news available at the moment 😔</p>
+        {% endif %}
+    </div>
+</section>
