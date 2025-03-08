@@ -21,7 +21,7 @@ defusedxml==0.7.1
     # via willow
 dj-database-url==2.2.0
     # via -r requirements.in
-django==5.0
+django==5.0.13
     # via
     #   -r requirements.in
     #   crispy-tailwind
@@ -122,5 +122,7 @@ wagtail==6.3.2
     # via -r requirements.in
 whitenoise==6.8.2
     # via -r requirements.in
-willow==1.9.0
-    # via wagtail
+willow[heif]==1.9.0
+    # via
+    #   wagtail
+    #   willow
