@@ -18,8 +18,9 @@ class NewsIndexPage(Page):
     def get_context(self, request):
         news = self.get_children().live().order_by('-first_published_at')
         context = super().get_context(request)
-        context['published_news'] = news
-        context["latest_news"] = news[0]
+        if news:
+            context['published_news'] = news
+            context["latest_news"] = news[0]
         return context
 
 
