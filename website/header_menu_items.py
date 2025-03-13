@@ -1,3 +1,4 @@
+from cProfile import label
 from dataclasses import dataclass, field
 from typing import List
 
@@ -23,6 +24,13 @@ header_menu_items = [
         ]
     ),
     HeaderLink(
+        label=_("Resources"),
+        children=[
+            HeaderLink(label=_("News"), href="/news"),
+            HeaderLink(label=_("Opportunity Grants"), href="/opportunity_grants"),
+        ]
+    ),
+    HeaderLink(
         label=_("Speaking"),
         children =[
             HeaderLink(label=_("Speaking at Djangocon Africa"), href="/speaking"),
@@ -37,14 +45,6 @@ header_menu_items = [
             HeaderLink(label=_("Our Sponsors"), href="/sponsors"),
         ]
     ),
-    HeaderLink(
-        label=_("Opportunity Grants"),
-        href="/opportunity_grants",
-    ),
-    HeaderLink(
-        label=_("News"),
-        href="/news"
-    )
     # HeaderLink(label=_("Schedule"), href="#",),
 ]
 
