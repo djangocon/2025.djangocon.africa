@@ -1,0 +1,54 @@
+{% extends "_base.html" %}
+{% load partials %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="dj-container pt-[72px] md:pt-[88px] pb-16">
+    <h1 class="text-center">{% translate "Purchase a Ticket" %}</h1>
+    <div class="flex flex-col gap-y-8 md:max-w-[740px] mx-auto pt-10 lg:pt-8">
+          <p>{% translate "Welcome to DjangoCon Africa 2025 Ticket Portal!" %}</p>
+          <p>
+              {% blocktranslate %}
+                  Ready to join us at DjangoCon Africa 2025? Select your ticket type below to secure your spot. 
+                  Early bird tickets are available for a limited time, so don't miss out on the special rates.
+              {% endblocktranslate %}
+        <!-- UZA Products Embed LIVE -->
+        <div id="uza-container" class="w-full max-w-[1200px] mx-auto mt-4 md:mt-8 px-4 md:px-0" style="height: 95vh; min-height: 500px; max-height: 800px;">
+            <uza-products
+            product-catalog-id="12345"
+            public-api-key={{uza_api_key}}
+            source="#web"
+            refCode="#bo"
+            customer-email=""
+            __locale-override="en"
+            ></uza-products>
+        </div>
+      {% comment %} <h2>
+          {% translate "Why Speak at DjangoCon Africa" %}
+      </h2> {% endcomment %}
+  
+      {% comment %} <ul>
+          <li>{% translate "Share new tools, resources, experiences, practices, and ideas with the Django community and beyond." %}</li>
+          <li>{% blocktranslate %}Connect with other Django professionals, expand your network, and build relationships that can benefit your 
+              career and personal growth.{% endblocktranslate %}</li>
+          <li>{% blocktranslate %}Your talk will be professionally recorded and made available on our official YouTube channel for a global 
+              audience to access and learn from. (optional){% endblocktranslate %}</li>
+          <li>{% blocktranslate %}A professional photographer will be present to capture high-quality images of your talk, providing a lasting 
+              visual record of your presentation. (Optional){% endblocktranslate %}</li>
+          <li>{% translate "Reach a wide audience and share your insights, experiences, and discoveries with the Django community and beyond." %}</li>
+          <li>{% translate "Give back to Django Community." %}</li>
+      </ul>
+  
+  
+      <p>
+          {% blocktranslate %}
+          If you would like to ask a question, you are always welcome to write the Content Committee:  
+          <a href="mailto:content@djangocon.africa">content@djangocon.africa</a>.
+          {% endblocktranslate %}
+      </p> {% endcomment %}
+      <div>
+  </div>
+  
+
+{% endblock %}
