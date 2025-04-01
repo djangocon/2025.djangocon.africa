@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from website.models import OpportunityGrants
-
+from django.conf import settings
 from datetime import datetime
 
 
@@ -28,6 +28,12 @@ def page_sponsor_us(request):
     return render(request, "page_sponsor_us.html", {"is_white_header": True})
 
 
+def page_ticket(request):
+    context = {
+        "is_white_header": False, "uza_api_key": settings.UZA_PUBLIC_API_KEY}
+    return render(request, "page_tickets.html", context)
+
+
 def opportunity_grants(request):
     og_state = OpportunityGrants.objects.first()
     return render(
@@ -36,6 +42,10 @@ def opportunity_grants(request):
         {
             "is_white_header": True,
             "og_state": og_state,
-            "og_is_before": og_state.closing_date > datetime.now(og_state.closing_date.tzinfo) if og_state else None,
-        }
+            "og_is_before": (
+                og_state.closing_date > datetime.now(og_state.closing_date.tzinfo)
+                if og_state
+                else None
+            ),
+        },
     )

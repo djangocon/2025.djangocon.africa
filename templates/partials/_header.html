@@ -12,9 +12,9 @@
         {% include "partials/_navigation.html" %}
         <div class="flex items-center gap-x-2">
             {% include "partials/_language_selector.html" %}
-{#            <button class="hidden lg:block border h-10 px-4 py-2 rounded-full {% if is_white_header %} text-black hover:text-gray-700 border-black/10{% else %}text-white hover:text-gray-200 hover:bg-white/10 border-white/10{% endif %}">#}
-{#                Tickets#}
-{#            </button>#}
+            <a href="{% url 'tickets' %}" class="hidden lg:block border h-10 px-4 py-2 rounded-full {% if is_white_header %} text-black hover:text-gray-700 border-black/10{% else %}text-white hover:text-gray-200 hover:bg-white/10 border-white/10{% endif %}">
+                Tickets
+            </a>
 {#            <button class="hidden lg:block border h-10 px-4 py-2 rounded-full {% if is_white_header %}text-black hover:text-gray-700 border-black/10{% else %}text-white hover:text-gray-200 border-white/10{% endif %}">#}
 {#                Account#}
 {#            </button>#}

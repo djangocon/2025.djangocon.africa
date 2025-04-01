@@ -1,5 +1,6 @@
 from .settings_base import *  # noqa: F403
 import dj_database_url
+import os
 
 SECRET_KEY = "not really a secret"
 DEBUG = True
@@ -38,6 +39,4 @@ DATABASES = {
 
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = BASE_DIR / "gitignore/emails"  # noqa: F405
-
-
 FEATURE_FLAGS["USER_LOGIN_REG"] = True  # noqa: F405
