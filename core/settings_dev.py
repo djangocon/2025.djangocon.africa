@@ -25,31 +25,18 @@ INSTALLED_APPS += [  # noqa: F405
 # You can run this database using docker compose.
 # Look inside dev_db/README.md for details!!
 
-# DB_USER = os.environ.get("DATABASE_USER", "pguser")  # noqa: F405
-# DB_HOST = os.environ.get("DATABASE_HOST", "127.0.0.1")  # noqa: F405
-# DB_PASSWORD = os.environ.get("DATABASE_PASSWORD", "password")  # noqa: F405
-# DB_NAME = os.environ.get("DATABASE_NAME", "db")  # noqa: F405
-# DB_PORT = os.environ.get("DATABASE_PORT", 5432)  # noqa: F405
-
-# DATABASES = {
-#     "default": dj_database_url.config(
-#         default=f"postgres://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-#     )
-# }
-
+DB_USER = os.environ.get("DATABASE_USER", "pguser")  # noqa: F405
+DB_HOST = os.environ.get("DATABASE_HOST", "127.0.0.1")  # noqa: F405
+DB_PASSWORD = os.environ.get("DATABASE_PASSWORD", "password")  # noqa: F405
+DB_NAME = os.environ.get("DATABASE_NAME", "db")  # noqa: F405
+DB_PORT = os.environ.get("DATABASE_PORT", 5432)  # noqa: F405
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DATABASE_NAME', 'djangocon_africa'),
-        'USER': os.environ.get('DATABASE_USER', 'postgres'),
-        'PASSWORD': os.environ.get('DATABASE_PASSWORD', '#3Ewoksss'),
-        'HOST': os.environ.get('DATABASE_HOST', 'localhost'),
-        'PORT': os.environ.get('DATABASE_PORT', '5432'),
-    }
+    "default": dj_database_url.config(
+        default=f"postgres://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+    )
 }
 
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = BASE_DIR / "gitignore/emails"  # noqa: F405
-# UZA_PUBLIC_API_KEY = os.environ.get("UZA_PUBLIC_API_KEY")  # noqa: F405s
 FEATURE_FLAGS["USER_LOGIN_REG"] = True  # noqa: F405
