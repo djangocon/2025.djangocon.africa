@@ -6,28 +6,20 @@ from datetime import datetime
 
 def page_home(request):
     schedule = [
-        [
-            [('Jan 3rd', 'Announce Conference', True)],
-            [('Jul 7th', 'Conference Schedule is announced', False)],
-        ],
-        [
-            [('Feb 1st', 'Call For Proposals open', True),
-             ('Feb 14th', 'Opportunity Grant opens', False)],
-            [('Aug 8th', 'Django Girls starts', False),
-             ('Aug 9th', 'Django Girls ends', False)],
-        ],
-        [
-            [('Mar 1st', 'Ticket sales open', False),
-             ('Mar 31st', 'Call For Proposals close', False)],
-            [('Aug 11th', 'Conference starts', False),
-             ('Aug 15th', 'Conference ends', False)],
-        ],
-        [
-            [('Apr 1st', 'Opportunity Grants notifications', False),
-             ('Apr 1st', 'Call For Proposals notifications', False)],
-            [('Aug 13th', 'UbuCon starts', False),
-             ('Aug 15th', 'UbuCon ends', False)],
-        ],
+        [(datetime(2025, 1, 3), 'Announce Conference')],
+        [(datetime(2025, 2, 1), 'Call For Proposals open'),
+         (datetime(2025, 2, 14), 'Opportunity Grant opens')],
+        [(datetime(2025, 3, 1), 'Ticket sales open'),
+         (datetime(2025, 3, 31), 'Call For Proposals close')],
+        [(datetime(2025, 4, 1), 'Opportunity Grants notifications'),
+         (datetime(2025, 4, 1), 'Call For Proposals notifications')],
+        [(datetime(2025, 7, 7), 'Conference Schedule is announced')],
+        [(datetime(2025, 8, 8), 'Django Girls starts'),
+         (datetime(2025, 8, 9), 'Django Girls ends')],
+        [(datetime(2025, 8, 11), 'Conference starts'),
+         (datetime(2025, 8, 13), 'UbuCon starts')],
+        [(datetime(2025, 8, 15), 'Conference ends'),
+         (datetime(2025, 8, 15), 'UbuCon ends')]
     ]
 
     return render(
@@ -57,7 +49,7 @@ def page_speaker_resources(request):
 
 
 def page_sponsor_us(request):
-    return render(request, "page_sponsor_us.html", {"is_white_header": True})
+    return render(request, "page_sponsor_us.html", {"is_white_header"})
 
 
 def page_ticket(request):
