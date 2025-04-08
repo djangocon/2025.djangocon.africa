@@ -3,6 +3,7 @@
 {% load partials %}
 {% load i18n %}
 {% load sponsors news %}
+{% load date_filters %}
 
 {% block content %}
 
@@ -195,6 +196,53 @@
           >
               {% translate "Get tickets" %}
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-10">
+    <div class="dj-container">
+      <h2 class="mb-4">{% translate "Our Schedule" %}</h2>
+      <div class="border rounded-2xl overflow-hidden">
+        <div class="md:hidden divide-y">
+          {% for row in schedule %}
+            <div class="p-6 space-y-4">
+              {% for cell in row %}
+                <p class="{% if cell.0|is_past %}line-through text-gray-400{% endif %}">
+                  <span class="text-neutral-400 font-medium">{{ cell.0|format_date }}:</span>
+                  <span>{{ cell.1 }}</span>
+                </p>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+        <div class="hidden md:block">
+          <div class="grid grid-cols-2">
+            <div class="divide-y">
+              {% for row in schedule|slice:":4" %}
+                <div class="p-6 space-y-4">
+                  {% for cell in row %}
+                    <p class="{% if cell.0|is_past %}line-through text-gray-400{% endif %}">
+                      <span class="text-neutral-400 font-medium">{{ cell.0|format_date }}:</span>
+                      <span>{{ cell.1 }}</span>
+                    </p>
+                  {% endfor %}
+                </div>
+              {% endfor %}
+            </div>
+            <div class="divide-y border-l">
+              {% for row in schedule|slice:"4:" %}
+                <div class="p-6 space-y-4">
+                  {% for cell in row %}
+                    <p class="{% if cell.0|is_past %}line-through text-gray-400{% endif %}">
+                      <span class="text-neutral-400 font-medium">{{ cell.0|format_date }}:</span>
+                      <span>{{ cell.1 }}</span>
+                    </p>
+                  {% endfor %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
         </div>
       </div>
     </div>
