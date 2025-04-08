@@ -62,12 +62,12 @@
               {% endblocktranslate %}
             </h2>
             <div class="space-y-2">
-              <button
-                class="bg-deepTeal text-white rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90"
-                aria-label="{% translate 'Secure a spot' %}"
+              <a
+                      href="{% url 'tickets' %}"
+                      class="bg-deepTeal text-white rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90"
               >
                 {% translate "Secure a spot" %}
-              </button>
+              </a>
               <a
                 href="{% url 'speaking' %}"
                 class="bg-transparent text-black rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-white/50 border"

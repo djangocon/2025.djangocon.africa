@@ -86,6 +86,14 @@
         @apply bg-accentYellow text-black no-underline p-3 cursor-pointer;
     }
 
+    .btn-primary {
+        @apply bg-deepTeal text-white rounded-full h-[50px] px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90 transition-colors;
+    }
+
+    .btn-secondary {
+        @apply bg-white text-black rounded-full h-[50px] px-6 flex items-center justify-center gap-x-1 hover:bg-white/90 transition-colors;
+    }
+
 }
 
 .dj-container {

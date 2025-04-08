@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <div x-data="{ isOpen: false }"
      @toggle-mobile-menu.window="isOpen = !isOpen"
@@ -47,9 +48,9 @@
                 </div>
             {% endfor %}
         </nav>
-{#        <div class="flex flex-col gap-y-4 px-4 sm:px-6 mt-6 mb-8">#}
-{#            <a href="#" class="h-[50px] p-4 rounded-full bg-deepTeal text-center text-white hover:bg-deepTeal/90">Tickets</a>#}
-{#            <a href="#" class="border h-[50px] p-4 rounded-full text-center hover:bg-gray-100">Account</a>#}
-{#        </div>#}
+        <div class="flex flex-col gap-y-4 px-4 sm:px-6 mt-6 mb-8">
+            <a href="{% url 'tickets' %}" class="h-[50px] p-4 rounded-full bg-deepTeal text-center text-white hover:bg-deepTeal/90">{% translate "Secure a spot" %}</a>
+            <a href="{% url 'sponsor_us' %}" class="h-[50px] p-4 rounded-full bg-transparent text-center text-black border-2 border-solid border-gray-100">{% translate "Sponsor us" %}</a>
+        </div>
     </div>
 </div>
