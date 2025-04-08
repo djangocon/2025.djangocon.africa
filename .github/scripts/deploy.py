@@ -89,6 +89,7 @@ def deploy() -> None:
     logging.info("starting the deployment")
     console = get_deployment_console()
     steps = [
+        "source ~/.virtualenvs/venv/bin/activate",
         "cd ~/2025.djangocon.africa",
         "git pull",
         "pip install -r requirements.txt",
