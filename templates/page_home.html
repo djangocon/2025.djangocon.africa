@@ -29,16 +29,16 @@
         >
       </p>
     </div>
-    <div class="flex items-center justify-center flex-col gap-6 md:flex-row pt-6">
+    <div class="dj-container flex items-center justify-center flex-col gap-4 md:flex-row pt-6">
         <a
             href="{% url 'tickets' %}"
-            class="bg-white text-black rounded-full h-[50px] px-6 flex items-center justify-center hover:border-2 hover:border-black hover:border-b-2 w-full md:w-auto"
+            class="btn-secondary w-full md:w-fit"
         >
             {% translate "Secure a spot" %}
         </a>
         <a
             href="{% url 'sponsor_us' %}"
-            class="bg-deepTeal text-white rounded-full h-[50px] px-6 flex items-center justify-center hover:text-gray-200 hover:bg-white/10 border-white/10 w-full md:w-auto"
+            class="btn-primary border border-white/10 w-full md:w-fit hover:bg-white/10"
           >
             {% translate "Sponsor us" %}
         <i class="fas fa-chevron-right"></i>
@@ -61,11 +61,10 @@
       </div>
     </div>
   </section>
-  <section class="bg-white mb-16 md:mb-10">
-    <div
-      class="dj-container flex gap-x-8 md:gap-x-12 gap-y-6 flex-col md:flex-row mt-5 items-center"
-    >
-      <div class="md:w-1/2 m-auto md:pt-[30px] md:pb-5">
+  <section class="bg-white">
+    <div class="dj-container pt-16 md:pt-10">
+    <div class="md:border rounded-t-2xl flex gap-x-8 gap-y-6 flex-col md:flex-row">
+      <div class="md:w-1/2 m-auto md:py-10 md:pl-10 lg:pr-10">
         <h2 class="mb-4">{% translate "First DjangoCon Africa" %}</h2>
         <p class="mb-4">
           {% blocktranslate %}
@@ -85,17 +84,17 @@
           forefront.
           {% endblocktranslate %}
         </p>
-        <div class="flex flex-col gap-6 md:flex-row">
+        <div class="flex flex-col gap-4 md:flex-row">
             <a
               href="{% url 'tickets' %}"
-              class="bg-deepTeal text-white rounded-full h-[50px] px-6 flex items-center justify-center hover:bg-deepTeal/90 w-full md:w-auto"
+              class="btn-primary"
             >
               {% translate "Secure a spot" %}
             </a>
             <a
               href="https://2023.djangocon.africa/news/report/"
               target="_blank"
-              class="text-black rounded-full h-[50px] px-6 flex items-center justify-center border-2 border-solid border-gray-400 w-full md:w-auto"
+              class="btn-secondary border border-black/10 hover:border-black/40"
             >
               {% translate "Read the 2023 report" %}
               <i class="fas fa-chevron-right"></i>
@@ -106,15 +105,20 @@
         <img
           src="{% static 'images/first-djangocon-africa.png' %}"
           alt="DjangoCon Africa 2023"
-          class="w-full h-auto object-cover rounded-2xl"
+          class="w-full h-full object-cover rounded-2xl md:rounded-tl-none md:rounded-b-none"
         />
       </div>
     </div>
+    </div>
   </section>
+  <div class="dj-container ">
+    <div class="md:px-6 pb-4 md:pb-6 pt-16 md:pt-12 md:border-x">
+      <h2 class="md:max-w-[447px]">
+        {% translate "What will be happening at DjangoCon Africa" %}
+      </h2>
+    </div>
+  </div>
   <section class="dj-container pb-10">
-    <h2 class="md:max-w-[447px] mb-4 md:mb-8">
-      {% translate "What will be happening at DjangoCon Africa" %}
-    </h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3">
       <div
         class="border pb-6 md:pt-6 md:px-6 border-x-0 md:border-x-[1px] border-t-0 md:border-t-[1px]"
@@ -150,7 +154,7 @@
         </p>
       </div>
       <div
-        class="border py-6 md:px-6 border-x-0 md:border-x-[1px] -mt-[1px] -ml-[1px]"
+        class="border py-6 md:px-6 border-x-0 md:border-x-[1px] -mt-[1px] -ml-[1px] lg:rounded-bl-2xl"
       >
         <h3 class="mb-4">👩‍💻 Django Girls</h3>
         <p>
@@ -162,9 +166,8 @@
           {% endblocktranslate %}
         </p>
       </div>
-     
       <div
-        class="border pt-6 pb-6 md:px-6 border-x-0 md:border-x-[1px] border-b-0 md:border-b-[1px] -mt-[1px] -ml-[1px]"
+        class="border pt-6 pb-6 md:px-6 border-x-0 md:border-x-[1px] border-b-0 md:border-b-[1px] -mt-[1px] -ml-[1px] rounded-bl-2xl lg:rounded-bl-none"
       >
         <h3 class="mb-4">🔎 {% translate "Discovery" %}</h3>
         <p>
@@ -178,21 +181,22 @@
       </div>
 
       <div
-        class="bg-gray-100 border-x-0 md:border-x-[1px] border-b-0 md:border-b-[1px] md:rounded-xl p-20 flex flex-col gap-4 justify-center items-center"
+        class="bg-gray-100 rounded-2xl md:rounded-t-none md:rounded-bl-none border-x-0 md:border-x-[1px] md:ml-[-1px] border-b-0 md:border-b-[1px] p-20"
       >
-            <h3 class="font-bold text-center">
-              {% blocktranslate %}
-                  Pumped for DjangoCon Africa? Secure a spot now!
-              {% endblocktranslate %}
-            </h3>
-            <a
-                href="{% url 'tickets' %}"
-                class="bg-deepTeal text-white rounded-full h-[50px] px-6 flex items-center justify-center hover:border-2 hover:border-black hover:border-b-2"
-            >
-                {% translate "Get tickets" %}
-            </a>
+        <div class="flex flex-col gap-4 justify-center items-center">
+          <h3 class="font-bold text-center text-deepTeal w-[280px]">
+            {% blocktranslate %}
+                Pumped for DjangoCon Africa? Secure a spot now!
+            {% endblocktranslate %}
+          </h3>
+          <a
+              href="{% url 'tickets' %}"
+              class="btn-primary"
+          >
+              {% translate "Get tickets" %}
+          </a>
+        </div>
       </div>
-
     </div>
   </section>
   <section class="py-10">
@@ -205,17 +209,17 @@
         {% endblocktranslate %}
       </p>
 
-        <div class="flex flex-col gap-6 md:flex-row">
+        <div class="flex flex-col gap-4 md:flex-row">
               <a
                 href="mailto:sponsor@djangocon.africa?subject=Sponsor DjangoCon Africa 2025"
-                class="bg-deepTeal text-white rounded-full h-[50px] px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90 w-full md:w-auto"
-              >
+                class="btn-primary border border-white/10 w-full md:w-fit"
+                >
                 {% translate "Sponsor us" %}
               </a>
             <a
               href="https://2023.djangocon.africa/news/report/"
               target="_blank"
-              class="text-black rounded-full h-[50px] px-6 flex items-center justify-center border-2 border-solid border-gray-400 w-full md:w-auto"
+              class="btn-secondary border border-black/10 hover:border-black/40"
             >
               {% translate "Learn more" %}
               <i class="fas fa-chevron-right"></i>
