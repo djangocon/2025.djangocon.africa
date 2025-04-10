@@ -35,7 +35,7 @@ def page_speaker_resources(request):
 
 
 def page_sponsor_us(request):
-    return render(request, "page_sponsor_us.html", {"is_white_header"})
+    return render(request, "page_sponsor_us.html")
 
 
 def page_ticket(request):
