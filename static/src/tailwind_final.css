@@ -933,10 +933,6 @@ td {
   margin-bottom: 0.5rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -975,10 +971,6 @@ td {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .mt-6 {
@@ -2062,6 +2054,10 @@ td {
     height: 470px;
   }
 
+  .sm\:w-\[280px\] {
+    width: 280px;
+  }
+
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -2100,6 +2096,10 @@ td {
   .md\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
+  }
+
+  .md\:w-\[280px\] {
+    width: 280px;
   }
 
   .md\:max-w-2xl {
