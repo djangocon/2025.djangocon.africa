@@ -1,0 +1,2139 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: DjangoCon Africa\n"
+"Language: fr\n"
+
+#: core/settings_base.py:136
+msgid "English"
+msgstr "Anglais"
+
+#: core/settings_base.py:137
+msgid "French"
+msgstr "Français"
+
+#: proposals/forms.py:22
+msgid "Notes to the reviewer. These notes will not be displayed publicly"
+msgstr "Remarques pour l'évaluateur. Ces remarques resteront privés"
+
+#: proposals/forms.py:25
+msgid "Are there other speakers involved in your talk? List only their email addresses here"
+msgstr "D'autres intervenants participent ils à votre présentation? Mettez ici leurs adresses e-mail"
+
+#: sponsors/models.py:11
+msgid "A Description of the file."
+msgstr "Description du dossier."
+
+#: sponsors/models.py:26
+msgid "The name of the sponsorship package."
+msgstr "Le nom de la formule de sponsoring."
+
+#: sponsors/models.py:35
+msgid "Currency symbol of the sponsorship package."
+msgstr "Le symbole de la devise de la formule de sponsoring."
+
+#: sponsors/models.py:40
+msgid "The amount of the sponsorship package."
+msgstr "Le montant de la formule de sponsoring."
+
+#: sponsors/models.py:43
+msgid "A short description of the sponsorship package."
+msgstr "Une brève description de la formule de sponsoring."
+
+#: sponsors/models.py:49
+msgid "The files of the sponsorship package."
+msgstr "Les fichiers du dossier de sponsoring."
+
+#: sponsors/models.py:54
+msgid "The symbol of the sponsorship package."
+msgstr "Le symbole de la formule de sponsoring."
+
+#: sponsors/models.py:73
+msgid "A description of the sponsor."
+msgstr "Une description du sponsor."
+
+#: sponsors/models.py:78
+msgid "The URL of the sponsor if needed."
+msgstr "L'URL du sponsor, si nécessaire."
+
+#: sponsors/models.py:82
+msgid "Whether the sponsor is hiring or not."
+msgstr "Indiquer si le sponsor recrute ou non."
+
+#: sponsors/models.py:87
+msgid "Hiring URL of the sponsor."
+msgstr "L'URL de recrutement du sponsor."
+
+#: sponsors/models.py:102
+msgid "The name of the tag."
+msgstr "Le nom du tag."
+
+#: sponsors/templates/sponsors/sponsors.html:11 website/header_menu_items.py:37
+msgid "Our Sponsors"
+msgstr "Nos sponsors"
+
+#: sponsors/templates/sponsors/sponsors.html:13
+msgid "\n"
+"            DjangoCon Africa is made possible by the generous support of our sponsors. We are thankful for their support\n"
+"            and encourage you to learn more about them. We're grateful to them all!\n"
+"            "
+msgstr "\n"
+"        DjangoCon Africa est rendu possible grâce au soutien généreux de nos sponsors. Nous sommes reconnaissants de leur soutien\n"
+"            et nous vous encourageons à en savoir plus sur eux. Nous leur sommes tous reconnaissants !\n"
+"            "
+
+#: templates/account/account_inactive.html:5
+#: templates/account/account_inactive.html:9
+msgid "Account Inactive"
+msgstr "Compte Inactif"
+
+#: templates/account/account_inactive.html:12
+msgid "This account is inactive."
+msgstr "Ce compte est inactif."
+
+#: templates/account/email/account_already_exists_message.txt:4
+msgid "You are receiving this email because you or someone else tried to signup for an\n"
+"account using email address:\n"
+"\n"
+"%(email)s\n"
+"\n"
+"However, an account using that email address already exists.  In case you have\n"
+"forgotten about this, please use the password forgotten procedure to recover\n"
+"your account:\n"
+"\n"
+"%(password_reset_url)s"
+msgstr "Vous recevez cet e-mail parce que vous ou quelqu'un d'autre a essayé de créer un compte \n"
+"à l'aide l'adresse e-mail suivante:\n"
+"\n"
+"%(email)s\n"
+"\n"
+"Cependant, un compte utilisant cette adresse e-mail existe déjà.  Au cas où vous l'auriez oublié, \n"
+"veuillez utiliser la procédure d'oubli du mot de passe pour récupérer\n"
+"votre compte :\n"
+"\n"
+"%(password_reset_url)s"
+
+#: templates/account/email/account_already_exists_subject.txt:3
+msgid "Account Already Exists"
+msgstr "Le Compte Existe Déjà"
+
+#: templates/account/email/base_message.txt:1
+msgid "Hello from %(site_name)s!"
+msgstr "Bonjour de la part de %(site_name)s !"
+
+#: templates/account/email/base_message.txt:5
+msgid "Thank you for using %(site_name)s!\n"
+"%(site_domain)s"
+msgstr "Merci d'utiliser %(site_name)s !\n"
+"%(site_domain)s"
+
+#: templates/account/email/base_notification.txt:5
+msgid "You are receiving this mail because the following change was made to your account:"
+msgstr "Vous recevez ce courrier parce que la modification suivante a été apportée à votre compte :"
+
+#: templates/account/email/base_notification.txt:10
+msgid "If you do not recognize this change then please take proper security precautions immediately. The change to your account originates from:\n"
+"\n"
+"- IP address: %(ip)s\n"
+"- Browser: %(user_agent)s\n"
+"- Date: %(timestamp)s"
+msgstr "Si vous ne reconnaissez pas ce changement, veuillez prendre immédiatement les mesures de sécurité qui s'imposent. La modification de votre compte provient de :\n"
+"\n"
+"- L'adresse IP : %(ip)s\n"
+"- Navigateur : %(user_agent)s\n"
+"- Date : %(timestamp)s"
+
+#: templates/account/email/email_confirm_message.txt:4
+msgid "Your email has been confirmed."
+msgstr "Votre courriel a été confirmé."
+
+#: templates/account/email/email_confirm_subject.txt:3
+msgid "Email Confirmation"
+msgstr "Confirmation de l'adresse électronique"
+
+#: templates/account/email/email_confirmation_subject.txt:3
+msgid "Please Confirm Your Email Address"
+msgstr "Veuillez confirmer votre adresse électronique"
+
+#: templates/account/email/password_changed_message.txt:4
+msgid "Your password has been changed."
+msgstr "Votre mot de passe a été modifié."
+
+#: templates/account/email/password_changed_subject.txt:3
+msgid "Password Changed"
+msgstr "Mot de passe modifié"
+
+#: templates/account/email/password_reset_key_message.txt:4
+msgid "You're receiving this email because you or someone else has requested a password reset for your user account.\n"
+"It can be safely ignored if you did not request a password reset. Click the link below to reset your password."
+msgstr "Vous recevez cet e-mail parce que vous ou quelqu'un d'autre a demandé une réinitialisation du mot de passe de votre compte d'utilisateur.\n"
+"Vous pouvez ignorer ce message si vous n'avez pas demandé la réinitialisation de votre mot de passe. Cliquez sur le lien ci-dessous pour réinitialiser votre mot de passe."
+
+#: templates/account/email/password_reset_key_message.txt:9
+msgid "In case you forgot, your username is %(username)s."
+msgstr "Au cas où vous l'auriez oublié, votre nom d'utilisateur est %(username)s."
+
+#: templates/account/email/password_reset_key_subject.txt:3
+msgid "Password Reset Email"
+msgstr "Courriel de réinitialisation du mot de passe"
+
+#: templates/account/email/password_reset_message.txt:4
+msgid "Your password has been reset."
+msgstr "Votre mot de passe a été réinitialisé."
+
+#: templates/account/email/password_reset_subject.txt:3
+msgid "Password Reset"
+msgstr "Reinitialiser  le mot de passe"
+
+#: templates/account/email/password_set_message.txt:4
+msgid "Your password has been set."
+msgstr "Votre mot de passe a été créé"
+
+#: templates/account/email/password_set_subject.txt:3
+msgid "Password Set"
+msgstr "Configuration mot de passe"
+
+#: templates/account/email/unknown_account_message.txt:4
+msgid "You are receiving this email because you, or someone else, tried to access an account with email %(email)s. However, we do not have any record of such an account in our database."
+msgstr "Vous recevez cet e-mail car une tentative d'accès à un compte avec l'adresse %(email)s a été effectuée. Cependant, nous n'avons aucun compte enregistré avec cette adresse."
+
+#: templates/account/email/unknown_account_message.txt:6
+msgid "This mail can be safely ignored if you did not initiate this action."
+msgstr "Ce message peut être ignoré  si vous n'êtes pas à l'origine de cette action."
+
+#: templates/account/email/unknown_account_message.txt:8
+msgid "If it was you, you can sign up for an account using the link below."
+msgstr "Si vous êtes à l'origine de cette action, vous pouvez vous inscrire et créer un compte en utilisant le lien ci-dessous."
+
+#: templates/account/email/unknown_account_subject.txt:3
+msgid "Unknown Account"
+msgstr "Compte Inconnu"
+
+#: templates/account/email_confirm.html:8
+#: templates/account/email_confirm.html:14
+msgid "Confirm Email Address"
+msgstr "Confirmez l'adresse email"
+
+#: templates/account/email_confirm.html:20
+msgid "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an email address for user %(user_display)s."
+msgstr "Merci de confirmer que <a href=\"mailto:%(email)s\">%(email)s</a>  est bien l'adresse email pour l'utilisateur  %(user_display)s."
+
+#: templates/account/email_confirm.html:34
+#: templates/account/messages/email_confirmation_failed.txt:2
+msgid "Unable to confirm %(email)s because it is already confirmed by a different account."
+msgstr "%(email)s est déjà utilisé dans un autre compte"
+
+#: templates/account/email_confirm.html:40
+msgid "This email confirmation link expired or is invalid. Please <a href=\"%(email_url)s\">issue a new email confirmation request</a>."
+msgstr "Lien de confirmation expiré ou invalide. Veuillez <a href=\"%(email_url)s\"> demander une nouvelle confirmation </a>."
+
+#: templates/account/messages/email_confirmation_sent.txt:2
+msgid "Confirmation email sent to %(email)s."
+msgstr "E-mail de Confirmation envoyé à  %(email)s."
+
+#: templates/account/messages/email_confirmed.txt:2
+msgid "You have confirmed %(email)s."
+msgstr "%(email)s confirmé."
+
+#: templates/account/messages/logged_in.txt:4
+msgid "Successfully signed in as %(name)s."
+msgstr "Vous êtes bien authentifié en tant que %(name)s."
+
+#: templates/account/messages/logged_out.txt:2
+msgid "You have signed out."
+msgstr "Vous êtes déconnecté(e)."
+
+#: templates/account/messages/password_changed.txt:2
+msgid "Password successfully changed."
+msgstr "Mot de passe modifié avec succès."
+
+#: templates/account/messages/password_set.txt:2
+msgid "Password successfully set."
+msgstr "Mot de passe défini avec succès."
+
+#: templates/account/password_change.html:7
+#: templates/account/password_change.html:12
+msgid "Change Password"
+msgstr "Changer le mot de passe"
+
+#: templates/account/password_change.html:20
+msgid "Forgot Password?"
+msgstr "Mot de passe oublier?"
+
+#: templates/account/password_set.html:5 templates/account/password_set.html:9
+#: templates/account/password_set.html:21
+msgid "Set Password"
+msgstr "Configurer le mot de passe"
+
+#: templates/account/snippets/already_logged_in.html:7
+msgid "Note"
+msgstr "Note"
+
+#: templates/account/snippets/already_logged_in.html:7
+msgid "You are already logged in as %(user_display)s."
+msgstr "Vous êtes déjà connecté en tant que %(user_display)s."
+
+#: templates/account/snippets/warn_no_email.html:3
+msgid "Warning:"
+msgstr "Attention :"
+
+#: templates/account/snippets/warn_no_email.html:3
+msgid "You currently do not have any email address set up. You should really add an email address so you can receive notifications, reset your password, etc."
+msgstr "Vous n'avez pas encore d'adresse électronique configurée. Vous devriez ajouter une adresse électronique afin de pouvoir recevoir des notifications, réinitialiser votre mot de passe, etc."
+
+#: templates/account/verified_email_required.html:5
+#: templates/account/verified_email_required.html:9
+msgid "Verify Your Email Address"
+msgstr "Vérifiez votre adresse électronique"
+
+#: templates/account/verified_email_required.html:13
+msgid "This part of the site requires us to verify that\n"
+"you are who you claim to be. For this purpose, we require that you\n"
+"verify ownership of your email address. "
+msgstr "Cette partie du site nous oblige à vérifier que vous êtes\n"
+"bien celui que vous prétendez être. À cette effet, nous vous demandons de\n"
+"vérifier la propriété de votre adresse électronique. \n"
+""
+
+#: templates/account/verified_email_required.html:18
+msgid "We have sent an email to you for\n"
+"verification. Please click on the link inside that email. If you do not see the verification email in your main inbox, check your spam folder. Otherwise\n"
+"contact us if you do not receive it within a few minutes."
+msgstr "Nous vous avons envoyé un courriel pour\n"
+"vérification. Veuillez cliquer sur le lien contenu dans cet e-mail. Si vous ne voyez pas l'e-mail de vérification dans votre boîte de réception principale, vérifiez votre \n"
+"dossier de courrier indésirable. Sinon, contactez-nous si vous ne le recevez pas dans les minutes qui suivent."
+
+#: templates/account/verified_email_required.html:23
+msgid "<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your email address</a>."
+msgstr "<strong>Note:</strong> vous pouvez toujours <a href=\"%(email_url)s\">changer votre adresse e-mail</a>."
+
+#: templates/page_coc.html:9 website/header_menu_items.py:21
+msgid "Code of Conduct"
+msgstr "Code de Conduite"
+
+#: templates/page_coc.html:12
+msgid "\n"
+"      Everybody who participates at DjangoCon Africa in one way or another is\n"
+"      required to conform to this Code of Conduct (CoC). This includes\n"
+"      attendees, speakers, sponsors, organisers and volunteers. <br /><br />\n"
+"      We will introduce a Code of Conduct team that will be primarily\n"
+"      responsible for handling any incidents at the conference. The CoC applies\n"
+"      before and throughout the event (including related activities such as\n"
+"      social events, and social media).\n"
+"      "
+msgstr "\n"
+"      Chaque personne prenant part à la conférence DjangoCon Africa\n"
+"      est tenue de se conformer à ce Code de Conduite (CdC). Cela inclut\n"
+"      les participants, les conférenciers, les sponsors, les organisateurs et les bénévoles. \n"
+"<br /><br />\n"
+"      Nous mettrons en place une équipe chargée du Code de Conduite qui sera\n"
+"      principalement responsable de la gestion de tout incident survenant lors de la conférence.\n"
+"      Le Code de Conduite s'applique avant et pendant l'événement (y compris les\n"
+"      activités connexes telles que les événements sociaux et les réseaux sociaux).\n"
+"      "
+
+#: templates/page_coc.html:23
+msgid "Why do we have a Code of Conduct?"
+msgstr "Pourquoi disposons-nous d'un Code de Conduite ?"
+
+#: templates/page_coc.html:24
+msgid "Our goals with having this Code of Conduct are:"
+msgstr "Les objectifs de ce Code de Conduite sont les suivants :"
+
+#: templates/page_coc.html:27
+msgid "\n"
+"          Helping everyone feel safe and included. Many attendees are first\n"
+"          timers, or have had poor experiences in other events. We want to set\n"
+"          the expectation that harassment and other unpleasant behavior are not\n"
+"          acceptable. So that if people do have an unpleasant experience, they\n"
+"          know that’s not neither the norm nor acceptable to us as a community.\n"
+"          "
+msgstr "\n"
+"          Aider chacun à se sentir en sécurité et inclus. De nombreux\n"
+"          participants viennent pour la première fois ou ont eu de mauvaises\n"
+"          expériences lors d'autres événements. Nous voulons faire comprendre\n"
+"          que le harcèlement et toute autre forme de comportement inapproprié\n"
+"          sont inacceptables. Ainsi, si des gens ont une expérience désagréable,\n"
+"          ils savent que ce n'est ni normal ni acceptable pour nous en tant que communauté.\n"
+"          "
+
+#: templates/page_coc.html:36
+msgid "\n"
+"          Helping to build trust that if an incident is reported, we will not\n"
+"          respond with victim blaming, and that we will do a thorough\n"
+"          investigation. Even, for example, if the incident concerns someone in\n"
+"          a position of power.\n"
+"          "
+msgstr "\n"
+"          Contribuer à instaurer la confiance dans le sens où, si un incident\n"
+"          est signalé, nous ne réagirons pas en blâmant la victime et nous\n"
+"          mènerons une enquête approfondie. Même si, par exemple,\n"
+"          l'incident implique une personne en position de pouvoir.\n"
+"          "
+
+#: templates/page_coc.html:44
+msgid "\n"
+"          Informing everyone of the expected behavior. We are a diverse\n"
+"          community, and having a Code of Conduct makes the expectations of\n"
+"          everybody’s behavior explicit and transparent.\n"
+"          "
+msgstr "\n"
+"          Informer chacun du comportement attendu. Nous sommes une\n"
+"          communauté diversifiée, et le fait d'avoir un Code de Conduite rend\n"
+"          explicites et transparentes les attentes quant au comportement de chacun.\n"
+"          "
+
+#: templates/page_coc.html:51
+msgid "\n"
+"          Having a framework for report handling. The Code of Conduct is the\n"
+"          basis for dealing with a report, assessing whether the CoC was\n"
+"          violated, and what action should be taken.\n"
+"          "
+msgstr "\n"
+"          Disposer d'un cadre pour le traitement des plaintes. Le Code de Conduite\n"
+"          constitue la base du traitement d'une plainte, de l'évaluation\n"
+"          de la violation du CdC et de l'action à mener.\n"
+"          "
+
+#: templates/page_coc.html:61
+msgid "Our Code of Conduct"
+msgstr "Notre Code de Conduite"
+
+#: templates/page_coc.html:64
+msgid "\n"
+"          Be kind and considerate to others. Do not insult or put down other\n"
+"          attendees. Behave professionally.\n"
+"          "
+msgstr "\n"
+"          Être aimable et bienveillant vis-à-vis des autres. Ne pas insulter\n"
+"          ou rabaisser les autres participants. Se comporter de manière professionnelle.\n"
+"          "
+
+#: templates/page_coc.html:70
+msgid "\n"
+"          We are dedicated to providing a harassment-free conference experience\n"
+"          for everyone, regardless of race, ethnicity, culture, national origin,\n"
+"          colour, immigration status, social and economic class, educational\n"
+"          level, sex, sexual orientation, gender identity and expression, age,\n"
+"          size, family status, political belief, religion, and mental and\n"
+"          physical ability.\n"
+"          "
+msgstr "\n"
+"          Nous nous engageons à offrir à tous une expérience de conférence sans risque de\n"
+"          harcèlement, indépendamment de la race, de l'ethnie, de la culture, de la \n"
+"          nationalité, de la couleur, du statut d'immigrant, de la classe sociale et \n"
+"          économique, du niveau d'éducation, du sexe, de l'orientation sexuelle,\n"
+"          de l'identité et de l'expression de genre, de l'âge, de la taille, de la situation \n"
+"          familiale, des convictions politiques, de la religion et des  \n"
+"          aptitudes mentales et physiques.\n"
+"          "
+
+#: templates/page_coc.html:80
+msgid "\n"
+"          We do not tolerate harassment of conference participants in any form.\n"
+"          This includes offensive comments related to the categories above,\n"
+"          deliberate intimidation, stalking, following, harassing photography or\n"
+"          recording, sustained disruption of talks or other events, violent\n"
+"          threats or language, inappropriate physical contact, and unwelcome\n"
+"          sexual attention.\n"
+"          "
+msgstr "\n"
+"          Nous ne tolérons aucune forme de harcèlement à l'encontre des participants \n"
+"          à la conférence. Cela inclut les commentaires offensants liés aux catégories\n"
+"          ci-dessus, l'intimidation délibérée, la traque, le suivi, la prise de photos ou\n"
+"          d'enregistrements à caractère harcelant, la perturbation régulière des présentations\n"
+"          ou d'autres activités, les menaces ou les propos agressifs, les contacts\n"
+"           physiques inappropriés et l'attention sexuelle non désirée.\n"
+"          "
+
+#: templates/page_coc.html:90
+msgid "\n"
+"          Advocating for, or encouraging, any of the above behavior is also not\n"
+"          acceptable.\n"
+"          "
+msgstr "\n"
+"         Encourager ou prôner ces comportements est également inacceptable.\n"
+"          "
+
+#: templates/page_coc.html:96
+msgid "\n"
+"          Sexual language and imagery are not appropriate for any venue to which\n"
+"          the CoC applies.\n"
+"          "
+msgstr "\n"
+"          L'utilisation de langage et d'images à caractère sexuel est interdite \n"
+"          dans tout lieu relevant du code de conduite.\n"
+"          "
+
+#: templates/page_coc.html:102
+msgid "Don’t publish individual photographs of people without their consent."
+msgstr "Si on veut publier la photo d'une personne. Demander son consentement d'abord."
+
+#: templates/page_coc.html:105
+msgid "\n"
+"          Be careful in the words that you choose. Remember that sexist, racist,\n"
+"          and other exclusionary jokes can be offensive and unwelcoming to those\n"
+"          around you.\n"
+"          "
+msgstr "\n"
+"          Choisissez vos mots avec soin. N'oubliez pas que les blagues sexistes, \n"
+"          racistes et autres blagues d'exclusion peuvent être offensantes et mal \n"
+"          accueillies par les personnes qui vous entourent.\n"
+"          "
+
+#: templates/page_coc.html:112
+msgid "\n"
+"          Excessive swearing and offensive jokes are not appropriate for\n"
+"          DjangoCon Africa.\n"
+"          "
+msgstr " \n"
+"          Les jurons excessifs et les tenues humoristiques offensantes ne sont pas appropriés pour DjangoCon Africa.\n"
+"          "
+
+#: templates/page_coc.html:121
+msgid "Where does the Code of Conduct apply?"
+msgstr "Où s'applique le Code de Conduite ?"
+
+#: templates/page_coc.html:123
+msgid "\n"
+"        This Code of Conduct applies to all conference related spaces. That\n"
+"        includes, but is not limited to:\n"
+"        "
+msgstr "\n"
+"        Ce Code de Conduite s'applique à tous les espaces dédiés à la conférence. Cela \n"
+"        inclut, mais ne se limite pas à :\n"
+"        "
+
+#: templates/page_coc.html:129
+msgid "The conference venue(s)"
+msgstr "Le(s) lieu(x) de la conférence"
+
+#: templates/page_coc.html:130
+msgid "The conference hotel(s)"
+msgstr "L'hôtel ou les hôtels de la conférence"
+
+#: templates/page_coc.html:131
+msgid "Any conference related social activities"
+msgstr "Toute activité sociale associée à la conférence"
+
+#: templates/page_coc.html:133
+msgid "\n"
+"          Slack channels, tweets with the conference hashtag, and other online\n"
+"          media\n"
+"          "
+msgstr "\n"
+"          Canal Slack, tweets avec le hashtag de la conférence et autres médias en ligne\n"
+"          "
+
+#: templates/page_coc.html:141
+msgid "\n"
+"        The Code of Conduct does not exclusively apply to events on the\n"
+"        conference agenda. For example, if after a scheduled social event you go\n"
+"        to a bar with a group of fellow participants, and someone harasses you\n"
+"        there, we would still treat that as a CoC violation.\n"
+"        "
+msgstr "\n"
+"        Le code de conduite ne s'applique pas exclusivement aux événements prévus \n"
+"        à l'ordre du jour de la conférence. Par exemple, si après un événement social \n"
+"        prévu, vous vous rendez dans un bar avec un groupe de participants et que \n"
+"        quelqu'un vous y harcèle, nous considérerons qu'il s'agit d'une violation du CdC.\n"
+"        "
+
+#: templates/page_coc.html:151
+msgid "What can happen if the CoC is violated?"
+msgstr "Que se passe-t-il en cas de violation du Code de Conduite ?"
+
+#: templates/page_coc.html:153
+msgid "\n"
+"        In case of a Code of Conduct violation, some of the most common actions\n"
+"        organisers may take are:\n"
+"        "
+msgstr "\n"
+"        En cas de violation du code de conduite, les organisateurs peuvent prendre \n"
+"        les mesures suivantes :\n"
+"        "
+
+#: templates/page_coc.html:159
+msgid "Demanding that a participant stops their behavior."
+msgstr "Exiger qu'un participant mette fin à son comportement."
+
+#: templates/page_coc.html:161
+msgid "\n"
+"          Demanding that a participant prevents further contact with certain\n"
+"          other participants.\n"
+"          "
+msgstr "\n"
+"          Exiger d'un participant qu'il n'entre plus en contact avec certains \n"
+"          autres participants.\n"
+"          "
+
+#: templates/page_coc.html:166
+msgid "Not publishing the video of a conference talk."
+msgstr "Ne pas publier la vidéo d'une présentation à la conférence."
+
+#: templates/page_coc.html:167
+msgid "Cancelling a conference talk."
+msgstr "Annuler une présentation à la conférence."
+
+#: templates/page_coc.html:168
+msgid "Removing a participant from the conference, without refund."
+msgstr "Exclure un participant de la conférence, sans remboursement."
+
+#: templates/page_coc.html:172
+msgid "\n"
+"        The action taken is at the discretion of the Code of Conduct team.\n"
+"        Participants are expected to comply immediately, and further action may\n"
+"        be taken in case a participant does not comply. A record will be kept of\n"
+"        all incidents.\n"
+"        "
+msgstr "\n"
+"        Les mesures prises sont laissées à la discrétion de l'équipe chargée du\n"
+"        Code de Conduite.  Les participants sont tenus d'obtempérer immédiatement\n"
+"        et d'autres mesures peuvent être prises en cas de non-respect. Tous les incidents\n"
+"        seront consignés dans un registre.\n"
+"        "
+
+#: templates/page_coc.html:182
+msgid "Where to report incidents"
+msgstr "Où signaler les incidents"
+
+#. Missing phone number here
+#: templates/page_coc.html:184
+msgid "\n"
+"        If a Code of Conduct incident happens to you, or witness it happening to\n"
+"        someone else, please contact the CoC team immediately either in person,\n"
+"        or by sending an email to "
+msgstr "\n"
+"        Si vous êtes victime ou témoin d'un incident relevant du Code de Conduite,  \n"
+"        veuillez contacter immédiatement l'équipe chargée du Code de Conduite, \n"
+"        soit en personne, soit en envoyant un courrier électronique à l'adresse suivante"
+
+#: templates/page_coc.html:191
+msgid " In urgent cases, you can also phone us on. <br />\n"
+"        Our Code of Conduct team consists of:\n"
+"        "
+msgstr " En cas d'urgence, vous pouvez également nous téléphoner au. <br />\n"
+"        Notre équipe chargée du Code de Conduite est composée de :\n"
+"        "
+
+#: templates/page_coc.html:203
+msgid "\n"
+"        The team members will be introduced in person at the conference. You can\n"
+"        approach any of them at any time to discuss an incident or concern. You\n"
+"        can also ask any other staff to help you find them at the conference.\n"
+"        "
+msgstr "\n"
+"        Les membres de l'équipe seront présentés en personne lors de la conférence.\n"
+"        Vous pouvez vous adresser à n'importe lequel d'entre eux à tout moment\n"
+"        pour discuter d'un incident ou d'une préoccupation. Vous pouvez également\n"
+"        demander à un autre membre du personnel de vous aider à les trouver\n"
+"        lors de la conférence.\n"
+"        "
+
+#: templates/page_coc.html:212
+msgid "Guidelines for reporting incidents"
+msgstr "Directives pour le signalement d'incidents"
+
+#: templates/page_coc.html:214
+msgid "\n"
+"        Please do not feel like you may be a burden to us by reporting\n"
+"        incidents. Even if you happen to report multiple incidents during the\n"
+"        conference. We rather consider reports an opportunity for us to act: by\n"
+"        knowing about an incident, we can act on it, and often prevent it from\n"
+"        continuing or repeating. But if we don’t know, we can’t take action.\n"
+"        "
+msgstr "\n"
+"        N'ayez pas l'impression d'être un fardeau pour nous en signalant des incidents.\n"
+"        Même si vous en signalez plusieurs au cours de la conférence. Nous considérons\n"
+"        plutôt les signalements comme une occasion  d'agir : en ayant connaissance\n"
+"        d'un incident, nous pouvons agir et souvent empêcher qu'il ne se poursuive ou\n"
+"         ne se répète. Mais si nous ne savons pas, nous ne pouvons pas agir.\n"
+"        "
+
+#: templates/page_coc.html:222
+msgid "\n"
+"        If you are not sure whether the situation was a Code of Conduct\n"
+"        violation, or whether it applied to that particular space, we encourage\n"
+"        you to still report it. We would much rather have a few extra reports\n"
+"        where we decide to take no action, rather than miss a report of an\n"
+"        actual violation. We do not look negatively on you if we find the\n"
+"        incident is not a violation. And knowing about incidents that are not\n"
+"        violations, or happen outside our spaces, can also help us to improve\n"
+"        the Code of Conduct or the processes surrounding it.\n"
+"        "
+msgstr "\n"
+"        Si vous n'êtes pas certain que la situation constitue une violation du Code de\n"
+"        Conduite ou qu'elle s'applique à cet espace en particulier, nous vous encourageons \n"
+"        à la signaler. Nous préférons recevoir quelques rapports supplémentaires\n"
+"        pour lesquels nous décidons de ne pas prendre de mesures, plutôt que de manquer\n"
+"        une violation réelle. Nous ne vous jugerons pas négativement si nous estimons\n"
+"        que l'incident ne constitue pas une violation. Par ailleurs, connaitre les incidents qui\n"
+"        ne sont pas une violation ou qui se produisent en dehors de nos espaces, peut \n"
+"        aider a améliorer le Code de Conduite ou les processus qui l'entourent.\n"
+"        "
+
+#: templates/page_coc.html:232
+msgid "In your report please include, when possible:"
+msgstr "Dans votre rapport, veuillez inclure, dans la mesure du possible:"
+
+#: templates/page_coc.html:235
+msgid "Your contact info (so we can get in touch with you)"
+msgstr "Vos coordonnées (pour que nous puissions vous contacter)"
+
+#: templates/page_coc.html:237
+msgid "\n"
+"          Names (real, nicknames, or pseudonyms) of any individuals involved. If\n"
+"          there were other witnesses besides you, please try to include them as\n"
+"          well.\n"
+"          "
+msgstr "\n"
+"          Les noms (réels, surnoms ou pseudonymes) de toutes les personnes\n"
+"          impliquées. S'il y a eu d'autres témoins que vous, essayez de les inclure\n"
+"          également.\n"
+"          "
+
+#: templates/page_coc.html:244
+msgid "\n"
+"          When and where the incident occurred. Please be as specific as\n"
+"          possible.\n"
+"          "
+msgstr "\n"
+"          Quand et où l'incident s'est produit. Soyez aussi précis que\n"
+"          possible.\n"
+"          "
+
+#: templates/page_coc.html:250
+msgid "\n"
+"          Your account of what occurred. If there is a written record (e.g.\n"
+"          tweets or slack messages) please include screenshots, or otherwise a\n"
+"          link.\n"
+"          "
+msgstr "\n"
+"          Votre récit de ce qui s'est passé. S'il existe une trace écrite (par \n"
+"          exemple, des tweets ou des messages Slack), veuillez inclure des \n"
+"          captures d'écran ou,  à défaut, un lien.\n"
+"          "
+
+#: templates/page_coc.html:256
+msgid "Any extra context you believe existed for the incident."
+msgstr "Tout contexte supplémentaire concernant l'incident."
+
+#: templates/page_coc.html:257
+msgid "If you believe this incident is ongoing."
+msgstr "Si vous pensez que l'incident est en cours."
+
+#: templates/page_coc.html:258
+msgid "Any other information you believe we should have."
+msgstr "Toute autre information dont vous pensez que nous devrions disposer."
+
+#: templates/page_coc.html:262
+msgid "\n"
+"        If you don’t have some of this information, or not at this time, please\n"
+"        still make the report anyways. <br /><br />\n"
+"        If you feel unsafe reporting in person, you may choose someone to\n"
+"        represent you. In this case, we’d need their contact information, but\n"
+"        we’d ask you to make clear that this person represents you.\n"
+"        "
+msgstr "\n"
+"        Si vous ne disposez pas de certaines de ces informations, ou si vous n'en\n"
+"        disposez pas pour l'instant, veuillez tout de même faire votre déclaration. <br /><br />\n"
+"        Si vous ne vous sentez pas en sécurité pour faire votre déclaration en personne,\n"
+"        vous pouvez choisir quelqu'un pour vous représenter. Dans ce cas, nous aurons\n"
+"        besoin de ses coordonnées, mais nous vous demanderons de préciser que\n"
+"        cette personne vous représente.\n"
+"        "
+
+#: templates/page_coc.html:273
+msgid "Other assistance"
+msgstr "Autre assistance"
+
+#: templates/page_coc.html:275
+msgid "\n"
+"        Conference staff will be happy to help participants contact hotel/venue\n"
+"        security or local law enforcement, provide escorts, or otherwise assist\n"
+"        those experiencing harassment to feel safe for the duration of the\n"
+"        conference. However, we will not contact security or law enforcement\n"
+"        without your consent, except when not doing so would create significant\n"
+"        danger for other participants. "
+msgstr "\n"
+"        Le personnel de la conférence n'hésitera pas à contacter la sécurité de l'hôtel/du site\n"
+"        ou les forces de l'ordre locales, de fournir des escortes ou d'aider d'une autre\n"
+"        manière les personnes victimes de harcèlement à se sentir en sécurité\n"
+"        pendant toute la durée de la conférence. Toutefois, nous ne contacterons\n"
+"        pas la sécurité ou les forces de l'ordre sans votre consentement, sauf si le fait\n"
+"        de ne pas le faire crée un danger important pour les autres participants. "
+
+#: templates/page_coc.html:282
+msgid "We value your attendance, and look forward to seeing you at DjangoCon Africa."
+msgstr "Nous apprécions votre présence et nous nous réjouissons de vous voir à la DjangoCon Africa."
+
+#: templates/page_coc.html:283
+msgid "This Code of Conduct was adapted from"
+msgstr "Ce Code de Conduite a été adapté de"
+
+#: templates/page_coc.html:287
+msgid "Code of Conduct written by"
+msgstr "Code de conduite rédigé par"
+
+#: templates/page_home.html:20
+msgid "\n"
+"        Join us for 5 days of inspiration, education and networking at DjangoCon\n"
+"        Africa from 11 - 15 August, 2025 in\n"
+"        "
+msgstr "\n"
+"        Rejoignez-nous pour 5 jours d'inspiration, d'éducation et de réseautage à la \n"
+"        DjangoCon Africa du 11 au 15 août 2025 à\n"
+"        "
+
+#: templates/page_home.html:54
+msgid "First DjangoCon Africa"
+msgstr "Première DjangoCon Africa"
+
+#: templates/page_home.html:56
+msgid "\n"
+"          In 2023 we hosted the first ever DjangoCon Africa. DjangoCon Africa\n"
+"          took place in Zanzibar, Tanzania 6th-11th November 2023.\n"
+"          "
+msgstr "\n"
+"          En 2023, nous avons accueilli la toute première DjangoCon Africa. DjangoCon Africa \n"
+"          s'est déroulée à Zanzibar, en Tanzanie, du 6 au 11 novembre 2023.\n"
+"          "
+
+#: templates/page_home.html:61
+msgid "\n"
+"          We had roughly 200 attendees, of whom 103 were women. The attendees\n"
+"          represented at least 22 countries from around the world.\n"
+"          "
+msgstr "\n"
+"          Nous avons eu environ 200 participants, dont 103 femmes. \n"
+"          Ils représentaient au moins 22 pays du monde entier.\n"
+"          "
+
+#: templates/page_home.html:66
+msgid "\n"
+"          We held 26 talks on topics covering programming, society, careers,\n"
+"          education, disability, agriculture - the full range of topics you’d\n"
+"          expect at a DjangoCon, with the African perspective often at the\n"
+"          forefront.\n"
+"          "
+msgstr "\n"
+"          Nous avons animé 26 sessions autour de thèmes tels que la programmation,\n"
+"          la société, les carrières, l'éducation, le handicap, l'agriculture,\n"
+"          soit toute la gamme de sujets auxquels on peut s'attendre lors\n"
+"           d'une DjangoCon, avec la perspective africaine étant au premier plan.\n"
+"          "
+
+#: templates/page_home.html:78
+msgid "Read the 2023 report"
+msgstr "Lire le rapport de 2023"
+
+#: templates/page_home.html:93
+msgid "What will be happening at DjangoCon Africa"
+msgstr "Les grandes tendances de la DjangoCon Africa"
+
+#: templates/page_home.html:99
+msgid "Talks"
+msgstr "Présentations"
+
+#: templates/page_home.html:101
+msgid "\n"
+"          Three days of talks, on programming, technology, careers, society and\n"
+"          business, with speakers from across the world.\n"
+"          "
+msgstr "\n"
+"          Trois jours de présentations sur la programmation, la technologie, les carrières,\n"
+"          la société et les affaires, avec des orateurs du monde entier.\n"
+"          "
+
+#: templates/page_home.html:110
+msgid "Workshops and tutorials"
+msgstr "Ateliers et tutoriels"
+
+#: templates/page_home.html:112
+msgid "\n"
+"          Hands-on training and learning sessions, led by experts in the field.\n"
+"          Details to be published soon.\n"
+"          "
+msgstr "\n"
+"          Sessions de formation et d'apprentissage pratiques, dirigées par des\n"
+"          experts du domaine. Les détails seront publiés bientôt.\n"
+"          "
+
+#: templates/page_home.html:121
+msgid "Collaboration"
+msgstr "Collaboration"
+
+#: templates/page_home.html:123
+msgid "\n"
+"          Work together on code, and contribute to major projects - including\n"
+"          Django itself.\n"
+"          "
+msgstr "\n"
+"          Collaborer sur le code et contribuer à des projets majeurs, y compris\n"
+"          Django lui-même.\n"
+"          "
+
+#: templates/page_home.html:134
+msgid "\n"
+"          A training workshop aimed at women, providing an introduction to web\n"
+"          application development. Tens of thousands of women across the world\n"
+"          have had their introduction to Django through this hugely successful\n"
+"          programme.\n"
+"          "
+msgstr "\n"
+"          Un atelier de formation destiné aux femmes, offrant une introduction\n"
+"          au développement d'applications web. Des dizaines de milliers de femmes\n"
+"          à travers le monde ont été initiées à Django grâce à ce programme qui\n"
+"          connaît un grand succès.\n"
+"          "
+
+#: templates/page_home.html:146
+msgid "Discovery"
+msgstr "Découverte"
+
+#: templates/page_home.html:148
+msgid "\n"
+"          DjangoCon Africa is an opportunity to discover places and people as\n"
+"          well as technology. It will bring together participants from across\n"
+"          Africa and the rest of the world, for mutual understanding of\n"
+"          contexts, challenges and opportunities.\n"
+"          "
+msgstr "\n"
+"          DjangoCon Africa est l'occasion de découvrir des lieux et des \n"
+"          personnes ainsi que des technologies. Elle réunira des participants\n"
+"          de toute l'Afrique et du monde entier, pour une compréhension mutuelle\n"
+"           des contextes, des défis et des opportunités.\n"
+"          "
+
+#: templates/page_home.html:160 website/header_menu_items.py:34
+msgid "Sponsors"
+msgstr "Sponsors"
+
+#: templates/page_home.html:162
+msgid "\n"
+"        DjangoCon Africa is made possible by the generous sponsorships of\n"
+"        various teams and organisations around the world.\n"
+"        "
+msgstr "\n"
+"        DjangoCon Africa est rendu possible grâce aux généreux soutiens\n"
+"        de diverses équipes et organisations à travers le monde.\n"
+"        "
+
+#: templates/page_home.html:171 templates/page_sponsor_us.html:10
+msgid "Sponsor us"
+msgstr "Nous Sponsoriser"
+
+#: templates/page_home.html:182 templates/page_news_detail.html:9
+msgid "Introducing DjangoCon Africa 🌍 2025 🎉"
+msgstr "Découvrez DjangoCon Africa 🌍 2025 🎉"
+
+#: templates/page_home.html:184
+msgid "\n"
+"            The African Django community is excited to announce the second\n"
+"            DjangoCon Africa event, taking...\n"
+"            "
+msgstr "\n"
+"            La communauté africaine de Django est heureuse d'annoncer\n"
+"            la deuxième édition de DjangoCon Africa, qui...\n"
+"            "
+
+#: templates/page_home.html:189
+msgid "23 Jan • By Team"
+msgstr "23 Jan • Par Équipe"
+
+#: templates/page_news_detail.html:13
+msgid "By Team • 23 Jan. 2025"
+msgstr "Par Équipe • 23 Jan. 2025"
+
+#: templates/page_news_detail.html:32
+msgid "\n"
+"        The African Django community is excited to announce the second DjangoCon\n"
+"        Africa event, taking place this year in Arusha, Tanzania, from 11th -\n"
+"        15th August 2025.\n"
+"        "
+msgstr "\n"
+"        La communauté Africaine Django est ravie d'annoncer la deuxième édition\n"
+"        de DjangoCon Africa, qui se tiendra cette année à Arusha, en \n"
+"        Tanzanie, du 11 au 15 août 2025.\n"
+"        "
+
+#: templates/page_news_detail.html:41
+msgid "About DjangoCon Africa"
+msgstr "À propos de DjangoCon Africa"
+
+#. No touring day this year. need to remove that
+#: templates/page_news_detail.html:43
+msgid "\n"
+"        DjangoCon Africa will include 3 days of single-track talks, 2 days of\n"
+"        workshops and sprints, and one day of touring for international\n"
+"        visitors. "
+msgstr "\n"
+"        DjangoCon Africa propose 3 jours de présentations individuelles, et\n"
+"        2 jours d'ateliers et de sprints."
+
+#: templates/page_news_detail.html:47
+msgid "\n"
+"        The event will also include a Django Girls workshop to be held the\n"
+"        weekend before DjangoCon Africa. To make the conference as inclusive as\n"
+"        possible, the event will offer financial aid to members of\n"
+"        under-represented communities in software to ensure they can also\n"
+"        attend. "
+msgstr "\n"
+"        L'événement offrira également un atelier DjangoGirls qui se tiendra\n"
+"        le week-end précédant la DjangoCon Africa. Afin de rendre la conférence\n"
+"        aussi inclusive que possible, l'événement offrira une aide financière aux\n"
+"        membres des communautés sous-représentées dans le domaine des\n"
+"        logiciels afin de s'assurer qu'ils puissent également y participer. "
+
+#. CFP opened in february, so replace June by February in the english version
+#: templates/page_news_detail.html:53
+msgid "\n"
+"        The CFP, which is open to all, will also be announced as soon as\n"
+"        the month of June.\n"
+"        "
+msgstr "\n"
+"        Le CFP, qui est ouvert à tous, sera également annoncé dès le mois \n"
+"        de Février.\n"
+"        "
+
+#: templates/page_news_detail.html:61
+msgid "Sponsorship"
+msgstr "Sponsoring"
+
+#: templates/page_news_detail.html:63
+msgid "\n"
+"        The success of DjangoCon Africa lies hugely in the sponsorship of\n"
+"        organizations and individuals within the Python/Django community. We are\n"
+"        appealing to organizations and individuals to help us make DjangoCon\n"
+"        Africa possible by sponsoring the event. If you are interested in\n"
+"        sponsoring DjangoCon Africa 2025, please contact the team at\n"
+"        sponsors@djangocon.africa.\n"
+"        "
+msgstr "\n"
+"        Le succès de DjangoCon Africa repose en grande partie sur le sponsoring\n"
+"        d'organisations et d'individus au sein de la communauté Python/Django. Nous\n"
+"        faisons appel aux organisations et aux individus pour nous aider à rendre DjangoCon\n"
+"        Africa possible en sponsorisant l'événement. Si vous êtes intéressé par le sponsoring\n"
+"        de DjangoCon Africa 2025, veuillez contacter l'équipe à l'adresse\n"
+"        sponsors@djangocon.africa.\n"
+"        "
+
+#: templates/page_news_detail.html:75
+msgid "About Tanzania"
+msgstr "À propos de la Tanzanie"
+
+#. EN: missing comma between whale and sharks
+#: templates/page_news_detail.html:77
+msgid "\n"
+"        Tanzania is a country in East Africa widely known for its vast\n"
+"        wilderness areas which include the Serengeti National Park and the\n"
+"        Kilimanjaro National Park, home to Africa’s highest mountain,\n"
+"        Kilimanjaro. Its offshore islands are Zanzibar, which has Arabic\n"
+"        influences, and Mafia which is a marine park home to whale sharks and\n"
+"        coral reefs.\n"
+"        "
+msgstr "\n"
+"        La Tanzanie est un pays d'Afrique de l'Est largement connu pour ses\n"
+"        vastes étendues sauvages, dont le Parc National du Serengeti et le\n"
+"        Parc National du Kilimandjaro, où se trouve la plus haute montagne \n"
+"        d'Afrique, le Kilimandjaro. Ses îles au large sont Zanzibar, qui a des\n"
+"        origines arabes, et Mafia, qui est un parc marin abritant des \n"
+"        requins, baleines et des récifs coralliens.\n"
+"        "
+
+#: templates/page_news_detail.html:92
+msgid "\n"
+"        Arusha is the home of Kilimanjaro National Park. Arusha is very accessible, \n"
+"        with two airports, Arusha Municipality Airport for domestic flights \n"
+"        and Kilimanjaro International Airport. For international travellers, it is \n"
+"        best and cheaper to book direct flight to Arusha, which will land at Kilimanjaro\n"
+"        International Airport. \n"
+"        "
+msgstr "\n"
+"        Arusha abrite le parc national du Kilimandjaro. Arusha est très accessible, avec\n"
+"        deux aéroports : l'Aéroport de la Municipalité d'Arusha pour les vols domestiques et  \n"
+"        l'Aéroport International du Kilimandjaro. Pour les voyageurs internationaux,\n"
+"        il est préférable et plus économique de réserver un vol direct pour Arusha,\n"
+"         qui atterrira à l'Aéroport International du Kilimandjaro.  \n"
+"        "
+
+#: templates/page_opportunity_grants.html:9 website/header_menu_items.py:41
+msgid "Opportunity Grants"
+msgstr "Bourses de soutien"
+
+#: templates/page_opportunity_grants.html:15
+msgid "DjangoCon Africa opportunity grants are now open until "
+msgstr "Les bourses octroyées dans le cadre de DjangoCon Africa sont désormais ouvertes jusqu'au "
+
+#: templates/page_opportunity_grants.html:20
+msgid "Our opportunity grant application window is now closed."
+msgstr "Notre fenêtre de candidature pour les bourses de soutien est maintenant fermée."
+
+#: templates/page_opportunity_grants.html:24
+msgid "If you have any questions, feel free to reach out to the opportunity grants team at"
+msgstr "Si vous avez des questions, n'hésitez pas à contacter l'équipe chargée des bourses à l'adresse suivante"
+
+#: templates/page_opportunity_grants.html:30
+msgid "\n"
+"                DjangoCon Africa 2025 offers grants to attendees and speakers so that those who might otherwise not be able to attend won’t hesitate to participate. Some expenses for the conference attendance (which can include travel, hotel, registration, etc.) will be covered for opportunity grant recipients. We will reimburse grant recipients on the first day of the conference.\n"
+"            "
+msgstr "\n"
+"                DjangoCon Africa 2025 offre des bourses aux participants et aux orateurs afin que ceux qui ne pourraient pas assister à la conférence n'hésitent pas à y participer. Certaines dépenses liées à la participation à la conférence (voyage, hôtel, inscription, etc.) seront couvertes pour les bénéficiaires d'une bourse de soutien. Les bénéficiaires seront remboursés le premier jour de la conférence. \n"
+"            "
+
+#: templates/page_opportunity_grants.html:36
+msgid "\n"
+"                We actively encourage people to apply for an opportunity grant. While we wish we could give grants to everyone who applies, we do not have the funds to do that. Our goal is to maximize the impact our grant program has, within the limited funds we have.\n"
+"            "
+msgstr "\n"
+"                Nous encourageons vivement les gens à soumettre une demande de bourse de soutien. Nous aimerions pouvoir octroyer des bourses à toutes les personnes qui en font la demande, mais nous ne disposons pas des fonds nécessaires pour le faire. Notre objectif est de maximiser l'impact de notre programme de soutien, dans la limite des fonds dont nous disposons.\n"
+"            "
+
+#: templates/page_opportunity_grants.html:41
+msgid "We try to do this in a number of ways:"
+msgstr "Nous nous efforçons d'y parvenir de différentes manières :"
+
+#: templates/page_opportunity_grants.html:45
+msgid "\n"
+"                    Conferences are a meeting place for developers from all around the globe. Therefore, the selection process is designed to benefit people who make a difference, particularly speakers and tutorial presenters.\n"
+"                "
+msgstr "\n"
+"                    Les conférences sont un lieu de rencontre pour les développeurs du monde entier. Par conséquent, le processus de sélection est conçu pour bénéficier aux personnes qui font la différence, en particulier les orateurs et les présentateurs de tutoriels.\n"
+"                    "
+
+#: templates/page_opportunity_grants.html:50
+msgid "\n"
+"                    Additionally, the selection process attempts to promote a more diverse DjangoCon Africa. While encouraging diversity takes many forms, we’re happy to use the opportunity grant program as a very direct method of supporting diversity within the Django community. In particular, our grant program prioritises people from underrepresented or marginalised groups in tech, as these people are more likely to experience hardships and difficulties travelling to our events and participating in our community.\n"
+"                "
+msgstr "\n"
+"                  De plus, le processus de sélection vise à promouvoir une plus grande diversité au sein de la DjangoCon Africa. Bien que la promotion de la diversité prenne de nombreuses formes, nous sommes heureux d'utiliser le programme de bourses comme moyen direct de promouvoir la diversité au sein de la communauté Django. En outre, notre programme de bourses privilégie les personnes issues de groupes sous-représentés ou marginalisés dans le domaine de la technologie, car ces personnes sont plus susceptibles d'éprouver des difficultés à se rendre à nos événements et à participer à notre communauté.\n"
+"                "
+
+#: templates/page_opportunity_grants.html:55
+msgid "\n"
+"                    When prioritising grant applications, we get a feel for how much impact this grant will have on the applicant and the wider community and country, compared to others. In this, we consider things like involvement in a local community, the social impact of the applicant’s activities, and how accessible other conferences are to them.\n"
+"                "
+msgstr "\n"
+"                    When prioritising grant applications, we get a feel for how much impact this grant will have on the applicant and the wider community and country, compared to others. In this, we consider things like involvement in a local community, the social impact of the applicant’s activities, and how accessible other conferences are to them."
+
+#: templates/page_opportunity_grants.html:62
+msgid "\n"
+"                Our program prioritises speakers first, and then anyone who is part of an underrepresented or marginalised group in tech. These groups include, but are not limited to:\n"
+"            "
+msgstr "\n"
+"              Notre programme priorise d'abord les orateurs, puis toute personne faisant partie d'un groupe sous-représenté ou marginalisé dans le domaine de la technologie. Ces groupes comprennent, sans s'y limiter:\n"
+"            "
+
+#: templates/page_opportunity_grants.html:69
+msgid "\n"
+"                    women and other gender minorities of all expressions and identities; e.g. transgender and non-binary people\n"
+"                "
+msgstr "\n"
+"                    les femmes et les autres minorités de genre de toutes expressions et identités, par exemple les personnes transgenres et non binaires\n"
+"                "
+
+#: templates/page_opportunity_grants.html:73
+msgid "people of colour"
+msgstr "les personnes de couleur"
+
+#: templates/page_opportunity_grants.html:74
+msgid "sexuality minorities, including asexual people"
+msgstr "les minorités sexuelles, y compris les personnes asexuelles"
+
+#: templates/page_opportunity_grants.html:75
+msgid "people with disabilities, both visible and invisible"
+msgstr "les personnes en situation de handicap, visible ou invisible"
+
+#: templates/page_opportunity_grants.html:76
+msgid "neurodivergent people"
+msgstr "les personnes neurodivergentes"
+
+#: templates/page_opportunity_grants.html:77
+msgid "people with chronic illnesses or diseases"
+msgstr "les personnes souffrant de maladies chroniques"
+
+#: templates/page_opportunity_grants.html:78
+msgid "religious and ethnic minorities"
+msgstr "les minorités religieuses et ethniques"
+
+#: templates/page_opportunity_grants.html:79
+msgid "age minorities (under ~21, over ~60)"
+msgstr "les minorités d'âge (moins de 21 ans, plus de 60 ans)"
+
+#: templates/page_opportunity_grants.html:80
+msgid "people experiencing poverty"
+msgstr "les personnes en situation de pauvreté"
+
+#: templates/page_opportunity_grants.html:81
+msgid "homeless and home/food insecure people"
+msgstr "les sans-abri et les personnes en situation d'insécurité alimentaire"
+
+#: templates/page_opportunity_grants.html:82
+msgid "caregivers of children or other dependents"
+msgstr "les personnes qui s'occupent d'enfants ou d'autres personnes dépendantes"
+
+#: templates/page_opportunity_grants.html:83
+msgid "people who have experienced trauma and its aftermath (PTSD, anxiety, etc)"
+msgstr "les personnes ayant subi un traumatisme et ses conséquences (SSPT, anxiété, etc.)"
+
+#: templates/page_opportunity_grants.html:84
+msgid "people living with or recovering from substance abuse"
+msgstr "les personnes souffrant de toxicomanie ou en voie de guérison"
+
+#: templates/page_opportunity_grants.html:88
+msgid "\n"
+"                The closing date for grant applications will be the same as the call for papers. If you would like to submit to the CFP and need a grant if you are selected, please ensure you fill in both the CFP form and the opportunity grant application form.\n"
+"            "
+msgstr "\n"
+"                La date limite de dépôt des demandes de bourses est la même que celle de l'appel à proposition. Si vous souhaitez postuler à l'appel à propositions et aurez besoin d'une bourse en cas de sélection, veillez à remplir à la fois le formulaire d'appel à propositions et le formulaire de demande de bourse.\n"
+"                "
+
+#: templates/page_opportunity_grants.html:94
+msgid "\n"
+"                If you are an accepted speaker, and you don’t need a grant because your employer is funding your conference costs, we can recognise your employer for this. For now we’re planning to get their logo in the programme, next to your talk, and a post on the job board. This is opt-in. With this, we hope to make it a bit easier for you to convince your employer to contribute towards your conference costs as a speaker.\n"
+"            "
+msgstr "\n"
+"                Si votre proposition d'intervention est retenue et que vous n'avez pas besoin d'une bourse parce que votre employeur finance les coûts de votre participation à la conférence, nous pouvons honorer votre employeur pour cette raison. Pour l'instant, nous prévoyons de faire figurer son logo dans le programme, à côté de votre intervention, et de l'afficher sur le tableau des emplois. Il s'agit d'une démarche volontaire. Nous espérons ainsi qu'il vous sera un peu plus facile de convaincre votre employeur de contribuer à vos frais de participation à la conférence en tant qu'orateur.\n"
+"            "
+
+#: templates/page_opportunity_grants.html:100
+msgid "\n"
+"                Lastly, we know that for some people it can be challenging to feel like it’s okay for you to apply. That’s why we want to stress:\n"
+"            "
+msgstr "\n"
+"                Enfin, nous savons que pour certaines personnes, il peut être difficile de postuler en toute confiance. C'est pourquoi nous tenons à insister sur ce point:\n"
+"            "
+
+#: templates/page_opportunity_grants.html:106
+msgid "Have you already attended a conference in the past? That’s ok."
+msgstr "Avez-vous déjà participé à une conférence dans le passé ? Cela ne pose pas de problème."
+
+#: templates/page_opportunity_grants.html:107
+msgid "Already received a grant in the past? Still ok."
+msgstr "Vous avez déjà reçu une aide financière dans le passé ? C'est toujours OK."
+
+#: templates/page_opportunity_grants.html:108
+msgid "Don’t have much experience with Django? That’s ok, too."
+msgstr "Vous n'avez pas beaucoup d'expérience avec Django ? Ce n'est pas grave non plus."
+
+#: templates/page_opportunity_grants.html:109
+msgid "Don’t want to take money away from someone else? Really, it’s ok, everyone says that!"
+msgstr "Vous ne voulez pas prendre l'argent de quelqu'un d'autre ? Vraiment, ce n'est pas grave, tout le monde le dit !"
+
+#: templates/page_opportunity_grants.html:110
+msgid "Don’t feel like you deserve this? That’s also ok: you do."
+msgstr "Vous n'avez pas l'impression de le mériter ? Ce n'est pas grave non plus : vous le méritez."
+
+#: templates/page_opportunity_grants.html:115
+msgid "\n"
+"                With our limited funds, we can’t promise you will receive a grant, but if you’re not sure, we encourage you to apply. If you’re uncomfortable with other people knowing you received a grant, you don’t have to tell them - our policy is to never publicly identify grant applicants or recipients unless we have your explicit permission.\n"
+"            "
+msgstr "\n"
+"                With our limited funds, we can’t promise you will receive a grant, but if you’re not sure, we encourage you to apply. If you’re uncomfortable with other people knowing you received a grant, you don’t have to tell them - our policy is to never publicly identify grant applicants or recipients unless we have your explicit permission.\n"
+"            "
+
+#: templates/page_opportunity_grants.html:126
+msgid "Apply"
+msgstr "Postuler"
+
+#: templates/page_opportunity_grants.html:130
+msgid "Closed"
+msgstr "Fermé"
+
+#: templates/page_speaker_resources.html:9
+msgid "Speaker’s Resources"
+msgstr "Ressources pour les orateurs"
+
+#: templates/page_speaker_resources.html:12
+msgid "This page is based on the DjangoCon US Speaker Resource page."
+msgstr "Cette page est inspirée de la page de ressources pour orateurs DjangoCon US."
+
+#: templates/page_speaker_resources.html:14
+msgid "Writing a great proposal"
+msgstr "Rédiger une bonne proposition"
+
+#: templates/page_speaker_resources.html:17
+msgid "\n"
+"                Make sure the title of your proposal is attention grabbing. Conferences typically need to review a lot of talk \n"
+"                proposals, so you want to make sure yours looks interesting.\n"
+"                "
+msgstr "\n"
+"                Veillez à ce que le titre de votre proposition soit captivant. Les conférences doivent généralement évaluer un grand\n"
+"                nombre de propositions de présentations, vous devez donc veiller à ce que la vôtre soit suffisamment originale.\n"
+"                "
+
+#: templates/page_speaker_resources.html:21
+msgid "\n"
+"                Try reading your proposal aloud - it should sound like normal human speech. If it leaves you breathless then \n"
+"                you probably need some punctuation.\n"
+"                "
+msgstr "\n"
+"                Essayez de lire votre proposition à haute voix - elle doit ressembler à un discours humain normal. Si elle vous \n"
+"                laisse sans voix, vous avez probablement besoin d'un peu de ponctuation.\n"
+"                "
+
+#: templates/page_speaker_resources.html:25
+msgid "Your proposal should not look like a wall of text."
+msgstr "Votre proposition ne doit pas être un long texte."
+
+#: templates/page_speaker_resources.html:26
+msgid "\n"
+"                Make use of the “notes” section of the talk submission form. You can use this to leave messages for the talk reviewers. \n"
+"                Eg: you might want to say something like: “I have submitted a few proposals, but this is the one I am \n"
+"                most interested in talking about”, “I’m not sure about the title, here are some alternative titles that might work.” \n"
+"                or “Please connect me with a speaker mentor”.\n"
+"            "
+msgstr "\n"
+"                Utilisez la section « notes » du formulaire de soumission de présentation. Vous pouvez l'utiliser pour laisser\n"
+"                des messages aux évaluateurs de l'exposé. Par exemple : vous pouvez dire quelque chose comme: \n"
+"                ”J'ai soumis plusieurs propositions, mais c'est celle-ci qui m'intéresse le plus “, ”Je ne suis pas\n"
+"                sûr du titre, voici quelques titres alternatifs qui pourraient fonctionner “ ou ” Veuillez me mettre en contact avec un orateur mentor”.\n"
+"            "
+
+#: templates/page_speaker_resources.html:32
+msgid "\n"
+"                If you have multiple ideas then feel free to make multiple proposals. You can let the conference organizers pick \n"
+"                which one seems most appropriate.\n"
+"                "
+msgstr "\n"
+"                Si vous avez plusieurs idées, n'hésitez pas à soumettre plusieurs propositions. Vous pouvez laisser les \n"
+"                organisateurs de la conférence choisir celle qui leur semble la plus appropriée.\n"
+"                "
+
+#: templates/page_speaker_resources.html:36
+msgid "\n"
+"                Don’t try to be extra fancy and add in big words that are unnecessary. The point of an abstract is to communicate \n"
+"                an idea, so you should focus on clear communication. Take a look at this.\n"
+"                "
+msgstr "\n"
+"                N'essayez pas d'être trop fantaisiste et d'ajouter de gros mots qui ne sont pas nécessaires. Le but d'un résumé est de communiquer une idée,\n"
+"                vous devez donc vous concentrer sur une communication claire. Jetez un coup d'œil à ce qui suit.\n"
+"                "
+
+#: templates/page_speaker_resources.html:42
+msgid "Making an awesome presentation"
+msgstr "Faire une présentation géniale"
+
+#: templates/page_speaker_resources.html:44
+msgid "Minimal slides are best — avoid walls of text and long lists of bullets."
+msgstr "Des diapositives minimales sont préférables — évitez les longs textes et les longues listes à puces."
+
+#: templates/page_speaker_resources.html:45
+msgid "\n"
+"                Light background with dark text is easiest to read; be mindful that the projection screen is white. \n"
+"                Choose fonts with adequate spacing between letters, and avoid thin or cursive fonts.\n"
+"            "
+msgstr "\n"
+"                Un fond clair avec un texte foncé est plus facile à lire ; n'oubliez pas que l'écran de projection est blanc. \n"
+"                Choisissez des polices de caractères avec un espacement suffisant entre les lettres, et évitez les polices fines ou cursives.\n"
+"            "
+
+#: templates/page_speaker_resources.html:49
+msgid "\n"
+"                If your talk requires live coding or using the terminal, make sure your editor or terminal settings are legible. \n"
+"                Dark text on a light background (high contrast) with a large font is best.\n"
+"                "
+msgstr "\n"
+"                Si votre exposé nécessite un codage en direct ou l'utilisation d'un terminal, assurez-vous que \n"
+"                les paramètres  de votre éditeur ou de votre terminal sont lisibles. Il est préférable d'utiliser \n"
+"                un texte foncé sur un fond clair (contraste élevé) avec une police de grande taille.\n"
+"                "
+
+#: templates/page_speaker_resources.html:53
+msgid "Images, memes, and GIFs should be appropriate for a professional audience."
+msgstr "Les images, les mèmes et les GIF doivent être adaptés à un public professionnel."
+
+#: templates/page_speaker_resources.html:54
+msgid "\n"
+"                Avoid or limit flashing videos or animated GIFs, as these may have negative effects for people with seizure \n"
+"                disorders, migraines, or ADD/ADHD.\n"
+"                "
+msgstr "\n"
+"                Évitez ou limitez les vidéos clignotantes ou les GIF animés, car ils peuvent avoir des effets négatifs sur les personnes \n"
+"                souffrant de troubles épileptiques, de migraines ou de troubles déficitaires de l'attention.\n"
+"                "
+
+#: templates/page_speaker_resources.html:60
+msgid "At the conference"
+msgstr "Lors de la conférence"
+
+#: templates/page_speaker_resources.html:62
+msgid "\n"
+"                Please be in your presentation room at least 15 minutes before your talk in order to set up and meet your \n"
+"                session chair.\n"
+"                "
+msgstr "\n"
+"                Veuillez vous rendre dans votre salle de présentation au moins 15 minutes avant votre intervention afin \n"
+"                de vous installer et de rencontrer votre coordinateur de session.\n"
+"                "
+
+#: templates/page_speaker_resources.html:66
+msgid "Remember to bring your laptop and charger, and any display adapters you might need."
+msgstr "N'oubliez pas d'apporter votre ordinateur portable et son chargeur, ainsi que tout adaptateur d'écran dont vous pourriez avoir besoin."
+
+#: templates/page_speaker_resources.html:67
+msgid "Bring your presentation on a usb stick just in case something goes horribly wrong."
+msgstr "Apportez votre présentation sur une clé USB, au cas où quelque chose tournerait mal."
+
+#: templates/page_speaker_resources.html:68
+msgid "There will be a Quiet Room available on conference days."
+msgstr "Une salle de repos sera disponible les jours de conférence."
+
+#: templates/page_speaker_resources.html:69
+msgid "\n"
+"                We may ask you to draft your slides as much as 3 weeks ahead of the conference. We won’t share the slides with \n"
+"                anyone outside of the conference organizing team.\n"
+"                "
+msgstr "\n"
+"                Nous pouvons vous demander de rédiger vos diapositives jusqu'à trois semaines avant la conférence.  \n"
+"                Nous ne partagerons pas les diapositives avec d'autres personnes que l'équipe organisatrice de la conférence.\n"
+"                "
+
+#: templates/page_speaker_resources.html:75
+msgid "Public speaking"
+msgstr "Prise de parole en public"
+
+#: templates/page_speaker_resources.html:76
+msgid "A lot of people find public speaking very stressful! Here are a few things that might help:"
+msgstr "Pour beaucoup de gens, la prise de parole en public est très stressante ! Voici quelques conseils qui pourraient vous aider :"
+
+#: templates/page_speaker_resources.html:78
+msgid "\n"
+"                Our community is warm and welcoming, the fact that you are putting effort into contributing is something everyone \n"
+"                will appreciate.\n"
+"                "
+msgstr "\n"
+"                Notre communauté est chaleureuse et accueillante, et le fait que vous vous efforciez d'y contribuer \n"
+"                est très apprécié de tous.\n"
+"                "
+
+#: templates/page_speaker_resources.html:82
+msgid "\n"
+"                It is normal to stumble from time to time, if you trip over your words then be willing to laugh at yourself and the audience \n"
+"                will like you more. Or if you can’t laugh at yourself, just pause for a moment, take a breath or a sip of water and keep going. \n"
+"                The audience can wait for a few seconds while you gather your thoughts, it’s ok.\n"
+"                "
+msgstr "\n"
+"                Il est normal de balbutier de temps en temps. Si vous balbutiez vos mots, acceptez de rire de vous-même et le public\n"
+"                vous appréciera davantage. Si vous ne pouvez pas rire de vous-même, arrêtez-vous un instant, respirez ou buvez une gorgée d'eau,\n"
+"                puis continuez. Le public peut attendre quelques secondes pendant que vous reprenez vos esprits, ce n'est pas grave.\n"
+"                "
+
+#: templates/page_speaker_resources.html:87
+msgid "\n"
+"                If you are prone to anxiety then make a point of practicing your talk in front of an audience ahead of \n"
+"                time - your friends, family and colleagues can be very useful here.\n"
+"                "
+msgstr "\n"
+"                Si vous êtes sujet à l'anxiété, il vous sera très utile de vous entraîner à l'avance devant un public \n"
+"                - vos amis, votre famille et vos collègues peuvent être très utiles à cet égard.\n"
+"                "
+
+#: templates/page_speaker_resources.html:93
+msgid "Practicing your talk"
+msgstr "Entraînez vous à votre présentation"
+
+#: templates/page_speaker_resources.html:94
+msgid "\n"
+"            Some people write out a script and then memorize that. Some people are expert freestylers. \n"
+"            Both approaches work well, but both need serious preparation.\n"
+"            "
+msgstr "\n"
+"            Certaines personnes écrivent un scénario et l'apprennent par cœur. D'autres sont des experts en freestyle. \n"
+"            Les deux approches fonctionnent bien, mais elles nécessitent toutes deux une préparation sérieuse.\n"
+"            "
+
+#: templates/page_speaker_resources.html:100
+msgid "If you write and memorize your script:"
+msgstr "Si vous décidez d'écriver et de mémoriser votre scénario:"
+
+#: templates/page_speaker_resources.html:102
+msgid "Realize that memorizing a 30 minute talk is going to take a lot of time"
+msgstr "Sachez que la mémorisation d'une présentation de 30 minutes prendra beaucoup de temps"
+
+#: templates/page_speaker_resources.html:103
+msgid "\n"
+"                If you need cue cards or speaker notes then keep them brief - if you just stare down at your notes \n"
+"                that would be bad. Practice looking up and away from your notes.\n"
+"                "
+msgstr "\n"
+"                Si vous avez besoin de cartes de repérage ou de notes d'orateur, soyez bref -  si vous vous contentez de \n"
+"                regarder vos notes, ce n'est pas bon signe. Entraînez-vous à lever les yeux et à vous éloigner de vos notes.\n"
+"                "
+
+#: templates/page_speaker_resources.html:111
+msgid "Practice talking through your slides over and over until you don’t stumble."
+msgstr "Entraînez-vous à présenter vos diapositives encore et encore jusqu'à ce que vous ne balbutiez plus."
+
+#: templates/page_speaker_resources.html:112
+msgid "\n"
+"                This method might sound easier, but you probably need to know about 30%% more about your topic if you \n"
+"                want to freestyle effectively.\n"
+"                "
+msgstr "\n"
+"                Cette méthode peut sembler plus facile, mais vous devez probablement en savoir 30 % de plus sur votre \n"
+"                sujet si vous voulez faire du freestyle de manière efficace.\n"
+"                "
+
+#: templates/page_speaker_resources.html:118
+msgid "Always:"
+msgstr "Toujours:"
+
+#: templates/page_speaker_resources.html:120
+msgid "Make sure you use a timer while practicing."
+msgstr "Veillez à utiliser un minuteur lorsque vous vous entraînez."
+
+#: templates/page_speaker_resources.html:125
+msgid "Audience Questions"
+msgstr "Questions de l'auditoire"
+
+#: templates/page_speaker_resources.html:126
+msgid "For a lot of people, this can be the scariest part!"
+msgstr "Pour beaucoup de gens, c'est la partie la plus effrayante !"
+
+#: templates/page_speaker_resources.html:128
+msgid "If someone asks you a question then feel free to take a moment to think before answering."
+msgstr "Si quelqu'un vous pose une question, n'hésitez pas à prendre un moment de réflexion avant de répondre."
+
+#: templates/page_speaker_resources.html:129
+msgid "If you aren’t sure what the question means then you can ask for clarity or try to paraphrase the question."
+msgstr "Si vous n'êtes pas sûr du sens de la question, vous pouvez demander des éclaircissements ou essayer de paraphraser la question."
+
+#: templates/page_speaker_resources.html:130
+msgid "Once you have attempted to answer the question you can ask “Does that answer your question?”"
+msgstr "Une fois que vous avez tenté de répondre à la question, vous pouvez demander “Est-ce que cela répond à votre question ?”"
+
+#: templates/page_speaker_resources.html:131
+msgid "\n"
+"                If you don’t know the answer to a question then be willing to say “I don’t know”. It’s really ok to not \n"
+"                have perfect knowledge. Don’t pretend to know things you don’t and don’t try to distract people from the main \n"
+"                question, just be honest about what you know.\n"
+"                "
+msgstr "\n"
+"                Si vous ne connaissez pas la réponse à une question, osez dire “Je ne sais pas”. Il n'y a pas de mal à ne pas avoir \n"
+"                une connaissance parfaite. Ne prétendez pas savoir des choses que vous ne savez pas et n'essayez pas de détourner \n"
+"                l'attention des gens de la question principale, soyez simplement honnête sur ce que vous savez.\n"
+"                "
+
+#: templates/page_speaker_resources.html:138
+msgid "Additional Resources"
+msgstr "Resources Supplémentaires "
+
+#: templates/page_speaker_resources.html:139
+msgid "\n"
+"            We understand how it can feel to be a first-time speaker if this is your first time. That’s why we’ve provided links \n"
+"            to valuable resources to support you, whether you’re new to speaking or fully experienced, a little extra help never hurts!\n"
+"            "
+msgstr "\n"
+"            Nous comprenons ce que peut ressentir un orateur novice si c'est la première fois qu'il s'exprime. C'est pourquoi\n"
+"            nous vous proposons des liens  vers des ressources précieuses pour vous aider. Que vous soyez novice ou \n"
+"            expérimenté, un peu d'aide supplémentaire ne fait jamais de mal!\n"
+"            "
+
+#: templates/page_speaker_resources.html:145
+msgid "Write a Conference Abstract"
+msgstr "Rédiger un résumé de conférence"
+
+#: templates/page_speaker_resources.html:147
+msgid "Public speaking hack for Engaging Presentation"
+msgstr "Conseils de prise de parole en public pour une présentation attrayante"
+
+#: templates/page_speaker_resources.html:149
+msgid "How I prepare Conference Talks"
+msgstr "Comment je prépare mes exposés de conférence"
+
+#: templates/page_speaker_resources.html:151
+msgid "Pro Tips for Conference talks"
+msgstr "Conseils de pro pour les exposés de conférence"
+
+#: templates/page_speaker_resources.html:153
+msgid "Ultimate Guide to Memorable Tech Talks"
+msgstr "Guide ultime pour des exposés techniques mémorables"
+
+#: templates/page_speaker_resources.html:154
+msgid "Conference Speaking"
+msgstr "Prise de parole lors d'une conférence"
+
+#: templates/page_speaking.html:9
+msgid "Speaking at DjangoCon Africa"
+msgstr "Intervenir à Djangocon Africa"
+
+#: templates/page_speaking.html:11
+msgid "Welcome Back to DjangoCon Africa 2025, we are very much excited just as you are!"
+msgstr "Bienvenue à DjangoCon Africa 2025, nous sommes tout aussi impatients que vous !"
+
+#: templates/page_speaking.html:13
+msgid "\n"
+"                To get started, do well to check Proposal guidelines where you will find the steps and guidelines to \n"
+"                submit your proposal. Keep in mind that there is a limit of 5 proposal submissions per person.\n"
+"            "
+msgstr "\n"
+"                Pour commencer, consultez les directives relatives aux propositions, où vous trouverez les étapes et les instructions\n"
+"                à suivre pour soumettre votre proposition. Gardez à l'esprit qu'il y a une limite de 5 propositions par personne.\n"
+"            "
+
+#: templates/page_speaking.html:20
+msgid "Why Speak at DjangoCon Africa"
+msgstr "Pourquoi intervenir à DjangoCon Africa"
+
+#: templates/page_speaking.html:24
+msgid "Share new tools, resources, experiences, practices, and ideas with the Django community and beyond."
+msgstr "Partager de nouveaux outils, ressources, expériences, pratiques et idées avec la communauté Django et au-delà."
+
+#: templates/page_speaking.html:25
+msgid "Connect with other Django professionals, expand your network, and build relationships that can benefit your \n"
+"            career and personal growth."
+msgstr "Entrez en contact avec d'autres professionnels de Django, élargissez votre réseau et construisez des relations \n"
+"            qui peuvent être bénéfiques pour votre carrière et votre développement personnel."
+
+#: templates/page_speaking.html:27
+msgid "Your talk will be professionally recorded and made available on our official YouTube channel for a global \n"
+"            audience to access and learn from. (optional)"
+msgstr "Votre exposé sera enregistré de manière professionnelle et mis à disposition sur notre chaîne officielle \n"
+"            YouTube pour qu'un large public puisse y accéder et en tirer des enseignements. (optionnel)"
+
+#: templates/page_speaking.html:29
+msgid "A professional photographer will be present to capture high-quality images of your talk, providing a lasting \n"
+"            visual record of your presentation. (Optional)"
+msgstr "Un photographe professionnel sera présent pour capturer des images de haute qualité de votre conférence, \n"
+"            fournissant un enregistrement visuel durable de votre présentation. (optionnel)"
+
+#: templates/page_speaking.html:31
+msgid "Reach a wide audience and share your insights, experiences, and discoveries with the Django community and beyond."
+msgstr "Touchez un large public et partagez vos idées, vos expériences et vos découvertes avec la communauté Django et au-delà."
+
+#: templates/page_speaking.html:32
+msgid "Give back to Django Community."
+msgstr "Rendre Service à la Communauté Django."
+
+#: templates/page_speaking.html:35
+msgid "Selection Process"
+msgstr "Processus de Sélection"
+
+#: templates/page_speaking.html:36
+msgid "\n"
+"        Reviewing submissions for DjangoCon Africa can be a challenging task, with many excellent talks and tutorials vying \n"
+"        for a limited number of slots. To ensure transparency and fairness, we're committed to making our selection process \n"
+"        clear to all submitters and attendees. Our main approach is community driven and it involves a team of volunteers \n"
+"        and organizers who will review submissions anonymously and collectively decide which ones to feature.\n"
+"        "
+msgstr "\n"
+"        L'examen des candidatures pour la DjangoCon Africa peut s'avérer une tâche difficile, de nombreuses conférences \n"
+"        et tutoriels excellents se disputant un nombre limité de places. Pour garantir la transparence et l'équité, \n"
+"        nous nous engageons à rendre notre processus de sélection clair pour tous les candidats et participants. \n"
+"        Notre approche principale est axée sur la communauté et implique une équipe de bénévoles\n"
+"        et d'organisateurs qui examineront les propositions de manière anonyme et décideront collectivement\n"
+"        de celles qui seront présentées.\n"
+"        "
+
+#: templates/page_speaking.html:44
+msgid " \n"
+"        Also we will be sharing our guidelines and reviewing process, we aim to provide a better understanding of what attendees \n"
+"        can expect from the conference and why certain talks are selected. Additionally, we may prioritize speakers from underrepresented \n"
+"        or marginalized groups to amplify the conference's social impact.\n"
+"        "
+msgstr " \n"
+"        Nous partagerons également nos critères et notre processus d'évaluation, afin de permettre aux participants de mieux\n"
+"        comprendre ce qu'ils peuvent attendre de la conférence et les raisons pour lesquelles certaines présentations sont sélectionnées.\n"
+"        En outre, il se peut que nous donnions la priorité à des orateurs issus de groupes sous-représentés ou marginalisés\n"
+"        afin d'amplifier l'impact social de la conférence.\n"
+"        "
+
+#: templates/page_speaking.html:51
+msgid "\n"
+"        We'll document our selection process on this website and announce updates via our social media channels, \n"
+"        including <a href=\"https://twitter.com/djcafrica\">Twitter/X</a>, <a href=\"https://linkedin.com/company/djcafrica\">LinkedIn</a>, \n"
+"        <a href=\"https://instagram.com/djcafrica\">Instagram</a>, <a href=\"https://facebook.com/djcafrica\">Facebook</a>, \n"
+"        <a href=\"https://fosstodon.org/@djangoconafrica/111065411415401242\">Mastodon</a>, \n"
+"        <a href=\"https://bsky.app/profile/djcafrica.bsky.social\">Bluesky</a>.\n"
+"        "
+msgstr "\n"
+"        Nous documenterons notre processus de sélection sur ce site web et annoncerons les mises à jour via\n"
+"        nos canaux de médias sociaux, notamment <a href=\"https://twitter.com/djcafrica\">Twitter/X</a>, <a href=\"https://linkedin.com/company/djcafrica\">LinkedIn</a>, \n"
+"        <a href=\"https://instagram.com/djcafrica\">Instagram</a>, <a href=\"https://facebook.com/djcafrica\">Facebook</a>, \n"
+"        <a href=\"https://fosstodon.org/@djangoconafrica/111065411415401242\">Mastodon</a>, \n"
+"        <a href=\"https://bsky.app/profile/djcafrica.bsky.social\">Bluesky</a>.\n"
+"        "
+
+#: templates/page_speaking.html:60
+msgid "Presentation Types"
+msgstr "Types de présentation"
+
+#: templates/page_speaking.html:62
+msgid "The following are the presentation types that will be accepted in Django Africa Conference 2025"
+msgstr "Vous trouverez ci-dessous les types de présentation qui seront acceptés lors à la DjangoCon Africa 2025"
+
+#: templates/page_speaking.html:64
+msgid "Talk"
+msgstr "Présentation"
+
+#: templates/page_speaking.html:65
+msgid "Length: 20 - 45mins"
+msgstr "Durée : 20 à 45 minutes"
+
+#: templates/page_speaking.html:67
+msgid "\n"
+"    We're seeking innovative and captivating talks that cater to the diverse interests of our attendees. While Django \n"
+"    expertise is a plus, we're also interested in talks that explore broader themes, such as community, web development, \n"
+"    user experience, Education, Open Source and more.\n"
+"    "
+msgstr "\n"
+"    Nous sommes à la recherche de présentations innovantes et captivantes qui   \n"
+"    répondent aux divers intérêts de nos participants. Bien que l'expertise en  \n"
+"   Django soit un atout, nous sommes également intéressés par des présentations qui explorent des thèmes plus larges, tels que la communauté, \n"
+"   le développement web, l'expérience utilisateur, l'éducation, l'Open Source et bien plus encore.\n"
+"    "
+
+#: templates/page_speaking.html:74
+msgid "\n"
+"        No Worries if you're a first time speaker - we're excited to provide a platform for you to \n"
+"        share your ideas and kickstart your speaking journey!\n"
+"    "
+msgstr "\n"
+"        Ne vous inquiétez pas si vous êtes un orateur novice - nous sommes ravis de vous fournir une plateforme \n"
+"        pour partager vos idées et démarrer votre carrière d'orateur !\n"
+"    "
+
+#: templates/page_speaking.html:80
+msgid "Workshop and Tutorials"
+msgstr "Ateliers et tutoriels"
+
+#: templates/page_speaking.html:81
+msgid "Length: 1.5 - 2hrs"
+msgstr "Durée : 1,5 - 2 heures"
+
+#: templates/page_speaking.html:83
+msgid "\n"
+"        This year we are open to any topic as long as it will develop or improve the experiences and knowledge of our attendee’s.\n"
+"        "
+msgstr "\n"
+"        Cette année, nous sommes ouverts à tous les sujets, tant qu'ils permettent de développer ou d'améliorer les expériences et les connaissances de nos participants.\n"
+"        "
+
+#: templates/page_speaking.html:88
+msgid "\n"
+"        Workshop and Tutorials can be targeted at any experience level, just be sure to indicate clearly what you expect your \n"
+"        students to already know or have experience with in your proposal!\n"
+"        "
+msgstr "\n"
+"        Les ateliers et tutoriels peuvent s'adresser à tous les niveaux d'expérience. Assurez-vous simplement d'indiquer clairement\n"
+"        dans votre proposition ce que vous pensez que vos étudiants savent déjà ou ont déjà de l'expérience!\n"
+"        "
+
+#: templates/page_speaking.html:94
+msgid "\n"
+"        Still unsure if you should submit? Not only will we cover your DjangoCon ticket, we will provide you with the right \n"
+"        platform to make it possible.\n"
+"        "
+msgstr "\n"
+"        Still unsure if you should submit? Not only will we cover your DjangoCon ticket, we will provide you with the right \n"
+"        platform to make it possible.\n"
+"        "
+
+#: templates/page_speaking.html:101
+msgid "Lightning Talks"
+msgstr "Présentations Courtes"
+
+#: templates/page_speaking.html:102
+msgid "Length: 5 - 10mins"
+msgstr "Durée : 5 à 10 minutes"
+
+#: templates/page_speaking.html:104
+msgid "Not ready for a full talk or tutorial?"
+msgstr "Vous n'êtes pas prêt pour une présentation complète ou un tutoriel ?"
+
+#: templates/page_speaking.html:108
+msgid "Want to take the leap and give your first conference talk?"
+msgstr "Vous voulez vous lancer et faire votre première présentation lors d'une conférence?"
+
+#: templates/page_speaking.html:112
+msgid "\n"
+"        Our lightning talks are the perfect opportunity! These short, 5-minute talks (with or without slides) are all about \n"
+"        sharing your ideas and experiences with the community. Don't be nervous or shy - remember, it's just 5 minutes! \n"
+"        We'll have a dedicated lightning talk slot at the end of each day during the conference. Sign-ups will take place \n"
+"        during the event, so be sure to mark your calendar and join us!\n"
+"        "
+msgstr "\n"
+"        Nos présentations éclair sont l'occasion idéale ! Ces courtes présentations de 5 minutes (avec ou sans diapositives) sont\n"
+"        l'occasion de partager vos idées et vos expériences avec la communauté. Ne soyez pas nerveux ou timide - rappelez-vous, \n"
+"        ce ne sont que 5 minutes ! Un créneau dédié aux exposés éclair est prévu à la fin de chaque journée de la conférence. Les inscriptions\n"
+"        se feront sur place, alors n'oubliez pas de noter la date dans votre calendrier et de nous rejoindre !\n"
+"        "
+
+#: templates/page_speaking.html:120
+msgid "Proposal Guidelines"
+msgstr "Guide de soumission d'une proposition"
+
+#: templates/page_speaking.html:122
+msgid "We will appreciate it more, if you Submit your talk in time."
+msgstr "Nous vous serions reconnaissants de bien vouloir soumettre proposition dans les délais impartis."
+
+#: templates/page_speaking.html:123
+msgid "All talks will be in English."
+msgstr "Tous les exposés seront présentés en Anglais."
+
+#: templates/page_speaking.html:124
+msgid " Read, understand, and agree to our Code of Conduct. As a speaker, your talk and your \n"
+"            slides will need to follow our Code of Conduct – if you are not sure what that means, or have some issue \n"
+"            you are not sure about, just ask us or email hello@djangocon.africa."
+msgstr " Lisez, comprenez et adhérez à notre Code de Conduite. En tant qu'orateur,\n"
+"            votre exposé et vos diapositives devront être conformes à notre Code de Conduite\n"
+"            - si vous n'êtes pas sûr de ce que cela signifie, ou si vous avez des doutes,\n"
+"             demandez-nous ou envoyez-nous un courriel à l'adresse hello@djangocon.africa."
+
+#: templates/page_speaking.html:127
+msgid " Make sure you spend some time and effort on your proposal. Typos, lack of formatting, and \n"
+"            half finished sentences are unnecessary and make your proposal hard to be taken seriously. \n"
+"            (Ask a mentor, Check the links in our speakers resources, or a friend to help if this is difficult for you.)\n"
+"            "
+msgstr " Prenez le temps et le soin de bien préparer votre proposition. Les fautes de frappe, \n"
+"            le manque de mise en forme et les phrases inachevées donnent une mauvaise impression \n"
+"            et rendent difficile la prise en considération de votre proposition. (Demandez l'aide d'un mentor,\n"
+"            consultez les liens dans nos ressources pour les orateurs, ou encore celle d'un ami si cela vous semble difficile.)\n"
+"            "
+
+#: templates/page_speaking.html:131
+msgid " Don't overdo it – two or three paragraphs are plenty of space to give us an idea of your talk, \n"
+"            we don't require an entire thesis."
+msgstr " N'en faites pas de trop - deux ou trois paragraphes suffisent amplement pour nous donner\n"
+"            une idée de votre exposé, nous n'avons pas besoin d'une thèse entière."
+
+#: templates/page_speaking.html:133
+msgid " Original content: Since we have little space and lots of submissions, we prefer original content. \n"
+"            If your talk is so awesome that you want to give it in multiple places, we'd ask you to consider putting a new spin on it, \n"
+"            if at all possible."
+msgstr " Un contenu original : Étant donné que nous disposons de peu de place et que nous recevons\n"
+"            beaucoup de propositions, nous préférons un contenu original.\n"
+"            Si votre exposé est tellement génial que vous souhaitez le présenter à plusieurs endroits,\n"
+"            nous vous demandons d'envisager de lui donner une nouvelle tournure, dans la mesure du possible."
+
+#: templates/page_speaking.html:136
+msgid "Please do well to minimise the use of AI or other technological assistance as much as possible."
+msgstr "Nous vous invitons à limiter autant que possible le recours à l'IA ou à d'autres formes d'assistance technologique."
+
+#: templates/page_speaking.html:139
+msgid "Suggested Topics"
+msgstr "Thèmes suggérés"
+
+#: templates/page_speaking.html:142
+msgid "Django internals and challenges in modern web development."
+msgstr "Django internals et les défis du développement web moderne."
+
+#: templates/page_speaking.html:143
+msgid "Wild ideas, clever hacks, surprising or cool use cases."
+msgstr "Des idées folles, des trucs astucieux, des cas d'utilisation surprenants ou géniaux."
+
+#: templates/page_speaking.html:144
+msgid "Improving Django and Python developers’ lives."
+msgstr "Améliorer la vie des développeurs Django et Python."
+
+#: templates/page_speaking.html:145
+msgid "Pushing Django to its limits."
+msgstr "Pousser Django à ses limites."
+
+#: templates/page_speaking.html:146
+msgid " The Django and Python community, culture, history, past, present & future, the why, \n"
+"            the who and the what of it all."
+msgstr " La communauté Django et Python, sa culture, son histoire, son passé, son présent et son futur, \n"
+"            le pourquoi, le qui et le quoi de tout cela."
+
+#: templates/page_speaking.html:148
+msgid "Security"
+msgstr "Sécurité"
+
+#: templates/page_speaking.html:149
+msgid "Emerging technologies and industries – AI, Blockchain, Open Source etc."
+msgstr "Technologies et industries émergentes - IA, Blockchain, Open Source, etc."
+
+#: templates/page_speaking.html:150
+msgid "Diversity, Equity and Inclusion"
+msgstr "Diversité, Équité et Inclusion"
+
+#: templates/page_speaking.html:151
+msgid "Whatever you deem appropriate - it’s your conference after all"
+msgstr "Tout ce que vous jugez approprié - c'est votre conférence après tout."
+
+#: templates/page_speaking.html:156
+msgid "This year's edition will feature a new Pan-African open source event running alongside DjangoCon Africa - UbuCon at DjangoCon Africa!"
+msgstr "L'édition de cette année comprendra un nouvel événement panafricain sur les logiciels libres qui se déroulera en parallèle de DjangoCon Africa - UbuCon at DjangoCon Africa!"
+
+#: templates/page_speaking.html:159
+msgid "\n"
+"        We invite proposals on any of these topics, and more: Desktop, Cloud and Infrastructure, Linux Containers and \n"
+"        Container Orchestration, DevOps, Virtualisation, Automation, Networking Windows Subsystem for Linux(WSL), \n"
+"        IoT, Embedded, Robotics, Appliances, Packaging, Documentation, QA and Bug triage, Security, Compliance and Kernel, \n"
+"        Data and AI, Video, Audio and Image editing, Open source tools, Community, Diversity, Local Outreach and Social Context.\n"
+"        "
+msgstr "\n"
+"        Nous vous invitons à soumettre des propositions sur l'un ou l'autre de ces sujets, et plus encore : Desktop, Cloud et Infrastructure,\n"
+"        Conteneurs Linux et Orchestration de Conteneurs, DevOps, Virtualisation, Automatisation, Mise en réseau Windows Subsystem for Linux(WSL),\n"
+"        IoT, Embarqué, Robotique, Appareils, Packaging, Documentation, QA et Triage de bugs, Sécurité, Conformité et Noyau,\n"
+"         Données et IA, Vidéo, Audio et Edition d'images, Outils open source, Communauté, Diversité, Sensibilisation locale et Contexte social.\n"
+"        "
+
+#: templates/page_speaking.html:167
+msgid "Speaker Perks"
+msgstr "Avantages pour les Orateurs"
+
+#: templates/page_speaking.html:170
+msgid "\n"
+"        As a speaker at DjangoCon Africa, you will enjoy premium access to our complimentary dinner and prioritised in Opportunity Grants. \n"
+"        However, if you need financial assistance of any sort to attend the conference, you will need to apply for an opportunity grant \n"
+"        separately and mention that you applied during your speaking application or proposal.\n"
+"        Please note that speakers are considered as first choice in issuing grants across.\n"
+"        "
+msgstr "\n"
+"        En tant qu'orateur à DjangoCon Africa, vous bénéficierez d'un accès privilégié à notre dîner gratuit et d'une priorité dans les bourses.\n"
+"        Cependant, si vous avez besoin d'une quelconque assistance financière pour participer à la conférence, vous devrez vous devrez soumettre\n"
+"        une demande de bourse séparément et le mentionner dans votre application ou proposition de présentation.\n"
+"        Veuillez noter que les orateurs sont prioritaires dans l'attribution des bourses.\n"
+"        "
+
+#: templates/page_speaking.html:178
+msgid "Company Support"
+msgstr "Soutien de l'entreprise"
+
+#: templates/page_speaking.html:181
+msgid "\n"
+"        If your company or employer has supported your talk preparation, such as allowing you to work on it during office hours, you're welcome \n"
+"        to acknowledge their support during your presentation. However, please ensure that the talk's content remains unbiased and focused on \n"
+"        sharing your expertise, rather than promoting commercial interests.\n"
+"        "
+msgstr "\n"
+"        Si votre entreprise ou votre employeur vous a soutenu dans la préparation de votre présentation, en vous autorisant par exemple à y \n"
+"        travailler pendant les heures de bureau, vous êtes invité à le mentionner lors de votre présentation. Veillez toutefois à ce que le contenu de la\n"
+"        présentation reste impartial et axé sur le partage de votre expertise, plutôt que sur la promotion d'intérêts commerciaux.\n"
+"        "
+
+#: templates/page_speaking.html:189
+msgid "\n"
+"        Don't let self-doubt hold you back - DjangoCon Africa is eager to showcase your unique perspective and expertise, and reading \n"
+"        inspiring stories from past speakers can help boost your confidence and encourage you to submit your proposal.\n"
+"        "
+msgstr "\n"
+"        Ne laissez pas le doute vous freiner - DjangoCon Africa est désireuse de mettre en valeur votre perspective et votre expertise \n"
+"        uniques, et lire les histoires inspirantes d'anciens orateurs peut vous aider à reprendre confiance et à soumettre votre proposition.\n"
+"        "
+
+#: templates/page_speaking.html:196
+msgid "\n"
+"        If you would like to ask a question, you are always welcome to write the Content Committee:  \n"
+"        <a href=\"mailto:content@djangocon.africa\">content@djangocon.africa</a>.\n"
+"        "
+msgstr "\n"
+"        Si vous souhaitez poser une question, vous pouvez toujours écrire au Comité de Contenu:  \n"
+"        <a href=\"mailto:content@djangocon.africa\">content@djangocon.africa</a>.\n"
+"        "
+
+#: templates/page_sponsor_us.html:13
+msgid "Join us for another exciting edition of DjangoCon Africa!"
+msgstr "Rejoignez-nous pour une nouvelle édition fascinante de DjangoCon Africa !"
+
+#: templates/page_sponsor_us.html:16
+msgid "\n"
+"            Be a part of a thriving community of developers and position your brand at the forefront of the rapidly growing \n"
+"            technology sector in Africa. With an expected 300 attendees from both the local and international community, \n"
+"            sponsoring this landmark event is a unique opportunity to connect with and reach a highly engaged audience.\n"
+"            "
+msgstr "\n"
+"            Faites partie d'une communauté florissante de développeurs et positionnez votre marque à la pointe du secteur\n"
+"            technologique en pleine croissance en Afrique. Avec 300 participants attendus  de la communauté locale  \n"
+"            et internationale, le sponsoring de cet événement phare est une occasion unique d'entrer en contact avec un public très engagé.\n"
+"            "
+
+#: templates/page_sponsor_us.html:28
+msgid "Download Sponsorship Brochure"
+msgstr "Télécharger la brochure de sponsoring"
+
+#: templates/page_sponsor_us.html:36
+msgid "Look who’s sponsoring us"
+msgstr "Découvrez qui nous sponsorise"
+
+#: templates/page_sponsor_us.html:41
+msgid "\n"
+"            If you are interested in becoming a sponsor or if you have any questions, then please email us at \n"
+"            <a href=\"mailto:sponsors@djangocon.africa\"></a>sponsors@djangocon.africa.\n"
+"            "
+msgstr "\n"
+"            Si vous souhaitez devenir un sponsor ou si vous avez des questions, envoyez-nous un courriel à \n"
+"            <a href=\"mailto:sponsors@djangocon.africa\"></a>sponsors@djangocon.africa.\n"
+"            "
+
+#. Why sponsor us?
+#: templates/page_sponsor_us.html:47
+msgid "Why sponsor?"
+msgstr "Pourquoi nous sponsoriser ?"
+
+#: templates/page_sponsor_us.html:49
+msgid "\n"
+"                If you are making anything that is useful to Django developers, such as developer tools, SaaS products or \n"
+"                hosting platforms, this is the perfect marketing opportunity. Africa is a fresh and ready market; and a booth at \n"
+"                our conference will enable to meet new potential customers for your products.\n"
+"                "
+msgstr "\n"
+"                Si vous concevez des produits utiles aux développeurs Django, tels que des outils de développement, \n"
+"                des produits SaaS ou des plateformes d'hébergement, c'est l'occasion idéale de faire du marketing. \n"
+"                L'Afrique est un marché nouveau et prêt, et un stand à notre conférence vous permettra \n"
+"                de rencontrer de nouveaux clients potentiels pour vos produits.\n"
+"                "
+
+#: templates/page_sponsor_us.html:55
+msgid "\n"
+"                DjangoCon Africa will uphold the tradition of existing DjangoCons all over the world of investing in great efforts \n"
+"                in being a diverse conference. Africa itself is very diverse with a total of 54 countries made up of many different \n"
+"                ethnicities. Only with the help of our sponsors can we be able to bring people from all social backgrounds and different \n"
+"                parts of the world together at our very first event.\n"
+"                "
+msgstr "\n"
+"                DjangoCon Africa maintiendra la tradition des DjangoCons existantes dans le monde entier en investissant des efforts \n"
+"                considérables pour être une conférence diversifiée. L'Afrique elle-même est un continent très diversifié, \n"
+"                composé de 54 pays aux nombreuses ethnies différentes. Ce n'est qu'avec l'aide de nos sponsors que nous\n"
+"                pourrons rassembler des personnes de tous les milieux sociaux et de différentes régions du monde lors de notre événement.\n"
+"                "
+
+#: templates/page_sponsor_us.html:63
+msgid "\n"
+"                There is no better place to recruit Django developers than a DjangoCon! DjangoCon Africa is the largest single\n"
+"                gathering of Django developers in Africa. Sponsoring the very first DjangoCon Africa will put you directly in front \n"
+"                of a fresh candidate pool.\n"
+"                "
+msgstr "\n"
+"                Il n'y a pas de meilleur endroit pour recruter des développeurs Django qu'une DjangoCon ! DjangoCon Africa\n"
+"                est le plus grand rassemblement de développeurs Django sur le continent africain. En sponsorisant la deuxième\n"
+"                DjangoCon Africa, vous vous positionnerez directement face à un vivier de jeunes talents.\n"
+"                "
+
+#: templates/page_sponsor_us.html:70
+msgid "\n"
+"                If you use Django or related projects to build your software products, sponsoring DjangoCon Africa is a good way \n"
+"                to give back to the community and say “thank you” to its members. Any open source community survives on the goodwill \n"
+"                of its members and the conference is an important gathering to meet and discuss the future of Django. At the same time, \n"
+"                sponsoring allows us to keep ticket prices affordable and even offer financial aid for developers from marginalized \n"
+"                groups who could not otherwise join.\n"
+"                "
+msgstr "\n"
+"                Si vous utilisez Django ou des projets connexes pour concevoir vos produits logiciels, soutenir la DjangoCon Africa\n"
+"                est un bon moyen de rendre à la communauté ce qu'elle vous a donné et de dire « merci » à ses membres.\n"
+"                Toute communauté open source survit grâce à la bonne volonté de ses membres et la conférence est un important\n"
+"                rassemblement pour se rencontrer et discuter de l'avenir de Django. En même temps, le sponsoring nous permet de\n"
+"                maintenir le prix des billets à un coût abordable et même d'offrir une assistance financière aux développeurs\n"
+"                issus de groupes marginalisés qui ne pourraient pas s'inscrire autrement.\n"
+"                "
+
+#: templates/page_sponsor_us.html:79
+msgid "\n"
+"                Your own employees can profit a lot from attending DjangoCon Africa. Not only does the conference provide valuable \n"
+"                education in form of talks and workshops that improve their professional talks and technical skills, it is also the \n"
+"                best single place to start and build a network within a community of potential future partners.\n"
+"                "
+msgstr "\n"
+"                Vos propres employés peuvent tirer profit d'une participation à la DjangoCon Africa. La conférence offre une formation précieuse \n"
+"                sous forme de présentations et d'ateliers qui améliorent leurs compétences techniques et professionnelles, \n"
+"                mais c'est aussi le meilleur endroit pour commencer à construire un réseau au sein d'une communauté de futurs partenaires potentiels.\n"
+"                "
+
+#: templates/page_sponsor_us.html:87
+msgid "Where does your money go to?"
+msgstr "Où va votre argent ?"
+
+#: templates/page_sponsor_us.html:89
+msgid "\n"
+"        Djangocon Africa is run by volunteers on a non-profit basis. All the money we receive will go towards covering \n"
+"        the costs of the event and reducing the cost for our attendees. This includes:\n"
+"        "
+msgstr "\n"
+"        La Djangocon Africa est organisée par des bénévoles sur une base non lucrative. Tout l'argent que nous recevons \n"
+"        sert à couvrir les coûts de l'événement et à réduire les frais pour les participants. Cela comprend: \n"
+"        "
+
+#: templates/page_sponsor_us.html:94
+msgid "catering and refreshments"
+msgstr "la restauration et les rafraîchissements"
+
+#: templates/page_sponsor_us.html:95
+msgid "venue rent"
+msgstr "la location de la salle"
+
+#: templates/page_sponsor_us.html:96
+msgid "technical services"
+msgstr "les services techniques"
+
+#: templates/page_sponsor_us.html:97
+msgid "financial assistance for accommodation and travel for attendees and speakers on a low budget."
+msgstr "l'assistance financière pour l'hébergement et les déplacements des participants et des orateurs à faible budget."
+
+#: templates/page_sponsor_us.html:98
+msgid "video recordings for talks"
+msgstr "l'enregistrement vidéo des présentations"
+
+#: templates/page_sponsor_us.html:99
+msgid "conference merchandise and program booklet"
+msgstr "les produits dérivés de la conférence et la brochure du programme"
+
+#: templates/page_sponsor_us.html:100
+msgid "basic running expenses"
+msgstr "les dépenses de fonctionnement de base"
+
+#: templates/page_sponsor_us.html:101
+msgid "Anything left over will be used for supporting future non-profit events."
+msgstr "Tout excédent sera utilisé pour soutenir de futurs événements à but non lucratif."
+
+#: website/header_menu_items.py:17
+msgid "Conference"
+msgstr "Conférence"
+
+#: website/header_menu_items.py:26
+msgid "Speaking"
+msgstr "Présentation"
+
+#: website/header_menu_items.py:28
+msgid "Speaking at Djangocon Africa"
+msgstr "Intervenir à Djangocon Africa"
+
+#: website/header_menu_items.py:29
+msgid "Speaker Resources"
+msgstr "Ressources pour les Orateurs"
+
+#: website/header_menu_items.py:30
+msgid "Call for Proposals"
+msgstr "Appel à Propositions"
+
+#: website/header_menu_items.py:36
+msgid "Become a Sponsor"
+msgstr "Devenir Sponsor"
+
+#: website/header_menu_items.py:51
+msgid "Talk Proposals"
+msgstr "Propositions d'Exposés"
+
+#: website/header_menu_items.py:52
+msgid "Logout"
+msgstr "Déconnexion"
+
+#: website/header_menu_items.py:57
+msgid "LogIn"
+msgstr "Se connecter"
+
+#: website/models.py:9
+msgid "Link to Opportunity Grant"
+msgstr "Lien vers l'Opportunité de Bourse"
+
+#: website/models.py:15
+msgid "Whether the button is an open state."
+msgstr "Si le bouton est dans un état ouvert."
+
+#: website/models.py:21
+msgid "The date and time when the button should be considered closed."
+msgstr "La date et l'heure auxquelles le bouton doit être considéré comme fermé."
+
+#: website/models.py:26
+msgid "The date and time when the Opportunity Grant was created."
+msgstr "La date et l'heure de création de l'opportunité de bourse."
+
+#: website/models.py:31
+msgid "The date and time when the Opportunity Grant was updated."
+msgstr "La date et l'heure de la mise à jour de l'opportunité de bourse."
+
