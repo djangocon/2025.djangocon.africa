@@ -292,7 +292,7 @@ msgstr "Vérifiez votre adresse électronique"
 #: templates/account/verified_email_required.html:13
 msgid "This part of the site requires us to verify that\n"
 "you are who you claim to be. For this purpose, we require that you\n"
-"verify ownership of your email address. "
+"verify ownership of your email address. \n"
 msgstr "Cette partie du site nous oblige à vérifier que vous êtes\n"
 "bien celui que vous prétendez être. À cette effet, nous vous demandons de\n"
 "vérifier la propriété de votre adresse électronique. \n"
@@ -489,7 +489,7 @@ msgid "\n"
 "          Excessive swearing and offensive jokes are not appropriate for\n"
 "          DjangoCon Africa.\n"
 "          "
-msgstr " \n"
+msgstr "\n"
 "          Les jurons excessifs et les tenues humoristiques offensantes ne sont pas appropriés pour DjangoCon Africa.\n"
 "          "
 
@@ -1470,7 +1470,7 @@ msgstr "Entraînez-vous à présenter vos diapositives encore et encore jusqu'à
 
 #: templates/page_speaker_resources.html:112
 msgid "\n"
-"                This method might sound easier, but you probably need to know about 30%% more about your topic if you \n"
+"                This method might sound easier, but you probably need to know about 30% more about your topic if you \n"
 "                want to freestyle effectively.\n"
 "                "
 msgstr "\n"
