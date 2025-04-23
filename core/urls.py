@@ -24,7 +24,6 @@ from django.views.i18n import set_language
 urlpatterns = [
     path("", include("website.urls")),
     path("accounts/", include("allauth.urls")),
-    path("proposals/", include("proposals.urls")),
     path("sponsors/", include("sponsors.urls")),
     path("__reload__/", include("django_browser_reload.urls")),
     path('i18n/', include('django.conf.urls.i18n')),
@@ -43,7 +42,6 @@ urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += i18n_patterns(
     path("", include("website.urls")),
     path("accounts/", include("allauth.urls")),
-    path("proposals/", include("proposals.urls")),
     path("sponsors/", include("sponsors.urls")),
     path("news/", include("news.urls")),
 )

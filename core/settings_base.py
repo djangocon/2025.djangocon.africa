@@ -36,7 +36,6 @@ INSTALLED_APPS = [
 
     # local apps
     "website",
-    "proposals",
     "custom_auth",
     "allauth",
     "allauth.account",
