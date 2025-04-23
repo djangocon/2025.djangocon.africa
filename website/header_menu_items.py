@@ -51,7 +51,6 @@ user_loggedin_link = HeaderLink(
     label='<i class="fas fa-user"></i> User',
     children=[
         # HeaderLink("Profile", href="todo"),
-        HeaderLink(_("Talk Proposals"), href=reverse("my_proposals")),
         HeaderLink(_("Logout"), href=reverse("account_logout")),
     ],
 )
