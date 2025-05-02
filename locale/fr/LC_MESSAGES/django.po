@@ -7,11 +7,11 @@ msgstr ""
 "Project-Id-Version: DjangoCon Africa\n"
 "Language: fr\n"
 
-#: core/settings_base.py:136
+#: core/settings_base.py:155
 msgid "English"
 msgstr "Anglais"
 
-#: core/settings_base.py:137
+#: core/settings_base.py:156
 msgid "French"
 msgstr "Français"
 
@@ -71,7 +71,7 @@ msgstr "L'URL de recrutement du sponsor."
 msgid "The name of the tag."
 msgstr "Le nom du tag."
 
-#: sponsors/templates/sponsors/sponsors.html:11 website/header_menu_items.py:37
+#: sponsors/templates/sponsors/sponsors.html:11 website/header_menu_items.py:44
 msgid "Our Sponsors"
 msgstr "Nos sponsors"
 
@@ -292,10 +292,10 @@ msgstr "Vérifiez votre adresse électronique"
 #: templates/account/verified_email_required.html:13
 msgid "This part of the site requires us to verify that\n"
 "you are who you claim to be. For this purpose, we require that you\n"
-"verify ownership of your email address. \n"
+"verify ownership of your email address. "
 msgstr "Cette partie du site nous oblige à vérifier que vous êtes\n"
 "bien celui que vous prétendez être. À cette effet, nous vous demandons de\n"
-"vérifier la propriété de votre adresse électronique. \n"
+"vérifier la propriété de votre adresse électronique."
 ""
 
 #: templates/account/verified_email_required.html:18
@@ -490,7 +490,8 @@ msgid "\n"
 "          DjangoCon Africa.\n"
 "          "
 msgstr "\n"
-"          Les jurons excessifs et les tenues humoristiques offensantes ne sont pas appropriés pour DjangoCon Africa.\n"
+"          Les injures et les plaisanteries de mauvais goût sont\n"
+"          inappropriées à DjangoCon Africa.\n"
 "          "
 
 #: templates/page_coc.html:121
@@ -778,7 +779,7 @@ msgstr "Ce Code de Conduite a été adapté de"
 msgid "Code of Conduct written by"
 msgstr "Code de conduite rédigé par"
 
-#: templates/page_home.html:20
+#: templates/page_home.html:21
 msgid "\n"
 "        Join us for 5 days of inspiration, education and networking at DjangoCon\n"
 "        Africa from 11 - 15 August, 2025 in\n"
@@ -788,11 +789,11 @@ msgstr "\n"
 "        DjangoCon Africa du 11 au 15 août 2025 à\n"
 "        "
 
-#: templates/page_home.html:54
+#: templates/page_home.html:69
 msgid "First DjangoCon Africa"
 msgstr "Première DjangoCon Africa"
 
-#: templates/page_home.html:56
+#: templates/page_home.html:71
 msgid "\n"
 "          In 2023 we hosted the first ever DjangoCon Africa. DjangoCon Africa\n"
 "          took place in Zanzibar, Tanzania 6th-11th November 2023.\n"
@@ -802,7 +803,7 @@ msgstr "\n"
 "          s'est déroulée à Zanzibar, en Tanzanie, du 6 au 11 novembre 2023.\n"
 "          "
 
-#: templates/page_home.html:61
+#: templates/page_home.html:76
 msgid "\n"
 "          We had roughly 200 attendees, of whom 103 were women. The attendees\n"
 "          represented at least 22 countries from around the world.\n"
@@ -812,7 +813,7 @@ msgstr "\n"
 "          Ils représentaient au moins 22 pays du monde entier.\n"
 "          "
 
-#: templates/page_home.html:66
+#: templates/page_home.html:81
 msgid "\n"
 "          We held 26 talks on topics covering programming, society, careers,\n"
 "          education, disability, agriculture - the full range of topics you’d\n"
@@ -826,19 +827,19 @@ msgstr "\n"
 "           d'une DjangoCon, avec la perspective africaine étant au premier plan.\n"
 "          "
 
-#: templates/page_home.html:78
+#: templates/page_home.html:100
 msgid "Read the 2023 report"
 msgstr "Lire le rapport de 2023"
 
-#: templates/page_home.html:93
+#: templates/page_home.html:118
 msgid "What will be happening at DjangoCon Africa"
 msgstr "Les grandes tendances de la DjangoCon Africa"
 
-#: templates/page_home.html:99
+#: templates/page_home.html:127
 msgid "Talks"
 msgstr "Présentations"
 
-#: templates/page_home.html:101
+#: templates/page_home.html:129
 msgid "\n"
 "          Three days of talks, on programming, technology, careers, society and\n"
 "          business, with speakers from across the world.\n"
@@ -848,11 +849,11 @@ msgstr "\n"
 "          la société et les affaires, avec des orateurs du monde entier.\n"
 "          "
 
-#: templates/page_home.html:110
+#: templates/page_home.html:138
 msgid "Workshops and tutorials"
 msgstr "Ateliers et tutoriels"
 
-#: templates/page_home.html:112
+#: templates/page_home.html:140
 msgid "\n"
 "          Hands-on training and learning sessions, led by experts in the field.\n"
 "          Details to be published soon.\n"
@@ -862,11 +863,11 @@ msgstr "\n"
 "          experts du domaine. Les détails seront publiés bientôt.\n"
 "          "
 
-#: templates/page_home.html:121
+#: templates/page_home.html:149
 msgid "Collaboration"
 msgstr "Collaboration"
 
-#: templates/page_home.html:123
+#: templates/page_home.html:151
 msgid "\n"
 "          Work together on code, and contribute to major projects - including\n"
 "          Django itself.\n"
@@ -876,7 +877,7 @@ msgstr "\n"
 "          Django lui-même.\n"
 "          "
 
-#: templates/page_home.html:134
+#: templates/page_home.html:162
 msgid "\n"
 "          A training workshop aimed at women, providing an introduction to web\n"
 "          application development. Tens of thousands of women across the world\n"
@@ -890,11 +891,11 @@ msgstr "\n"
 "          connaît un grand succès.\n"
 "          "
 
-#: templates/page_home.html:146
+#: templates/page_home.html:173
 msgid "Discovery"
 msgstr "Découverte"
 
-#: templates/page_home.html:148
+#: templates/page_home.html:175
 msgid "\n"
 "          DjangoCon Africa is an opportunity to discover places and people as\n"
 "          well as technology. It will bring together participants from across\n"
@@ -908,11 +909,11 @@ msgstr "\n"
 "           des contextes, des défis et des opportunités.\n"
 "          "
 
-#: templates/page_home.html:160 website/header_menu_items.py:34
+#: templates/page_home.html:252 website/header_menu_items.py:41
 msgid "Sponsors"
 msgstr "Sponsors"
 
-#: templates/page_home.html:162
+#: templates/page_home.html:254
 msgid "\n"
 "        DjangoCon Africa is made possible by the generous sponsorships of\n"
 "        various teams and organisations around the world.\n"
@@ -922,11 +923,14 @@ msgstr "\n"
 "        de diverses équipes et organisations à travers le monde.\n"
 "        "
 
-#: templates/page_home.html:171 templates/page_sponsor_us.html:10
+#: news/templates/news/news_index_page.html:82
+#: news/templates/news/news_index_page.html:84 templates/page_home.html:44
+#: templates/page_home.html:265 templates/page_sponsor_us.html:10
+#: templates/partials/_mobile_nav.html:53
 msgid "Sponsor us"
 msgstr "Nous Sponsoriser"
 
-#: templates/page_home.html:182 templates/page_news_detail.html:9
+#: templates/page_news_detail.html:9
 msgid "Introducing DjangoCon Africa 🌍 2025 🎉"
 msgstr "Découvrez DjangoCon Africa 🌍 2025 🎉"
 
@@ -1060,17 +1064,17 @@ msgstr "\n"
 "         qui atterrira à l'Aéroport International du Kilimandjaro.  \n"
 "        "
 
-#: templates/page_opportunity_grants.html:9 website/header_menu_items.py:41
+#: templates/page_opportunity_grants.html:9 website/header_menu_items.py:29
 msgid "Opportunity Grants"
 msgstr "Bourses de soutien"
 
 #: templates/page_opportunity_grants.html:15
 msgid "DjangoCon Africa opportunity grants are now open until "
-msgstr "Les bourses octroyées dans le cadre de DjangoCon Africa sont désormais ouvertes jusqu'au "
+msgstr "Les bourses de bourses pour la DjangoCon Africa sont désormais ouvertes jusqu'au "
 
 #: templates/page_opportunity_grants.html:20
 msgid "Our opportunity grant application window is now closed."
-msgstr "Notre fenêtre de candidature pour les bourses de soutien est maintenant fermée."
+msgstr "Notre fenêtre de demande de bourses est maintenant fermée."
 
 #: templates/page_opportunity_grants.html:24
 msgid "If you have any questions, feel free to reach out to the opportunity grants team at"
@@ -1470,7 +1474,7 @@ msgstr "Entraînez-vous à présenter vos diapositives encore et encore jusqu'à
 
 #: templates/page_speaker_resources.html:112
 msgid "\n"
-"                This method might sound easier, but you probably need to know about 30% more about your topic if you \n"
+"                This method might sound easier, but you probably need to know about 30%% more about your topic if you \n"
 "                want to freestyle effectively.\n"
 "                "
 msgstr "\n"
@@ -2085,23 +2089,23 @@ msgstr "Tout excédent sera utilisé pour soutenir de futurs événements à but
 msgid "Conference"
 msgstr "Conférence"
 
-#: website/header_menu_items.py:26
+#: website/header_menu_items.py:33
 msgid "Speaking"
 msgstr "Présentation"
 
-#: website/header_menu_items.py:28
+#: website/header_menu_items.py:35
 msgid "Speaking at Djangocon Africa"
 msgstr "Intervenir à Djangocon Africa"
 
-#: website/header_menu_items.py:29
+#: website/header_menu_items.py:36
 msgid "Speaker Resources"
 msgstr "Ressources pour les Orateurs"
 
-#: website/header_menu_items.py:30
+#: website/header_menu_items.py:37
 msgid "Call for Proposals"
 msgstr "Appel à Propositions"
 
-#: website/header_menu_items.py:36
+#: website/header_menu_items.py:43
 msgid "Become a Sponsor"
 msgstr "Devenir Sponsor"
 
@@ -2109,11 +2113,11 @@ msgstr "Devenir Sponsor"
 msgid "Talk Proposals"
 msgstr "Propositions d'Exposés"
 
-#: website/header_menu_items.py:52
+#: website/header_menu_items.py:54
 msgid "Logout"
 msgstr "Déconnexion"
 
-#: website/header_menu_items.py:57
+#: website/header_menu_items.py:59
 msgid "LogIn"
 msgstr "Se connecter"
 
@@ -2136,4 +2140,148 @@ msgstr "La date et l'heure de création de l'opportunité de bourse."
 #: website/models.py:31
 msgid "The date and time when the Opportunity Grant was updated."
 msgstr "La date et l'heure de la mise à jour de l'opportunité de bourse."
+
+#: news/templates/news/news_index_page.html:10
+msgid "Latest News"
+msgstr "Dernières Actualités"
+
+#: news/templates/news/news_index_page.html:59
+msgid "\n"
+"              5 days of inspiration, education and networking at DjangoCon Africa\n"
+"              from 25-31 August, 2025 in Arusha, Tanzania.\n"
+"              "
+msgstr "\n"
+"        Rejoignez-nous pour 5 jours d'inspiration, d'éducation et de réseautage à la \n"
+"        DjangoCon Africa du 11 au 15 Août 2025 en Tanzanie.\n"
+"              "
+
+#: news/templates/news/news_index_page.html:69 templates/page_home.html:38
+#: templates/page_home.html:93 templates/partials/_mobile_nav.html:52
+msgid "Secure a spot"
+msgstr "Réserver une place"
+
+#: news/templates/news/news_index_page.html:74
+#: news/templates/news/news_index_page.html:76
+msgid "Apply to speak"
+msgstr "Postuler pour intervenir"
+
+#: templates/page_home.html:189
+msgid "\n"
+"                Pumped for DjangoCon Africa? Secure a spot now!\n"
+"            "
+msgstr "\n"
+"                Vous êtes impatient de participer à la DjangoCon Africa ? Réservez votre place dès maintenant !\n"
+"            "
+
+#: templates/page_home.html:197
+msgid "Get tickets"
+msgstr "Obtenir des billets"
+
+#: templates/page_home.html:205
+msgid "Our Schedule"
+msgstr "Notre Programme"
+
+#: templates/page_home.html:271
+msgid "Learn more"
+msgstr "En savoir plus"
+
+#: templates/page_tickets.html:8
+msgid "Purchase a Ticket"
+msgstr "Acheter un Billet"
+
+#: templates/page_tickets.html:10
+msgid "Welcome to DjangoCon Africa 2025 Ticket Portal!"
+msgstr "Bienvenue sur le portail des billets de DjangoCon Africa 2025 !"
+
+#: templates/page_tickets.html:12
+msgid "\n"
+"                Ready to join us at DjangoCon Africa 2025? Select your ticket type below to secure your spot. \n"
+"                Early bird tickets are available for a limited time, so don't miss out on the special rates.\n"
+"            "
+msgstr "\n"
+"                Prêt à nous rejoindre à DjangoCon Africa 2025? Choisissez votre type de billet ci-dessous pour réserver votre place. \n"
+"                Les billets à tarif préférentiel sont disponible pour une durée limitée, alors ne ratez pas ces tarifs spéciaux.\n"
+"            "
+
+#: templates/page_tickets.html:36
+msgid "Purchase via WhatsApp"
+msgstr "Acheter par WhatsApp"
+
+#: templates/page_tickets.html:37
+msgid "Click the link below to start your ticket purchase process on WhatsApp:"
+msgstr "Cliquer sur le lien ci-dessous pour commencer l'achat de votre billet sur WhatsApp"
+
+#: templates/page_tickets.html:40
+msgid "Buy Ticket on WhatsApp"
+msgstr "Acheter un Billet sur WhatsApp"
+
+#: templates/page_tickets.html:44
+msgid "\n"
+"            For any questions about WhatsApp purchases, please contact our support team at:\n"
+"            <a href=\"mailto:tickets@djangocon.africa\" style=\"color:\">tickets@djangocon.africa</a>\n"
+"            "
+msgstr "\n"
+"        Pour toute question concernant les achats sur WhatsApp, veuillez contacter notre équipe d'assistance\n"
+"        à l'adresse:  <a href=\"mailto:tickets@djangocon.africa\" style=\"color:\">tickets@djangocon.africa</a>\n"
+"            "
+
+#: website/header_menu_items.py:26
+msgid "Resources"
+msgstr "Ressources"
+
+#: website/header_menu_items.py:28
+msgid "News"
+msgstr "Actualités"
+
+#: website/constants.py:17
+msgid "Call For Proposals Open"
+msgstr "Appel à Propositions Ouvert"
+
+#: website/constants.py:18
+msgid "Call for Sponsors Open"
+msgstr "Appel à Sponsors Ouvert"
+
+#: website/constants.py:19
+msgid "Opportunity Grant Open"
+msgstr "Demandes de bourses Ouvertes"
+
+#: website/constants.py:22
+msgid "Ticket Sales Open"
+msgstr "Debut de le Vente des Billets"
+
+#: website/constants.py:23
+msgid "Opportunity Grants && Call For Proposals close"
+msgstr "Fermeture de Bourses et d'Appel à Propositions"
+
+#: website/constants.py:26
+msgid "Talk review start"
+msgstr "Début Revue des Propositions"
+
+#: website/constants.py:27
+msgid "Opportunity Grant && Call for Proposal Notifications"
+msgstr "Notifications de Bourses et d'Appel à Propositions"
+
+#: website/constants.py:30
+msgid "Django Girls starts"
+msgstr "Début de Django Girls"
+
+#: website/constants.py:31
+msgid "Django Girls ends"
+msgstr "Fin de Django Girls"
+
+#: website/constants.py:34
+msgid "Conference starts"
+msgstr "Début de la Conférence"
+
+#: website/constants.py:35
+msgid "UbuCon starts"
+msgstr "Début de UbuCon"
+
+#: website/constants.py:38
+msgid "Conference ends"
+msgstr "Fin de la Conférence"
+
+#: website/constants.py:39
+msgid "UbuCon ends"
+msgstr "Fin de UbuCon"
 
