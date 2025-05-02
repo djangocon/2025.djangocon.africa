@@ -210,7 +210,7 @@
               {% for cell in row %}
                 <p class="{% if cell.0|is_past %}line-through text-gray-400{% endif %}">
                   <span class="text-neutral-400 font-medium">{{ cell.0|format_date }}:</span>
-                  <span>{{ cell.1 }}</span>
+                  <span>{% translate cell.1 %}</span>
                 </p>
               {% endfor %}
             </div>
@@ -224,7 +224,7 @@
                   {% for cell in row %}
                     <p class="{% if cell.0|is_past %}line-through text-gray-400{% endif %}">
                       <span class="text-neutral-400 font-medium">{{ cell.0|format_date }}:</span>
-                      <span>{{ cell.1 }}</span>
+                      <span>{%  translate cell.1 %}</span>
                     </p>
                   {% endfor %}
                 </div>
@@ -236,7 +236,7 @@
                   {% for cell in row %}
                     <p class="{% if cell.0|is_past %}line-through text-gray-400{% endif %}">
                       <span class="text-neutral-400 font-medium">{{ cell.0|format_date }}:</span>
-                      <span>{{ cell.1 }}</span>
+                      <span>{%  translate cell.1 %}</span>
                     </p>
                   {% endfor %}
                 </div>
