@@ -1,23 +1,52 @@
-<!-- templates/grants/verify_code.html -->
-{% extends '_base.html' %}
-{% block title %}Verify Code{% endblock %}
+{% extends "_base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Verify Your Grant Status" %}{% endblock %}
 {% block content %}
-    <h1 class="text-2xl font-bold mb-4">Enter Verification Code</h1>
-    <p class="mb-4">A code was sent to <strong>{{ email }}</strong>.</p>
-    {% if messages %}
-        {% for message in messages %}
-            <p class="{% if message.tags == 'error' %}text-red-500{% else %}text-green-500{% endif %} mb-4">{{ message }}</p>
-        {% endfor %}
-    {% endif %}
-    <form method="post" class="bg-white p-6 rounded-lg shadow-md max-w-md">
-        {% csrf_token %}
-        <div class="mb-4">
-            <label for="code" class="block text-sm font-medium text-gray-700">Verification Code:</label>
-            <input type="text" name="code" id="code" class="mt-1 p-2 w-full border rounded-md focus:ring-blue-500 focus:border-blue-500" required>
-        </div>
-        <button type="submit" class="bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 w-full">Verify</button>
-    </form>
-    <p class="mt-4">
-        <a href="{% url 'request_code' %}" class="text-blue-600 hover:underline">Request a new code</a>
-    </p>
+<div class="flex items-center justify-center min-h-screen bg-gray-50 mt-[72px] md:mt-[88px]">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 max-w-[246px] w-full mx-auto bg-white rounded-xl shadow-2xl p-6 md:p-8 hover:-translate-y-1 transition-transform duration-200">
+        <h1 class="text-2xl font-bold text-gray-900 mb-6 text-center tracking-tight">
+            {% translate "Enter Verification Code" %}
+        </h1>
+
+        <!-- Messages -->
+        {% if messages %}
+            <div class="mb-6">
+                {% for message in messages %}
+                    <p class="text-center text-sm font-medium {% if message.tags == 'error' %}text-red-600{% else %}text-green-600{% endif %} animate-fade-in">
+                        {{ message }}
+                    </p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <!-- Form -->
+        <form method="post">
+            {% csrf_token %}
+            <div class="flex flex-col sm:flex-row gap-2">
+                <div class="flex-1">
+                    <input
+                        type="text"
+                        name="code"
+                        id="code"
+                        class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-deepTeal focus:border-deepTeal text-gray-900 placeholder-gray-400 transition-colors duration-200"
+                        placeholder="{% translate 'Enter 6-digit code' %}"
+                        required
+                    >
+                </div>
+                <button
+                    type="submit"
+                    class="w-auto bg-deepTeal text-white px-4 py-2 rounded-lg hover:bg-deepTeal/80 focus:outline-none focus:ring-2 focus:ring-deepTeal focus:ring-offset-2 transition duration-200 transform hover:scale-105"
+                >
+                    {% translate "Verify Code" %}
+                </button>
+            </div>
+        </form>
+        <p class="mt-4 text-center text-sm text-gray-600">
+            {% blocktranslate with email=email %}Code sent to {{ email }}.{% endblocktranslate %}
+        </p>
+    </div>
+    <footer class="fixed bottom-0 w-full bg-gray-800/80 text-white py-4 text-center z-0">
+        {% include "partials/_footer.html" %}
+    </footer>
+</div>
 {% endblock %}

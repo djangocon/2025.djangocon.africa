@@ -3,7 +3,7 @@
 /*
 Tanzania flag colors generated using:
 - https://www.flagcolorcodes.com/tanzania
-- https://uicolors.app/create 
+- https://uicolors.app/create
 */
 
 // tz_flag_green = {
@@ -12,7 +12,7 @@ Tanzania flag colors generated using:
 //   '200': '#bbf7c5',
 //   '300': '#85f098',
 //   '400': '#49df65',
-//   '500': '#1eb53a', //main 
+//   '500': '#1eb53a', //main
 //   '600': '#15a430',
 //   '700': '#148129',
 //   '800': '#156625',
@@ -49,7 +49,7 @@ Tanzania flag colors generated using:
 // }
 
 
-// 
+//
 
 const darkPrimary = "#0F103F"
 const lightPrimary = "#2B1392"
@@ -87,6 +87,15 @@ module.exports = {
       backgroundImage: {
         'dotted-world-map': "url('/static/images/dotted-world-map.svg')",
     },
+      animation: {
+        'fade-in': 'fadeIn 0.3s ease-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
     },
   },
   plugins: [],
