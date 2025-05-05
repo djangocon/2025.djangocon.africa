@@ -29,6 +29,7 @@ urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('set_language/', set_language, name='set_language'),
     path("news/", include("news.urls")),
+    path('grants/', include('grants.urls')),
 ]
 
 if settings.DEBUG:
@@ -43,4 +44,5 @@ urlpatterns += i18n_patterns(
     path("", include("website.urls")),
     path("accounts/", include("allauth.urls")),
     path("sponsors/", include("sponsors.urls")),
+    path('grants/', include('grants.urls')),
 )
