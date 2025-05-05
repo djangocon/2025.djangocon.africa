@@ -1,0 +1,29 @@
+<!-- grants/templates/grants/grant_status.html -->
+{% extends "_base.html" %}
+{% block content %}
+<div class="max-w-2xl mx-auto p-6">
+    <h1 class="text-2xl font-bold mb-4">Grant Application Status</h1>
+    <div class="bg-white shadow-md rounded-lg p-6">
+        <p><strong>Name:</strong> {{ application.full_name }}</p>
+        <p><strong>Email:</strong> {{ application.email }}</p>
+        <p><strong>Status:</strong> {{ application.status }}</p>
+        {% if application.grant_type %}
+        <p><strong>Grant Type:</strong> {{ application.get_grant_type_display }}</p>
+        {% endif %}
+        {% if application.ticket_only %}
+        <p><strong>Ticket Only:</strong> {{ application.get_ticket_only_display }}</p>
+        {% endif %}
+        <h2 class="text-xl font-semibold mt-4 mb-2">Budget Details</h2>
+        {% if budget.items %}
+        <ul class="list-disc pl-5">
+            {% for item in budget.items %}
+            <li>{{ item.name }}: {{ item.cost }}</li>
+            {% endfor %}
+        </ul>
+        <p class="mt-2"><strong>Total:</strong> {{ budget.total_amount }}</p>
+        {% else %}
+        <p>No budget details provided.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

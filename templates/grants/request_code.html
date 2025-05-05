@@ -1,0 +1,19 @@
+<!-- templates/grants/request_code.html -->
+{% extends '_base.html' %}
+{% block title %}Request Verification Code{% endblock %}
+{% block content %}
+    <h1 class="text-2xl font-bold mb-4">Request Grant Status</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <p class="{% if message.tags == 'error' %}text-red-500{% else %}text-green-500{% endif %} mb-4">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+    <form method="post" class="bg-white p-6 rounded-lg shadow-md max-w-md">
+        {% csrf_token %}
+        <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+            <input type="email" name="email" id="email" class="mt-1 p-2 w-full border rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+        </div>
+        <button type="submit" class="bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 w-full">Send Code</button>
+    </form>
+{% endblock %}

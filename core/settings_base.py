@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "allauth.account",
     "sponsors",
     "news",
+    "grants",
 
     # wagtail
     'wagtail.contrib.forms',
