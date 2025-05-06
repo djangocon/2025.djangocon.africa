@@ -2,58 +2,55 @@
 {% load i18n %}
 {% block title %}{% translate "Grant Application Status" %}{% endblock %}
 {% block content %}
-    <div class="flex items-center justify-center min-h-screen bg-gray-50 mt-[72px] md:mt-[88px]">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 max-w-lg w-full mx-auto bg-white rounded-xl shadow-2xl p-6 md:p-8 hover:-translate-y-1 transition-transform duration-200">
-            <h1 class="text-2xl font-bold text-gray-900 mb-6 text-center tracking-tight">
-                {% translate "Grant Application Status" %}
-            </h1>
+<div class="dj-container pt-[72px] md:pt-[88px] pb-16">
+    <h2 class="text-center">{% translate "Grant Application Status" %}</h2>
+    <div class="flex flex-col gap-y-8 md:max-w-[740px] mx-auto pt-10 lg:pt-8">
+        <!-- Status Card -->
+        <div class="space-y-6 bg-white rounded-xl shadow-md p-6">
+            <div class="flex items-center justify-between border-b border-gray-200 pb-3">
+                <span class="text-sm font-medium text-gray-600">{% translate "Name" %}</span>
+                <span class="text-base font-semibold text-gray-900">{{ application.full_name }}</span>
+            </div>
+            <div class="flex items-center justify-between border-b border-gray-200 pb-3">
+                <span class="text-sm font-medium text-gray-600">{% translate "Email" %}</span>
+                <span class="text-base font-semibold text-gray-900">{{ application.email }}</span>
+            </div>
+            <div class="flex items-center justify-between border-b border-gray-200 pb-3">
+                <span class="text-sm font-medium text-gray-600">{% translate "Status" %}</span>
+                <span class="text-base font-semibold {% if application.status == 'PENDING' %}text-yellow-600{% elif application.status == 'ACCEPTED' %}text-green-600{% else %}text-red-600{% endif %}">
+                    {{ application.status|title }}
+                </span>
+            </div>
+            {% if application.grant_type %}
+            <div class="flex items-center justify-between border-b border-gray-200 pb-3">
+                <span class="text-sm font-medium text-gray-600">{% translate "Grant Type" %}</span>
+                <span class="text-base font-semibold text-gray-900">{{ application.get_grant_type_display }}</span>
+            </div>
+            {% endif %}
+            {% if application.ticket_only %}
+            <div class="flex items-center justify-between border-b border-gray-200 pb-3">
+                <span class="text-sm font-medium text-gray-600">{% translate "Ticket Only" %}</span>
+                <span class="text-base font-semibold text-gray-900">{{ application.get_ticket_only_display }}</span>
+            </div>
+            {% endif %}
 
-            <!-- Status Card -->
-            <div class="space-y-4">
-                <div class="flex items-center justify-between border-b border-gray-200 pb-3">
-                    <span class="text-sm font-medium text-gray-600">{% translate "Name" %}</span>
-                    <span class="text-base font-semibold text-gray-900">{{ application.full_name }}</span>
-                </div>
-                <div class="flex items-center justify-between border-b border-gray-200 pb-3">
-                    <span class="text-sm font-medium text-gray-600">{% translate "Email" %}</span>
-                    <span class="text-base font-semibold text-gray-900">{{ application.email }}</span>
-                </div>
-                <div class="flex items-center justify-between border-b border-gray-200 pb-3">
-                    <span class="text-sm font-medium text-gray-600">{% translate "Status" %}</span>
-                    <span class="text-base font-semibold {% if application.status == 'PENDING' %}text-yellow-600{% elif application.status == 'ACCEPTED' %}text-green-600{% else %}text-red-600{% endif %}">
-                        {{ application.status|title }}
-                    </span>
-                </div>
-                {% if application.grant_type %}
-                <div class="flex items-center justify-between border-b border-gray-200 pb-3">
-                    <span class="text-sm font-medium text-gray-600">{% translate "Grant Type" %}</span>
-                    <span class="text-base font-semibold text-gray-900">{{ application.get_grant_type_display }}</span>
-                </div>
+            <!-- Budget Details -->
+            <div class="mt-6">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4">{% translate "Budget Details" %}</h2>
+                {% if budget.items %}
+                <ul class="list-disc pl-5 space-y-2">
+                    {% for item in budget.items %}
+                    <li class="text-gray-700">{{ item.name }}: <span class="font-medium">{{ item.cost }}</span></li>
+                    {% endfor %}
+                </ul>
+                <p class="mt-4 text-base font-semibold text-gray-900">
+                    {% translate "Total" %}: {{ budget.total_amount }}
+                </p>
+                {% else %}
+                <p class="text-gray-600 italic">{% translate "No budget details provided." %}</p>
                 {% endif %}
-                {% if application.ticket_only %}
-                <div class="flex items-center justify-between border-b border-gray-200 pb-3">
-                    <span class="text-sm font-medium text-gray-600">{% translate "Ticket Only" %}</span>
-                    <span class="text-base font-semibold text-gray-900">{{ application.get_ticket_only_display }}</span>
-                </div>
-                {% endif %}
-
-                <!-- Budget Details -->
-                <div class="mt-6">
-                    <h2 class="text-lg font-semibold text-gray-800 mb-4">{% translate "Budget Details" %}</h2>
-                    {% if budget.items %}
-                    <ul class="list-disc pl-5 space-y-2">
-                        {% for item in budget.items %}
-                        <li class="text-gray-700">{{ item.name }}: <span class="font-medium">{{ item.cost }}</span></li>
-                        {% endfor %}
-                    </ul>
-                    <p class="mt-4 text-base font-semibold text-gray-900">
-                        {% translate "Total" %}: {{ budget.total_amount }}
-                    </p>
-                    {% else %}
-                    <p class="text-gray-600 italic">{% translate "No budget details provided." %}</p>
-                    {% endif %}
-                </div>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
