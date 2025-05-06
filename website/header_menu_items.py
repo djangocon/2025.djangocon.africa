@@ -19,6 +19,7 @@ header_menu_items = [
             # HeaderLink(label=_("About the conference"), href="#"),
             # HeaderLink(label=_("Venue"), href="#"),
             HeaderLink(label=_("Code of Conduct"), href="/coc"),
+            HeaderLink(label=_("Welcome To Arusha"), href="/welcome_to_arusha"),
             # HeaderLink(label=_("Organisers"), href="#"),
         ]
     ),

@@ -9,12 +9,7 @@ from website.constants import SCHEDULES
 def page_home(request):
 
     return render(
-        request,
-        "page_home.html",
-        {
-            "is_white_header": False,
-            "schedule": SCHEDULES
-        }
+        request, "page_home.html", {"is_white_header": False, "schedule": SCHEDULES}
     )
 
 
@@ -38,9 +33,12 @@ def page_sponsor_us(request):
     return render(request, "page_sponsor_us.html")
 
 
+def page_welcome(request):
+    return render(request, "page_welcome.html")
+
+
 def page_ticket(request):
-    context = {
-        "is_white_header": False, "uza_api_key": settings.UZA_PUBLIC_API_KEY}
+    context = {"is_white_header": False, "uza_api_key": settings.UZA_PUBLIC_API_KEY}
     return render(request, "page_tickets.html", context)
 
 
