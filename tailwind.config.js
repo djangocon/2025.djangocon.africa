@@ -75,7 +75,7 @@ module.exports = {
       colors: {
         // tz_flag_green,
         // tz_flag_yellow,
-        // tz_flag_blue
+        // tz_flag_blue,
         darkPrimary,
         lightPrimary,
         accentPurple,

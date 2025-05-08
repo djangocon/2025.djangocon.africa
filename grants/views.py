@@ -1,7 +1,6 @@
 # grants/views.py
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
-from django.template.loader import render_to_string
 import logging
 
 from django.conf import settings
