@@ -1,5 +1,7 @@
 from .settings_base import *  # noqa: F403
+from decouple import config
 import dj_database_url
+import os
 
 ALLOWED_HOSTS = ["2025.djangocon.africa"]
 BASE_URL = "https://2025.djangocon.africa"
@@ -18,13 +20,8 @@ DATABASES = {
 
 
 # email config - to be setted in another feature
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'in-v3.mailjet.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'mailjet-api-key'
-EMAIL_HOST_PASSWORD = 'mailjet-secret-key'
-DEFAULT_FROM_EMAIL = 'grants@djangoconafrica.org'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST_USER = str(os.getenv('EMAIL_USER'))
-EMAIL_HOST_PASSWORD = str(os.getenv('EMAIL_PASSWORD'))
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+MAILJET_API_KEY = config('MAILJET_API_KEY')
+MAILJET_API_SECRET = config('MAILJET_SECRET_KEY')
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
+DEFAULT_FROM_NAME = 'DjangoCon Africa 2025'

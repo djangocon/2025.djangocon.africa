@@ -1,6 +1,7 @@
-from .settings_base import *  # noqa: F403
 import dj_database_url
 import os
+from decouple import config
+from .settings_base import *  # noqa: F403
 
 SECRET_KEY = "not really a secret"
 DEBUG = True
@@ -37,8 +38,21 @@ DATABASES = {
     )
 }
 
+# Email Sending settings
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
+DEFAULT_FROM_NAME = 'DjangoCon Africa 2025'
+
+# For development (console output)
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# For production (Mailjet)
+# Mailjet configuration
+# EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+# MAILJET_API_KEY = config('MAILJET_API_KEY')
+# MAILJET_API_SECRET = config('MAILJET_SECRET_KEY')
+
 EMAIL_FILE_PATH = BASE_DIR / "gitignore/emails"  # noqa: F405
-FEATURE_FLAGS["USER_LOGIN_REG"] = True  # noqa: F405
+FEATURE_FLAGS["USER_LOGIN_REG"] = True
+# noqa: F405
 WAGTAIL_SITE_NAME = 'DjangoCon Africa'
 WAGTAILADMIN_BASE_URL = "http://localhost:8000"

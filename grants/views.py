@@ -1,6 +1,9 @@
 # grants/views.py
 from django.shortcuts import render, redirect
-from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.template.loader import render_to_string
+import logging
+
 from django.conf import settings
 from .models import GrantApplication, VerificationCode
 from django.contrib import messages
@@ -9,7 +12,10 @@ import random
 import string
 from django.utils import timezone
 from datetime import timedelta
+from .utils.email import send_email  # Import the new function
 
+
+logger = logging.getLogger(__name__)
 def parse_budget(budget_text):
     """Parse budget text into a structured dictionary."""
     budget = {'total_amount': '0$', 'items': []}
@@ -22,6 +28,8 @@ def parse_budget(budget_text):
     for item_name, item_cost in items:
         budget['items'].append({'name': item_name.strip(), 'cost': '$' + item_cost})
     return budget
+
+
 
 def request_code(request):
     if request.method == 'POST':
@@ -46,21 +54,27 @@ def request_code(request):
         )
 
         subject = 'DjangoCon Africa Grant Verification Code'
-        message = f'Your verification code is: {code}\nThis code expires in 10 minutes.'
-        try:
-            send_mail(
-                subject,
-                message,
-                settings.DEFAULT_FROM_EMAIL,
-                [email],
-                fail_silently=False,
-            )
+        context = {'code': code}
+        html_content = render_to_string('grants/verification_email.html', context)
+        text_content = f'Your verification code is: {code}\nThis code expires in 10 minutes.'
+
+        # Send email using the custom function
+        success = send_email(
+            subject=subject,
+            text_content=text_content,
+            html_content=html_content,
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            from_name=settings.DEFAULT_FROM_NAME,
+            to_email=email,
+            to_name=None  # Optional recipient name
+        )
+
+        if success:
             messages.success(request, 'Verification code sent to your email.')
-        except Exception as e:
+            return redirect('verify_code', email=email)
+        else:
             messages.error(request, 'Failed to send email. Please try again.')
             return render(request, 'grants/request_code.html')
-
-        return redirect('verify_code', email=email)
 
     return render(request, 'grants/request_code.html')
 
