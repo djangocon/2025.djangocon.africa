@@ -1,16 +1,17 @@
 # grants/views.py
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
+from datetime import timedelta
+from django.utils import timezone
+from django.contrib import messages
+
 import logging
+import random
+import string
+import re
 
 from django.conf import settings
 from .models import GrantApplication, VerificationCode
-from django.contrib import messages
-import re
-import random
-import string
-from django.utils import timezone
-from datetime import timedelta
 from .utils.email import send_email  # Import the new function
 
 
@@ -20,7 +21,9 @@ def parse_budget(budget_text):
     budget = {'total_amount': '0$', 'items': []}
     if not budget_text.strip():
         return budget
+    print(budget_text)
     total_match = re.search(r'Total.*?\$(\d+)', budget_text, re.IGNORECASE)
+    print(total_match)
     if total_match:
         budget['total_amount'] = total_match.group(1) + '$'
     items = re.findall(r'(\w+(?:\s*\w+)*)\s*:\s*\$?(\d+)(?:\s*\([^)]+\))?', budget_text, re.IGNORECASE)
