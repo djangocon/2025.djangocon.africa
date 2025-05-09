@@ -27,25 +27,44 @@ class Command(BaseCommand):
                 # Map original columns to new header
                 old_to_new = {
                     'Timestamp': 'Timestamp',
-                    'Column 1': 'Column1',
-                    'Full Name': 'FullName',
+                    'Column1': 'Column1',
+                    'FullName': 'FullName',
                     'Email': 'Email',
-                    'Profession / Occupation': 'Profession',
-                    'Country of Origin': 'Country',
-                    'City or Town You Are Traveling From': 'City',
-                    'Do you only need a conference ticket?': 'TicketOnly',
-                    'Type of Grant': 'GrantType',
-                    'How much financial assistance would you need to attend DjangoCon Africa 2025. Please itemize below: (eg. Flight, lodging, ground transportation, Visa, incidence) etc.': 'Budget',
+                    'Profession': 'Profession',
+                    'CountryOrigin': 'Country',
+                    'CityTravelingFrom': 'City',
+                    'YourNeed': 'TicketOnly',
+                    'TypeofGrant': 'GrantType',
+                    'Budget': 'Budget',
                 }
 
+                # Verify all expected columns exist
+                missing_cols = [col for col in old_to_new if col not in reader.fieldnames]
+                if missing_cols:
+                    self.stdout.write(
+                        self.style.WARNING(f"Missing columns in CSV: {missing_cols}")
+                    )
+
                 rows = []
-                for row in reader:
-                    new_row = []
+                for row_num, row in enumerate(reader, 1):
+                    new_row = {}
                     for new_col in new_header:
+                        # Find the original column name that maps to this new column
                         old_col = next((k for k, v in old_to_new.items() if v == new_col), None)
-                        value = row.get(old_col, '')  # Use empty string for blank values
-                        new_row.append(value)
-                    rows.append(new_row)
+                        if old_col:
+                            value = row.get(old_col, '').strip()  # Use empty string for blank values, strip whitespace
+                            new_row[new_col] = value
+                        else:
+                            self.stdout.write(
+                                self.style.WARNING(f"Row {row_num}: No mapping for new column {new_col}")
+                            )
+                            new_row[new_col] = ''
+                    # Debug: Check Budget specifically
+                    if not new_row.get('Budget'):
+                        self.stdout.write(
+                            self.style.WARNING(f"Row {row_num}: Budget is empty or missing")
+                        )
+                    rows.append([new_row[col] for col in new_header])
 
             # Validate row lengths
             header_len = len(new_header)
