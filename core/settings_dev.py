@@ -52,7 +52,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # MAILJET_API_SECRET = config('MAILJET_SECRET_KEY')
 
 EMAIL_FILE_PATH = BASE_DIR / "gitignore/emails"  # noqa: F405
-FEATURE_FLAGS["USER_LOGIN_REG"] = True
+FEATURE_FLAGS = {"USER_LOGIN_REG": False}
 # noqa: F405
 WAGTAIL_SITE_NAME = 'DjangoCon Africa'
 WAGTAILADMIN_BASE_URL = "http://localhost:8000"
