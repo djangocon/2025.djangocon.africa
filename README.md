@@ -1,7 +1,7 @@
 # 2025.djangocon.africa
 Website for DjangoCon Africa 2025
 
-## Installation 
+## Installation
 
 To get up and running do the following:
 
@@ -9,17 +9,17 @@ To get up and running do the following:
 1. Create a virtual environment.
 
 ```
-python3.12 -m venv venv 
+python3.12 -m venv venv
 ```
 
 Of course there are many ways to make a virtual environment. We are following the simplest method. If you like to use a different thing then go for it.
 
 2. Install the requirements
 
-Activate your virtual env 
+Activate your virtual env
 
 ```
-source venv/bin/activate 
+source venv/bin/activate
 ```
 
 Then install the requirements:
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 3. Install npm dependencies
 
 ```
-npm install 
+npm install
 ```
 
 ## Running the application
@@ -40,7 +40,7 @@ npm install
 
 See: dev_db/README.md
 
-Remember to run the migrations! 
+Remember to run the migrations!
 
 2. Run the server
 
@@ -52,13 +52,13 @@ python manage.py runserver
 ```
 
 
-## Working with tailwind 
+## Working with tailwind
 
 You can learn about tailwind [here](https://tailwindcss.com/docs/installation). It is installed in this project using the standard "Tailwind CLI" installation.
 
 The Tailwind CLI is used to build a css file. The build process takes in a few inputs:
 
-1. HTML files: It will look at what tailwind classes you are referencing inside your html files. The final built css file will contain only those css classes that are actually being used. 
+1. HTML files: It will look at what tailwind classes you are referencing inside your html files. The final built css file will contain only those css classes that are actually being used.
 
 2. An input CSS file. In our case we are using `website/static/src/tailwind_input.css`. This file contains any extra classes or default styles.
 
@@ -66,7 +66,7 @@ The Tailwind CLI is used to build a css file. The build process takes in a few i
 
 The output of the tailwind build is: `website/static/dist/tailwind_final.css`. You can see that we reference this file in our base template, `website/templates/website/_base.html`
 
-### Building the tailwind css file 
+### Building the tailwind css file
 
 There are 2 commands you can use:
 
@@ -92,3 +92,7 @@ Django internationalisation has been enabled for this website and we support Eng
 4. To generate messages for translations, use the `django-admin makemessages -l fr` and all the files with translate tags will be added to `locale/fr/LC_MESSAGES/django.po`. This is the file translators should edit to support translation into French.
 5. To compile messages use the `django-admin compilemessages` command. For more information on Django translations read the Django documentation
 https://docs.djangoproject.com/en/5.1/topics/i18n/translation/.
+
+## wagtail configuration
+We use wagtail for to manage articles :
+1. Local Configuration : ... (to be added)
