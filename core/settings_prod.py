@@ -20,8 +20,8 @@ DATABASES = {
 
 
 # email config - to be setted in another feature
-EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
-MAILJET_API_KEY = config('MAILJET_API_KEY')
-MAILJET_API_SECRET = config('MAILJET_SECRET_KEY')
-DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
-DEFAULT_FROM_NAME = 'DjangoCon Africa 2025'
+EMAIL_BACKEND = "django.core.mail.backends.dummy.EmailBackend"
+MAILJET_API_KEY = config("MAILJET_API_KEY")
+MAILJET_API_SECRET = config("MAILJET_SECRET_KEY")
+DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL", default="hello@djangocon.africa")
+DEFAULT_FROM_NAME = "DjangoCon Africa 2025"

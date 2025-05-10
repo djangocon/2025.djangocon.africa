@@ -7,37 +7,79 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='GrantApplication',
+            name="GrantApplication",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('timestamp', models.DateTimeField()),
-                ('full_name', models.CharField(max_length=200)),
-                ('email', models.EmailField(max_length=254, unique=True)),
-                ('profession', models.CharField(max_length=200)),
-                ('country_of_origin', models.CharField(max_length=100)),
-                ('city_of_travel', models.CharField(max_length=100)),
-                ('ticket_only', models.CharField(choices=[('YES', 'Yes'), ('NO', 'No')], max_length=50)),
-                ('grant_type', models.CharField(choices=[('TRAVEL', 'Travel'), ('TICKET', 'Conference Ticket'), ('FULL', 'Full (Travel + Ticket)'), ('SPEAKER', 'Speaker')], max_length=100)),
-                ('budget_details', models.TextField(blank=True, default='')),
-                ('status', models.CharField(choices=[('PENDING', 'Pending'), ('ACCEPTED', 'Accepted'), ('REJECTED', 'Rejected')], default='PENDING', max_length=20)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("timestamp", models.DateTimeField()),
+                ("full_name", models.CharField(max_length=200)),
+                ("email", models.EmailField(max_length=254, unique=True)),
+                ("profession", models.CharField(max_length=200)),
+                ("country_of_origin", models.CharField(max_length=100)),
+                ("city_of_travel", models.CharField(max_length=100)),
+                (
+                    "ticket_only",
+                    models.CharField(
+                        choices=[("YES", "Yes"), ("NO", "No")], max_length=50
+                    ),
+                ),
+                (
+                    "grant_type",
+                    models.CharField(
+                        choices=[
+                            ("TRAVEL", "Travel"),
+                            ("TICKET", "Conference Ticket"),
+                            ("FULL", "Full (Travel + Ticket)"),
+                            ("SPEAKER", "Speaker"),
+                        ],
+                        max_length=100,
+                    ),
+                ),
+                ("budget_details", models.TextField(blank=True, default="")),
+                (
+                    "status",
+                    models.CharField(
+                        choices=[
+                            ("PENDING", "Pending"),
+                            ("ACCEPTED", "Accepted"),
+                            ("REJECTED", "Rejected"),
+                        ],
+                        default="PENDING",
+                        max_length=20,
+                    ),
+                ),
             ],
             options={
-                'ordering': ['-timestamp'],
+                "ordering": ["-timestamp"],
             },
         ),
         migrations.CreateModel(
-            name='VerificationCode',
+            name="VerificationCode",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('email', models.EmailField(max_length=254, unique=True)),
-                ('code', models.CharField(max_length=6)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('expires_at', models.DateTimeField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("email", models.EmailField(max_length=254, unique=True)),
+                ("code", models.CharField(max_length=6)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("expires_at", models.DateTimeField()),
             ],
         ),
     ]

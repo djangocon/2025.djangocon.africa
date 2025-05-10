@@ -39,11 +39,11 @@ DATABASES = {
 }
 
 # Email Sending settings
-DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
-DEFAULT_FROM_NAME = 'DjangoCon Africa 2025'
+DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", "rakoto.olive42@gmail.com")
+DEFAULT_FROM_NAME = "DjangoCon Africa 2025"
 
 # For development (console output)
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # For production (Mailjet)
 # Mailjet configuration
@@ -54,5 +54,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_FILE_PATH = BASE_DIR / "gitignore/emails"  # noqa: F405
 FEATURE_FLAGS = {"USER_LOGIN_REG": False}
 # noqa: F405
-WAGTAIL_SITE_NAME = 'DjangoCon Africa'
+WAGTAIL_SITE_NAME = "DjangoCon Africa"
 WAGTAILADMIN_BASE_URL = "http://localhost:8000"
