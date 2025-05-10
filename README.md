@@ -96,3 +96,15 @@ https://docs.djangoproject.com/en/5.1/topics/i18n/translation/.
 ## wagtail configuration
 We use wagtail for to manage articles :
 1. Local Configuration : ... (to be added)
+
+## Steps for charging grant application  from csv file
+step 1 :  after exporting the google sheets grant application as a csv , rename the header with following names:
+
+Timestamp,Column1,FullName,Email,Profession,CountryOrigin,CityTravelingFrom,YourNeed,AboutYourself,TypeofGrant,Budget
+
+step 2 : upload the csv file in /media/
+step 3 : Use the command `python manage.py preprocess /media/grants.csv  /media/grants_treated.csv`
+step 4 : After  content verification you can use the command
+`python manage.py  import_file_grants   /media/grants_treated.csv`
+to put records the databases
+step 5 : revert in case of error : ....
