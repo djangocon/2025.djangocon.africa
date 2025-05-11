@@ -55,3 +55,43 @@ FEATURE_FLAGS = {"USER_LOGIN_REG": False}
 # noqa: F405
 WAGTAIL_SITE_NAME = "DjangoCon Africa"
 WAGTAILADMIN_BASE_URL = "http://localhost:8000"
+
+# Basic development logging configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+    },
+    'formatters': {
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'loggers': {
+        '': {  # Root logger
+            'handlers': ['console'],
+            'level': 'INFO',  # Only show INFO and above
+            'propagate': True,
+        },
+        'django': {
+            'handlers': ['console'],
+            'level': 'INFO',  # Suppress Django DEBUG logs
+            'propagate': False,
+        },
+        'autoreload': {
+            'handlers': ['console'],
+            'level': 'WARNING',  # Suppress autoreload DEBUG logs
+            'propagate': False,
+        },
+        'wagtail': {
+            'handlers': ['console'],
+            'level': 'WARNING',  # Suppress Wagtail DEBUG logs
+            'propagate': False,
+        },
+    },
+}
