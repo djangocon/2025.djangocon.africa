@@ -19,9 +19,6 @@ class GrantApplication(models.Model):
     timestamp = models.DateTimeField()
     full_name = models.CharField(max_length=200)
     email = models.EmailField(unique=True)
-    profession = models.CharField(max_length=200)
-    country_of_origin = models.CharField(max_length=100)
-    city_of_travel = models.CharField(max_length=100)
     ticket_only = models.CharField(max_length=50, choices=TICKET_CHOICES)
     grant_type = models.CharField(max_length=100, choices=GRANT_TYPES)
     budget_details = models.TextField(blank=True, default="")  # Allow blank

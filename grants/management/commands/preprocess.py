@@ -16,12 +16,8 @@ class Command(BaseCommand):
         # Define new header (matches GrantApplication fields, no Motivation)
         new_header = [
             "Timestamp",
-            "Column1",
             "FullName",
             "Email",
-            "Profession",
-            "Country",
-            "City",
             "TicketOnly",
             "GrantType",
             "Budget",
@@ -38,12 +34,8 @@ class Command(BaseCommand):
                 # Map original columns to new header
                 old_to_new = {
                     "Timestamp": "Timestamp",
-                    "Column1": "Column1",
                     "FullName": "FullName",
                     "Email": "Email",
-                    "Profession": "Profession",
-                    "CountryOrigin": "Country",
-                    "CityTravelingFrom": "City",
                     "YourNeed": "TicketOnly",
                     "TypeofGrant": "GrantType",
                     "Budget": "Budget",
