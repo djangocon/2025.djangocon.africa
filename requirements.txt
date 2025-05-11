@@ -101,9 +101,12 @@ pytest==8.3.3
     #   -r requirements.in
     #   pytest-django
     #   pytest-dotenv
+    #   pytest-mock
 pytest-django==4.8.0
     # via -r requirements.in
 pytest-dotenv==0.5.2
+    # via -r requirements.in
+pytest-mock==3.14.0
     # via -r requirements.in
 python-decouple==3.8
     # via -r requirements.in
