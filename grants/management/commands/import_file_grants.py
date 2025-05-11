@@ -7,15 +7,28 @@ import pytz
 
 
 class Command(BaseCommand):
-    help = "Import grant applications from a preprocessed CSV file, updating existing records for duplicate emails"
+    help = "Import grant applications from a preprocessed CSV file, updating existing records for duplicate emails, or revert imports"
 
     def add_arguments(self, parser):
         parser.add_argument(
             "csv_file", type=str, help="Path to the preprocessed CSV file"
         )
+        parser.add_argument(
+            "--revert",
+            action="store_true",
+            help="Revert the import by deleting records from the CSV file",
+        )
 
     def handle(self, *args, **kwargs):
         csv_file = kwargs["csv_file"]
+        revert = kwargs["revert"]
+
+        if revert:
+            self.revert_import(csv_file)
+        else:
+            self.import_applications(csv_file)
+
+    def import_applications(self, csv_file):
         valid_grant_types = ["TRAVEL", "TICKET", "FULL", "SPEAKER"]
 
         try:
@@ -123,3 +136,33 @@ class Command(BaseCommand):
             self.stdout.write(self.style.ERROR(f"File {csv_file} not found"))
         except Exception as e:
             self.stdout.write(self.style.ERROR(f"Error reading CSV: {e}"))
+
+    def revert_import(self, csv_file):
+        try:
+            with open(csv_file, "r", encoding="utf-8-sig") as file:
+                reader = csv.DictReader(file)
+                if "Email" not in reader.fieldnames:
+                    self.stdout.write(
+                        self.style.ERROR("CSV file must contain an 'Email' column")
+                    )
+                    return
+
+                emails = [row["Email"].strip() for row in reader if row["Email"].strip()]
+                if not emails:
+                    self.stdout.write(self.style.WARNING("No valid emails found in CSV"))
+                    return
+
+                # Delete GrantApplication records matching the emails
+                deleted_count, _ = GrantApplication.objects.filter(
+                    email__in=emails
+                ).delete()
+
+                self.stdout.write(
+                    self.style.SUCCESS(
+                        f"Reverted import: deleted {deleted_count} records"
+                    )
+                )
+        except FileNotFoundError:
+            self.stdout.write(self.style.ERROR(f"File {csv_file} not found"))
+        except Exception as e:
+            self.stdout.write(self.style.ERROR(f"Error during revert: {e}"))

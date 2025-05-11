@@ -1,6 +1,5 @@
 import dj_database_url
 import os
-from decouple import config
 from .settings_base import *  # noqa: F403
 
 SECRET_KEY = "not really a secret"
