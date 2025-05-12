@@ -112,20 +112,19 @@ def test_send_email_mailjet_success(mocker, mock_settings):
     )
 
 def test_send_email_mailjet_failure_status_code(mocker, mock_settings):
-    # Arrange
     mock_settings.EMAIL_BACKEND = "mailjet"
-    mock_config = mocker.patch("decouple.config")
+    mock_config = mocker.patch("grants.utils.email.config")
     mock_config.side_effect = lambda key: {
         "MAILJET_API_KEY": "api_key",
         "MAILJET_SECRET_KEY": "secret_key",
     }[key]
     mock_mailjet = mocker.patch("grants.utils.email.Client")
+    mock_mailjet.return_value.send = mocker.MagicMock()
     mock_send = mock_mailjet.return_value.send.create
     mock_send.return_value.status_code = 400
     mock_send.return_value.json.return_value = {"Error": "Bad request"}
     mock_logger = mocker.patch("grants.utils.email.logger")
 
-    # Act
     result = send_email(
         subject="Test Subject",
         text_content="Test Text",
@@ -135,9 +134,25 @@ def test_send_email_mailjet_failure_status_code(mocker, mock_settings):
         to_email="recipient@example.com",
     )
 
-    # Assert
+    print(f"Result: {result}")
+    print(f"Mock config called: {mock_config.called}")
+    print(f"Mock mailjet called: {mock_mailjet.called}")
+    print(f"Mock send called: {mock_send.called}")
+
     assert result is False
-    mock_send.assert_called_once()
+    mock_send.assert_called_once_with(
+        data={
+            "Messages": [
+                {
+                    "From": {"Email": "sender@example.com", "Name": "Sender"},
+                    "To": [{"Email": "recipient@example.com", "Name": ""}],
+                    "Subject": "Test Subject",
+                    "TextPart": "Test Text",
+                    "HTMLPart": "<p>Test HTML</p>",
+                }
+            ]
+        }
+    )
     mock_logger.error.assert_called_once_with(
         "Mailjet failed: Status=400, Data={'Error': 'Bad request'}"
     )
