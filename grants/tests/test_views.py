@@ -2,7 +2,7 @@ import pytest
 from django.urls import reverse
 from django.utils import timezone
 from datetime import timedelta
-from grants.views import parse_budget, request_code, verify_code
+from grants.views import parse_budget
 from grants.models import GrantApplication, VerificationCode
 from django.contrib.messages import get_messages
 
