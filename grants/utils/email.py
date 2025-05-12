@@ -10,25 +10,8 @@ logger = logging.getLogger(__name__)
 def send_email(
     subject, text_content, html_content, from_email, from_name, to_email, to_name=None
 ):
-    """
-    Send an email using the configured backend (Mailjet or console).
-
-    Args:
-        subject: Email subject
-        text_content: Plain text content
-        html_content: HTML content
-        from_email: Sender email (verified in Mailjet if used)
-        from_name: Sender name
-        to_email: Recipient email
-        to_name: Recipient name (optional)
-
-    Returns:
-        bool: True if email was sent successfully, False otherwise
-    """
-    # Check the configured email backend
     if settings.EMAIL_BACKEND == "django.core.mail.backends.console.EmailBackend":
         try:
-            # Use Django's EmailMultiAlternatives for console output
             email = EmailMultiAlternatives(
                 subject=subject,
                 body=text_content,
@@ -43,7 +26,6 @@ def send_email(
             logger.error(f"Error sending email via console backend: {e}")
             return False
     else:
-        # Send email via Mailjet API
         try:
             api_key = config("MAILJET_API_KEY")
             api_secret = config("MAILJET_SECRET_KEY")

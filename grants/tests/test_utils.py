@@ -64,12 +64,15 @@ def test_send_email_console_failure(mocker, mock_settings):
 def test_send_email_mailjet_success(mocker, mock_settings):
     # Arrange
     mock_settings.EMAIL_BACKEND = "mailjet"
-    mock_config = mocker.patch("decouple.config")
+    mock_config = mocker.patch("grants.utils.email.config")
     mock_config.side_effect = lambda key: {
         "MAILJET_API_KEY": "api_key",
         "MAILJET_SECRET_KEY": "secret_key",
     }[key]
+    # Mock Client without autospec
     mock_mailjet = mocker.patch("grants.utils.email.Client")
+    # Manually set up send.create
+    mock_mailjet.return_value.send = mocker.MagicMock()
     mock_send = mock_mailjet.return_value.send.create
     mock_send.return_value.status_code = 200
     mock_send.return_value.json.return_value = {"Messages": [{"Status": "success"}]}
@@ -86,7 +89,10 @@ def test_send_email_mailjet_success(mocker, mock_settings):
         to_name="Recipient",
     )
 
+
     # Assert
+    assert mock_mailjet.called, "Mailjet Client was not called"
+    assert mock_send.called, "Mailjet send.create was not called"
     assert result is True
     mock_send.assert_called_once_with(
         data={
