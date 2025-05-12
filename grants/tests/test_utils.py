@@ -153,6 +153,7 @@ def test_send_email_mailjet_failure_status_code(mocker, mock_settings):
         "Mailjet failed: Status=400, Data={'Error': 'Bad request'}"
     )
 
+
 def test_send_email_mailjet_exception(mocker, mock_settings):
     mock_settings.EMAIL_BACKEND = "mailjet"
     mock_config = mocker.patch("grants.utils.email.config")
@@ -160,8 +161,7 @@ def test_send_email_mailjet_exception(mocker, mock_settings):
         "MAILJET_API_KEY": "api_key",
         "MAILJET_SECRET_KEY": "secret_key",
     }[key]
-    mock_mailjet = mocker.patch("mailjet_rest.Client")
-    mock_mailjet.return_value.send = mocker.MagicMock()
+    mock_mailjet = mocker.patch("grants.utils.email.Client")
     mock_send = mock_mailjet.return_value.send.create
     mock_send.side_effect = Exception("API error")
     mock_logger = mocker.patch("grants.utils.email.logger")
