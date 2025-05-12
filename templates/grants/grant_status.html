@@ -37,15 +37,19 @@
             <!-- Budget Details -->
             <div class="mt-6">
                 <h2 class="text-lg font-semibold text-gray-800 mb-4">{% translate "Budget Details" %}</h2>
-                {% if budget.items %}
-                <ul class="list-disc pl-5 space-y-2">
-                    {% for item in budget.items %}
-                    <li class="text-gray-700">{{ item.name }}: <span class="font-medium">{{ item.cost }}</span></li>
+                {% if budget.details %}
+                <div class="text-gray-700 space-y-2">
+                    {% for line in budget.details.splitlines %}
+                        {% if line.strip %}
+                        <p>{{ line|safe }}</p>
+                        {% endif %}
                     {% endfor %}
-                </ul>
+                </div>
+                {% if budget.total_amount %}
                 <p class="mt-4 text-base font-semibold text-gray-900">
                     {% translate "Total" %}: {{ budget.total_amount }}
                 </p>
+                {% endif %}
                 {% else %}
                 <p class="text-gray-600 italic">{% translate "No budget details provided." %}</p>
                 {% endif %}

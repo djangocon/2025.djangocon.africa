@@ -19,21 +19,33 @@ logger = logging.getLogger(__name__)
 
 
 def parse_budget(budget_text):
-    """Parse budget text into a structured dictionary."""
-    budget = {"total_amount": "0$", "items": []}
+    """Parse budget text into total amount (if present) and details."""
+    budget = {"details": ""}
     if not budget_text.strip():
         return budget
-    total_match = re.search(r"Total.*?\$(\d+)", budget_text, re.IGNORECASE)
-    if total_match:
-        budget["total_amount"] = total_match.group(1) + "$"
-    items = re.findall(
-        r"(\w+(?:\s*\w+)*)\s*:\s*\$?(\d+)(?:\s*\([^)]+\))?", budget_text, re.IGNORECASE
-    )
-    for item_name, item_cost in items:
-        if item_name.strip().lower() != "total":
-            budget["items"].append({"name": item_name.strip(), "cost": "$" + item_cost})
-    return budget
 
+    # Normalize input: replace commas
+    budget_text = budget_text.replace(",", "")
+
+    # Extract total amount (integer or decimal, with $ before or after)
+    total_match = re.search(r"Total\s*.*?\$?([\d.]+)\$?", budget_text, re.IGNORECASE | re.DOTALL)
+    if total_match:
+        total_amount = total_match.group(1)
+        # Format total as $X.XX
+        if "." not in total_amount:
+            total_amount += ".00"
+        budget["total_amount"] = "$" + total_amount
+
+    # Capture details: everything except the total line
+    details = []
+    for line in budget_text.splitlines():
+        # Match lines with "Total" followed by a number (with optional $)
+        if not re.search(r"Total\s*.*?\b[\d.]+", line, re.IGNORECASE):
+            if line.strip():  # Skip empty lines
+                details.append(line.strip())
+    budget["details"] = "\n".join(details) if details else ""
+
+    return budget
 
 def request_code(request):
     if request.method == "POST":
