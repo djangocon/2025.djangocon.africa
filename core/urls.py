@@ -44,5 +44,6 @@ urlpatterns += i18n_patterns(
     path("", include("website.urls")),
     path("accounts/", include("allauth.urls")),
     path("sponsors/", include("sponsors.urls")),
+    path("news/", include("news.urls")),
     path('grants/', include('grants.urls')),
 )
