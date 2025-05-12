@@ -34,22 +34,38 @@ pip install -r requirements.txt
 npm install
 ```
 
-## Running the application
+## Running the application on development
 
-1. Get the development database up and running:
+1. set the database locally as you like. using docker is the easiet way.
+   those are some configuration sample :
 
-See: dev_db/README.md
+   dev_db/docker-compose.yaml
+    services:
+        postgres:
+        image: postgres:12
+        environment:
+        - POSTGRES_USER=""
+        - POSTGRES_PASSWORD=""
+        - POSTGRES_DB=db
+        volumes:
+        - ./gitignore/postgresql:/var/lib/postgresql/data
+        - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+        ports:
+        - "5432:5432"%
 
-Remember to run the migrations!
+    docker-entrypoint-initdb.d/create-db-test.sql :
+        CREATE DATABASE test_db;
+        grant all privileges on database test_db to pguser;
+        -- ALTER USER user WITH SUPERUSER;%
 
 2. Run the server
 
-Before using the runserver command, you need to load up some environmental variables. `.env_example` has some sensible defaults that just work in a dev environment:
+    Before using the runserver command, you need to load up some environmental variables. `.env_example` has some sensible defaults that just work in a dev environment:
 
-```
-source .env_example
-python manage.py runserver
-```
+    ```
+    source .env_example
+    python manage.py runserver
+    ```
 
 
 ## Working with tailwind
@@ -98,11 +114,10 @@ We use wagtail for to manage articles :
 1. Local Configuration : ... (to be added)
 
 ## Steps for charging grant application  from csv file
-step 1 :  after exporting the google sheets grants application as a csv, rename the header with following names:
+1.  After exporting the google sheets grants application as a csv, rename the header with following names:
+    Timestamp,Column1,FullName,Email,Profession,CountryOrigin,CityTravelingFrom,YourNeed,AboutYourself,TypeofGrant,Budget
 
-Timestamp,Column1,FullName,Email,Profession,CountryOrigin,CityTravelingFrom,YourNeed,AboutYourself,TypeofGrant,Budget
-
-step 2 : upload the csv file in /media/
-step 3 : use the command `python manage.py preprocess /media/grants.csv  media/grants_treated.csv`
-step 4 : After  content verification, use the command `python manage.py  import_file_grants   media/grants_treated.csv` to record data to the databases
-step 5 : to revert in case of error . use the command `python manage.py import_file_grants media/grants_treated --revert`
+2.  Upload the csv file in /media/
+3.  Use the command `python manage.py preprocess /media/grants.csv  media/grants_treated.csv`
+4.  After  content verification, use the command `python manage.py  import_file_grants   media/grants_treated.csv` to record data to the databases
+5.  To revert in case of error . use the command `python manage.py import_file_grants media/grants_treated --revert`
