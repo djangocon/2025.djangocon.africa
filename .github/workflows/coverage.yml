@@ -35,11 +35,11 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Generate tailwind css 
+    - name: Generate tailwind css
       run: |
-        npm i 
+        npm i
         npm run tailwind
-        
+
     - name: Setup Python ${{ matrix.python-version }}
       uses: actions/setup-python@master
       with:
@@ -47,7 +47,8 @@ jobs:
     - name: Generate Report
       run: |
         pip install -r requirements.txt
-        python manage.py collectstatic
+        pip install coverage pytest pytest-django
+        python manage.py collectstatic --noinput
         coverage run -m pytest
         coverage xml
       env:
