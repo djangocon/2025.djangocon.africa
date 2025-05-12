@@ -103,4 +103,4 @@ def verify_code(request, email):
             VerificationCode.objects.filter(email=email).delete()  # Delete on invalid code
             messages.error(request, "Invalid or expired code.")
             return render(request, "grants/verify_code.html")
-    return render(request, "grants/verify_code.html")
+    return render(request, "grants/verify_code.html", {"email": email})
