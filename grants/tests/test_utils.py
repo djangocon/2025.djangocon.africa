@@ -175,11 +175,6 @@ def test_send_email_mailjet_exception(mocker, mock_settings):
         to_email="recipient@example.com",
     )
 
-    print(f"Result: {result}")
-    print(f"Mock config called: {mock_config.called}")
-    print(f"Mock mailjet called: {mock_mailjet.called}")
-    print(f"Mock send called: {mock_send.called}")
-
     assert result is False
     mock_logger.error.assert_called_once_with(
         "Error sending email via Mailjet: API error"
