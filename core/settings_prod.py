@@ -1,5 +1,4 @@
 from .settings_base import *  # noqa: F403
-from decouple import config
 import dj_database_url
 import os
 
@@ -21,7 +20,7 @@ DATABASES = {
 
 # email config - to be setted in another feature
 EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
-MAILJET_API_KEY = config('MAILJET_API_KEY')
-MAILJET_API_SECRET = config('MAILJET_SECRET_KEY')
-DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default="hello@djangocon.africa")
+MAILJET_API_KEY = os.environ.get('MAILJET_API_KEY')
+MAILJET_API_SECRET = os.environ.get('MAILJET_SECRET_KEY')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', default="hello@djangocon.africa")
 DEFAULT_FROM_NAME = 'DjangoCon Africa 2025'
