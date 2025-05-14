@@ -28,7 +28,9 @@ def parse_budget(budget_text):
     budget_text = budget_text.replace(",", "")
 
     # Extract total amount (integer or decimal, with $ before or after)
-    total_match = re.search(r"Total\s*.*?\$?([\d.]+)\$?", budget_text, re.IGNORECASE | re.DOTALL)
+    total_match = re.search(
+        r"Total\s*.*?\$?([\d.]+)\$?", budget_text, re.IGNORECASE | re.DOTALL
+    )
     if total_match:
         total_amount = total_match.group(1)
         # Format total as $X.XX
@@ -46,6 +48,7 @@ def parse_budget(budget_text):
     budget["details"] = "\n".join(details) if details else ""
 
     return budget
+
 
 def request_code(request):
     if request.method == "POST":
@@ -112,7 +115,9 @@ def verify_code(request, email):
             }
             return render(request, "grants/grant_status.html", context)
         except VerificationCode.DoesNotExist:
-            VerificationCode.objects.filter(email=email).delete()  # Delete on invalid code
+            VerificationCode.objects.filter(
+                email=email
+            ).delete()  # Delete on invalid code
             messages.error(request, "Invalid or expired code.")
             return render(request, "grants/verify_code.html")
     return render(request, "grants/verify_code.html", {"email": email})

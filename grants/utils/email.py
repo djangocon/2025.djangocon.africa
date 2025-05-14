@@ -10,6 +10,10 @@ logger = logging.getLogger(__name__)
 def send_email(
     subject, text_content, html_content, from_email, from_name, to_email, to_name=None
 ):
+    # Validate inputs
+    if not to_email or not subject or not text_content:
+        return False
+
     if settings.EMAIL_BACKEND == "django.core.mail.backends.console.EmailBackend":
         try:
             email = EmailMultiAlternatives(

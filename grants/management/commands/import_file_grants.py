@@ -141,9 +141,13 @@ class Command(BaseCommand):
                     )
                     return
 
-                emails = [row["Email"].strip() for row in reader if row["Email"].strip()]
+                emails = [
+                    row["Email"].strip() for row in reader if row["Email"].strip()
+                ]
                 if not emails:
-                    self.stdout.write(self.style.WARNING("No valid emails found in CSV"))
+                    self.stdout.write(
+                        self.style.WARNING("No valid emails found in CSV")
+                    )
                     return
 
                 # Delete GrantApplication records matching the emails
