@@ -28,6 +28,7 @@ header_menu_items = [
         children=[
             HeaderLink(label=_("News"), href="/news"),
             HeaderLink(label=_("Opportunity Grants"), href="/opportunity_grants"),
+            HeaderLink(label=_("Grant Status"), href="/grants/request_code/"),
         ]
     ),
     HeaderLink(
