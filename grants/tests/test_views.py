@@ -122,11 +122,10 @@ def test_request_code_post_nonexistent_email(request_with_messages):
         "post", reverse("request_code"), {"email": "test@example.com"}
     )
     response = request_code(request)
-    assert response.status_code == 200
-    assert b"email not found" in response.content.lower()
+    assert response.status_code == 302
     messages = list(request._messages)
     assert len(messages) == 1
-    assert str(messages[0]) == "Email not found in our database."
+    assert str(messages[0]) == "Verification code sent to your email."
 
 
 @override_settings(
@@ -175,15 +174,14 @@ def test_request_code_post_email_failure(
 # Tests for verify_code
 @pytest.mark.django_db
 def test_verify_code_invalid_email(request_with_messages):
+    email = "test@example.com"
     request = request_with_messages(
-        "get", reverse("verify_code", kwargs={"email": "test@example.com"})
+        "get", reverse("verify_code", kwargs={"email": email})
     )
     response = verify_code(request, email="test@example.com")
-    assert response.status_code == 302
-    assert response.url == reverse("request_code")
-    messages = list(request._messages)
-    assert len(messages) == 1
-    assert str(messages[0]) == "Email not found in our database."
+    assert response.status_code == 200
+    assert f"Code sent to {email}".encode() in response.content
+    assert not VerificationCode.objects.filter(email="test@example.com").exists()
 
 
 def test_verify_code_get(request_with_messages, grant_application):

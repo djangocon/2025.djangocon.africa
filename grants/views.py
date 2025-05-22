@@ -14,6 +14,8 @@ from django.conf import settings
 from .models import GrantApplication, VerificationCode
 from .utils.email import send_email  # Import the new function
 
+from django.utils.translation import gettext as _
+
 
 logger = logging.getLogger(__name__)
 
@@ -54,70 +56,78 @@ def request_code(request):
     if request.method == "POST":
         email = request.POST.get("email", "").strip().lower()
         if not email:
-            messages.error(request, "Please enter a valid email.")
+            messages.error(request, _("Please enter a valid email."))
             return render(request, "grants/request_code.html")
-        try:
-            GrantApplication.objects.get(email=email)
-        except GrantApplication.DoesNotExist:
-            messages.error(request, "Email not found in our database.")
-            return render(request, "grants/request_code.html")
-        code = "".join(random.choices(string.digits, k=6))
-        VerificationCode.objects.update_or_create(
-            email=email,
-            defaults={
-                "code": code,
-                "expires_at": timezone.now() + timedelta(minutes=10),
-            },
-        )
-        subject = "DjangoCon Africa Grant Verification Code"
-        context = {"code": code}
-        html_content = render_to_string("grants/verification_email.html", context)
-        text_content = (
-            f"Your verification code is: {code}\nThis code expires in 10 minutes."
-        )
-        success = send_email(
-            subject=subject,
-            text_content=text_content,
-            html_content=html_content,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            from_name=settings.DEFAULT_FROM_NAME,
-            to_email=email,
-            to_name=None,
-        )
-        if success:
-            messages.success(request, "Verification code sent to your email.")
-            return redirect("verify_code", email=email)
+
+
+        if GrantApplication.objects.filter(email=email).exists():
+            code = "".join(random.choices(string.digits, k=6))
+            VerificationCode.objects.update_or_create(
+                email=email,
+                defaults={
+                    "code": code,
+                    "expires_at": timezone.now() + timedelta(minutes=10),
+                },
+            )
+
+            subject = _("DjangoCon Africa Grant Verification Code")
+            context = {"code": code}
+            html_content = render_to_string("grants/email/verification_email.html", context)
+            text_content = (
+                _(f"Your verification code is: {code}\nThis code expires in 10 minutes.")
+            )
+
+            success = send_email(
+                subject=subject,
+                text_content=text_content,
+                html_content=html_content,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                from_name=settings.DEFAULT_FROM_NAME,
+                to_email=email,
+                to_name=None,
+            )
+            if success:
+                messages.success(request, _("Verification code sent to your email."))
+                return redirect("verify_code", email=email)
+            else:
+                messages.error(request, _("Failed to send email. Please try again."))
+                return render(request, "grants/request_code.html")
         else:
-            messages.error(request, "Failed to send email. Please try again.")
-            return render(request, "grants/request_code.html")
+            messages.success(request, _("Verification code sent to your email."))
+            return redirect("verify_code", email=email)
+
     return render(request, "grants/request_code.html")
 
 
 def verify_code(request, email):
-    try:
-        application = GrantApplication.objects.get(email=email)
-    except GrantApplication.DoesNotExist:
-        messages.error(request, "Email not found in our database.")
-        return redirect("request_code")
     if request.method == "POST":
-        code = request.POST.get("code", "").strip()
-        try:
-            verification = VerificationCode.objects.get(email=email, code=code)
-            if not verification.is_valid():
+        if GrantApplication.objects.filter(email=email).exists():
+            code = request.POST.get("code", "").strip()
+            try:
+                verification = VerificationCode.objects.get(email=email, code=code)
+                if not verification.is_valid():
+                    verification.delete()
+                    messages.error(request, _("Invalid or expired code."))
+                    return render(request, "grants/verify_code.html")
+
+                application = GrantApplication.objects.get(email=email)
+
                 verification.delete()
-                messages.error(request, "Invalid or expired code.")
-                return render(request, "grants/verify_code.html")
-            verification.delete()
-            parsed_budget = parse_budget(application.budget_details)
-            context = {
-                "application": application,
-                "budget": parsed_budget,
-            }
-            return render(request, "grants/grant_status.html", context)
-        except VerificationCode.DoesNotExist:
-            VerificationCode.objects.filter(
-                email=email
-            ).delete()  # Delete on invalid code
-            messages.error(request, "Invalid or expired code.")
-            return render(request, "grants/verify_code.html")
+                parsed_budget = parse_budget(application.budget_details)
+                context = {
+                    "application": application,
+                    "budget": parsed_budget,
+                }
+
+                return render(request, "grants/grant_status.html", context)
+            except VerificationCode.DoesNotExist:
+                VerificationCode.objects.filter(
+                    email=email
+                ).delete()  # Delete on invalid code
+                messages.error(request, _("Invalid or expired code."))
+                return render(request, "grants/verify_code.html", { "email": email })
+        else:
+            messages.error(request, _("Invalid or expired code."))
+            return render(request, "grants/verify_code.html", { "email": email })
+
     return render(request, "grants/verify_code.html", {"email": email})
