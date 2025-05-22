@@ -24,7 +24,7 @@ SCHEDULES = [
     ],
     [
         (datetime(2025, 4, 8), _('Talk review start')),
-        (datetime(2025, 4, 28), _('Opportunity Grant && Call for Proposal Notifications'))
+        (datetime(2025, 5, 31), _('Opportunity Grant && Call for Proposal Notifications'))
     ],
     [
         (datetime(2025, 8, 8), _('Django Girls starts')),
