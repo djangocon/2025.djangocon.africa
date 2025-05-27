@@ -24,6 +24,7 @@ eggs/
 lib/
 lib64/
 parts/
+media/
 sdist/
 var/
 wheels/
@@ -168,7 +169,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-
+dev_db/
 .DS_Store
 .environment
 */__pycache__/

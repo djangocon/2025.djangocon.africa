@@ -1,7 +1,7 @@
 # 2025.djangocon.africa
 Website for DjangoCon Africa 2025
 
-## Installation 
+## Installation
 
 To get up and running do the following:
 
@@ -9,17 +9,17 @@ To get up and running do the following:
 1. Create a virtual environment.
 
 ```
-python3.12 -m venv venv 
+python3.12 -m venv venv
 ```
 
 Of course there are many ways to make a virtual environment. We are following the simplest method. If you like to use a different thing then go for it.
 
 2. Install the requirements
 
-Activate your virtual env 
+Activate your virtual env
 
 ```
-source venv/bin/activate 
+source venv/bin/activate
 ```
 
 Then install the requirements:
@@ -31,34 +31,50 @@ pip install -r requirements.txt
 3. Install npm dependencies
 
 ```
-npm install 
+npm install
 ```
 
-## Running the application
+## Running the application on development
 
-1. Get the development database up and running:
+1. set the database locally as you like. using docker is the easiet way.
+   those are some configuration sample :
 
-See: dev_db/README.md
+   dev_db/docker-compose.yaml
+    services:
+        postgres:
+        image: postgres:12
+        environment:
+        - POSTGRES_USER=""
+        - POSTGRES_PASSWORD=""
+        - POSTGRES_DB=db
+        volumes:
+        - ./gitignore/postgresql:/var/lib/postgresql/data
+        - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+        ports:
+        - "5432:5432"%
 
-Remember to run the migrations! 
+    docker-entrypoint-initdb.d/create-db-test.sql :
+        CREATE DATABASE test_db;
+        grant all privileges on database test_db to pguser;
+        -- ALTER USER user WITH SUPERUSER;%
 
 2. Run the server
 
-Before using the runserver command, you need to load up some environmental variables. `.env_example` has some sensible defaults that just work in a dev environment:
+    Before using the runserver command, you need to load up some environmental variables. `.env_example` has some sensible defaults that just work in a dev environment:
 
-```
-source .env_example
-python manage.py runserver
-```
+    ```
+    source .env_example
+    python manage.py runserver
+    ```
 
 
-## Working with tailwind 
+## Working with tailwind
 
 You can learn about tailwind [here](https://tailwindcss.com/docs/installation). It is installed in this project using the standard "Tailwind CLI" installation.
 
 The Tailwind CLI is used to build a css file. The build process takes in a few inputs:
 
-1. HTML files: It will look at what tailwind classes you are referencing inside your html files. The final built css file will contain only those css classes that are actually being used. 
+1. HTML files: It will look at what tailwind classes you are referencing inside your html files. The final built css file will contain only those css classes that are actually being used.
 
 2. An input CSS file. In our case we are using `website/static/src/tailwind_input.css`. This file contains any extra classes or default styles.
 
@@ -66,7 +82,7 @@ The Tailwind CLI is used to build a css file. The build process takes in a few i
 
 The output of the tailwind build is: `website/static/dist/tailwind_final.css`. You can see that we reference this file in our base template, `website/templates/website/_base.html`
 
-### Building the tailwind css file 
+### Building the tailwind css file
 
 There are 2 commands you can use:
 
@@ -92,3 +108,16 @@ Django internationalisation has been enabled for this website and we support Eng
 4. To generate messages for translations, use the `django-admin makemessages -l fr` and all the files with translate tags will be added to `locale/fr/LC_MESSAGES/django.po`. This is the file translators should edit to support translation into French.
 5. To compile messages use the `django-admin compilemessages` command. For more information on Django translations read the Django documentation
 https://docs.djangoproject.com/en/5.1/topics/i18n/translation/.
+
+## wagtail configuration
+We use wagtail for to manage articles :
+1. Local Configuration : ... (to be added)
+
+## Steps for charging grant application  from csv file
+1.  After exporting the google sheets grants application as a csv, rename the header with following names:
+    Timestamp,Column1,FullName,Email,Profession,CountryOrigin,CityTravelingFrom,YourNeed,AboutYourself,TypeofGrant,Budget
+
+2.  Upload the csv file in /media/
+3.  Use the command `python manage.py preprocess /media/grants.csv  media/grants_treated.csv`
+4.  After  content verification, use the command `python manage.py  import_file_grants   media/grants_treated.csv` to record data to the databases
+5.  To revert in case of error . use the command `python manage.py import_file_grants media/grants_treated --revert`

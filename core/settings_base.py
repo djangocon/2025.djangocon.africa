@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "allauth.account",
     "sponsors",
     "news",
+    "grants",
 
     # wagtail
     'wagtail.contrib.forms',
@@ -182,6 +183,21 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
 
 CRISPY_TEMPLATE_PACK = "tailwind"
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        },
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -230,4 +246,7 @@ CMS_PATH = os.environ.get("CMS_PATH", "cms/")
 # WAGTAIL SETTINGS
 WAGTAIL_SITE_NAME = 'DjangoCon Africa'
 WAGTAILADMIN_BASE_URL = "https://2025.djangocon.africa/"
-UZA_PUBLIC_API_KEY = os.environ.get("UZA_PUBLIC_API_KEY")  # noqa: F405
+UZA_PUBLIC_API_KEY = os.environ.get("UZA_PUBLIC_API_KEY") # noqa: F405
+# remove wagtail warning
+# URLField : RemovedInDjango60Warning
+FORMS_URLFIELD_ASSUME_HTTPS = True
