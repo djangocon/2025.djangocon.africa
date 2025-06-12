@@ -1,0 +1,340 @@
+{% extends "_base.html" %} 
+{% load partials %} 
+{% load i18n %} 
+{% block content%}
+{% load static %}
+<div class="dj-container pt-[72px] md:pt-[88px] pb-16">
+  <h1 class="text-center text-5xl font-bold mb-6">{% translate "Visa Information" %}</h1>
+  
+  <div class="text-center mb-8 max-w-2xl mx-auto">
+    <p class="text-lg text-gray-600">
+      {% blocktranslate %} 
+      Complete guide for obtaining your visa to attend DjangoCon Africa 2025 in Arusha, Tanzania
+      {% endblocktranslate %}
+    </p>
+  </div>
+  
+  <div class="flex flex-col gap-y-8 md:max-w-[900px] mx-auto pt-10 lg:pt-8">
+    
+    <!-- Hero Image -->
+    <div class="flex justify-center">
+        <img 
+            src="https://meetafricasafari.com/assets/img/tanzania-visa1.jpg"
+            alt="{% translate 'Tanzania Visa Information' %}" 
+            class="w-full max-w-[600px] h-40 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+        />
+    </div>
+
+    <!-- Important Notice -->
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg">
+        <div class="flex items-start">
+            <div class="flex-shrink-0">
+                <span class="text-2xl">📋</span>
+            </div>
+            <div class="ml-4">
+                <h3 class="text-lg font-semibold text-blue-900 mb-2">{% translate "Important Notice" %}</h3>
+                <p class="text-blue-800">
+                    {% blocktranslate %}
+                    Most visitors to Tanzania, including those attending DjangoCon Africa 2025 in Arusha, will need a visa. 
+                    The specific requirements can vary based on your nationality, so it's essential to check the 
+                    <a href="https://www.immigration.go.tz/" class="underline font-semibold" target="_blank">Tanzania Immigration Department's official website</a> 
+                    or your nearest Tanzanian embassy/consulate for the most accurate and up-to-date information.
+                    {% endblocktranslate %}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Apply Section -->
+    <div class="bg-white p-6 rounded-lg shadow-md border">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800 flex items-center">
+            <span class="mr-3">🌐</span>
+            {% translate "How to Apply" %}
+        </h2>
+        <div class="space-y-4">
+            <p class="text-gray-700 leading-relaxed">
+                {% blocktranslate %}
+                We highly recommend applying for your visa online in advance through the 
+                <a href="https://visa.immigration.go.tz/" class="text-blue-600 underline font-semibold" target="_blank">Tanzania Immigration Department's official website</a>. 
+                While "visa on arrival" is sometimes an option, applying beforehand helps avoid potential queues and delays upon your arrival at 
+                Kilimanjaro International Airport (KIA).
+                {% endblocktranslate %}
+            </p>
+            
+            <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                <h4 class="font-semibold text-green-800 mb-2">{% translate "Recommended Application Method:" %}</h4>
+                <ul class="list-disc list-inside text-green-700 space-y-1">
+                    <li>{% translate "Apply online in advance" %}</li>
+                    <li>{% translate "Avoid airport queues and delays" %}</li>
+                    <li>{% translate "Ensure your visa is ready before travel" %}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Details Section -->
+    {% comment %} <div class="bg-white p-6 rounded-lg shadow-md border">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800 flex items-center">
+            <span class="mr-3">📝</span>
+            {% translate "Key Details for Your Online Application" %}
+        </h2>
+        <p class="text-gray-700 mb-6">
+            {% blocktranslate %}
+            When filling out the online visa application, pay close attention to these specific fields:
+            {% endblocktranslate %}
+        </p>
+        
+        <div class="space-y-6">
+            <div class="bg-gray-50 p-5 rounded-lg border-l-4 border-blue-500">
+                <h4 class="font-bold text-gray-800 mb-3 flex items-center">
+                    <span class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm mr-3">1</span>
+                    {% translate "Local Host Type" %}
+                </h4>
+                <p class="text-gray-700 ml-9">
+                    {% blocktranslate %}
+                    When asked to choose the local host, please select <strong>'Company/Organization'</strong>.
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div class="bg-gray-50 p-5 rounded-lg border-l-4 border-blue-500">
+                <h4 class="font-bold text-gray-800 mb-3 flex items-center">
+                    <span class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm mr-3">2</span>
+                    {% translate "Local Host Company/Organization Name" %}
+                </h4>
+                <p class="text-gray-700 ml-9">
+                    {% blocktranslate %}
+                    Enter: <strong class="bg-yellow-200 px-2 py-1 rounded">Binary Institute Tanzania Limited</strong>
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div class="bg-gray-50 p-5 rounded-lg border-l-4 border-blue-500">
+                <h4 class="font-bold text-gray-800 mb-3 flex items-center">
+                    <span class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm mr-3">3</span>
+                    {% translate "Registration Number" %}
+                </h4>
+                <p class="text-gray-700 ml-9">
+                    {% blocktranslate %}
+                    For the 'Company/Organization Registration No' field, use: <strong class="bg-yellow-200 px-2 py-1 rounded">146-667-821</strong>
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div class="bg-gray-50 p-5 rounded-lg border-l-4 border-blue-500">
+                <h4 class="font-bold text-gray-800 mb-3 flex items-center">
+                    <span class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm mr-3">4</span>
+                    {% translate "Organization Address" %}
+                </h4>
+                <div class="text-gray-700 ml-9">
+                    <p><strong class="bg-yellow-200 px-2 py-1 rounded">Plot 543, Maputo St, Kunduchi, Dar es Salaam</strong></p>
+                    <p class="mt-2">{% translate "P.O Box:" %} <strong class="bg-yellow-200 px-2 py-1 rounded">32485</strong></p>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 p-5 rounded-lg border-l-4 border-blue-500">
+                <h4 class="font-bold text-gray-800 mb-3 flex items-center">
+                    <span class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm mr-3">5</span>
+                    {% translate "Local Host Contact Information" %}
+                </h4>
+                <div class="text-gray-700 ml-9 space-y-3">
+                    <div>
+                        <p class="font-semibold mb-1">{% translate "Primary Contact Person:" %}</p>
+                        <p><strong class="bg-yellow-200 px-2 py-1 rounded">Noah Maina</strong></p>
+                        <p class="text-sm text-gray-600 mt-1">{% translate "Local Host and Conference Organiser" %}</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold mb-1">{% translate "Email:" %}</p>
+                        <p><strong class="bg-yellow-200 px-2 py-1 rounded">secretariat@pycon.or.tz</strong></p>
+                    </div>
+                    <div>
+                        <p class="font-semibold mb-1">{% translate "Phone Number:" %}</p>
+                        <p><strong class="bg-yellow-200 px-2 py-1 rounded">+255 758 828 363</strong></p>
+                    </div>
+                    <div>
+                        <p class="font-semibold mb-1">{% translate "Additional Contact:" %}</p>
+                        <p><strong class="bg-yellow-200 px-2 py-1 rounded">CatherineRose Barretto</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> {% endcomment %}
+
+    <!-- Invitation Letter Section -->
+    <div class="bg-white p-6 rounded-lg shadow-md border">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800 flex items-center">
+            <span class="mr-3">✉️</span>
+            {% translate "Invitation Letter" %}
+        </h2>
+        <div class="space-y-4">
+            <p class="text-gray-700 leading-relaxed">
+                {% blocktranslate %}
+                If your visa application, particularly when applying through a Tanzanian Consulate, requires an invitation letter, 
+                you can request one from the DjangoCon Africa organizing team.
+                {% endblocktranslate %}
+            </p>
+            
+            <div class="bg-orange-50 p-5 rounded-lg border border-orange-200">
+                <h4 class="font-semibold text-orange-800 mb-3">{% translate "Required Information for Invitation Letter:" %}</h4>
+                <p class="text-orange-700 mb-3">{% translate "To help us prepare your letter, please provide the following details:" %}</p>
+                <ul class="list-disc list-inside text-orange-700 space-y-2">
+                    <li>{% translate "Your Full name (exactly as it appears on your passport)" %}</li>
+                    <li>{% translate "Your Passport number" %}</li>
+                    <li>{% translate "Your Date of birth" %}</li>
+                    <li>{% translate "Your Home address" %}</li>
+                </ul>
+                
+                <div class="mt-6">
+                    <a href="https://forms.gle/69H6suC4bgYr7qGu8" 
+                       class="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors shadow-lg border-2 border-orange-600" 
+                       style="background-color: #ea580c !important; color: white !important; text-decoration: none !important;"
+                       target="_blank">
+                        {% translate "Request Invitation Letter" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Complete Contact Information Section -->
+    <div class="bg-white p-6 rounded-lg shadow-md border">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800 flex items-center">
+            <span class="mr-3">📋</span>
+            {% translate "Complete Host Information for Visa Forms" %}
+        </h2>
+        <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+            <p class="text-blue-800 mb-4 font-medium">
+                {% translate "Use this exact information when filling out visa application forms that require host details:" %}
+            </p>
+            <div class="bg-white p-4 rounded-lg border-2 border-blue-300 font-mono text-sm">
+                <div class="space-y-2">
+                    <p><strong>{% translate "Conference:" %}</strong> PyCon Tanzania (DjangoCon Africa 2025)</p>
+                    <p><strong>{% translate "Host Organization:" %}</strong> Binary Institute Tanzania Limited</p>
+                    <p><strong>{% translate "Registration Number:" %}</strong> 146-667-821</p>
+                    <p><strong>{% translate "Address:" %}</strong> Plot 543, Maputo St, Kunduchi, Dar es Salaam</p>
+                    <p><strong>{% translate "P.O Box:" %}</strong> 32485, Tanzania</p>
+                    <p><strong>{% translate "Primary Contact:" %}</strong> Noah Maina</p>
+                    <p><strong>{% translate "Position:" %}</strong> Local Host and Conference Organiser</p>
+                    <p><strong>{% translate "Email:" %}</strong> secretariat@pycon.or.tz</p>
+                    <p><strong>{% translate "Phone:" %}</strong> +255 758 828 363</p>
+                    <p><strong>{% translate "Additional Contact:" %}</strong> CatherineRose Barretto</p>
+                </div>
+            </div>
+            <div class="mt-4 text-sm text-blue-700">
+                <p>{% translate "💡 Tip: You can copy this information directly into your visa application form." %}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- After Submitting Section -->
+    <div class="bg-white p-6 rounded-lg shadow-md border">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800 flex items-center">
+            <span class="mr-3">📤</span>
+            {% translate "After Submitting Your Application" %}
+        </h2>
+        <div class="bg-purple-50 p-5 rounded-lg border border-purple-200">
+            <p class="text-purple-800 leading-relaxed">
+                {% blocktranslate %}
+                Once you have submitted your visa application, please inform our organizing team by sending an email to 
+                <a href="mailto:visas@djangocon.africa" class="font-bold underline">visas@djangocon.africa</a> 
+                to help us track and assist if needed.
+                {% endblocktranslate %}
+            </p>
+        </div>
+    </div>
+
+    <!-- Quick Reference Card -->
+    <div class="bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-lg text-white">
+        <h3 class="text-2xl font-bold mb-4 text-center">{% translate "Quick Reference" %}</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+                <h4 class="font-semibold mb-2">{% translate "Application Website:" %}</h4>
+                <a href="https://visa.immigration.go.tz/" class="underline" target="_blank">visa.immigration.go.tz</a>
+                
+                <h4 class="font-semibold mb-2 mt-4">{% translate "Host Organization:" %}</h4>
+                <p>Binary Institute Tanzania Limited</p>
+                
+                <h4 class="font-semibold mb-2 mt-4">{% translate "Registration Number:" %}</h4>
+                <p>146-667-821</p>
+                
+                <h4 class="font-semibold mb-2 mt-4">{% translate "Address:" %}</h4>
+                <p>Plot 543, Maputo St, Kunduchi<br>Dar es Salaam, P.O Box 32485</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2">{% translate "Primary Contact:" %}</h4>
+                <p>Noah Maina</p>
+                <p class="text-sm text-blue-100">{% translate "Local Host & Conference Organiser" %}</p>
+                
+                <h4 class="font-semibold mb-2 mt-4">{% translate "Contact Email:" %}</h4>
+                <a href="mailto:secretariat@pycon.or.tz" class="underline">secretariat@pycon.or.tz</a>
+                
+                <h4 class="font-semibold mb-2 mt-4">{% translate "Phone:" %}</h4>
+                <p>+255 758 828 363</p>
+                
+                <h4 class="font-semibold mb-2 mt-4">{% translate "Visa Support:" %}</h4>
+                <a href="mailto:visas@djangocon.africa" class="underline">visas@djangocon.africa</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Resources -->
+    <div class="bg-white p-6 rounded-lg shadow-md border">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800 flex items-center">
+            <span class="mr-3">🔗</span>
+            {% translate "Additional Resources" %}
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-3">
+                <h4 class="font-semibold text-gray-800">{% translate "Official Links:" %}</h4>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="https://www.immigration.go.tz/" class="text-blue-600 underline" target="_blank">
+                            {% translate "Tanzania Immigration Department" %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://visa.immigration.go.tz/" class="text-blue-600 underline" target="_blank">
+                            {% translate "Online Visa Application Portal" %}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="space-y-3">
+                <h4 class="font-semibold text-gray-800">{% translate "Need Help?" %}</h4>
+                <ul class="space-y-2">
+                    <li>
+                        <span class="text-gray-600">{% translate "Email:" %}</span>
+                        <a href="mailto:visas@djangocon.africa" class="text-blue-600 underline">visas@djangocon.africa</a>
+                    </li>
+                    <li>
+                        <span class="text-gray-600">{% translate "Conference Website:" %}</span>
+                        <a href="https://2025.djangocon.africa" class="text-blue-600 underline" target="_blank">2025.djangocon.africa</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Note -->
+    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg">
+        <div class="flex items-start">
+            <div class="flex-shrink-0">
+                <span class="text-2xl">⚠️</span>
+            </div>
+            <div class="ml-4">
+                <h3 class="text-lg font-semibold text-yellow-900 mb-2">{% translate "Important Reminder" %}</h3>
+                <p class="text-yellow-800">
+                    {% blocktranslate %}
+                    Visa requirements and processes can change. Always verify the latest information with official sources 
+                    before submitting your application. We recommend starting your visa application process as early as possible 
+                    to ensure you receive your visa in time for the conference.
+                    {% endblocktranslate %}
+                </p>
+            </div>
+        </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
