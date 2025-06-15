@@ -33,7 +33,6 @@ INSTALLED_APPS = [
     "template_partials",
     "crispy_forms",
     "crispy_tailwind",
-
     # local apps
     "website",
     "custom_auth",
@@ -41,22 +40,20 @@ INSTALLED_APPS = [
     "allauth.account",
     "sponsors",
     "news",
-
     # wagtail
-    'wagtail.contrib.forms',
-    'wagtail.contrib.redirects',
-    'wagtail.embeds',
-    'wagtail.sites',
-    'wagtail.users',
-    'wagtail.snippets',
-    'wagtail.documents',
-    'wagtail.images',
-    'wagtail.search',
-    'wagtail.admin',
-    'wagtail',
-
-    'taggit',
-    'modelcluster',
+    "wagtail.contrib.forms",
+    "wagtail.contrib.redirects",
+    "wagtail.embeds",
+    "wagtail.sites",
+    "wagtail.users",
+    "wagtail.snippets",
+    "wagtail.documents",
+    "wagtail.images",
+    "wagtail.search",
+    "wagtail.admin",
+    "wagtail",
+    "taggit",
+    "modelcluster",
 ]
 
 MIDDLEWARE = [
@@ -70,7 +67,7 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.locale.LocaleMiddleware",
-    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+    "wagtail.contrib.redirects.middleware.RedirectMiddleware",
 ]
 
 ROOT_URLCONF = "core.urls"
@@ -98,9 +95,7 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 
 STORAGES = {
-    "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage"
-    },
+    "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
@@ -146,17 +141,17 @@ USE_L10N = True
 USE_TZ = True
 
 LANGUAGE_FLAGS = {
-    'en': '🇬🇧',
-    'fr': '🇫🇷',
+    "en": "🇬🇧",
+    "fr": "🇫🇷",
 }
 
 
 LANGUAGES = [
-    ('en', _('English')),
-    ('fr', _('French')),
+    ("en", _("English")),
+    ("fr", _("French")),
 ]
 
-LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
+LOCALE_PATHS = [os.path.join(BASE_DIR, "locale")]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -219,15 +214,15 @@ ACCOUNT_LOGOUT_ON_GET = True
 # user login and registration is disabled
 FEATURE_FLAGS = {"USER_LOGIN_REG": False}
 
-LANGUAGE_COOKIE_NAME = 'django_language'
+LANGUAGE_COOKIE_NAME = "django_language"
 LANGUAGE_COOKIE_AGE = None
-LANGUAGE_COOKIE_PATH = '/'
+LANGUAGE_COOKIE_PATH = "/"
 SESSION_COOKIE_AGE = 86400  # 24 hours in seconds
 
 ADMIN_PATH = os.environ.get("ADMIN_PATH", "/admin")
 CMS_PATH = os.environ.get("CMS_PATH", "cms/")
 
 # WAGTAIL SETTINGS
-WAGTAIL_SITE_NAME = 'DjangoCon Africa'
+WAGTAIL_SITE_NAME = "DjangoCon Africa"
 WAGTAILADMIN_BASE_URL = "https://2025.djangocon.africa/"
 UZA_PUBLIC_API_KEY = os.environ.get("UZA_PUBLIC_API_KEY")  # noqa: F405
