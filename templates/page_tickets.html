@@ -1,52 +1,526 @@
-{% extends "_base.html" %}
-{% load partials %}
-{% load i18n %}
-
-{% block content %}
-
+{% extends "_base.html" %} 
+{% load partials %} 
+{% load i18n %} 
+{% block content%}
+{% load static %}
 <div class="dj-container pt-[72px] md:pt-[88px] pb-16">
-    <h1 class="text-center">{% translate "Purchase a Ticket" %}</h1>
-    <div class="flex flex-col gap-y-8 md:max-w-[740px] mx-auto pt-10 lg:pt-8">
-        <p>{% translate "Welcome to DjangoCon Africa 2025 Ticket Portal!" %}</p>
-        <p>
-            {% blocktranslate %}
-                Ready to join us at DjangoCon Africa 2025? Select your ticket type below to secure your spot. 
-                Early bird tickets are available for a limited time, so don't miss out on the special rates.
-            {% endblocktranslate %}
-        </p>
-
-        <!-- Conditional UZA Products Embed -->
-        {% if uza_api_key %}
-            <div id="uza-container" class="w-full max-w-[1200px] mx-auto mt-4 md:mt-8 px-4 md:px-0" style="height: 95vh; min-height: 500px; max-height: 800px;">
-                <uza-products
-                    product-catalog-id="12345"
-                    public-api-key={{ uza_api_key }}
-                    source="#web"
-                    refCode="#bo"
-                    customer-email=""
-                    __locale-override="en"ex
-                ></uza-products>
-            </div>
-        {% else %}
-            <div class="w-full max-w-[1200px] mx-auto mt-4 md:mt-8 px-4 md:px-0 text-center">
-                <p class="text-lg font-semibold">Coming soon!</p>
-            </div>
-        {% endif %}
-
-        <h3 class="text-xl font-bold mt-6 mb-4">{% translate "Purchase via WhatsApp" %}</h3>
-        <p class="mb-4">{% translate "Click the link below to start your ticket purchase process on WhatsApp:" %}</p>
-        <a href="https://wa.me/message/W32U6NBW654NP1" 
-           class="bg-deepTeal text-white rounded-full h-[50px] w-fit px-6 flex items-center justify-center gap-x-1 hover:bg-deepTeal/90">
-            {% translate "Buy Ticket on WhatsApp" %}
-        </a>
-        
-        <p class="mt-6">
-            {% blocktranslate %}
-            For any questions about WhatsApp purchases, please contact our support team at:
-            <a href="mailto:tickets@djangocon.africa" class="underline">tickets@djangocon.africa</a>
-            {% endblocktranslate %}
-        </p>
+  <h1 class="text-center">{% translate "Conference Venue" %}</h1>
+  <div class="flex flex-col gap-y-8 md:max-w-[740px] mx-auto pt-10 lg:pt-8">
+    
+    <div class="flex justify-center">
+        <img 
+            src="https://cdn.jacadatravel.com/wp-content/uploads/2016/10/Arusha-AdobeStock_472967067-MAIN.jpg" 
+            alt="{% translate 'Welcome to DjangoCon Africa 2025' %}" 
+            class="w-full max-w-[800px] h-auto rounded-lg shadow-lg"
+        />
     </div>
+    <p>{% translate "Welcome to DjangoCon Africa , This year the conference will be held in Arusha!" %}</p>
+
+   {% comment %}
+    <p>
+      {% blocktranslate %} Ready to join us at DjangoCon Africa 2025? Select
+      your ticket type below to secure your spot. Early bird tickets are
+      available for a limited time, so don't miss out on the special rates. {%
+      endblocktranslate %}
+    </p>
+    {% endcomment %}
+
+    <h2 class="text-4xl font-bold mt-6">
+    {% translate "DjangoCon Africa 2025: Your Ultimate Guide to Arusha,Tanzania" %}
+    </h2>
+
+    <p>
+      {% blocktranslate %} Welcome to Arusha, Tanzania, the host city for
+      DjangoCon Africa 2025! This guide is designed to help you prepare for an
+      unforgettable experience, from August 11th to 15th, 2025. We're excited to
+      welcome you to this vibrant city, the "Safari Capital of the World," and
+      gateway to some of Africa's most breathtaking landscapes. 
+    {% endblocktranslate %}
+    </p>
+
+    <h3 class="text-3xl font-semibold mt-6">
+      {% translate "Conference Details:" %}
+    </h3>
+    <ul class="list-disc list-inside mt-4">
+      <li>
+        <strong>{% translate "Dates:" %}</strong> 
+        {% translate "August 11th - 15th, 2025" %}
+      </li>
+      <li>
+        <strong>{% translate "Venue:" %}</strong> {% translate "Life Fitness Hall (Formerly known as 101 Complex) Njiro, Arusha, Tanzania" %}
+      </li>
+      <li>
+        <strong>{% translate "Official Website:" %}</strong>
+        <a href="https://2025.djangocon.africa" class="text-blue-500 underline">
+          https://2025.djangocon.africa
+        </a>
+      </li>
+    </ul>
+
+    <h2 class="text-4xl font-bold mt-6">{% translate "Why, Arusha" %}</h2>
+
+    <p>
+      {% blocktranslate %} Arusha offers the perfect blend of adventure and
+      relaxation. In August, the weather is ideal for exploring Tanzania's
+      natural wonders. The city's proximity to iconic sites like Arusha National
+      Park, Ngorongoro Crater, Tarangire N. Park, Manyara N. Park, Mount Meru,
+      and Mount Kilimanjaro makes it a prime location for: 
+    {% endblocktranslate %}
+    </p>
+
+    <ul class="list-disc list-inside mt-4">
+        <li>
+            <strong>{% translate "Hiking and Walks:" %}</strong> 
+            {% translate "Explore the slopes of Mt. Meru and different waterfalls it contains" %}
+        </li>
+        <li>
+            <strong>{% translate "Game Drives:" %}</strong> 
+            {% translate "Witness incredible wildlife in nearby national parks." %}
+        </li>
+        <li>
+            <strong>{% translate "Swimming:" %}</strong> 
+            {% translate "Enjoy the comfortable climate." %}
+        </li>
+        <li>
+            <strong>{% translate "Cultural Experiences:" %}</strong> 
+            {% translate "Immerse yourself in Tanzanian culture." %}
+        </li>
+    </ul>
+    <p>
+      {% blocktranslate %} Get a glance of how Arusha looks like {% endblocktranslate %}
+    <div class="mt-4 mb-8">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div class="cursor-pointer gallery-item">
+                <img src="{% static 'images/Arusha/hiking.jpg' %}" alt="{% translate 'Arusha Landscape' %}" class="w-full h-40 object-cover rounded-lg hover:opacity-90 transition">
+            </div>
+            <div class="cursor-pointer gallery-item">
+                <img src="{% static 'images/Arusha/building.jpg' %}" alt="{% translate 'Mount Meru' %}" class="w-full h-40 object-cover rounded-lg hover:opacity-90 transition">
+            </div>
+            <div class="cursor-pointer gallery-item">
+                <img src="https://images.unsplash.com/photo-1661513494445-91a1bc5ec10a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="{% translate 'Arusha City View' %}" class="w-full h-40 object-cover rounded-lg hover:opacity-90 transition">
+            </div>
+            <div class="cursor-pointer gallery-item">
+                <img src="https://images.unsplash.com/photo-1612433513944-8dc17fa1d2e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="{% translate 'Wildlife' %}" class="w-full h-40 object-cover rounded-lg hover:opacity-90 transition">
+            </div>
+            <div class="cursor-pointer gallery-item">
+                <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="{% translate 'Arusha Market' %}" class="w-full h-40 object-cover rounded-lg hover:opacity-90 transition">
+            </div>
+            <div class="cursor-pointer gallery-item">
+                <img src="https://images.unsplash.com/photo-1496497243327-9dccd845c35f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="{% translate 'Safari' %}" class="w-full h-40 object-cover rounded-lg hover:opacity-90 transition">
+            </div>
+        </div>
+
+        <!-- Image Modal -->
+        <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center hidden">
+            <div class="max-w-4xl mx-auto p-4 relative">
+                <button id="closeModal" class="absolute top-2 right-2 text-white text-2xl font-bold z-10">&times;</button>
+                <img id="modalImage" src="" alt="{% translate 'Enlarged view' %}" class="max-h-[90vh] max-w-full object-contain">
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const galleryItems = document.querySelectorAll('.gallery-item');
+                const modal = document.getElementById('imageModal');
+                const modalImg = document.getElementById('modalImage');
+                const closeBtn = document.getElementById('closeModal');
+
+                galleryItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        const imgSrc = this.querySelector('img').src;
+                        const imgAlt = this.querySelector('img').alt;
+                        modalImg.src = imgSrc;
+                        modalImg.alt = imgAlt;
+                        modal.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden';
+                    });
+                });
+
+                closeBtn.addEventListener('click', closeModal);
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeModal();
+                    }
+                });
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        closeModal();
+                    }
+                });
+
+                function closeModal() {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        </script>
+    </div>
+
+    <h5 class="text-2xl mt-6">
+    {% translate "Arusha is more than just a starting point for safaris; it's a city rich in culture and history, offering a warm welcome to all visitors.:" %}
+    </h5>
+
+    <h2 class="text-4xl font-bold mt-6">{% translate "Travel Information" %}</h2>
+    <h3 class="text-3xl font-semibold mt-6">
+        {% translate "Getting to Arusha" %}
+    </h3>
+
+    <ul class="list-disc list-inside mt-4">
+        <li>
+            <strong>{% translate "Kilimanjaro International Airport (KIA):" %}</strong>
+            {% translate "This is the primary airport for reaching Arusha." %}
+        </li>
+        <li>
+            <strong>{% translate "Distance to Arusha:" %}</strong>
+            {% translate "Approximately 50 km (31 miles)." %}
+        </li>
+        <li>
+            <strong>{% translate "Transportation from KIA to Arusha:" %}</strong>
+            <ul class="list-disc list-inside ml-6">
+                <li>
+                    <strong>{% translate "Shuttles:" %}</strong>
+                    {% translate "Several shuttle services are available, offering a convenient and affordable option. Expect to pay around TZS 20,000 (~USD 8). It's advisable to pre-book." %}
+                </li>
+                <li>
+                    <strong>{% translate "Taxis:" %}</strong>
+                    {% translate "Taxis are readily available at the airport but are generally more expensive than shuttles. Negotiate the fare before you start your journey." %}
+                </li>
+                <li>
+                    <strong>{% translate "Private Transfers:" %}</strong>
+                    {% translate "Many hotels offer private transfer services. Contact your hotel in advance to arrange this." %}
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>{% translate "Arusha Airport (ARK):" %}</strong>
+            {% translate "This airport primarily handles domestic flights." %}
+        </li>
+        <li>
+            <strong>{% translate "Connecting through Julius Nyerere International Airport (DAR):" %}</strong>
+            {% translate "If you arrive in Tanzania through Dar es Salaam (DAR), you can take a domestic flight to Arusha Airport. This can save significant travel time. Check Coastal Aviation, Precision Air, and Air Tanzania for flight options." %}
+        </li>
+    </ul>
+
+
+    <h3 class="text-3xl font-semibold mt-6">
+        {% translate "Getting Around Arusha" %}
+    </h3>
+
+    <p>
+        {% blocktranslate %} Arusha offers several transportation options: {% endblocktranslate %}
+    </p>
+
+    <ul class="list-disc list-inside mt-4">
+        <li>
+            <strong>{% translate "Public Transport (Dala-Dalas):" %}</strong>
+            {% translate "These minibuses are the most affordable way to get around, but they can be crowded. Be prepared for a local experience!" %}
+        </li>
+        <li>
+            <strong>{% translate "Ride-Hailing Apps:" %}</strong>
+            {% translate "Bolt and inDrive are available in Arusha, offering convenient and relatively affordable transportation. Both offer car and motorcycle (Bajaj) options." %}
+        </li>
+        <li>
+            <strong>{% translate "Taxis:" %}</strong>
+            {% translate "Taxis are available, but it's essential to negotiate the fare before you start your journey." %}
+        </li>
+        <li>
+            <strong>{% translate "Motorcycle Taxis (Bajajs or Bodabodas):" %}</strong>
+            {% translate "These are a quick way to get around the city, especially for shorter distances. Negotiate the price beforehand, and wear a helmet if provided." %}
+        </li>
+    </ul>
+
+
+    <h2 class="text-4xl font-bold mt-6">{% translate "Visas" %}</h2>
+
+    <ul class="list-disc list-inside mt-4">
+        <li>
+            <strong>{% translate "Visa Requirements:" %}</strong> 
+            {% translate "Most visitors to Tanzania require a visa." %}
+        </li>
+        <li>
+            <strong>{% translate "Tourist Visa:" %}</strong> 
+            {% translate "A single-entry tourist visa, valid for up to 90 days, is commonly issued." %}
+        </li>
+        <li>
+            <strong>{% translate "Application:" %}</strong>
+            <ul class="list-disc list-inside ml-6">
+                <li>
+                    <strong>{% translate "Online:" %}</strong> 
+                    <a href="https://visa.immigration.go.tz/" class="text-blue-500 underline">
+                        {% translate "Through the Tanzania Immigration Department’s official website." %}
+                    </a>
+                </li>
+                <li>
+                    <strong>{% translate "Tanzanian Embassy/Consulate:" %}</strong> 
+                    {% translate "In your home country." %}
+                </li>
+                <li>
+                    <strong>{% translate "On Arrival:" %}</strong> 
+                    {% translate "(Not recommended) At Kilimanjaro International Airport (KIA) and other entry points." %}
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>{% translate "Important:" %}</strong> 
+            {% blocktranslate %} Visa requirements can change. Always check the latest information from the 
+            <a href="https://www.immigration.go.tz/" class="text-blue-500 underline">
+                Tanzania Immigration Department
+            </a> 
+            or your nearest Tanzanian embassy/consulate well in advance of your trip. {% endblocktranslate %}
+        </li>
+    </ul>
+    
+
+    <h2 class="text-4xl font-bold mt-6">{% translate "Health and Safety" %}</h2>
+
+    <h3 class="text-3xl font-semibold mt-6">{% translate "Health" %}</h3>
+    <ul class="list-disc list-inside mt-4">
+        <li>
+            <strong>{% translate "Travel Insurance:" %}</strong>
+            {% translate "Ensure you have comprehensive travel insurance that covers medical expenses." %}
+        </li>
+        <li>
+            <strong>{% translate "Routine Vaccinations:" %}</strong>
+            {% translate "Be up-to-date on your routine vaccinations (measles, mumps, rubella, etc.)." %}
+        </li>
+        <li>
+            <strong>{% translate "Yellow Fever:" %}</strong>
+            {% translate "Tanzania requires proof of Yellow Fever vaccination if you are arriving from or transiting through a country with a risk of Yellow Fever transmission. Check the WHO website for the latest list." %}
+        </li>
+        <li>
+            <strong>{% translate "Typhoid and Hepatitis A:" %}</strong>
+            {% translate "Consider vaccinations for these." %}
+        </li>
+        <li>
+            <strong>{% translate "COVID-19:" %}</strong>
+            {% translate "Proof of COVID-19 vaccination is not currently required, but vaccination is strongly recommended." %}
+        </li>
+        <li>
+            <strong>{% translate "Malaria Prevention:" %}</strong>
+            <ul class="list-disc list-inside ml-6">
+                <li>
+                    <strong>{% translate "Anti-malarial Medication:" %}</strong>
+                    {% translate "Consult your doctor about appropriate prophylaxis." %}
+                </li>
+                <li>
+                    <strong>{% translate "Mosquito Repellent:" %}</strong>
+                    {% translate "Use a repellent containing DEET, picaridin, or IR3535." %}
+                </li>
+                <li>
+                    <strong>{% translate "Clothing:" %}</strong>
+                    {% translate "Wear long sleeves and pants, especially in the evenings." %}
+                </li>
+                <li>
+                    <strong>{% translate "Accommodation:" %}</strong>
+                    {% translate "Sleep under a mosquito net or in air-conditioned rooms." %}
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>{% translate "Water:" %}</strong>
+            {% translate "Drink bottled or purified water. Avoid tap water unless it has been boiled." %}
+        </li>
+        <li>
+            <strong>{% translate "Altitude Sickness:" %}</strong>
+            {% translate "If you plan to climb Mount Meru, be aware of altitude sickness. Acclimatize gradually, drink plenty of water, and avoid strenuous activity for the first few days." %}
+        </li>
+    </ul>
+
+    <h3 class="text-3xl font-semibold mt-6">{% translate "Safety" %}</h3>
+    <ul class="list-disc list-inside mt-4">
+        <li>
+            <strong>{% translate "General Safety:" %}</strong>
+            {% translate "Arusha is generally safe, but exercise common sense." %}
+        </li>
+        <li>
+            <strong>{% translate "Be Aware of Your Surroundings:" %}</strong>
+            {% translate "Pay attention to your belongings, especially in crowded areas." %}
+        </li>
+        <li>
+            <strong>{% translate "Secure Valuables:" %}</strong>
+            {% translate "Avoid displaying expensive jewellery, cameras, or large amounts of cash." %}
+        </li>
+        <li>
+            <strong>{% translate "Use Reputable Services:" %}</strong>
+            {% translate "Use registered taxis or reputable ride-hailing services." %}
+        </li>
+        <li>
+            <strong>{% translate "Nighttime Precautions:" %}</strong>
+            {% translate "Avoid walking alone at night in poorly lit areas." %}
+        </li>
+        <li>
+            <strong>{% translate "Petty Theft:" %}</strong>
+            {% translate "Be aware of the possibility of pickpocketing and bag snatching, especially in crowded areas and on public transport." %}
+        </li>
+    </ul>
+
+
+    <h2 class="text-4xl font-bold mt-6">{% translate "Practical Information" %}</h2>
+
+    <h3 class="text-3xl font-semibold mt-6">{% translate "Climate in August" %}</h3>
+    <p>{% translate "August is an excellent time to visit Arusha, as it falls within the dry season." %}</p>
+    <ul class="list-disc list-inside mt-4">
+        <li><strong>{% translate "Weather:" %}</strong> {% translate "Expect warm days and cool evenings." %}</li>
+        <li><strong>{% translate "Rainfall:" %}</strong> {% translate "Minimal rainfall." %}</li>
+        <li><strong>{% translate "Daytime Temperatures:" %}</strong> {% translate "22°C to 28°C (72°F to 82°F)" %}</li>
+        <li><strong>{% translate "Nighttime Temperatures:" %}</strong> {% translate "14°C to 16°C (57°F to 61°F)" %}</li>
+        <li><strong>{% translate "Altitude Variations:" %}</strong> {% translate "Temperatures can vary depending on altitude." %}</li>
+        <li><strong>{% translate "Arusha National Park:" %}</strong> {% translate "Daytime highs around 19°C (66°F), nighttime lows around 9°C (48°F)." %}</li>
+        <li><strong>{% translate "Mount Meru:" %}</strong> {% translate "Expect significantly cooler temperatures, especially at higher elevations." %}</li>
+    </ul>
+
+    <h3 class="text-3xl font-semibold mt-6">{% translate "What to Pack" %}</h3>
+    <ul class="list-disc list-inside mt-4">
+        <li><strong>{% translate "Clothing:" %}</strong>
+            <ul class="list-disc list-inside ml-6">
+                <li>{% translate "Lightweight, breathable clothing for warm days." %}</li>
+                <li>{% translate "Long-sleeved shirts and pants for evenings and protection from mosquitoes." %}</li>
+                <li>{% translate "A light jacket or sweater for cooler evenings." %}</li>
+                <li>{% translate "A waterproof jacket or poncho, just in case." %}</li>
+                <li>{% translate "Comfortable walking shoes or hiking boots." %}</li>
+                <li>{% translate "Modest clothing for visiting rural areas or religious sites." %}</li>
+                <li>{% translate "Swimsuit." %}</li>
+            </ul>
+        </li>
+        <li><strong>{% translate "Essentials:" %}</strong>
+            <ul class="list-disc list-inside ml-6">
+                <li>{% translate "Reusable water bottle." %}</li>
+                <li>{% translate "Sunscreen (high SPF)." %}</li>
+                <li>{% translate "Hat and sunglasses." %}</li>
+                <li>{% translate "Mosquito repellent." %}</li>
+                <li>{% translate "Personal toiletries." %}</li>
+                <li>{% translate "Any necessary medications (in their original packaging) and a copy of your prescription." %}</li>
+                <li>{% translate "Hand sanitizer." %}</li>
+                <li>{% translate "A small backpack for day trips." %}</li>
+                <li>{% translate "Universal adapter and power bank." %}</li>
+            </ul>
+        </li>
+        <li><strong>{% translate "Optional:" %}</strong>
+            <ul class="list-disc list-inside ml-6">
+                <li>{% translate "Binoculars (especially for safaris)." %}</li>
+                <li>{% translate "A travel pillow." %}</li>
+                <li>{% translate "A small first-aid kit." %}</li>
+                <li>{% translate "A headlamp or flashlight." %}</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3 class="text-3xl font-semibold mt-6">{% translate "Culture and Etiquette" %}</h3>
+    <ul class="list-disc list-inside mt-4">
+        <li><strong>{% translate "Respect Local Customs:" %}</strong> {% translate "Tanzanians are known for their warmth and friendliness." %}</li>
+        <li><strong>{% translate "Dress Modestly:" %}</strong> {% translate "Dress modestly, especially in rural areas and when visiting religious sites. Avoid revealing clothing." %}</li>
+        <li><strong>{% translate "Greetings:" %}</strong> {% translate "\"Jambo\" (hello) is a common greeting in Swahili." %}</li>
+        <li><strong>{% translate "Photography:" %}</strong> {% translate "Always ask permission before photographing people." %}</li>
+        <li><strong>{% translate "Tipping:" %}</strong> {% translate "Tipping is customary in restaurants, hotels, and for safari guides." %}</li>
+        <li><strong>{% translate "Language:" %}</strong> {% translate "Swahili is the national language. While English is spoken in tourist areas, learning a few basic Swahili phrases is appreciated." %}</li>
+    </ul>
+
+    <h2 class="text-4xl font-bold mt-6">{% translate "Accommodation" %}</h2>
+
+    <p>
+        {% blocktranslate %} Here are some accommodation options that are nearby the venue and all city facilities. It's highly recommended to book your accommodation well in advance, especially because August is peak tourist season. {% endblocktranslate %}
+    </p>
+
+    <h3 class="text-3xl font-semibold mt-6">{% translate "Online Means to review and book your accommodations:" %}</h3>
+    <p>
+        {% blocktranslate %} For those interested in Hotel and AirBnB Rentals. Use {% endblocktranslate %}
+    </p>
+    <ul class="list-disc list-inside mt-4">
+        <li>
+            <strong>{% translate "Booking.com:" %}</strong>
+            <a href="https://www.booking.com/searchresults.html?ss=Arusha&ssne=Arusha&ssne_untouched=Arusha&label=gen173nr-1FCAEoggI46AdIM1gEaOgBiAEBmAExuAEHyAEM2AEB6AEB-AECiAIBqAIDuAL_vYm_BsACAdICJGVjZDNjMjFjLTRhYTktNDRjZi05MWFkLTFkZmQ1MTc1YzA5NtgCBeACAQ&aid=356980&lang=en-us&sb=1&src_elem=sb&src=searchresults&dest_id=-2561033&dest_type=city&checkin=2025-08-04&checkout=2025-08-09&ltfd=1%3A5%3A8-2025%3A1%3A&group_adults=1&no_rooms=1&group_children=0" class="text-blue-500 underline">
+                {% translate "Filtered Hotels and Accommodations near the Venue" %}
+            </a>
+            {% translate "(Adjust the dates and your budget to fit your stay)" %}
+        </li>
+        <li>
+            <strong>{% translate "Airbnb:" %}</strong>
+            <a href="https://www.airbnb.com/s/Arusha/homes?refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2025-08-11&monthly_length=3&monthly_end_date=2025-09-13&price_filter_input_type=2&channel=EXPLORE&place_id=ChIJAXA6kENnMRgRU0ESZivtD9c&acp_id=e9321b43-a4fb-4814-9478-73a03a2563db&date_picker_type=flexible_dates&source=structured_search_input_header&search_type=user_map_move&drawer_open=false&query=Arusha&search_mode=regular_search&price_filter_num_nights=5&ne_lat=-3.360276182314217&ne_lng=36.71087447847691&sw_lat=-3.4093268556549226&sw_lng=36.69098135708228&zoom=15.025031596440483&zoom_level=15.025031596440483&search_by_map=true&monthly_dial_flexible_start_date_search_filter_type=0&flexible_trip_dates%5B%5D=august" class="text-blue-500 underline">
+                {% translate "Filtered Near the Venue and all Town areas" %}
+            </a>
+            {% translate "(Adjust the dates and your budget to fit your stay)" %}
+        </li>
+    </ul>
+
+    <h3 class="text-3xl font-semibold mt-6">{% translate "Accommodations below will require linking up with the Coordinators on the ground:" %}</h3>
+    <ul class="list-disc list-inside mt-4">
+        <li>
+            <strong>{% translate "Eagles" %}</strong>
+            <ul class="list-disc list-inside ml-6">
+                <li>{% translate "Capacity:" %} {% translate "13 people" %}</li>
+                <li>{% translate "Rate:" %} {% translate "Approximately USD 20 per person per night" %}</li>
+                <li>{% translate "Type:" %} {% translate "Lodge" %}</li>
+            </ul>
+        </li>
+        <li>
+            <strong>{% translate "Megan Hotel:" %}</strong>
+            <ul class="list-disc list-inside ml-6">
+                <li>{% translate "Capacity:" %} {% translate "~20 people" %}</li>
+                <li>{% translate "Rate:" %} {% translate "Approximately USD 30 per person per night" %}</li>
+                <li>{% translate "Type:" %} {% translate "Hotel" %}</li>
+                <li>
+                    <a href="https://maps.app.goo.gl/WVbUPkpVLMgQ2fEd6" class="text-blue-500 underline">
+                        {% translate "Link" %}
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>
+        {% blocktranslate %} This accommodation list will be updated to include more options. For more details - check with the people on the ground. {% endblocktranslate %}
+    </p>
+
+    <h2 class="text-4xl font-bold mt-6">{% translate "Local Resources and Contacts" %}</h2>
+    <ul class="list-disc list-inside mt-4">
+        <li>
+            <strong>{% translate "Venue:" %}</strong>
+            <a href="https://maps.app.goo.gl/Zoq32M6ao6F2fkh78" class="text-blue-500 underline">
+                {% translate "Life Fitness Hall, Njiro" %}
+            </a>
+        </li>
+        <li>
+            <strong>{% translate "On-the-Ground Contacts:" %}</strong>
+            <ul class="list-disc list-inside ml-6">
+                <li>
+                    <a href="mailto:juliustheodory@gmail.com" class="text-blue-500 underline">
+                        {% translate "Julius Moshiro" %}
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:mtuchidev@gmail.com" class="text-blue-500 underline">
+                        {% translate "Emmanuel Evance" %}
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2 class="text-4xl font-bold mt-6">{% translate "Additional Tips for an Amazing Trip" %}</h2>
+    <ul class="list-disc list-inside mt-4">
+        <li>{% translate "Learn some basic Swahili: Simple phrases like 'Jambo' (Hello), 'Asante' (Thank you), and 'Karibu' (Welcome) will go a long way." %}</li>
+        <li>{% translate "Bargaining: Bargaining is expected in markets and for taxis (if not using a meter or ride-hailing app)." %}</li>
+        <li>{% translate "Currency: The Tanzanian Shilling (TZS) is the local currency. Credit cards are accepted in larger hotels and restaurants, but it's a good idea to have some cash on hand for smaller establishments and markets." %}</li>
+        <li>{% translate "Stay Connected: Consider purchasing a local SIM card for affordable data and calls. Vodacom, Airtel, and Tigo are common providers." %}</li>
+        <li>{% translate "Power: Tanzania uses Type D and G electrical outlets. Pack an adapter. The standard voltage is 230 V, and the frequency is 50 Hz." %}</li>
+        <li>{% translate "Respect the Environment: Be a responsible traveler. Avoid littering, and respect wildlife and their habitats. If you go on safari, follow the guidelines of your tour operator." %}</li>
+        <li>{% translate "Enjoy the local cuisine: Tanzanian food is delicious and diverse. Be sure to try local dishes like Ugali, Nyama Choma, and Zanzibar Pilau." %}</li>
+        <li>{% translate "Embrace the culture: Tanzanians are known for their hospitality. Be open to learning about their culture and traditions." %}</li>
+    </ul>
+
+    <p>
+        {% blocktranslate %} We hope this guide helps you prepare for an incredible experience at DjangoCon Africa 2025 and a memorable visit to Arusha! {% endblocktranslate %}
+    </p>
+
+    {% comment %} <p class="mt-6">
+      {% blocktranslate %} For any questions about WhatsApp purchases, please
+      contact our support team at:
+      <a href="mailto:tickets@djangocon.africa" style="color: "
+        >tickets@djangocon.africa</a>
+      {% endblocktranslate %}
+    </p> {% endcomment %}
+  </div>
 </div>
 
 {% endblock %}

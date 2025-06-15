@@ -12,5 +12,7 @@ urlpatterns = [
     path("sponsor_us/", views.page_sponsor_us, name="sponsor_us"),
     path("opportunity_grants/", views.opportunity_grants, name="opportunity_grants"),
     path("welcome_to_arusha/", views.page_welcome, name="welcome_to_arusha"),
+    path("venue/", views.page_venue, name="venue"),
+    path("visa_info/", views.page_visa_info, name="visa_info"),
     path("tickets/", views.page_ticket, name="tickets"),
 ]
