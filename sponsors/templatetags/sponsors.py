@@ -20,7 +20,7 @@ def mini_sponsors():
 
 @register.simple_tag
 def sponsor_by_pkg_name(*args):
-    sponsor_list = Sponsor.objects.all().order_by('packages__name', 'order', 'id').distinct("packages__name")
+    sponsor_list = Sponsor.objects.all().order_by("packages__order", "packages__name").distinct("packages__order", "packages__name")
     return sponsor_list.filter(packages__name__in=args)
 
 
@@ -35,4 +35,7 @@ def sponsor_tagged_image(sponsor, tag):
     """return the corresponding url from the tagged image list."""
     if sponsor.files.filter(tag_name=tag).exists():
         return sponsor.files.filter(tag_name=tag).first().tagged_file.item.url
+    # if tag does not exist try fetching 'main_logo'
+    elif sponsor.files.filter(tag_name="main_logo").exists():
+        return sponsor.files.filter(tag_name="main_logo").first().tagged_file.item.url
     return ''
