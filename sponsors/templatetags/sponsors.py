@@ -20,7 +20,7 @@ def mini_sponsors():
 
 @register.simple_tag
 def sponsor_by_pkg_name(*args):
-    sponsor_list = Sponsor.objects.all().order_by('packages', 'order', 'id')
+    sponsor_list = Sponsor.objects.all().order_by('packages__name', 'order', 'id').distinct("packages__name")
     return sponsor_list.filter(packages__name__in=args)
 
 

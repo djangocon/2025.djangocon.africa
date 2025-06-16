@@ -37,6 +37,14 @@ def page_welcome(request):
     return render(request, "page_welcome.html")
 
 
+def page_venue(request):
+    return render(request, "page_venue.html")
+
+
+def page_visa_info(request):
+    return render(request, "page_visa_info.html")
+
+
 def page_ticket(request):
     context = {"is_white_header": False, "uza_api_key": settings.UZA_PUBLIC_API_KEY}
     return render(request, "page_tickets.html", context)

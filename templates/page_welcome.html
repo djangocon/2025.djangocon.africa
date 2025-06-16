@@ -2,7 +2,7 @@
 {% load partials %} 
 {% load i18n %} 
 {% block content%}
-
+{% load static %}
 <div class="dj-container pt-[72px] md:pt-[88px] pb-16">
   <h1 class="text-center">{% translate "Welcome 2 Arusha" %}</h1>
   <div class="flex flex-col gap-y-8 md:max-w-[740px] mx-auto pt-10 lg:pt-8">
@@ -57,41 +57,146 @@
       </li>
     </ul>
 
-    <h2 class="text-4xl font-bold mt-6">{% translate "Why, Arusha" %}</h2>
+    <h2 class="text-4xl font-bold mt-8">{% translate "Why Arusha?" %}</h2>
+
+    <div class="flex justify-center mb-6">
+        <img 
+            src="{% static 'images/venue/JTM_7576.png' %}" 
+            alt="{% translate 'Beautiful Arusha Landscape' %}" 
+            class="w-full max-w-[600px] h-64 object-cover rounded-lg shadow-lg"
+        />
+    </div>
 
     <p>
-      {% blocktranslate %} Arusha offers the perfect blend of adventure and
-      relaxation. In August, the weather is ideal for exploring Tanzania's
-      natural wonders. The city's proximity to iconic sites like Arusha National
-      Park, Ngorongoro Crater, Tarangire N. Park, Manyara N. Park, Mount Meru,
-      and Mount Kilimanjaro makes it a prime location for: 
-    {% endblocktranslate %}
+      {% blocktranslate %} Get a glance of how beautiful Arusha and Tanzania are {% endblocktranslate %}
     </p>
+    
+    <div class="mt-6 mb-8">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="cursor-pointer gallery-item group">
+                <img src="{% static 'images/Arusha/hiking.jpg' %}" alt="{% translate 'Arusha Scene' %}" class="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+            </div>
+            <div class="cursor-pointer gallery-item group">
+                <img src="{% static 'images/Arusha/building.jpg' %}" alt="{% translate 'Arusha Scene' %}" class="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+            </div>
+            <div class="cursor-pointer gallery-item group">
+                <img src="{% static 'images/venue/JTM_3555.png' %}" alt="{% translate 'Conference Venue' %}" class="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+            </div>
+            <div class="cursor-pointer gallery-item group">
+                <img src="{% static 'images/venue/JTM_3545.png' %}" alt="{% translate 'Conference Venue' %}" class="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+            </div>
+            <div class="cursor-pointer gallery-item group">
+                <img src="{% static 'images/Arusha/JTM_3465.jpg' %}" alt="{% translate 'Arusha Scene' %}" class="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+            </div>
+            <div class="cursor-pointer gallery-item group">
+                <img src="{% static 'images/venue/JTM_2760.jpg' %}" alt="{% translate 'Arusha Scene' %}" class="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+            </div>
+            <div class="cursor-pointer gallery-item group">
+                <img src="{% static 'images/venue/JTM_4789.png' %}" alt="{% translate 'Conference Venue' %}" class="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+            </div>
+            <div class="cursor-pointer gallery-item group">
+                <img src="{% static 'images/Arusha/JTM_5524.jpg' %}" alt="{% translate 'Conference Venue' %}" class="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+            </div>
+        </div>
 
-    <ul class="list-disc list-inside mt-4">
-        <li>
-            <strong>{% translate "Hiking and Walks:" %}</strong> 
-            {% translate "Explore the slopes of Mt. Meru and different waterfalls it contains" %}
-        </li>
-        <li>
-            <strong>{% translate "Game Drives:" %}</strong> 
-            {% translate "Witness incredible wildlife in nearby national parks." %}
-        </li>
-        <li>
-            <strong>{% translate "Swimming:" %}</strong> 
-            {% translate "Enjoy the comfortable climate." %}
-        </li>
-        <li>
-            <strong>{% translate "Cultural Experiences:" %}</strong> 
-            {% translate "Immerse yourself in Tanzanian culture." %}
-        </li>
-    </ul>
+        <!-- Image Modal -->
+        <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-0 z-50 flex items-center justify-center opacity-0 invisible transition-all duration-300 ease-in-out pointer-events-none">
+            <div id="modalContent" class="max-w-4xl mx-auto p-4 relative transform scale-75 transition-all duration-300 ease-in-out">
+                <button id="closeModal" class="absolute -top-4 -right-4 bg-white hover:bg-gray-100 text-gray-800 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold z-10 shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <img id="modalImage" src="" alt="{% translate 'Enlarged view' %}" class="max-h-[90vh] max-w-full object-contain rounded-lg shadow-2xl">
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const galleryItems = document.querySelectorAll('.gallery-item');
+                const modal = document.getElementById('imageModal');
+                const modalImg = document.getElementById('modalImage');
+                const modalContent = document.getElementById('modalContent');
+                const closeBtn = document.getElementById('closeModal');
+
+                function openModal(imgSrc, imgAlt) {
+                    modalImg.src = imgSrc;
+                    modalImg.alt = imgAlt;
+                    
+                    // Show modal with animation
+                    modal.classList.remove('pointer-events-none');
+                    modal.classList.remove('invisible');
+                    
+                    // Force reflow
+                    modal.offsetHeight;
+                    
+                    // Add animation classes
+                    modal.classList.remove('opacity-0');
+                    modal.classList.add('bg-opacity-75');
+                    modalContent.classList.remove('scale-75');
+                    modalContent.classList.add('scale-100');
+                    
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Focus the close button for accessibility
+                    setTimeout(() => closeBtn.focus(), 100);
+                }
+
+                function closeModal() {
+                    // Remove animation classes
+                    modal.classList.add('opacity-0');
+                    modal.classList.remove('bg-opacity-75');
+                    modalContent.classList.remove('scale-100');
+                    modalContent.classList.add('scale-75');
+                    
+                    // Hide modal after animation
+                    setTimeout(() => {
+                        modal.classList.add('invisible');
+                        modal.classList.add('pointer-events-none');
+                        document.body.style.overflow = 'auto';
+                    }, 300);
+                }
+
+                galleryItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        const imgSrc = this.querySelector('img').src;
+                        const imgAlt = this.querySelector('img').alt;
+                        openModal(imgSrc, imgAlt);
+                    });
+                });
+
+                closeBtn.addEventListener('click', closeModal);
+                
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        closeModal();
+                    }
+                });
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && !modal.classList.contains('invisible')) {
+                        closeModal();
+                    }
+                });
+            });
+        </script>
+    </div>
 
     <h5 class="text-2xl mt-6">
     {% translate "Arusha is more than just a starting point for safaris; it's a city rich in culture and history, offering a warm welcome to all visitors.:" %}
     </h5>
-
-    <h2 class="text-4xl font-bold mt-6">{% translate "Travel Information" %}</h2>
+    
+ <h2 class="text-4xl font-bold mt-6">{% translate "Travel Information" %}</h2>
+    
+    <!-- Travel Header Image -->
+    <div class="flex justify-center my-6">
+        <img 
+            src="{% static 'images/venue/JTM_9147.jpg' %}" 
+            alt="{% translate 'Arusha Transportation and Access' %}" 
+            class="w-full max-w-[600px] h-48 object-cover rounded-lg shadow-lg"
+        />
+    </div>
+    
     <h3 class="text-3xl font-semibold mt-6">
         {% translate "Getting to Arusha" %}
     </h3>
@@ -161,7 +266,9 @@
     </ul>
 
 
-    <h2 class="text-4xl font-bold mt-6">{% translate "Visas" %}</h2>
+
+
+    {% comment %} <h2 class="text-4xl font-bold mt-6">{% translate "Visas" %}</h2>
 
     <ul class="list-disc list-inside mt-4">
         <li>
@@ -199,7 +306,7 @@
             </a> 
             or your nearest Tanzanian embassy/consulate well in advance of your trip. {% endblocktranslate %}
         </li>
-    </ul>
+    </ul> {% endcomment %}
     
 
     <h2 class="text-4xl font-bold mt-6">{% translate "Health and Safety" %}</h2>
