@@ -46,3 +46,17 @@ def schedule_list(request):
     return render(request, "schedule/schedule_list.html", context)
 
 
+def session_detail(request, slug):
+    """View for displaying detailed information about a specific session"""
+    session = get_object_or_404(
+        Session.objects.select_related(
+            'room', 'conference_day', 'speaker'
+        ),
+        slug=slug
+    )
+
+    context = {
+        'session': session,
+    }
+
+    return render(request, "schedule/session_detail.html", context)
