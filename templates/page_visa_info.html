@@ -9,7 +9,7 @@
   <div class="text-center mb-8 max-w-2xl mx-auto">
     <p class="text-lg text-gray-600">
       {% blocktranslate %} 
-      Complete guide for obtaining your visa to attend DjangoCon Africa 2025 in Arusha, Tanzania
+      You may need a visa to enter Tanzania. Consider the official Tanzania Immigration Department website the source of truth.
       {% endblocktranslate %}
     </p>
   </div>
@@ -32,13 +32,22 @@
                 <span class="text-2xl">📋</span>
             </div>
             <div class="ml-4">
-                <h3 class="text-lg font-semibold text-blue-900 mb-2">{% translate "Important Notice" %}</h3>
-                <p class="text-blue-800">
+                <h3 class="text-lg font-semibold text-blue-900 mb-2">{% translate "Visa Categories" %}</h3>
+                <p class="text-blue-800 mb-4">
                     {% blocktranslate %}
-                    Most visitors to Tanzania, including those attending DjangoCon Africa 2025 in Arusha, will need a visa. 
-                    The specific requirements can vary based on your nationality, so it's essential to check the 
+                    Visitors to Tanzania fall into three categories, according to their nationality:
+                    {% endblocktranslate %}
+                </p>
+                <ul class="list-disc list-inside text-blue-800 space-y-2">
+                    <li>{% translate "Countries whose nationals do not require any visa (if you're in this list, you can stop reading)" %}</li>
+                    <li>{% translate "Countries whose citizens require a referral visa (who must apply for a visa in advance)" %}</li>
+                    <li>{% translate "Other countries, whose citizens can apply for a visa on arrival or in advance" %}</li>
+                </ul>
+                <p class="text-blue-800 mt-4">
+                    {% blocktranslate %}
+                    Check the 
                     <a href="https://www.immigration.go.tz/" class="underline font-semibold" target="_blank">Tanzania Immigration Department's official website</a> 
-                    or your nearest Tanzanian embassy/consulate for the most accurate and up-to-date information.
+                    for the most accurate and up-to-date information.
                     {% endblocktranslate %}
                 </p>
             </div>
@@ -54,20 +63,83 @@
         <div class="space-y-4">
             <p class="text-gray-700 leading-relaxed">
                 {% blocktranslate %}
-                We highly recommend applying for your visa online in advance through the 
-                <a href="https://visa.immigration.go.tz/" class="text-blue-600 underline font-semibold" target="_blank">Tanzania Immigration Department's official website</a>. 
-                While "visa on arrival" is sometimes an option, applying beforehand helps avoid potential queues and delays upon your arrival at 
-                Kilimanjaro International Airport (KIA).
+                We recommend applying for your visa online in advance through the 
+                <a href="https://www.immigration.go.tz/index.php/immigration-services/visa-information" class="text-blue-600 underline font-semibold" target="_blank">Tanzania Immigration Department's official website</a>, 
+                even if a visa on arrival is an option for you. Applying beforehand helps avoid queues and delays upon your arrival at 
+                Kilimanjaro International Airport (JRO). You need to apply for an Ordinary visa, for Meetings and workshops.
                 {% endblocktranslate %}
             </p>
             
             <div class="bg-green-50 p-4 rounded-lg">
-                <h4 class="font-semibold text-green-800 mb-2">{% translate "Recommended Application Method:" %}</h4>
+                <h4 class="font-semibold text-green-800 mb-2">{% translate "Application Details:" %}</h4>
                 <ul class="list-disc list-inside text-green-700 space-y-1">
                     <li>{% translate "Apply online in advance" %}</li>
+                    <li>{% translate "Ordinary visa for Meetings and workshops" %}</li>
+                    <li>{% translate "Cost: USD 50" %}</li>
                     <li>{% translate "Avoid airport queues and delays" %}</li>
-                    <li>{% translate "Ensure your visa is ready before travel" %}</li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Required Documents Section -->
+    <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800 flex items-center">
+            <span class="mr-3">📄</span>
+            {% translate "Required Documents" %}
+        </h2>
+        <div class="space-y-6">
+            <p class="text-gray-700 leading-relaxed">
+                {% blocktranslate %}
+                You will need several documents for your visa application:
+                {% endblocktranslate %}
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-gray-800 mb-2">{% translate "Physical Address in Arusha" %}</h4>
+                    <p class="text-gray-700 text-sm">
+                        {% blocktranslate %}
+                        You will need to provide the physical address of where you will stay. If you don't know yet, 
+                        you can provide the address of a hotel close to the venue (Life Fitness Hall, Njiro, Arusha).
+                        {% endblocktranslate %}
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-gray-800 mb-2">{% translate "Flight Reservation" %}</h4>
+                    <p class="text-gray-700 text-sm">
+                        {% blocktranslate %}
+                        A reservation for a return ticket with a booking number (usually in the form A12B3C). 
+                        A travel agent can get you a reservation without buying the ticket.
+                        {% endblocktranslate %}
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-gray-800 mb-2">{% translate "Host Organisation Documents" %}</h4>
+                    <p class="text-gray-700 text-sm mb-2">
+                        {% blocktranslate %}
+                        If you need these documents, please email 
+                        <a href="mailto:hello@djangocon.africa" class="text-blue-600 underline">hello@djangocon.africa</a> 
+                        to request them:
+                        {% endblocktranslate %}
+                    </p>
+                    <ul class="text-sm text-gray-700 space-y-1 ml-4">
+                        <li>• {% translate "Business licence" %}</li>
+                        <li>• {% translate "Certificate of incorporation (if required)" %}</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-gray-800 mb-2">{% translate "Covering Letter" %}</h4>
+                    <p class="text-gray-700 text-sm mb-2">
+                        {% blocktranslate %}
+                        The visa form requires you to upload a document containing "other relevant information".
+                        {% endblocktranslate %}
+                    </p>
+                    <a href="https://docs.google.com/document/d/1Kx5jXCg2RaAciJq_CZKwIDqvKnTpJC3C61Cb5kC4qPQ/edit?tab=t.0" class="text-blue-600 underline text-sm" target="_blank">{% translate "Download covering letter template" %}</a>
+                </div>
             </div>
         </div>
     </div>
@@ -81,8 +153,7 @@
         <div class="space-y-4">
             <p class="text-gray-700 leading-relaxed">
                 {% blocktranslate %}
-                If your visa application, particularly when applying through a Tanzanian Consulate, requires an invitation letter, 
-                you can request one from the DjangoCon Africa organizing team.
+                Use our form to provide us with some personal details, and we will issue you with an invitation letter.
                 {% endblocktranslate %}
             </p>
             
@@ -102,6 +173,29 @@
                      {% translate "Request Invitation Letter" %}
                     </a>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Section -->
+    <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800 flex items-center">
+            <span class="mr-3">💳</span>
+            {% translate "Payment" %}
+        </h2>
+        <div class="bg-yellow-50 p-5 rounded-lg">
+            <p class="text-yellow-800 leading-relaxed mb-4">
+                {% blocktranslate %}
+                The application will cost you USD 50.
+                {% endblocktranslate %}
+            </p>
+            <div class="bg-yellow-100 p-4 rounded-lg">
+                <h4 class="font-semibold text-yellow-900 mb-2">{% translate "Payment Tips:" %}</h4>
+                <p class="text-yellow-800 text-sm">
+                    {% blocktranslate %}
+                    Some users have reported problems with the website's payment gateway. There are various payment options. Keep trying.
+                    {% endblocktranslate %}
+                </p>
             </div>
         </div>
     </div>
@@ -143,13 +237,22 @@
             {% translate "After Submitting Your Application" %}
         </h2>
         <div class="bg-purple-50 p-5">
-            <p class="text-purple-800 leading-relaxed">
+            <p class="text-purple-800 leading-relaxed mb-4">
                 {% blocktranslate %}
-                Once you have submitted your visa application, please inform our organizing team by sending an email to 
+                Once you have submitted your visa application, inform our organizing team by sending an email to 
                 <a href="mailto:hello@djangocon.africa" class="font-bold underline">hello@djangocon.africa</a>
-                to help us track and assist if needed.
+                to help us track and assist if needed. We will co-ordinate with the immigration authorities to help ensure swift success.
                 {% endblocktranslate %}
             </p>
+            <div class="bg-purple-100 p-4 rounded-lg">
+                <h4 class="font-semibold text-purple-900 mb-2">{% translate "Application Status:" %}</h4>
+                <p class="text-purple-800 text-sm">
+                    {% blocktranslate %}
+                    When you check back to see the progress of your application, its status will at first be "Pending", 
+                    and once it's being processed: "On progress".
+                    {% endblocktranslate %}
+                </p>
+            </div>
         </div>
     </div>
 
@@ -159,7 +262,7 @@
         <div class="grid md:grid-cols-2 gap-6">
             <div>
                 <h4 class="font-semibold mb-2">{% translate "Application Website:" %}</h4>
-                <a href="https://visa.immigration.go.tz/" class="underline" target="_blank">visa.immigration.go.tz</a>
+                <a href="https://www.immigration.go.tz/index.php/immigration-services/visa-information" class="underline" target="_blank">immigration.go.tz/visa-information</a>
                 
                 <h4 class="font-semibold mb-2 mt-4">{% translate "Host Organization:" %}</h4>
                 <p>Binary Institute Tanzania Limited</p>
@@ -182,7 +285,7 @@
                 <p>+255 758 828 363</p>
                 
                 <h4 class="font-semibold mb-2 mt-4">{% translate "Visa Support:" %}</h4>
-                <a href="mailto:hello@djangocon.africa" class="underline">hello@djangocon.africa</a>
+                <a href="mailto:visas@djangocon.africa" class="underline">visas@djangocon.africa</a>
             </div>
         </div>
     </div>
@@ -203,7 +306,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://visa.immigration.go.tz/" class="text-blue-600 underline" target="_blank">
+                        <a href="https://www.immigration.go.tz/index.php/immigration-services/visa-information" class="text-blue-600 underline" target="_blank">
                             {% translate "Online Visa Application Portal" %}
                         </a>
                     </li>
@@ -214,7 +317,7 @@
                 <ul class="space-y-2">
                     <li>
                         <span class="text-gray-600">{% translate "Email:" %}</span>
-                        <a href="mailto:hello@djangocon.africa" class="text-blue-600 underline">hello@djangocon.africa</a>
+                        <a href="mailto:visas@djangocon.africa" class="text-blue-600 underline">visas@djangocon.africa</a>
                     </li>
                     <li>
                         <span class="text-gray-600">{% translate "Conference Website:" %}</span>
