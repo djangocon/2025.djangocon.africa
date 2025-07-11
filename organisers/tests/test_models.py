@@ -20,6 +20,15 @@ class TestOrganiser:
         assert organiser.country.code == "TZ"
         assert organiser.social_links["github"] == "https://github.com/janedoe"
         assert organiser.order == 1
+        assert organiser.approved is False  # Default value
+
+    @pytest.mark.django_db
+    def test_organiser_approved_field(self):
+        """Test the approved field functionality"""
+        organiser = Organiser.objects.create(
+            name="Test Organiser", role="Test Role", approved=True, order=1
+        )
+        assert organiser.approved is True
 
     @pytest.mark.django_db
     def test_organiser_ordering(self):

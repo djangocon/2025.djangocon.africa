@@ -23,7 +23,9 @@ class Migration(migrations.Migration):
                 (
                     "name",
                     models.CharField(
-                        max_length=255, help_text="Full name of the organiser"
+                        max_length=255,
+                        help_text="Full name of the organiser",
+                        unique=True,
                     ),
                 ),
                 (
@@ -58,6 +60,13 @@ class Migration(migrations.Migration):
                 (
                     "order",
                     models.PositiveIntegerField(default=1, help_text="Display order"),
+                ),
+                (
+                    "approved",
+                    models.BooleanField(
+                        default=False,
+                        help_text="Whether this organiser is approved for display",
+                    ),
                 ),
             ],
             options={
