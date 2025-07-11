@@ -1,0 +1,53 @@
+{% extends "_base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<div class="dj-container pt-[72px] md:pt-[88px] pb-16">
+    <h1 class="text-center">{% translate "Organisers" %}</h1>
+    <div class="text-center mt-2 md:mt-4 mb-8 md:mb-6 md:max-w-[844px] mx-auto">
+        <p>
+            {% blocktranslate %}
+            Organising DjangoCon Africa can be demanding. But a lot of awesome people commit to spending a lot of time and resources to put things together to make it work. We can never thank you enough for making it happen!
+            {% endblocktranslate %}
+        </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-20 gap-y-6 md:gap-y-10 md:max-w-[926px] mx-auto">
+        {% for organiser in organisers %}
+        <div class="flex gap-x-4">
+            {% if organiser.photo %}
+                <img src="{{ organiser.photo.url }}" alt="{{ organiser.name }}" class="w-[88px] h-[88px] md:w-[120px] md:h-[120px] aspect-square rounded-2xl object-cover" />
+            {% else %}
+                <div class="w-[88px] h-[88px] md:w-[120px] md:h-[120px] aspect-square bg-gray-100 rounded-2xl">
+                </div>
+            {% endif %}
+            <div class="">
+                <p class="font-archivo font-medium mb-1">{{ organiser.name }} {% if organiser.country %}<span class="ml-1">{{ organiser.country.unicode_flag }}</span>{% endif %}</p>
+                <div class="font-chivomono text-base text-black/80 mb-2">{{ organiser.role }}</div>
+                <div class="flex items-center gap-x-4">
+                    {% if organiser.social_links.github %}
+                        <a href="{{ organiser.social_links.github }}" target="_blank">
+                            <img src="{% static 'icons/github-black.svg' %}" alt="GitHub" class="w-6 h-6" /></a>
+                    {% endif %}
+                    {% if organiser.social_links.twitter %}
+                        <a href="{{ organiser.social_links.twitter }}" target="_blank"><img src="{% static 'icons/x-black.svg' %}" alt="Twitter/X" class="w-6 h-6" /></a>
+                    {% endif %}
+                    {% if organiser.social_links.linkedin %}
+                        <a href="{{ organiser.social_links.linkedin }}" target="_blank"><img src="{% static 'icons/linkedin-black.svg' %}" alt="LinkedIn" class="w-6 h-6" /></a>
+                    {% endif %}
+                    {% if organiser.social_links.mastodon %}
+                        <a href="{{ organiser.social_links.mastodon }}" target="_blank"><img src="{% static 'icons/mastodon-black.svg' %}" alt="Mastodon" class="w-6 h-6" /></a>
+                    {% endif %}
+                    {% if organiser.social_links.bluesky %}
+                        <a href="{{ organiser.social_links.bluesky }}" target="_blank"><img src="{% static 'icons/bluesky-black.svg' %}" alt="Bluesky" class="w-6 h-6" /></a>
+                    {% endif %}
+                    {% if organiser.social_links.web %}
+                        <a href="{{ organiser.social_links.web }}" target="_blank"><img src="{% static 'icons/website-black.svg' %}" alt="Website" class="w-6 h-6" /></a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
