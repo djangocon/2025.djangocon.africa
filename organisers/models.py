@@ -2,9 +2,6 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django_countries.fields import CountryField
 
-# Create your models here.
-
-
 class Organiser(models.Model):
     name = models.CharField(
         max_length=255, unique=True, help_text=_("Full name of the organiser")
