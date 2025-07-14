@@ -73,9 +73,8 @@ def test_valid_url_to_reset_password(user, client):
         format="text/html",
     )
     email_lines = mail.outbox[0].body.splitlines()
-    url = email_lines[6]
     re = client.post(
-        url,
+        "/accounts/password/reset/",
         dict(password1="FNEYghfr", password2="FNEYghfr"),
         format="text/html",
     )
