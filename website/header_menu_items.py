@@ -19,7 +19,7 @@ header_menu_items = [
             HeaderLink(label=_("Venue"), href="/venue"),
             HeaderLink(label=_("Welcome To Arusha"), href="/welcome_to_arusha"),
             HeaderLink(label=_("Visa Information"), href="/visa_info"),
-            HeaderLink(label=_("Organisers"), href="/organisers/"),
+            # HeaderLink(label=_("Organisers"), href="/organisers/"),
         ],
     ),
     HeaderLink(
