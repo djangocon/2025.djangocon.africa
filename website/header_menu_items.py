@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
 
-from django.urls import reverse
 from django.utils.translation import gettext as _
 
 
@@ -16,13 +15,11 @@ header_menu_items = [
     HeaderLink(
         label=_("Conference"),
         children=[
-            # HeaderLink(label=_("About the conference"), href="#"),
-            # HeaderLink(label=_("Venue"), href="#"),
             HeaderLink(label=_("Code of Conduct"), href="/coc"),
             HeaderLink(label=_("Venue"), href="/venue"),
             HeaderLink(label=_("Welcome To Arusha"), href="/welcome_to_arusha"),
             HeaderLink(label=_("Visa Information"), href="/visa_info"),
-            # HeaderLink(label=_("Organisers"), href="#"),
+            # HeaderLink(label=_("Organisers"), href="/organisers/"),
         ],
     ),
     HeaderLink(
@@ -52,13 +49,3 @@ header_menu_items = [
     ),
     # HeaderLink(label=_("Schedule"), href="#",),
 ]
-
-user_loggedin_link = HeaderLink(
-    label='<i class="fas fa-user"></i> User',
-    children=[
-        # HeaderLink("Profile", href="todo"),
-        HeaderLink(_("Logout"), href=reverse("account_logout")),
-    ],
-)
-
-user_not_loggedin_link = HeaderLink(label=_("LogIn"), href=reverse("account_login"))

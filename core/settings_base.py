@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "template_partials",
     "crispy_forms",
     "crispy_tailwind",
+    "django_countries",
     # local apps
     "website",
     "custom_auth",
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     "allauth.account",
     "sponsors",
     "news",
+    "organisers",
     # wagtail
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
