@@ -29,10 +29,10 @@
             <div class="flex-1">
               {% if time_data.sessions|length == 1 %}
                 {% with session=time_data.sessions.0 %}
-                  {% if session.is_break %}
+                  {% if session.is_break or session.is_check_in or session.is_opening or session.is_closing %}
                     <div class="bg-[#F2F6F7] border border-deepTeal rounded-2xl p-6">
                       <div class="flex items-center gap-3">
-                        <span class="text-2xl">🥗</span>
+                        <span class="text-2xl">{% get_session_emoji session %}</span>
                         <p class="text-2xl font-archivo font-medium">{{ session.title }}</p>
                       </div>
                     </div>
