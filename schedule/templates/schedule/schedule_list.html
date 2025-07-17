@@ -1,0 +1,68 @@
+{% extends "_base.html" %}
+{% load static %}
+{% load i18n %}
+{% load schedule_filters %}
+
+{% block content %}
+<div class="dj-container pt-[72px] md:pt-[88px] pb-16">
+  <h1 class="text-center">
+    {% translate "SCHEDULE" %}
+  </h1>
+
+  <div class="flex flex-wrap justify-center gap-x-4 mb-10">
+    {% for day in conference_days %}
+      <a href="?day={{ day.id }}"
+         class="px-4 py-2 rounded-full transition-all duration-200 hover:bg-deepTeal/90 {% if day == selected_day %}bg-deepTeal text-white {% else %}bg-white text-gray-700 hover:bg-gray-100 border {% endif %}">
+        {{ day.name }}
+      </a>
+    {% endfor %}
+  </div>
+
+  {% if selected_day and sessions_by_time %}
+    <div class="flex flex-col gap-y-8 md:gap-y-4">
+      {% for time_slot, time_data in sessions_by_time.items %}
+        <div>
+          <div class="md:flex items-center gap-y-1 gap-x-14">
+            <div class="flex-shrink-0 md:text-right">
+              <p class="text-base">{{ time_data.time_range }}</p>
+            </div>
+            <div class="flex-1">
+              {% if time_data.sessions|length == 1 %}
+                {% with session=time_data.sessions.0 %}
+                  {% if session.is_break or session.is_check_in or session.is_opening or session.is_closing %}
+                    <div class="bg-[#F2F6F7] border border-deepTeal rounded-2xl p-6">
+                      <div class="flex items-center gap-3">
+                        <span class="text-2xl">{% get_session_emoji session %}</span>
+                        <p class="text-2xl font-archivo font-medium">{{ session.title }}</p>
+                      </div>
+                    </div>
+                  {% else %}
+                    {% session_card session %}
+                  {% endif %}
+                {% endwith %}
+              {% else %}
+                <div class="grid md:grid-cols-2 gap-6">
+                  {% for session in time_data.sessions %}
+                    {% session_card session %}
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <!-- No Schedule Available -->
+    <div class="text-center py-16">
+      <div class="text-6xl mb-4">📅</div>
+      <h3 class="text-2xl font-semibold mb-2">
+        {% translate "Schedule Coming Soon" %}
+      </h3>
+      <p class="max-w-md mx-auto">
+        {% translate "We're working hard to finalize the conference schedule. Check back soon for updates!" %}
+      </p>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

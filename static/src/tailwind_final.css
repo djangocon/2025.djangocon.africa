@@ -937,6 +937,10 @@ td {
   margin-top: -1px;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -1088,6 +1092,10 @@ td {
   height: 6rem;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
 .h-4 {
   height: 1rem;
 }
@@ -1106,6 +1114,10 @@ td {
 
 .h-64 {
   height: 16rem;
+}
+
+.h-\[343px\] {
+  height: 343px;
 }
 
 .h-8 {
@@ -1150,6 +1162,11 @@ td {
 
 .w-12 {
   width: 3rem;
+}
+
+
+.w-32 {
+  width: 8rem;
 }
 
 .w-16 {
@@ -1223,6 +1240,10 @@ td {
 
 .max-w-full {
   max-width: 100%;
+}
+
+.max-w-md {
+  max-width: 28rem;
 }
 
 .max-w-lg {
@@ -1314,6 +1335,14 @@ td {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.place-items-center {
+  place-items: center;
+}
+
 .content-start {
   align-content: flex-start;
 }
@@ -1332,6 +1361,18 @@ td {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-14 {
+  gap: 3.5rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
 }
 
 .gap-4 {
@@ -1380,6 +1421,10 @@ td {
 .gap-x-8 {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
+}
+
+.gap-y-1 {
+  row-gap: 0.25rem;
 }
 
 .gap-y-12 {
@@ -1518,6 +1563,10 @@ td {
   border-width: 2px;
 }
 
+.border-4 {
+  border-width: 4px;
+}
+
 .border-x-0 {
   border-left-width: 0px;
   border-right-width: 0px;
@@ -1630,6 +1679,11 @@ td {
   background-color: rgb(49 49 20 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#F2F6F7\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 246 247 / var(--tw-bg-opacity));
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -1664,9 +1718,28 @@ td {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.bg-green-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 253 244 / var(--tw-bg-opacity));
+}
+
+.bg-orange-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 247 237 / var(--tw-bg-opacity));
+}
+
+.bg-purple-50 {
+  --tw-bg-opacity: 1;
 }
 
 .bg-green-100 {
@@ -1747,6 +1820,10 @@ td {
 
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-dotted-world-map-white {
+  background-image: url('/static/images/dotted-world-map-white.svg');
 }
 
 .from-blue-500 {
@@ -1975,8 +2052,18 @@ td {
   line-height: 1;
 }
 
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .text-\[20px\] {
   font-size: 20px;
+}
+
+.text-\[48px\] {
+  font-size: 48px;
 }
 
 .text-base {
@@ -2016,6 +2103,10 @@ td {
   font-weight: 600;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .italic {
   font-style: italic;
 }
@@ -2034,6 +2125,20 @@ td {
 
 .leading-relaxed {
   line-height: 1.625;
+}
+
+.tracking-\[-2\%\] {
+  letter-spacing: -2%;
+}
+
+.text-\[\#2E2E2E\] {
+  --tw-text-opacity: 1;
+  color: rgb(46 46 46 / var(--tw-text-opacity));
+}
+
+.text-\[\#575757\] {
+  --tw-text-opacity: 1;
+  color: rgb(87 87 87 / var(--tw-text-opacity));
 }
 
 .text-black {
@@ -2428,6 +2533,19 @@ td {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.hover\:text-blue-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
+.hover\:decoration-blue-500:hover {
+  text-decoration-color: #3b82f6;
+}
+
 .hover\:shadow-lg:hover {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -2528,10 +2646,18 @@ td {
     display: block;
   }
 
+  .md\:flex {
+    display: flex;
+  }
+
   .md\:hidden {
     display: none;
   }
 
+  .md\:h-\[436px\] {
+    height: 436px;
+  }
+  
   .md\:h-\[120px\] {
     height: 120px;
   }
@@ -2544,6 +2670,9 @@ td {
     width: 50%;
   }
 
+  .md\:w-\[436px\] {
+    width: 436px;
+  }
   .md\:w-\[120px\] {
     width: 120px;
   }
@@ -2593,6 +2722,13 @@ td {
     flex-direction: row;
   }
 
+  .md\:items-start {
+    align-items: flex-start;
+  }
+
+  .md\:gap-y-4 {
+    row-gap: 1rem;
+  }
   .md\:gap-y-10 {
     row-gap: 2.5rem;
   }
@@ -2694,6 +2830,18 @@ td {
 
   .md\:pt-\[88px\] {
     padding-top: 88px;
+  }
+
+  .md\:text-right {
+    text-align: right;
+  }
+
+  .md\:text-\[96px\] {
+    font-size: 96px;
+  }
+
+  .md\:leading-\[120px\] {
+    line-height: 120px;
   }
 }
 

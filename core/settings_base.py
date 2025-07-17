@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     # local apps
     "website",
     "custom_auth",
+    "schedule",
     "allauth",
     "allauth.account",
     "sponsors",

@@ -86,6 +86,7 @@ module.exports = {
       },
       backgroundImage: {
         'dotted-world-map': "url('/static/images/dotted-world-map.svg')",
+        'dotted-world-map-white': "url('/static/images/dotted-world-map-white.svg')",
     },
     },
   },
