@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Speaker, Room, ConferenceDay, Session
+from .models import Speaker, Room, ConferenceDay, Session, Tracks
 
 
 @admin.register(Speaker)
@@ -32,19 +32,24 @@ class ConferenceDayAdmin(admin.ModelAdmin):
     ordering = ['order', 'date']
 
 
+@admin.register(Tracks)
+class TracksAdmin(admin.ModelAdmin):
+    list_display = ['name']
+    search_fields = ['name']
+
 @admin.register(Session)
 class SessionAdmin(admin.ModelAdmin):
-    list_display = ['title', 'conference_day', 'time_range', 'room', 'session_type', 'speaker', 'slug']
-    list_filter = ['conference_day', 'room', 'session_type', 'is_break']
+    list_display = ['title', 'conference_day', 'time_range', 'room', 'session_type', 'speaker', 'slug', 'track']
+    list_filter = ['conference_day', 'room', 'session_type', 'is_break', 'is_check_in', 'track']
     search_fields = ['title', 'description', 'speaker__name', 'slug']
-    ordering = ['conference_day__order', 'start_time', 'room__name']
+    ordering = ['conference_day__order', 'start_time', 'room__name', 'track__name']
     prepopulated_fields = {'slug': ('title',)}
     
     fieldsets = (
         ('Basic Information', {
-            'fields': ('title', 'slug', 'description', 'abstract', 'speaker', 'room', 'session_type', 'conference_day')
+            'fields': ('title', 'slug', 'description', 'abstract', 'speaker', 'track', 'room', 'session_type', 'conference_day')
         }),
         ('Time & Schedule', {
-            'fields': ('start_time', 'end_time', 'is_break')
+            'fields': ('start_time', 'end_time', 'is_break', 'is_check_in', 'is_opening', 'is_closing',)
         })
     )

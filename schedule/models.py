@@ -99,6 +99,19 @@ class ConferenceDay(models.Model):
         return self.name
 
 
+class Tracks(models.Model):
+    """Model for conference tracks"""
+    name = models.CharField(max_length=255, help_text=_("Room name"))
+
+    class Meta:
+        verbose_name = _("Tracks")
+        verbose_name_plural = _("Tracks")
+        ordering = ['name']
+
+    def __str__(self):
+        return self.name
+
+
 class Session(models.Model):
     """Model for conference sessions"""
 
@@ -108,6 +121,9 @@ class Session(models.Model):
         ('workshop', _('Workshop')),
         ('panel', _('Panel')),
         ('break', _('Break')),
+        ('check-in', _('Check-in')),
+        ('is-opening', _('Is opening')),
+        ('is-closing', _('Is closing')),
     ]
 
     title = models.CharField(max_length=255, help_text=_("Session title"))
@@ -120,6 +136,7 @@ class Session(models.Model):
         help_text=_("Type of session")
     )
     speaker = models.ForeignKey(Speaker, on_delete=models.CASCADE, null=True, blank=True, help_text=_("Session speaker"))
+    track = models.ForeignKey(Tracks, on_delete=models.CASCADE, null=True, blank=False, help_text=_("Session track"))
     room = models.ForeignKey(Room, on_delete=models.CASCADE, help_text=_("Session room"))
     conference_day = models.ForeignKey(ConferenceDay, on_delete=models.CASCADE, help_text=_("Conference day"))
 
@@ -127,6 +144,9 @@ class Session(models.Model):
     end_time = models.TimeField(help_text=_("Session end time"))
 
     is_break = models.BooleanField(default=False, help_text=_("Whether this is a break/lunch session"))
+    is_check_in = models.BooleanField(default=False, help_text=_("Whether this is a check-in session"))
+    is_opening = models.BooleanField(default=False, help_text=_("Whether this is a opening session"))
+    is_closing = models.BooleanField(default=False, help_text=_("Whether this is a closing session"))
 
     # URL slug for session detail pages
     slug = models.SlugField(max_length=255, unique=True, blank=True, help_text=_("URL slug for this session"))

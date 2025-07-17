@@ -1,6 +1,6 @@
 import pytest
 from datetime import date, time
-from schedule.models import Speaker, Room, ConferenceDay, Session
+from schedule.models import Speaker, Room, ConferenceDay, Session, Tracks
 
 
 class TestSpeaker:
@@ -76,6 +76,20 @@ class TestRoom:
         assert str(room) == "Conference Room A"
 
 
+class TestTracks:
+
+    @pytest.mark.django_db
+    def test_track_creation(self):
+        track = Tracks.objects.create(name="DJCA Track")
+
+        assert track is not None
+        assert track.name == "DJCA Track"
+
+    @pytest.mark.django_db
+    def test_track_str_method(self):
+        track = Tracks.objects.create(name="DJCA Track")
+        assert str(track) == "DJCA Track"
+
 class TestConferenceDay:
 
     @pytest.mark.django_db
@@ -120,12 +134,14 @@ class TestSession:
     def sample_data(self):
         speaker = Speaker.objects.create(name="Test Speaker")
         room = Room.objects.create(name="Test Room")
+        track = Tracks.objects.create(name="Temp Track")
         conf_day = ConferenceDay.objects.create(
             name="Test Day", date=date(2025, 8, 12)
         )
         return {
             'speaker': speaker,
             'room': room,
+            'track': track,
             'conference_day': conf_day
         }
 
@@ -136,6 +152,7 @@ class TestSession:
             description="A test session",
             session_type="talk",
             speaker=sample_data['speaker'],
+            track=sample_data['track'],
             room=sample_data['room'],
             conference_day=sample_data['conference_day'],
             start_time=time(10, 0),
@@ -147,9 +164,13 @@ class TestSession:
         assert session.session_type == "talk"
         assert session.speaker == sample_data['speaker']
         assert session.room == sample_data['room']
+        assert session.track == sample_data['track']
         assert session.start_time == time(10, 0)
         assert session.end_time == time(11, 0)
         assert session.is_break is False  # Default value
+        assert session.is_opening is False # Default value
+        assert session.is_closing is False # Default value
+        assert session.is_check_in is False # Default value
 
     @pytest.mark.django_db
     def test_session_type_display(self, sample_data):
@@ -235,4 +256,43 @@ class TestSession:
             is_break=True
         )
 
-        assert break_session.is_break is True 
+        assert break_session.is_break is True
+
+    @pytest.mark.django_db
+    def test_session_opening_session(self, sample_data):
+        opening_session = Session.objects.create(
+            title="Opening Session",
+            room=sample_data['room'],
+            conference_day=sample_data['conference_day'],
+            start_time=time(12, 0),
+            end_time=time(13, 0),
+            is_opening=True
+        )
+
+        assert opening_session.is_opening is True
+
+    @pytest.mark.django_db
+    def test_session_closing_session(self, sample_data):
+        closing_session = Session.objects.create(
+            title="Closing Session",
+            room=sample_data['room'],
+            conference_day=sample_data['conference_day'],
+            start_time=time(12, 0),
+            end_time=time(13, 0),
+            is_closing=True
+        )
+
+        assert closing_session.is_closing is True
+
+    @pytest.mark.django_db
+    def test_session_check_in_session(self, sample_data):
+        check_in_session = Session.objects.create(
+            title="Check In Session",
+            room=sample_data['room'],
+            conference_day=sample_data['conference_day'],
+            start_time=time(12, 0),
+            end_time=time(13, 0),
+            is_check_in=True
+        )
+
+        assert check_in_session.is_check_in is True
