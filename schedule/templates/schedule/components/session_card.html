@@ -24,6 +24,9 @@
       <span class="border px-4 py-2 text-base rounded-full">
         {{ session.room.name }}
       </span>
+      <span class="border px-4 py-2 text-base rounded-full">
+        {{ session.track.name }}
+      </span>
     </div>
     <h3 class="text-2xl font-medium">
       <a href="{% url 'schedule:session_detail' session.slug %}"
