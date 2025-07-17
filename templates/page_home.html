@@ -62,6 +62,10 @@
       </div>
     </div>
   </section>
+
+ 
+
+  {% comment %} First Ever Django Africa {% endcomment %}
   <section class="bg-white">
     <div class="dj-container pt-16 md:pt-10">
     <div class="md:border rounded-t-2xl flex gap-x-8 gap-y-6 flex-col md:flex-row">
@@ -80,7 +84,7 @@
           <br /><br />
           {% blocktranslate %}
           We held 26 talks on topics covering programming, society, careers,
-          education, disability, agriculture - the full range of topics you’d
+          education, disability, agriculture - the full range of topics you'd
           expect at a DjangoCon, with the African perspective often at the
           forefront.
           {% endblocktranslate %}
@@ -110,6 +114,47 @@
         />
       </div>
     </div>
+    </div>
+  </section>
+
+   <!-- UbuCon Africa Section -->
+  <section class="bg-white py-16 md:py-10">
+    <div class="dj-container">
+      <div class="md:border rounded-2xl flex gap-x-8 gap-y-6 flex-col md:flex-row">
+        <div class="md:w-1/2">
+          <img
+            src="{% static 'images/ubucon-djangocon.jpeg' %}"
+            alt="UbuCon Africa at DjangoCon Africa 2025"
+            class="w-full h-full object-cover rounded-2xl md:rounded-tr-none md:rounded-b-none"
+          />
+        </div>
+        <div class="md:w-1/2 m-auto md:py-10 md:pr-10 lg:pl-10">
+          <h2 class="mb-4">✨ {% translate "Ubuntu Meets Django in Arusha!" %}</h2>
+          <p class="mb-4">
+            {% blocktranslate %}
+            We're beyond excited to co-host UbuCon Africa at DjangoCon Africa 2025!
+            {% endblocktranslate %}
+            <br /><br />
+            {% blocktranslate %}
+            UbuCon is the gathering place for Ubuntu enthusiasts, contributors, and curious minds to celebrate open source, collaboration, and the spirit of community. This inaugural African edition will celebrate the power of community, open collaboration, and the Ubuntu philosophy of "I am because we are."
+            {% endblocktranslate %}
+            <br /><br />
+            {% blocktranslate %}
+            Whether you're a seasoned contributor, a die-hard Debian-based dev or just curious about Ubuntu, this is your moment to connect, contribute, and celebrate the power of people-powered tech.
+            {% endblocktranslate %}
+          </p>
+          <div class="flex flex-col gap-4 md:flex-row">
+            <a
+              href="https://discourse.ubuntu.com/t/ubucon-africa-djangocon-africa-2025/59940"
+              target="_blank"
+              class="btn-primary"
+            >
+              {% translate "Learn more" %}
+              <i class="fas fa-external-link-alt ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <div class="dj-container ">
@@ -259,7 +304,7 @@
 
         <div class="flex flex-col gap-4 md:flex-row">
               <a
-                href="mailto:sponsor@djangocon.africa?subject=Sponsor DjangoCon Africa 2025"
+                href="mailto:hello@djangocon.africa?subject=Sponsor DjangoCon Africa 2025"
                 class="btn-primary border border-white/10 w-full md:w-fit"
                 >
                 {% translate "Sponsor us" %}

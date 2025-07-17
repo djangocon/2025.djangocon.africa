@@ -26,6 +26,7 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path("sponsors/", include("sponsors.urls")),
     path("schedule/", include("schedule.urls")),
+    path("organisers/", include("organisers.urls")),
     path("__reload__/", include("django_browser_reload.urls")),
     path('i18n/', include('django.conf.urls.i18n')),
     path('set_language/', set_language, name='set_language'),
