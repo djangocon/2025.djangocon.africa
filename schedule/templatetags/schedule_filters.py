@@ -27,6 +27,7 @@ def get_session_emoji(session):
         "is_check_in": "🛎️",
         "is_opening": "👋" ,
         "is_closing": "🙏",
+        "lighting": "⚡️",
     }
     if session.is_break:
         return emojis["is_break"]
@@ -38,3 +39,22 @@ def get_session_emoji(session):
         return emojis["is_closing"]
     else:
         return ""
+
+
+@register.simple_tag
+def get_all_speakers(session):
+    """Return all speakers for the session"""
+    return session.speaker.all()
+
+@register.simple_tag
+def join_speakers_names(speakers):
+    """Return human-readable speakers names"""
+    if not speakers:
+        return ""
+
+    if speakers.count() == 1:
+        return speakers[0].name
+    elif speakers.count() == 2:
+        return " and ".join([speaker.name for speaker in speakers])
+
+    return ", ".join([speaker.name for speaker in speakers[:speakers.count() -1]]) + " and " + speakers.last().name

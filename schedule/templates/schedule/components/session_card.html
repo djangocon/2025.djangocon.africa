@@ -1,21 +1,21 @@
+{% load schedule_filters %}
 <div class="bg-gray-100 rounded-2xl p-6">
     {% if session.speaker %}
-    <div class="flex items-center gap-x-2 mb-4">
-       <div class="w-12 h-12 rounded-full flex-shrink-0 overflow-hidden">
-          {% if session.speaker.photo %}
-            <img src="{{ session.speaker.photo.url }}"
-                alt="{{ session.speaker.name }}"
-                class="h-full w-full object-cover">
-          {% else %}
-            <div class="w-full h-full bg-gray-300"></div>
-          {% endif %}
+        <div class="flex -space-x-2 overflow-hidden items-center gap-x-2 mb-4">
+            {% get_all_speakers session as speakers %}
+            {% for speaker in speakers %}
+                {% if speaker.photo %}
+                    <img src="{{ speaker.photo.url }}"
+                         alt="{{ speaker.name }}"
+                         class="inline-block size-10 rounded-full ring-2 ring-white" />
+                {% else %}
+                    <div class="w-full h-full bg-gray-300"></div>
+                {% endif %}
+            {% endfor %}
+            <h3 class="font-medium pl-2">
+                {% join_speakers_names speakers %}
+            </h3>
         </div>
-      <div>
-        <h3 class="font-medium">
-          {{ session.speaker.name }}
-        </h3>
-      </div>
-    </div>
     {% endif %}
     <div class="flex flex-wrap gap-2 mb-4">
       <span class="border px-4 py-2 text-base rounded-full">

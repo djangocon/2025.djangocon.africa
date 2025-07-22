@@ -118,12 +118,13 @@ class Session(models.Model):
     SESSION_TYPES = [
         ('keynote', _('Keynote')),
         ('talk', _('Talk')),
+        ('lighting', _('Lighting Talk')),
         ('workshop', _('Workshop')),
         ('panel', _('Panel')),
         ('break', _('Break')),
         ('check-in', _('Check-in')),
-        ('is-opening', _('Is opening')),
-        ('is-closing', _('Is closing')),
+        ('is-opening', _('Opening')),
+        ('is-closing', _('Closing')),
     ]
 
     title = models.CharField(max_length=255, help_text=_("Session title"))
@@ -135,7 +136,7 @@ class Session(models.Model):
         default='talk',
         help_text=_("Type of session")
     )
-    speaker = models.ForeignKey(Speaker, on_delete=models.CASCADE, null=True, blank=True, help_text=_("Session speaker"))
+    speaker = models.ManyToManyField(Speaker, related_name='speakers', blank=True, help_text=_("Session speakers"))
     track = models.ForeignKey(Tracks, on_delete=models.CASCADE, null=True, blank=False, help_text=_("Session track"))
     room = models.ForeignKey(Room, on_delete=models.CASCADE, help_text=_("Session room"))
     conference_day = models.ForeignKey(ConferenceDay, on_delete=models.CASCADE, help_text=_("Conference day"))
