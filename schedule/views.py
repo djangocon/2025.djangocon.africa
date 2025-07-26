@@ -24,7 +24,7 @@ def schedule_list(request):
     sessions_by_time = {}
     if selected_day:
         sessions = Session.objects.filter(conference_day=selected_day).select_related(
-            'room', 'speaker'
+            'room',
         ).order_by('start_time', 'room__name')
 
         # Group sessions by time slot
@@ -50,7 +50,7 @@ def session_detail(request, slug):
     """View for displaying detailed information about a specific session"""
     session = get_object_or_404(
         Session.objects.select_related(
-            'room', 'conference_day', 'speaker'
+            'room', 'conference_day',
         ),
         slug=slug
     )

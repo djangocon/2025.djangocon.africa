@@ -29,7 +29,9 @@
             <div class="flex-1">
               {% if time_data.sessions|length == 1 %}
                 {% with session=time_data.sessions.0 %}
-                  {% if session.is_break or session.is_check_in or session.is_opening or session.is_closing %}
+                  {% is_lighting_talk session as is_lighting %}
+                  {% is_workshop session as is_workshop %}
+                  {% if session.is_break or session.is_check_in or session.is_opening or session.is_closing or is_lighting or is_workshop %}
                     <div class="bg-[#F2F6F7] border border-deepTeal rounded-2xl p-6">
                       <div class="flex items-center gap-3">
                         <span class="text-2xl">{% get_session_emoji session %}</span>

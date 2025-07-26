@@ -1,0 +1,36 @@
+{% load schedule_filters %}
+<div class="flex flex-wrap gap-6">
+    {% for speaker in speakers %}
+        <div class="mx-auto bg-[#F2F6F7] rounded-xl p-6 flex flex-col md:flex-row md:items-start gap-6">
+
+            {% if speaker.photo %}
+                <img
+                        src="{{ speaker.photo.url }}"
+                        alt="{{ speaker.name }}"
+                        class="w-32 h-32 rounded-xl object-cover flex-shrink-0"/>
+            {% else %}
+                <div class="h-full grid place-items-center">
+                    <div class="w-32 h-32 rounded-full bg-gray-300 flex items-center justify-center border-4 border-white shadow-lg">
+                        <span class="text-4xl text-gray-600">👤</span>
+                    </div>
+                </div>
+            {% endif %}
+
+            <div>
+                <h3 class="font-medium mb-4">
+                    {{ speaker.name }}
+                </h3>
+
+                {% if speaker.bio %}
+                    <div class="text-base mb-4 text-[#2E2E2E]">
+                        {{ speaker.bio|linebreaks }}
+                    </div>
+                {% endif %}
+
+                {% if speaker.social_links %}
+                    {% social_links speaker.social_links %}
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>

@@ -151,18 +151,18 @@ class TestSession:
             title="Test Session",
             description="A test session",
             session_type="talk",
-            speaker=sample_data['speaker'],
             track=sample_data['track'],
             room=sample_data['room'],
             conference_day=sample_data['conference_day'],
             start_time=time(10, 0),
             end_time=time(11, 0)
         )
+        session.speaker.set([sample_data['speaker']])
 
         assert session is not None
         assert session.title == "Test Session"
         assert session.session_type == "talk"
-        assert session.speaker == sample_data['speaker']
+        assert session.speaker.first() == sample_data['speaker']
         assert session.room == sample_data['room']
         assert session.track == sample_data['track']
         assert session.start_time == time(10, 0)
