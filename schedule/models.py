@@ -122,6 +122,7 @@ class Session(models.Model):
         ('workshop', _('Workshop')),
         ('panel', _('Panel')),
         ('break', _('Break')),
+        ("sprints", _('Sprints')),
     ]
 
     title = models.CharField(max_length=255, help_text=_("Session title"))
@@ -134,7 +135,7 @@ class Session(models.Model):
         help_text=_("Type of session")
     )
     speaker = models.ManyToManyField(Speaker, related_name='speakers', blank=True, help_text=_("Session speakers"))
-    track = models.ForeignKey(Tracks, on_delete=models.CASCADE, null=True, blank=False, help_text=_("Session track"))
+    track = models.ForeignKey(Tracks, on_delete=models.CASCADE, null=True, blank=True, help_text=_("Session track"))
     room = models.ForeignKey(Room, on_delete=models.CASCADE, help_text=_("Session room"))
     conference_day = models.ForeignKey(ConferenceDay, on_delete=models.CASCADE, help_text=_("Conference day"))
 
