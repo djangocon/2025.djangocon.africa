@@ -52,7 +52,6 @@ def get_session_emoji(session):
         "is_opening": "👋",
         "is_closing": "🙏",
         "lighting": "⚡️",
-        "workshop": "🛠️",
     }
     if session.is_break:
         return emojis["is_break"]
@@ -64,8 +63,6 @@ def get_session_emoji(session):
         return emojis["is_closing"]
     elif session.session_type == "lighting":
         return emojis["lighting"]
-    elif session.session_type == "workshop":
-        return emojis["workshop"]
     else:
         return ""
 
@@ -80,13 +77,6 @@ def get_all_speakers(session):
 def is_lighting_talk(session):
     """Check if the session is a lighting talk"""
     return session.session_type.lower() == "lighting"
-
-
-@register.simple_tag
-def is_workshop(session):
-    """Check if the session is a workshop"""
-    return session.session_type.lower() == "workshop"
-
 
 @register.simple_tag
 def join_speakers_names(speakers):
