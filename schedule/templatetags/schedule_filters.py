@@ -18,6 +18,28 @@ def session_card(session):
         'session': session,
     }
 
+@register.inclusion_tag("schedule/components/speaker/single_speaker.html")
+def single_speaker(speaker):
+    """Render single speaker info"""
+    return {
+        "speaker": speaker,
+    }
+
+@register.inclusion_tag("schedule/components/speaker/multiple_speakers.html")
+def multiple_speaker(speakers):
+    """Render multiple speaker info"""
+    return {
+        "speakers": speakers,
+    }
+
+
+@register.inclusion_tag("schedule/components/social_links.html")
+def social_links(socials):
+    """Render speaker social links"""
+    return {
+        "social_links": socials,
+    }
+
 
 @register.simple_tag
 def get_session_emoji(session):
