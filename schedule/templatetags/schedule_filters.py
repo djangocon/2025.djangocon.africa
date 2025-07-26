@@ -18,12 +18,14 @@ def session_card(session):
         'session': session,
     }
 
+
 @register.inclusion_tag("schedule/components/speaker/single_speaker.html")
 def single_speaker(speaker):
     """Render single speaker info"""
     return {
         "speaker": speaker,
     }
+
 
 @register.inclusion_tag("schedule/components/speaker/multiple_speakers.html")
 def multiple_speaker(speakers):
@@ -47,9 +49,10 @@ def get_session_emoji(session):
     emojis = {
         "is_break": "🥗",
         "is_check_in": "🛎️",
-        "is_opening": "👋" ,
+        "is_opening": "👋",
         "is_closing": "🙏",
         "lighting": "⚡️",
+        "workshop": "🛠️",
     }
     if session.is_break:
         return emojis["is_break"]
@@ -59,6 +62,10 @@ def get_session_emoji(session):
         return emojis["is_opening"]
     elif session.is_closing:
         return emojis["is_closing"]
+    elif session.session_type == "lighting":
+        return emojis["lighting"]
+    elif session.session_type == "workshop":
+        return emojis["workshop"]
     else:
         return ""
 
@@ -67,6 +74,19 @@ def get_session_emoji(session):
 def get_all_speakers(session):
     """Return all speakers for the session"""
     return session.speaker.all()
+
+
+@register.simple_tag
+def is_lighting_talk(session):
+    """Check if the session is a lighting talk"""
+    return session.session_type.lower() == "lighting"
+
+
+@register.simple_tag
+def is_workshop(session):
+    """Check if the session is a workshop"""
+    return session.session_type.lower() == "workshop"
+
 
 @register.simple_tag
 def join_speakers_names(speakers):
@@ -79,4 +99,4 @@ def join_speakers_names(speakers):
     elif speakers.count() == 2:
         return " and ".join([speaker.name for speaker in speakers])
 
-    return ", ".join([speaker.name for speaker in speakers[:speakers.count() -1]]) + " and " + speakers.last().name
+    return ", ".join([speaker.name for speaker in speakers[:speakers.count() - 1]]) + " and " + speakers.last().name

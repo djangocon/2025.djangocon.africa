@@ -122,9 +122,6 @@ class Session(models.Model):
         ('workshop', _('Workshop')),
         ('panel', _('Panel')),
         ('break', _('Break')),
-        ('check-in', _('Check-in')),
-        ('is-opening', _('Opening')),
-        ('is-closing', _('Closing')),
     ]
 
     title = models.CharField(max_length=255, help_text=_("Session title"))
