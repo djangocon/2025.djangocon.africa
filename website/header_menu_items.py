@@ -34,10 +34,10 @@ header_menu_items = [
         children=[
             HeaderLink(label=_("Speaking at Djangocon Africa"), href="/speaking"),
             HeaderLink(label=_("Speaker Resources"), href="/speaker_resources"),
-            HeaderLink(
-                label=_("Call for Proposals"),
-                href="https://pretalx.com/djangocon-africa-2025/cfp",
-            ),
+            # HeaderLink(
+            #     label=_("Call for Proposals"),
+            #     href="https://pretalx.com/djangocon-africa-2025/cfp",
+            # ),
         ],
     ),
     HeaderLink(
@@ -47,5 +47,5 @@ header_menu_items = [
             HeaderLink(label=_("Our Sponsors"), href="/sponsors/"),
         ],
     ),
-    # HeaderLink(label=_("Schedule"), href="#",),
+    HeaderLink(label=_("Schedule"), href="/schedule",),
 ]
