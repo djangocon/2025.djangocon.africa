@@ -2148,7 +2148,7 @@ msgstr "Dernières Actualités"
 #: news/templates/news/news_index_page.html:59
 msgid "\n"
 "              5 days of inspiration, education and networking at DjangoCon Africa\n"
-"              from 25-31 August, 2025 in Arusha, Tanzania.\n"
+"              from 11-15 August, 2025 in Arusha, Tanzania.\n"
 "              "
 msgstr "\n"
 "        Rejoignez-nous pour 5 jours d'inspiration, d'éducation et de réseautage à la \n"
